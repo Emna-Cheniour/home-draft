@@ -77,7 +77,10 @@ cursor: pointer;
     margin-top: 2px;
     text-decoration: none;
     visibility: visible;
+    z-index: 40;
+    position: absolute;
 }
+
 .dropdown ul li {
     display: inline-block;
     width: 193px;
@@ -138,4 +141,9 @@ cursor: pointer;
         color: white;
         padding: 5px;
     }
+    
+}
+.services{
+    display: block; 
+    z-index: -1;
 }

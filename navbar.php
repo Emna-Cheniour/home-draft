@@ -26,6 +26,7 @@
         <li><a href=""> <i title="S'inscrire" class="fas fa-user-plus"></i><a></li>
     </ul>
 </div>
+
 <div class="dropdown">
     <ul>
         <li><a href="#">Ctalogue des produits</a></li>
