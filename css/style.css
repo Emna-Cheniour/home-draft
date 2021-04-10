@@ -1,0 +1,134 @@
+html,body{
+    margin:0;
+    padding: 0;
+}
+a, a:hover{
+    text-decoration: none;
+    color: white;
+}
+ul{ 
+    margin:0; 
+    padding: 0;
+}
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins',sans-serif;
+}
+
+/* Barre de navigation */ 
+.navbar-custom {
+    background-color: #1c2942;
+    height: 80px;
+    position: relative;
+}
+.navbar-custom ul li:hover , .navbar-custom ul li a:hover, .dropdown ul li a:hover{
+font-weight: bold;
+color: #3b556d !important;
+cursor: pointer;
+
+}
+.logopic{
+    height: 80px;
+    padding: 5px;
+    vertical-align: middle;
+}
+.pagename{
+    font-weight: bold;
+    color: white;
+    line-height: 80px;
+    padding: 0 0 0 5px;
+    font-size: 30px;
+    vertical-align: middle;
+}
+.navLinks{
+    display: inline-block;
+    margin:0 0 0 25px;
+    font-size: 20px;
+    vertical-align: middle;
+}
+.navLinks li{
+ display: inline-block;
+ color: white;
+ margin: 0 20px 0;
+}
+.righNavLinks{   
+    display: inline-block;
+    position: absolute;
+    right: 0px; 
+    height: 80px;
+    margin: 0 25px 0 0;
+    font-size: 20px;
+    vertical-align: middle;
+}
+.righNavLinks li{
+    padding: 0 20px 0;
+    display: inline-block;
+    line-height: 80px;
+}
+/* Dropdown services*/
+.dropdown {
+    display: none;
+    width: 400px;
+    margin-left: 378.883px ;
+    background-color: #1c2942;
+    margin-top: 2px;
+    text-decoration: none;
+}
+.dropdown ul li {
+    display: inline-block;
+    width: 193px;
+    list-style-type: none;
+    color: white;
+    padding: 5px;
+}
+.dropdownForPhone{
+    height: 0;
+    margin: 0;
+    padding: 0;
+    visibility: hidden;
+}
+
+@media only screen and (max-width: 768px){
+/* Barre de navigation */
+
+    .navLinks{
+        display: block;
+        margin: 0;
+
+    }
+    .righNavLinks{
+        display: block;
+        position: static;
+        margin: 0;
+    }
+    .navbar-custom{
+        height: auto;
+        text-align: center;
+    }
+    /* Dropdown services*/
+    .dropdown{
+        height: 0;
+        margin: 0;
+        padding: 0;
+        visibility: hidden;
+    }
+    .dropdownForPhone{
+        width: 400px;
+        text-decoration: none;
+        height: auto;
+        visibility: visible;
+        display: none;
+        margin: 15px auto 0;
+    
+    }
+    .dropdownForPhone ul li {
+        display: inline-block;
+        width: 193px;
+        list-style-type: none;
+        color: white;
+        padding: 5px;
+    }
+}
