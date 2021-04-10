@@ -3,10 +3,8 @@
     <span class="pagename">Celiac101</span>
     <ul class='navLinks'>
         <li><a href="acceuil.php">Acceuil </a></li>
-        <li id="drop">Services </li>
+        <li id="drop">Services <i class="fas fa-caret-down dropPhone"></i></li>
         <li><a href="#">Informations </a></li>
-
-
     </ul>
     <div class="dropdownForPhone">
         <ul>
@@ -27,7 +25,6 @@
         <li><a href=""> <i title="Se connecter" class="fas fa-sign-in-alt"></i><a></li>
         <li><a href=""> <i title="S'inscrire" class="fas fa-user-plus"></i><a></li>
     </ul>
-
 </div>
 <div class="dropdown">
     <ul>

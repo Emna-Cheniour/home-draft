@@ -12,13 +12,15 @@
 </head>
 <body>
     <?php include("navbar.php"); ?>
-    <div class="Services">
+    <div class="services">
         <h1>Services</h1>
-        <div class="Services wrapper">
-            <div class="Service card"></div>
+        <div class="services wrapper">
+            <div class="service card"></div>
         </div>
     </div>
     
+    
+
 <script src="js/main.js" ></script>
 
 </body>

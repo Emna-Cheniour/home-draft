@@ -76,6 +76,7 @@ cursor: pointer;
     background-color: #1c2942;
     margin-top: 2px;
     text-decoration: none;
+    visibility: visible;
 }
 .dropdown ul li {
     display: inline-block;
@@ -89,8 +90,11 @@ cursor: pointer;
     margin: 0;
     padding: 0;
     visibility: hidden;
+    display: none;
 }
-
+.dropPhone{
+    display: none !important;
+}
 @media only screen and (max-width: 768px){
 /* Barre de navigation */
 
@@ -109,6 +113,9 @@ cursor: pointer;
         text-align: center;
     }
     /* Dropdown services*/
+    .dropPhone{
+        display:inline-block !important;
+    }
     .dropdown{
         height: 0;
         margin: 0;
