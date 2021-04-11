@@ -22,8 +22,9 @@
         <ul></ul>
     </div>
     <ul class="righNavLinks">
-        <li><a href=""> <i title="Se connecter" class="fas fa-sign-in-alt"></i><a></li>
-        <li><a href=""> <i title="S'inscrire" class="fas fa-user-plus"></i><a></li>
+        <li><a href=""> <i title="Dons" class="fas fa-donate"></i><a></li>
+        <li><a href=""> <i title="Chariot" class="fas fa-shopping-cart"></i><a></li>
+        <li id="dropProfil"> <i title="profil" class="fas fa-user"></i></li>
     </ul>
 </div>
 
@@ -42,3 +43,11 @@
     </ul>
     <ul></ul>
 </div>
+<div class="dropdownProfil">
+    <ul>
+    <li><a href="#">Modifier Profil</a></li>
+    <li>Se Deconnecter</li>
+    </ul>
+</div>
+
+

@@ -95,7 +95,9 @@ ul {    /*  Eliminer le margin et le padding qui viennet par défaut par une lis
 
 .navbar-custom ul li:hover,
 .navbar-custom ul li a:hover,
-.dropdown ul li a:hover {
+.dropdown ul li a:hover,
+.dropdownProfil ul li a:hover,
+.dropdownProfil ul li:hover {
     font-weight: bold;
     color: #3b556d !important;
     cursor: pointer;
@@ -144,6 +146,7 @@ ul {    /*  Eliminer le margin et le padding qui viennet par défaut par une lis
     padding: 0 20px 0;
     display: inline-block;
     line-height: 80px;
+    color:white;
 }
 @media only screen and (max-width: 800px) {
     /* Barre de navigation */
@@ -241,6 +244,32 @@ height: 0;
     }
 
 }
+.dropdownProfil{
+    display: none;
+    width: 150px;
+    background-color: #1c2942;
+    margin-top: 2px;
+    text-decoration: none;
+    visibility: visible;
+    z-index: 40;
+    position: absolute;
+    right: 50px;
+
+}
+.dropdownProfil ul li {
+    font-size: 15px;
+    list-style-type: none;
+    color: white;
+    padding: 5px;
+}
+@media only screen and (max-width: 800px) {
+    .dropdownProfil{
+        right:calc(50% - 75px);
+        justify-self: center;
+        
+    }
+}
+
 /*Services*/
 .services {
     display: flex;
