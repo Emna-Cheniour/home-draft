@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <?php include("navbarDeconnecte.php"); ?>
+    <?php include("navbarConnecte.php"); ?>
     <div class="row poster">
         <div class="col8 posterDetails">
             <h2 class="c4">Celiac101</h2>
