@@ -148,7 +148,7 @@ ul {
 /* Dropdown services*/
 .dropdown {
     display: none;
-    width: 400px;
+    width: 420px;
     margin-left: 378.883px;
     background-color: #1c2942;
     margin-top: 2px;
@@ -160,18 +160,23 @@ ul {
 
 .dropdown ul li {
     display: inline-block;
-    width: 193px;
+    width: 203px;
+    font-size: 15px;
     list-style-type: none;
     color: white;
     padding: 5px;
 }
 
 .dropdownForPhone {
-    height: 0;
+    width: 0px;
     margin: 0;
     padding: 0;
     visibility: hidden;
-    display: none;
+    display: inline-block;
+}
+.dropdownForPhone *{
+width: 0;
+height: 0;
 }
 
 .dropPhone {
@@ -211,7 +216,7 @@ ul {
     }
 
     .dropdownForPhone {
-        width: 400px;
+        width: 420px;
         text-decoration: none;
         height: auto;
         visibility: visible;
@@ -219,10 +224,15 @@ ul {
         margin: 15px auto 0;
 
     }
+    .dropdownForPhone *{
+        width: initial;
+        height: initial;
+        }
 
     .dropdownForPhone ul li {
         display: inline-block;
-        width: 193px;
+        width: 203px;
+        font-size: 15px;
         list-style-type: none;
         color: white;
         padding: 5px;
