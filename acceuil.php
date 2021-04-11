@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.min (1).css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/Titles.css">
+    <link rel="stylesheet" href="css/colors.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
 
     <title>Celiac101</title>
@@ -15,8 +15,18 @@
 
 <body>
     <?php include("navbarDeconnecte.php"); ?>
+    <div class="row poster">
+        <div class="col8 posterDetails">
+            <h2 class="c4">Celiac101</h2>
+            <p> Votre meilleur guide pour vivre avec la maladie coeliaque </p>
+            <p>Celiac 101 vous offre un ensemble de service qui facilitent votre quotidient et vous aident à vous adapter au régime alimentaire sans gluten
+            </p>
+            <p>Bienvenu au premier site web d'origine tunisienne pour les malades coeliaques. </p>
+        </div>
+        <div class="col4 pimg"><img class="posterImg" src="images/poster picture.png" alt=""></div>
+    </div>
     <div class="services">
-        <h1>Services</h1>
+        <h1 class="c4">Services</h1>
         <div class="serviceRow row">
             <div class="service col4">
                 <img src="images/panier.png">

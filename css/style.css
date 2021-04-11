@@ -17,7 +17,7 @@ ul {    /*  Eliminer le margin et le padding qui viennet par défaut par une lis
     padding: 0;
 }
 
-/* Responsive grid*/
+/*  grid*/
 
 * { /*Pourr tout le document*/
     box-sizing: border-box; /* width= padding+width+border et Height= padding+height+border*/
@@ -292,8 +292,7 @@ height: 0;
 }
 
 .services__btn {
-    display: flex;
-    justify-content: center;
+    align-self: center;
 }
 
 
@@ -319,5 +318,36 @@ height: 0;
   @media screen and (max-width:768px){
     .serviceRow{
       grid-template-columns: 1fr;
+    }
+  }
+  /* Poster*/
+  .posterImg{
+      height: 400px;
+      width: 400px;
+      margin: 30px 10px 40px;
+
+  }
+  .posterDetails{
+      padding: 20px;
+      align-self: center;
+      text-align: center;
+  }
+  .posterDetails p{
+      font-size: 20px;
+      padding: 5px;
+  }
+  .posterDetails h2{
+      padding-bottom: 30px;
+      text-align: center;
+  }
+  @media screen and (max-width:1250px){
+    .poster{
+        display: flex;
+        flex-direction: column;
+    }
+    .pimg{
+        align-self: center;
+        display: flex;
+        justify-content: center;
     }
   }
