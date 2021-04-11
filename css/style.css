@@ -271,7 +271,10 @@ ul {
 }
 
 .service p {
+    height: 120px;
     text-align: center;
+    vertical-align: middle;
+    justify-content: center;
     padding: 10px;
     font-size: 15px;
 }
@@ -279,9 +282,6 @@ ul {
 .services__btn {
     display: flex;
     justify-content: center;
-    margin-top: 16px;
-
-
 }
 
 

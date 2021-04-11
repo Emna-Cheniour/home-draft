@@ -25,7 +25,7 @@
                     <br>
                     Visitez notre catalogue et jouissez de la qualité au meilleur prix.
                 </p>
-                <div class="services__btn"><button class="btn btn1">Catalogue</button></div>
+                <div class="services__btn"><button class="btn btn-primary">Catalogue</button></div>
             </div>
             <div class="service col4">
                 <img src="images/recette.png">
@@ -34,7 +34,7 @@
                     <br>
                     Pour ceci, Celiac101 vous offre des recettes testées et leurs démarches simplifiées.
                 </p>
-                <div class="services__btn"><button class="btn btn2">Recettes</button></div>
+                <div class="services__btn"><button class="btn btn-primary">Recettes</button></div>
             </div>
             <div class="service col4">
                 <img src="images/aliment.png">
@@ -43,7 +43,7 @@
                     <br>
                     Notre journal des aliments omettera toute incertitude !
                 </p>
-                <div class="services__btn"><button class="btn btn1">Consulter Journal</button></div>
+                <div class="services__btn"><button class="btn btn-primary">Consulter Journal</button></div>
             </div>
             <div class="service col4">
                 <img src="images/resto.png">
@@ -52,16 +52,16 @@
                     <br>
                     Decouvrez les localisations des restaurants en Tunisie avec des repas sans gluten et plus.
                 </p>
-                <div class="services__btn"><button class="btn btn2">Liste Des Restaurants</button></div>
+                <div class="services__btn"><button class="btn btn-primary">Liste Des Restaurants</button></div>
             </div>
             <div class="service col4">
                 <img src="images/faq.png">
                 <h2>FAQs</h2>
-                <p>Des réponses aux questions les plus posées par et aux les coeliaques.
+                <p>Les questions les plus posées par et aux les coeliaques.
                     <br>
-                    Découvrez les maintenant!
+                    Découvrez maintenant leurs réponses correctes, faciles à comprendre et brèves !
                 </p>
-                <div class="services__btn"><button class="btn btn1">FAQ</button></div>
+                <div class="services__btn"><button class="btn btn-primary">FAQ</button></div>
             </div>
             <div class="service col4">
                 <img src="images/nutritionist.png">
@@ -70,7 +70,7 @@
                     <br>
                     Vous pouvez les contacter et demander leurs conseils.
                 </p>
-                <div class="services__btn"><button class="btn btn2">Contact</button></div>
+                <div class="services__btn"><button class=" btn btn-primary">Contacter</button></div>
             </div>
         </div>
     </div>
