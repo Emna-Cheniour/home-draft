@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <?php include("navbar.php"); ?>
+    <?php include("navbarDeconnecte.php"); ?>
     <div class="services">
         <h1>Services</h1>
         <div class="serviceRow row">

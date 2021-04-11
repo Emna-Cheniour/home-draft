@@ -12,18 +12,19 @@ a:hover {
     color: white;
 }
 
-ul {
+ul {    /*  Eliminer le margin et le padding qui viennet par défaut par une liste ul*/
     margin: 0;
     padding: 0;
 }
 
 /* Responsive grid*/
 
-* {
-    box-sizing: border-box;
+* { /*Pourr tout le document*/
+    box-sizing: border-box; /* width= padding+width+border et Height= padding+height+border*/
     margin: 0;
+    border: 0px;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif; 
 }
 
 .col1 {
@@ -144,6 +145,26 @@ ul {
     display: inline-block;
     line-height: 80px;
 }
+@media only screen and (max-width: 800px) {
+    /* Barre de navigation */
+
+    .navLinks {
+        display: block;
+        margin: 0;
+
+    }
+
+    .righNavLinks {
+        display: block;
+        position: static;
+        margin: 0;
+    }
+
+    .navbar-custom {
+        height: auto;
+        text-align: center;
+    }
+}
 
 /* Dropdown services*/
 .dropdown {
@@ -184,25 +205,6 @@ height: 0;
 }
 
 @media only screen and (max-width: 800px) {
-    /* Barre de navigation */
-
-    .navLinks {
-        display: block;
-        margin: 0;
-
-    }
-
-    .righNavLinks {
-        display: block;
-        position: static;
-        margin: 0;
-    }
-
-    .navbar-custom {
-        height: auto;
-        text-align: center;
-    }
-
     /* Dropdown services*/
     .dropPhone {
         display: inline-block !important;
@@ -239,7 +241,7 @@ height: 0;
     }
 
 }
-
+/*Services*/
 .services {
     display: flex;
     flex-direction: column;
