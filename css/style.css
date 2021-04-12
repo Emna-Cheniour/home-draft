@@ -148,7 +148,7 @@ ul {    /*  Eliminer le margin et le padding qui viennet par défaut par une lis
     line-height: 80px;
     color:white;
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 900px) {
     /* Barre de navigation */
 
     .navLinks {
@@ -207,7 +207,7 @@ height: 0;
     display: none !important;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 900px) {
     /* Dropdown services*/
     .dropPhone {
         display: inline-block !important;
@@ -262,7 +262,7 @@ height: 0;
     color: white;
     padding: 5px;
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 900px) {
     .dropdownProfil{
         right:calc(50% - 75px);
         justify-self: center;
@@ -332,11 +332,12 @@ height: 0;
 
 }
 
-.service :hover {
-    transform: scale(1.075);
+.service:hover {
+    transform: scale(1.085);
     transition: 0.3s ease-in;
     cursor: pointer;
 }
+
 @media screen and (max-width: 1300px){
     .serviceRow{
       grid-template-columns: 1fr 1fr;
