@@ -45,8 +45,8 @@
 </div>
 <div class="dropdownProfil">
     <ul>
-    <li><a href="#">Modifier Profil</a></li>
-    <li>Se Deconnecter</li>
+    <li><i class="fas fa-cogs"></i><a href="#">Modifier Profil</a></li>
+    <li><i class="fas fa-sign-out-alt"></i>Se Deconnecter</li>
     </ul>
 </div>
 

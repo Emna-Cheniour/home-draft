@@ -12,19 +12,22 @@ a:hover {
     color: white;
 }
 
-ul {    /*  Eliminer le margin et le padding qui viennet par défaut par une liste ul*/
+ul {
+    /*  Eliminer le margin et le padding qui viennet par défaut par une liste ul*/
     margin: 0;
     padding: 0;
 }
 
 /*  grid*/
 
-* { /*Pourr tout le document*/
-    box-sizing: border-box; /* width= padding+width+border et Height= padding+height+border*/
+* {
+    /*Pourr tout le document*/
+    box-sizing: border-box;
+    /* width= padding+width+border et Height= padding+height+border*/
     margin: 0;
     border: 0px;
     padding: 0;
-    font-family: 'Poppins', sans-serif; 
+    font-family: 'Poppins', sans-serif;
 }
 
 .col1 {
@@ -78,6 +81,11 @@ ul {    /*  Eliminer le margin et le padding qui viennet par défaut par une lis
 [class*="col-"] {
     float: left;
     padding: 15px;
+}
+
+.row {
+    margin: 0;
+    /* redefinir proprieté de la classe du theme de bootstrap*/
 }
 
 .row::after {
@@ -146,8 +154,9 @@ ul {    /*  Eliminer le margin et le padding qui viennet par défaut par une lis
     padding: 0 20px 0;
     display: inline-block;
     line-height: 80px;
-    color:white;
+    color: white;
 }
+
 @media only screen and (max-width: 900px) {
     /* Barre de navigation */
 
@@ -198,9 +207,10 @@ ul {    /*  Eliminer le margin et le padding qui viennet par défaut par une lis
     visibility: hidden;
     display: inline-block;
 }
-.dropdownForPhone *{
-width: 0;
-height: 0;
+
+.dropdownForPhone * {
+    width: 0;
+    height: 0;
 }
 
 .dropPhone {
@@ -208,6 +218,7 @@ height: 0;
 }
 
 @media only screen and (max-width: 900px) {
+
     /* Dropdown services*/
     .dropPhone {
         display: inline-block !important;
@@ -229,10 +240,11 @@ height: 0;
         margin: 15px auto 0;
 
     }
-    .dropdownForPhone *{
+
+    .dropdownForPhone * {
         width: initial;
         height: initial;
-        }
+    }
 
     .dropdownForPhone ul li {
         display: inline-block;
@@ -244,9 +256,11 @@ height: 0;
     }
 
 }
-.dropdownProfil{
+
+/* Dropdown profil*/
+.dropdownProfil {
     display: none;
-    width: 150px;
+    width: 160px;
     background-color: #1c2942;
     margin-top: 2px;
     text-decoration: none;
@@ -256,17 +270,23 @@ height: 0;
     right: 50px;
 
 }
+
 .dropdownProfil ul li {
     font-size: 15px;
     list-style-type: none;
     color: white;
     padding: 5px;
 }
+
+.dropdownProfil ul li i {
+    padding-right: 10px;
+}
+
 @media only screen and (max-width: 900px) {
-    .dropdownProfil{
-        right:calc(50% - 75px);
+    .dropdownProfil {
+        right: calc(50% - 75px);
         justify-self: center;
-        
+
     }
 }
 
@@ -338,46 +358,115 @@ height: 0;
     cursor: pointer;
 }
 
-@media screen and (max-width: 1300px){
-    .serviceRow{
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr;
+@media screen and (max-width: 1300px) {
+    .serviceRow {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
     }
-  
-  }
-  @media screen and (max-width:768px){
-    .serviceRow{
-      grid-template-columns: 1fr;
-    }
-  }
-  /* Poster*/
-  .posterImg{
-      height: 400px;
-      width: 400px;
-      margin: 30px 10px 40px;
 
-  }
-  .posterDetails{
-      padding: 20px;
-      align-self: center;
-      text-align: center;
-  }
-  .posterDetails p{
-      font-size: 20px;
-      padding: 5px;
-  }
-  .posterDetails h2{
-      padding-bottom: 30px;
-      text-align: center;
-  }
-  @media screen and (max-width:1250px){
-    .poster{
+}
+
+@media screen and (max-width:768px) {
+    .serviceRow {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Poster*/
+.posterImg {
+    height: 400px;
+    width: 400px;
+    margin: 30px 10px 40px;
+
+}
+
+.posterDetails {
+    padding: 20px;
+    align-self: center;
+    text-align: center;
+}
+
+.posterDetails p {
+    font-size: 20px;
+    padding: 5px;
+}
+
+.posterDetails h2 {
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+@media screen and (max-width:1250px) {
+    .poster {
         display: flex;
         flex-direction: column;
     }
-    .pimg{
+
+    .pimg {
         align-self: center;
         display: flex;
         justify-content: center;
     }
-  }
+}
+
+/*Footer*/
+.myFooter {
+    background-color: #1c2942;
+}
+
+.cp {
+    color: gray !important;
+    width: 466px;
+    margin-left: calc(50% - 233px);
+    text-align: center;
+}
+
+.myFooter>div {
+    padding: 20px 40px 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.myFooter a :hover,
+.myFooter * a:hover {
+    font-weight: bold;
+    color: #3b556d !important;
+    cursor: pointer;
+}
+
+.logo a {
+    vertical-align: middle;
+}
+
+.myFooter div>* {
+    padding-top: 20px;
+}
+
+.socials a {
+    padding-right: 30px;
+}
+
+.aide {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.aide a {
+    padding: 10px 20px 0px;
+
+}
+
+@media screen and (max-width:700px)  {
+
+    .myFooter {
+        display: flex;
+        flex-direction: column;
+    }
+    .myFooter div{
+        width: 100% !important;
+    }
+
+}
