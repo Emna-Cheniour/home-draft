@@ -84,6 +84,19 @@
             </div>
         </div>
     </div>
+    <div class="row donation">
+    <div class="col8"></div>
+    <div class="col4">
+    <img class="imgDon" src="images/dons.png" alt="dons">
+    </div>
+    </div>
+    <div class="row quizz">
+    
+    <div class="col4">
+    <img class="imgDon" src="images/dons.png" alt="dons">
+    </div>
+    <div class="col8"></div>
+    </div>
     <?php include("footer.php"); ?>
 
 

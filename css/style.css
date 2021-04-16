@@ -470,3 +470,17 @@ ul {
     }
 
 }
+/* Dons*/
+.donation{
+    padding: 30px 10px 30px;
+}
+.donation *{
+    display: flex;
+    justify-content: center;
+}
+.imgDon{
+    justify-self:center ;
+    width: 300px ;
+    border-radius: 200px;
+    border: 2px solid #5FC2BA; 
+}
