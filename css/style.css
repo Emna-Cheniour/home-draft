@@ -433,8 +433,8 @@ button{
 
 .cp {
     color: gray !important;
-    width: 466px;
-    margin-left: calc(50% - 233px);
+    width: 100%;
+    padding-left: calc(50% - 233px);
     text-align: center;
 }
 
@@ -533,4 +533,9 @@ button{
         display: none;
     }
 }
-}
+/* }
+* {
+  background: #000 !important;
+  color: #0f0 !important;
+  outline: solid #f00 1px !important;
+} */
