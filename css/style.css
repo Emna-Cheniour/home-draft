@@ -515,6 +515,11 @@ button{
     border-radius: 200px;
     border: 2px solid #5FC2BA;
 }
+.imgDon:hover{
+    -webkit-transform: scale(1.1) rotate(6deg);
+     transform: scale(1.1) rotate(6deg);
+     transition: 0.3s ease-in;
+}
 .phone{
     display: none;
 }
