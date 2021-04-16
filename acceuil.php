@@ -53,7 +53,7 @@
                     <br>
                     Notre journal des aliments omettera toute incertitude !
                 </p>
-                <div class="services__btn"><button class="btn btn-primary">Consulter Journal</button></div>
+                <div class="services__btn"><button class="btn btn-primary">Journal</button></div>
             </div>
             <div class="service col4">
                 <img src="images/resto.png">
@@ -62,7 +62,7 @@
                     <br>
                     Decouvrez les localisations des restaurants en Tunisie avec des repas sans gluten et plus.
                 </p>
-                <div class="services__btn"><button class="btn btn-primary">Liste Des Restaurants</button></div>
+                <div class="services__btn"><button class="btn btn-primary">Carte</button></div>
             </div>
             <div class="service col4">
                 <img src="images/faq.png">
@@ -85,17 +85,28 @@
         </div>
     </div>
     <div class="row donation">
-    <div class="col8"></div>
-    <div class="col4">
-    <img class="imgDon" src="images/dons.png" alt="dons">
-    </div>
+        <div class="col9">
+            <h2 class="c4">Faites un don !</h2>
+            <p>Vivre sans gluten est couteux voire irréalisable pour certains malades.</p>
+            <p> Faites un dons monétaire ou de produits et sauvez leurs vies!</p>
+            
+            <button class="button  btn btn-primary">Aidez d'autres!</button>
+        </div>
+        <div class="col3">
+            <img class="imgDon" src="images/dons.png" alt="dons">
+        </div>
     </div>
     <div class="row quizz">
-    
-    <div class="col4">
-    <img class="imgDon" src="images/dons.png" alt="dons">
+
+        <div class="col3">
+            <img class="imgDon" src="images/quizz.png" alt="dons">
+        </div>
+        <div class="col9">
+            <h2 class="c4">Prenez notre quizz!<h2>
+                    <p>Vous avez quelques symptomes et vous pensez que c'est coeliaque?</p>
+                    <p> Prenez notre quizz réalisé par des spécialites et vous aurez le meilleur conseil!</p>
+                   <button class="button btn btn-primary">Quizz</button>
     </div>
-    <div class="col8"></div>
     </div>
     <?php include("footer.php"); ?>
 
