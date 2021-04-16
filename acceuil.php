@@ -89,7 +89,7 @@
             <h2 class="c4">Faites un don !</h2>
             <p>Vivre sans gluten est couteux voire irréalisable pour certains malades.</p>
             <p> Faites un dons monétaire ou de produits et sauvez leurs vies!</p>
-            
+
             <button class="button  btn btn-primary">Aidez d'autres!</button>
         </div>
         <div class="col3">
@@ -98,15 +98,18 @@
     </div>
     <div class="row quizz">
 
-        <div class="col3">
+        <div class="col3 web">
             <img class="imgDon" src="images/quizz.png" alt="dons">
         </div>
         <div class="col9">
             <h2 class="c4">Prenez notre quizz!<h2>
-                    <p>Vous avez quelques symptomes et vous pensez que c'est coeliaque?</p>
-                    <p> Prenez notre quizz réalisé par des spécialites et vous aurez le meilleur conseil!</p>
-                   <button class="button btn btn-primary">Quizz</button>
-    </div>
+                    <p>Vous avez quelques symptomes de la maladie coeliaque?</p>
+                    <p> Prenez un quizz réalisé par des spécialites pour le meilleur conseil!</p>
+                    <button class="button btn btn-primary">Quizz</button>
+        </div>
+        <div class="col3 phone">
+            <img class="imgDon" src="images/quizz.png" alt="dons">
+        </div>
     </div>
     <?php include("footer.php"); ?>
 
