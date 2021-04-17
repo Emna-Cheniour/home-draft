@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recette</title>
+  <link rel="stylesheet" href="css/bootstrap.min (1).css (1).css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/colors.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="css/recipeStyle.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  
+</head>
+<body>
+  <div class="navbar-custom">
+    <img class="logopic" src="images/logo1.png" alt="Logo">
+    <span class="pagename">Celiac101</span>
+    <ul class='navLinks'>
+        <li><a href="acceuil.php">Acceuil </a></li>
+        <li id="drop">Services <i class="fas fa-caret-down dropPhone"></i></li>
+        <li><a href="#">Informations </a></li>
+    </ul>
+    <div class="dropdownForPhone">
+        <ul>
+            <li><a href="#">Catalogue des produits</a></li>
+            <li><a href="#">Journal des aliments</a></li>
+        </ul>
+        <ul>
+            <li><a href="#">Localisations</a></li>
+            <li><a href="#">Contacter un specialiste</a></li>
+        </ul>
+        <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Recettes</a></li>
+        </ul>
+        <ul></ul>
+    </div>
+    <ul class="righNavLinks">
+        <li><a href=""> <i title="Dons" class="fas fa-donate"></i><a></li>
+        <li><a href=""> <i title="Chariot" class="fas fa-shopping-cart"></i><a></li>
+        <li id="dropProfil"> <i title="profil" class="fas fa-user"></i></li>
+    </ul>
+</div>
+
+<div class="dropdown-service">
+    <ul>
+        <li><a href="#">Catalogue des produits</a></li>
+        <li><a href="#">Journal des aliments</a></li>
+    </ul>
+    <ul>
+        <li><a href="#">Localisations</a></li>
+        <li><a href="#">Contacter un specialiste</a></li>
+    </ul>
+    <ul>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Recettes</a></li>
+    </ul>
+    <ul></ul>
+</div>
+<div class="dropdownProfil">
+    <ul>
+    <li><a href="#">Modifier Profil</a></li>
+    <li>Se Deconnecter</li>
+    </ul>
+</div>
+  
+
+  <div class="search__wrapper">
+
+    <div class="form-group">
+
+      <div class="dropdown">
+        <div class="default-option">Filtre</div>
+
+        <div class="dropdown-list">
+          <ul class="indicator">
+            <!--<li data-filter="all" class="active"><button><a href="#">Tous</a></button></li>-->
+            <li><button><a href="#">Pâtes</a></button></li>
+            <li><button><a href="#">Plat Végétarien</a></button></li>
+            <li><button><a href="#">Salade</a></button></li>
+            <li><button><a href="#">Smoothie</a></button></li>
+            <li><button><a href="#">Plat Tunisien</a></button></li>
+            <li><button><a href="#">Pâtisseries</a></button></li>
+            
+          </ul>
+        </div>
+      </div>
+
+      
+    <div class="search__input">
+     <!--<img class="search-icon" src="images/loupe.png"/>--> 
+     <i class="fas fa-search" id="search__icon"></i>
+      <input id="search" placeholder="Rechercher..." type="text">
+    
+    </div>
+
+    </div>
+  </div>
+
+
+  <div class="card__wrapper">
+
+    <div class="card" >
+      <div  class="card__body">
+        <img src="icons/reciper1.jpg" class="card__img">
+        <h2 class="card__title">Bowl Chia</h2>
+        
+        <div class="card__detail">
+          <div class="detail__field">
+            <span class="number">20</span>
+            <span class="expression">Minutes</span>
+          </div>
+
+          <div class="detail__field">
+            <span class="number">5</span>
+            <span class="expression">Ingredients</span>
+          </div>
+
+          <div class="detail__field">
+            <span class="number">4-6</span>
+            <span class="expression">Servings</span>
+          </div>
+        </div>
+        <p class="card__description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum tempore corrupti culpa minima velit, et,</p>
+      </div>
+      <div class="card__options">
+        <button class="card__btn"><a href="recetteIndiv.html">Voir Recette</a></button>
+
+        <div class="card__icons">
+          <a  class="like">
+              <i class="fa fa-heart" aria-hidden="true"></i>
+          </a>
+          
+          <img class="add" src="icons/plus.png">
+          
+        </div>
+      </div>
+      
+    </div>
+
+    <div class="card" >
+      <div class="card__body" >
+        <img src="icons/reciper2.jpg" class="card__img">
+        <h2 class="card__title">Recipe2</h2>
+        <div class="card__detail">
+          <div class="detail__field">
+            <span class="number">20</span>
+            <span class="expression">Minutes</span>
+          </div>
+
+          <div class="detail__field">
+            <span class="number">5</span>
+            <span class="expression">Ingredients</span>
+          </div>
+
+          <div class="detail__field">
+            <span class="number">4-6</span>
+            <span class="expression">Servings</span>
+          </div>
+        </div>
+        <p class="card__description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum tempore corrupti culpa minima velit, et,</p>
+      </div>
+      <div class="card__options">
+        <button class="card__btn"><a href="#">Voir Recette</a></button>
+        <div class="card__icons">
+          <a class="like">
+            <i class="fa fa-heart" aria-hidden="true"></i>
+          </a>
+          <img src="icons/plus.png">
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card__body" >
+        <img src="icons/reciper3.jpg" class="card__img">
+        <h2 class="card__title">Recipe3</h2>
+        <div class="card__detail">
+          <div class="detail__field">
+            <span class="number">20</span>
+            <span class="expression">Minutes</span>
+          </div>
+
+          <div class="detail__field">
+            <span class="number">5</span>
+            <span class="expression">Ingredients</span>
+          </div>
+
+          <div class="detail__field">
+            <span class="number">4-6</span>
+            <span class="expression">Servings</span>
+          </div>
+        </div>
+        <p class="card__description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum tempore corrupti culpa minima velit, et, </p>
+      </div>
+      <div class="card__options">
+        <button class="card__btn"><a href="#">Voir Recette</a></button>
+        <div class="card__icons">
+          <a class="like">
+            <i class="fa fa-heart" aria-hidden="true"></i>
+          </a>
+          <img src="icons/plus.png">
+        </div>
+      </div>
+    </div>
+
+    <div class="card" >
+      <div class="card__body">
+        <img src="icons/reciper4.jpg" class="card__img">
+        <h2 class="card__title">Recipe4</h2>
+        <div class="card__detail">
+          <div class="detail__field">
+            <span class="number">20</span>
+            <span class="expression">Minutes</span>
+          </div>
+
+          <div class="detail__field">
+            <span class="number">5</span>
+            <span class="expression">Ingredients</span>
+          </div>
+
+          <div class="detail__field">
+            <span class="number">4-6</span>
+            <span class="expression">Servings</span>
+          </div>
+        </div>
+        <p class="card__description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum tempore corrupti culpa minima velit, et,</p>
+      </div>
+      <div class="card__options">
+        <button class="card__btn"><a href="#">Voir Recette</a></button>
+        <div class="card__icons">
+          <a class="like">
+            <i class="fa fa-heart" aria-hidden="true"></i>
+          </a>
+          <img src="icons/plus.png">
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card__body" >
+        <img src="icons/reciper5.jpg" class="card__img">
+        <h2 class="card__title">Recipe5</h2>
+        <div class="card__detail">
+          <div class="detail__field">
+            <span class="number">20</span>
+            <span class="expression">Minutes</span>
+          </div>
+
+          <div class="detail__field">
+            <span class="number">5</span>
+            <span class="expression">Ingredients</span>
+          </div>
+
+          <div class="detail__field">
+            <span class="number">4-6</span>
+            <span class="expression">Servings</span>
+          </div>
+        </div>
+        <p class="card__description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum tempore corrupti culpa minima velit, et,</p>
+      </div>
+      <div class="card__options">
+        <button class="card__btn"><a href="#">Voir Recette</a></button>
+        <div class="card__icons">
+          <a class="like">
+            <i class="fa fa-heart" aria-hidden="true"></i>
+          </a>
+          <img src="icons/plus.png">
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card__body" >
+        <img src="icons/reciper6.jpg" class="card__img">
+        <h2 class="card__title">Recipe6</h2>
+        <div class="card__detail">
+          <div class="detail__field">
+            <span class="number">20</span>
+            <span class="expression">Minutes</span>
+          </div>
+
+          <div class="detail__field">
+            <span class="number">5</span>
+            <span class="expression">Ingredients</span>
+          </div>
+
+          <div class="detail__field">
+            <span class="number">4-6</span>
+            <span class="expression">Servings</span>
+          </div>
+        </div>
+        <p class="card__description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum tempore corrupti culpa minima velit, et,</p>
+      </div>
+      <div class="card__options">
+        <button class="card__btn"><a href="#">Voir Recette</a></button>
+        <div class="card__icons">
+          <a class="like">
+            <i class="fa fa-heart" aria-hidden="true"></i>
+          </a>
+          
+          <img src="icons/plus.png">
+        </div>
+      </div>
+    </div>
+
+    <div class="card" >
+      <div class="card__body" >
+        <img src="icons/reciper7.jpg" class="card__img">
+        <h2 class="card__title">Recipe7</h2>
+        <div class="card__detail">
+          <div class="detail__field">
+            <span class="number">20</span>
+            <span class="expression">Minutes</span>
+          </div>
+
+          <div class="detail__field">
+            <span class="number">5</span>
+            <span class="expression">Ingredients</span>
+          </div>
+
+          <div class="detail__field">
+            <span class="number">4-6</span>
+            <span class="expression">Servings</span>
+          </div>
+        </div>
+        <p class="card__description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum tempore corrupti culpa minima velit, et,</p>
+      </div>
+      <div class="card__options">
+        <button class="card__btn"><a href="#">Voir Recette</a></button>
+        <div class="card__icons">
+          
+          <a class="like">
+            <i class="fa fa-heart" aria-hidden="true"></i>
+          </a>
+          <img src="icons/plus.png">
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card__body" >
+        <img src="icons/reciper8.jpg" class="card__img">
+        <h2 class="card__title">Recipe8</h2>
+        <div class="card__detail">
+          <div class="detail__field">
+            <span class="number">20</span>
+            <span class="expression">Minutes</span>
+          </div>
+
+          <div class="detail__field">
+            <span class="number">5</span>
+            <span class="expression">Ingredients</span>
+          </div>
+
+          <div class="detail__field">
+            <span class="number">4-6</span>
+            <span class="expression">Servings</span>
+          </div>
+        </div>
+        <p class="card__description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum tempore corrupti culpa minima velit, et,</p>
+      </div>
+      <div class="card__options">
+        <button class="card__btn"><a href="#">Voir Recette</a></button>
+        <div class="card__icons">
+          <a class="like">
+            <i class="fa fa-heart" aria-hidden="true"></i>
+          </a>
+          <img src="icons/plus.png">
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card__body" >
+        <img src="icons/reciper9.jpg" class="card__img">
+        <h2 class="card__title">Recipe9</h2>
+        <div class="card__detail">
+          <div class="detail__field">
+            <span class="number">20</span>
+            <span class="expression">Minutes</span>
+          </div>
+
+          <div class="detail__field">
+            <span class="number">5</span>
+            <span class="expression">Ingredients</span>
+          </div>
+
+          <div class="detail__field">
+            <span class="number">4-6</span>
+            <span class="expression">Servings</span>
+          </div>
+        </div>
+        <p class="card__description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum tempore corrupti culpa minima velit, et,</p>
+      </div>
+      <div class="card__options">
+        <button class="card__btn"><a href="#">Voir Recette</a></button>
+        <div class="card__icons">
+          <a class="like">
+            <i class="fa fa-heart" aria-hidden="true"></i>
+          </a>
+          <img src="icons/plus.png">
+        </div>
+      </div>
+    </div>
+
+    
+
+  </div>
+<!--<div class="footer__container">
+
+    <div class="footer__links">
+
+      <div class="footer__link--wrapper">
+
+        <div class="footer__link--item">
+          <h2>A propos</h2>
+          <div class="link">
+            <img src="icons/teamwork.png">
+            <a href="#">Professionnels</a>
+          </div>
+          <div class="link">
+            <img src="icons/donate.png">
+            <a href="#">Organisations</a>
+          </div>
+          
+          <div class="link">
+            <img src="icons/gluten.png">
+            <a href="#">Produits</a>
+          </div>
+          <div class="link">
+            <img src="images/express-delivery.png">
+            <a href="#">Infos de livraison</a>
+          </div>
+          
+        </div>
+
+        <div class="footer__link--item">
+          <h2>Suivez-Nous sur les réseaux sociaux </h2>
+          <div class="link">
+            <i id="fb" class="fa fa-facebook-square"></i>
+            <a href="#">Facebook</a>
+          </div>
+          <div class="link">
+            <i id="insta" class="fa fa-instagram"></i>
+            <a href="#">Instagram</a>
+          </div>
+          <div class="link">
+            <i id="twitter" class="fa fa-twitter"></i>
+            <a href="#">Twitter</a>
+          </div>
+          <div class="link">
+            <i id="yt" class="fa fa-youtube-play"></i>
+            <a href="#">Youtube</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    
+  </div>-->
+  
+  <script src="Js/heart.js"></script>
+  <script src="Js/searchBar.js"></script>
+  <script src="Js/drop.js"></script>
+  <script src="Js/main.js"></script>
+</body>
+</html>
