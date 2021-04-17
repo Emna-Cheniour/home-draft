@@ -7,13 +7,12 @@ body {
 }
 
 p {
-    color: #0B162C;
+    color: #1C2942;
 }
 
 a,
 a:hover {
     text-decoration: none;
-    color: white;
 }
 
 ul {
@@ -22,7 +21,7 @@ ul {
     padding: 0;
 }
 
-button{
+button{ /*non*/ 
     width: 150px;
 }
 
@@ -123,8 +122,7 @@ button{
 .dropdownService ul li a:hover,
 .dropdownProfil ul li a:hover,
 .dropdownProfil ul li:hover {
-    font-weight: bold;
-    color: #3b556d !important;
+    color: #137c8b !important;
     cursor: pointer;
 
 }
