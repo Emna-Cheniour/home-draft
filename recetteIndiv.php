@@ -10,8 +10,6 @@
     <link rel="stylesheet" href="css/colors.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
    <link rel="stylesheet" href="css/recipeIndivStyle.css">
-   
- 
   
 </head>
 <body>
@@ -295,6 +293,7 @@
   
   
 </div>
+
 <script src="Js/starHover.js"></script>
 
 <!--<script src="js/serving.js"></script>-->

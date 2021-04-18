@@ -5,6 +5,6 @@
     </div>
     <button class="back__btn">
       <img src="icons/back.png" alt="">
-      <a href="recette.html">Retour</a>
+      <a href="recette.php">Retour</a>
     </button>
   </div>
