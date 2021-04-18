@@ -4,8 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Recette</title>
-  <link rel="stylesheet" href="css/bootstrap.min (1).css (1).css">
+  <title>Liste Des Recettes</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/colors.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
@@ -15,58 +14,8 @@
   
 </head>
 <body>
-  <div class="navbar-custom">
-    <img class="logopic" src="images/logo1.png" alt="Logo">
-    <span class="pagename">Celiac101</span>
-    <ul class='navLinks'>
-        <li><a href="acceuil.php">Acceuil </a></li>
-        <li id="drop">Services <i class="fas fa-caret-down dropPhone"></i></li>
-        <li><a href="#">Informations </a></li>
-    </ul>
-    <div class="dropdownForPhone">
-        <ul>
-            <li><a href="#">Catalogue des produits</a></li>
-            <li><a href="#">Journal des aliments</a></li>
-        </ul>
-        <ul>
-            <li><a href="#">Localisations</a></li>
-            <li><a href="#">Contacter un specialiste</a></li>
-        </ul>
-        <ul>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">Recettes</a></li>
-        </ul>
-        <ul></ul>
-    </div>
-    <ul class="righNavLinks">
-        <li><a href=""> <i title="Dons" class="fas fa-donate"></i><a></li>
-        <li><a href=""> <i title="Chariot" class="fas fa-shopping-cart"></i><a></li>
-        <li id="dropProfil"> <i title="profil" class="fas fa-user"></i></li>
-    </ul>
-</div>
-
-<div class="dropdown-service">
-    <ul>
-        <li><a href="#">Catalogue des produits</a></li>
-        <li><a href="#">Journal des aliments</a></li>
-    </ul>
-    <ul>
-        <li><a href="#">Localisations</a></li>
-        <li><a href="#">Contacter un specialiste</a></li>
-    </ul>
-    <ul>
-        <li><a href="#">FAQ</a></li>
-        <li><a href="#">Recettes</a></li>
-    </ul>
-    <ul></ul>
-</div>
-<div class="dropdownProfil">
-    <ul>
-    <li><a href="#">Modifier Profil</a></li>
-    <li>Se Deconnecter</li>
-    </ul>
-</div>
-  
+ 
+<?php include("navbarConnecte.php"); ?>  
 
   <div class="search__wrapper">
 
@@ -91,7 +40,6 @@
 
       
     <div class="search__input">
-     <!--<img class="search-icon" src="images/loupe.png"/>--> 
      <i class="fas fa-search" id="search__icon"></i>
       <input id="search" placeholder="Rechercher..." type="text">
     
@@ -410,62 +358,15 @@
     
 
   </div>
-<!--<div class="footer__container">
 
-    <div class="footer__links">
 
-      <div class="footer__link--wrapper">
+  <?php include("footer.php"); ?>
 
-        <div class="footer__link--item">
-          <h2>A propos</h2>
-          <div class="link">
-            <img src="icons/teamwork.png">
-            <a href="#">Professionnels</a>
-          </div>
-          <div class="link">
-            <img src="icons/donate.png">
-            <a href="#">Organisations</a>
-          </div>
-          
-          <div class="link">
-            <img src="icons/gluten.png">
-            <a href="#">Produits</a>
-          </div>
-          <div class="link">
-            <img src="images/express-delivery.png">
-            <a href="#">Infos de livraison</a>
-          </div>
-          
-        </div>
 
-        <div class="footer__link--item">
-          <h2>Suivez-Nous sur les réseaux sociaux </h2>
-          <div class="link">
-            <i id="fb" class="fa fa-facebook-square"></i>
-            <a href="#">Facebook</a>
-          </div>
-          <div class="link">
-            <i id="insta" class="fa fa-instagram"></i>
-            <a href="#">Instagram</a>
-          </div>
-          <div class="link">
-            <i id="twitter" class="fa fa-twitter"></i>
-            <a href="#">Twitter</a>
-          </div>
-          <div class="link">
-            <i id="yt" class="fa fa-youtube-play"></i>
-            <a href="#">Youtube</a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-    
-  </div>-->
-  
+  <script src="Js/main.js"></script>
   <script src="Js/heart.js"></script>
   <script src="Js/searchBar.js"></script>
   <script src="Js/drop.js"></script>
-  <script src="Js/main.js"></script>
+  
 </body>
 </html>
