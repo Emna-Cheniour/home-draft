@@ -21,7 +21,7 @@
                     <br>
                     Visitez notre catalogue et jouissez de la qualité au meilleur prix.
                 </p>
-                <div class="services__btn"><button class="btn btn1">Catalogue</button></div>
+                <div class="services__btn"><a class="btn btn1">Catalogue</a></div>
             </div>
             <div class="service col4">
                 <img src="images/recette.png">
@@ -30,7 +30,7 @@
                     <br>
                     Pour ceci, Celiac101 vous offre des recettes testées et leurs démarches simplifiées.
                 </p>
-                <div class="services__btn"><button class="btn btn2">Recettes</button></div>
+                <div class="services__btn"><a href="recette.php" class="btn btn2">Recettes</a></div>
             </div>
             <div class="service col4">
                 <img src="images/aliment.png">
@@ -39,7 +39,7 @@
                     <br>
                     Notre journal des aliments omettera toute incertitude !
                 </p>
-                <div class="services__btn"><button class="btn btn1">Journal</button></div>
+                <div class="services__btn"><a class="btn btn1">Journal</a></div>
             </div>
             <div class="service col4">
                 <img src="images/resto.png">
@@ -48,7 +48,7 @@
                     <br>
                     Decouvrez les localisations des restaurants en Tunisie avec des repas sans gluten et plus.
                 </p>
-                <div class="services__btn"><button class="btn btn2">Carte</button></div>
+                <div class="services__btn"><a class="btn btn2">Carte</a></div>
             </div>
             <div class="service col4">
                 <img src="images/faq.png">
@@ -57,7 +57,7 @@
                     <br>
                     Découvrez maintenant leurs réponses correctes, faciles à comprendre et brèves !
                 </p>
-                <div class="services__btn"><button class="btn btn1">FAQ</button></div>
+                <div class="services__btn"><a class="btn btn1">FAQ</a></div>
             </div>
             <div class="service col4">
                 <img src="images/nutritionist.png">
@@ -66,7 +66,7 @@
                     <br>
                     Vous pouvez les contacter et demander leurs conseils.
                 </p>
-                <div class="services__btn"><button class="btn btn2">Contacter</button></div>
+                <div class="services__btn"><a class="btn btn2">Contacter</a></div>
             </div>
         </div>
     </div>
