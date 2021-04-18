@@ -111,10 +111,11 @@
             <img class="imgDon" src="images/quizz.png" alt="dons">
         </div>
     </div>
+
     <?php include("footer.php"); ?>
 
 
-    <script src="js/main.js"></script>
+    <script src="Js/main.js"></script>
 
 </body>
 

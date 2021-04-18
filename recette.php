@@ -75,7 +75,7 @@
         <p class="card__description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum tempore corrupti culpa minima velit, et,</p>
       </div>
       <div class="card__options">
-        <button class="card__btn"><a href="recetteIndiv.html">Voir Recette</a></button>
+        <button class="card__btn"><a href="recetteIndiv.php">Voir Recette</a></button>
 
         <div class="card__icons">
           <a  class="like">
@@ -360,7 +360,7 @@
   </div>
 
 
-  <?php include("footer.php"); ?>
+ 
 
 
   <script src="Js/main.js"></script>
