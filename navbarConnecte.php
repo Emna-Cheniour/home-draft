@@ -3,7 +3,7 @@
     <span class="pagename">Celiac101</span>
     <ul class='navLinks'>
         <li><a href="acceuil.php">Acceuil </a></li>
-        <li id="drop">Services <i class="fas fa-caret-down dropPhone"></i></li>
+        <li id="drop">Services </li>
         <li><a href="#">Informations </a></li>
     </ul>
     <div class="dropdownForPhone">

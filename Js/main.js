@@ -1,5 +1,4 @@
-const drop= document.querySelector('#drop');
-const dropPhone= document.querySelector('.dropPhone');
+const dropIt= document.querySelector('#drop');
 const dropdiv = document.querySelector(".dropdownService");
 const dropdivPhone = document.querySelector(".dropdownForPhone");
 const dropProfil = document.querySelector("#dropProfil");
@@ -11,6 +10,6 @@ function show(x,y,d){ //Fonction pour afficher ou enlever un element par clic su
          else y.style.display="none";
      })
 }
-show(drop,dropdiv,"block");
-show(dropPhone,dropdivPhone,"inline-block");
+show(dropIt,dropdiv,"block");
+show(dropIt,dropdivPhone,"inline-block");
 show(dropProfil,dropDivProfil,"block");

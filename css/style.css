@@ -20,18 +20,7 @@ ul {
     margin: 0;
     padding: 0;
 }
-/*
-button{
-    width: 150px;
-}*/
 
-
- button:hover {
-    cursor: pointer;
-    /*font-size: 1.08rem;*/
-    transition: 0.3s ease-in;
-
-}
 
 
 /*  grid*/
@@ -117,11 +106,16 @@ button{
     position: relative;
 }
 
-.navbar-custom ul li:hover,
-.navbar-custom ul li a:hover,
-.dropdownService ul li a:hover,
-.dropdownProfil ul li a:hover,
-.dropdownProfil ul li:hover {
+.navbar-custom a,
+.navbar-custom li {
+    color: white;
+}
+
+.navbar-custom li:hover,
+.navbar-custom li a:hover,
+.dropdownService li a:hover,
+.dropdownProfil li a:hover,
+.dropdownProfil li:hover {
     color: #137c8b !important;
     cursor: pointer;
 
@@ -159,9 +153,9 @@ button{
 
 .navLinks li {
     display: inline-block;
-    color: white;
     margin: 0 20px 0;
 }
+
 
 .righNavLinks {
     display: inline-block;
@@ -177,8 +171,8 @@ button{
     padding: 0 20px 0;
     display: inline-block;
     line-height: 80px;
-    color: white;
 }
+
 
 @media only screen and (max-width: 900px) {
     /* Barre de navigation */
@@ -219,8 +213,11 @@ button{
     width: 203px;
     font-size: 15px;
     list-style-type: none;
-    color: white;
     padding: 5px;
+}
+
+.dropdownService ul li a {
+    color: white;
 }
 
 .dropdownForPhone {
@@ -236,16 +233,10 @@ button{
     height: 0;
 }
 
-.dropPhone {
-    display: none !important;
-}
 
 @media only screen and (max-width: 900px) {
 
     /* Dropdown services*/
-    .dropPhone {
-        display: inline-block !important;
-    }
 
     .dropdownService {
         height: 0;
@@ -350,7 +341,7 @@ button{
 
 .service h2 {
     text-align: center;
-    color: #1C2942;
+    color: #3498db;
     font-size: 30px;
 }
 
@@ -380,8 +371,7 @@ button{
     }
 
 }
-
-@media screen and (max-width:768px) {
+@media screen and (max-width:950px) {
     .serviceRow {
         grid-template-columns: 1fr;
     }
@@ -442,6 +432,10 @@ button{
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.myFooter a {
+    color: white;
 }
 
 .myFooter a :hover,
@@ -513,32 +507,38 @@ button{
     border-radius: 200px;
     border: 2px solid #5FC2BA;
 }
-.imgDon:hover{
+
+.imgDon:hover {
     -webkit-transform: scale(1.1) rotate(6deg);
-     transform: scale(1.1) rotate(6deg);
-     transition: 0.3s ease-in;
+    transform: scale(1.1) rotate(6deg);
+    transition: 0.3s ease-in;
 }
-.phone{
+
+.phone {
     display: none;
 }
 
 
 @media screen and (max-width:1100px) {
-   .donation div,.quizz div {
-       width: 100%;
-   }
 
-@media only screen and (max-width: 1100px) {
-    .phone{
-        display: block;
+    .donation div,
+    .quizz div {
+        width: 100%;
     }
-    .web{
-        display: none;
+
+    @media only screen and (max-width: 1100px) {
+        .phone {
+            display: block;
+        }
+
+        .web {
+            display: none;
+        }
     }
 }
- }
-/* * {
+/* s
+ * {
   background: #000 !important;
   color: #0f0 !important;
   outline: solid #f00 1px !important;
-} */
+}  */

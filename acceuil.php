@@ -1,18 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/bootstrap.min (1).css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/colors.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
-
-    <title>Celiac101</title>
-</head>
-
+<?php include("head.php"); ?>
 <body>
     <?php include("navbarDeconnecte.php"); ?>
     <div class="row poster">
@@ -35,7 +21,7 @@
                     <br>
                     Visitez notre catalogue et jouissez de la qualité au meilleur prix.
                 </p>
-                <div class="services__btn"><button class="btn btn-primary">Catalogue</button></div>
+                <div class="services__btn"><button class="btn btn1">Catalogue</button></div>
             </div>
             <div class="service col4">
                 <img src="images/recette.png">
@@ -44,7 +30,7 @@
                     <br>
                     Pour ceci, Celiac101 vous offre des recettes testées et leurs démarches simplifiées.
                 </p>
-                <div class="services__btn"><button class="btn btn-primary">Recettes</button></div>
+                <div class="services__btn"><button class="btn btn2">Recettes</button></div>
             </div>
             <div class="service col4">
                 <img src="images/aliment.png">
@@ -53,7 +39,7 @@
                     <br>
                     Notre journal des aliments omettera toute incertitude !
                 </p>
-                <div class="services__btn"><button class="btn btn-primary">Journal</button></div>
+                <div class="services__btn"><button class="btn btn1">Journal</button></div>
             </div>
             <div class="service col4">
                 <img src="images/resto.png">
@@ -62,7 +48,7 @@
                     <br>
                     Decouvrez les localisations des restaurants en Tunisie avec des repas sans gluten et plus.
                 </p>
-                <div class="services__btn"><button class="btn btn-primary">Carte</button></div>
+                <div class="services__btn"><button class="btn btn2">Carte</button></div>
             </div>
             <div class="service col4">
                 <img src="images/faq.png">
@@ -71,7 +57,7 @@
                     <br>
                     Découvrez maintenant leurs réponses correctes, faciles à comprendre et brèves !
                 </p>
-                <div class="services__btn"><button class="btn btn-primary">FAQ</button></div>
+                <div class="services__btn"><button class="btn btn1">FAQ</button></div>
             </div>
             <div class="service col4">
                 <img src="images/nutritionist.png">
@@ -80,7 +66,7 @@
                     <br>
                     Vous pouvez les contacter et demander leurs conseils.
                 </p>
-                <div class="services__btn"><button class=" btn btn-primary">Contacter</button></div>
+                <div class="services__btn"><button class="btn btn2">Contacter</button></div>
             </div>
         </div>
     </div>
@@ -90,7 +76,7 @@
             <p>Vivre sans gluten est couteux voire irréalisable pour certains malades.</p>
             <p> Faites un dons monétaire ou de produits et sauvez leurs vies!</p>
 
-            <button class="button  btn btn-primary">Aidez d'autres!</button>
+            <button class="btn btn3">Aidez d'autres!</button>
         </div>
         <div class="col3">
             <img class="imgDon" src="images/dons.png" alt="dons">
@@ -105,7 +91,7 @@
             <h2 class="c4">Prenez notre quizz!<h2>
                     <p>Vous avez quelques symptomes de la maladie coeliaque?</p>
                     <p> Prenez un quizz réalisé par des spécialites pour le meilleur conseil!</p>
-                    <button class="button btn btn-primary">Quizz</button>
+                    <button class="btn btn4">Quizz</button>
         </div>
         <div class="col3 phone">
             <img class="imgDon" src="images/quizz.png" alt="dons">
