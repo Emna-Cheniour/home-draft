@@ -115,7 +115,7 @@
     <?php include("footer.php"); ?>
 
 
-    <script src="Js/main.js"></script>
+    <script src="js/main.js"></script>
 
 </body>
 
