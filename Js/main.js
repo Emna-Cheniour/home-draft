@@ -13,3 +13,4 @@ function show(x,y,d){ //Fonction pour afficher ou enlever un element par clic su
 show(dropIt,dropdiv,"block");
 show(dropIt,dropdivPhone,"inline-block");
 show(dropProfil,dropDivProfil,"block");
+/*//*/
