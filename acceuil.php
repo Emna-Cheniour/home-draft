@@ -1,9 +1,9 @@
 <?php include("head.php"); ?>
 
 <body>
-    
+
     <?php include("navbarDeconnecte.php"); ?>
-    
+
     <div class="row poster">
         <div class="col8 posterDetails">
             <h2 class="c4">Celiac101</h2>
@@ -104,19 +104,20 @@
             </div>
         </div>
         <div class="col">
-            
-    <h3>Vous avez besoin d'un
-        <span class="txt-rotate" data-period="2000" data-rotate='["medécin?","nutritioniste?","gastrologue?"]'></span> 
-    </h3>
+            <div class="container">
+                <h4>Vous avez besoin d'un
+                    <span class="txt-rotate" data-period="2000" data-rotate='["medécin?","nutritioniste?","gastrologue?"]'></span>
+                </h4>
+            </div>
 
         </div>
     </div>
 
 
     <?php include("footer.php"); ?>
-    
+
     <script src="js/txtRotation.js"></script>
-    
+
     <script src="js/main.js"></script>
 
 </body>

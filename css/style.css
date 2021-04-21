@@ -36,6 +36,7 @@ ul {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    
 }
 
 .col {
@@ -556,3 +557,13 @@ ul {
   color: #0f0 !important;
   outline: solid #f00 1px !important;
 }  */
+/*trials*/
+.maliste{
+    height: 60px;
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    background-color: #1C2942;
+    color: white;
+}
