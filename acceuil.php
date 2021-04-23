@@ -1,8 +1,9 @@
 <?php include("head.php"); ?>
+
 <body>
+
     <?php include("navbarDeconnecte.php"); ?>
-<!--logout button test-->
-    <div class="logoutBtn"><button><a href="logout.php">SE DECONNECTER</a></button></div>
+
     <div class="row poster">
         <div class="col8 posterDetails">
             <h2 class="c4">Celiac101</h2>
@@ -72,36 +73,50 @@
             </div>
         </div>
     </div>
-    <div class="row donation">
-        <div class="col9">
-            <h2 class="c4">Faites un don !</h2>
-            <p>Vivre sans gluten est couteux voire irréalisable pour certains malades.</p>
-            <p> Faites un dons monétaire ou de produits et sauvez leurs vies!</p>
+    <div class="row">
+        <div class="col" style="flex: 1.5;">
+            <div class="row rowy donation">
+                <div class="col9">
+                    <h2 class="c4">Faites un don !</h2>
+                    <p>Vivre sans gluten est couteux voire irréalisable pour certains malades.</p>
+                    <p> Faites un dons monétaire ou de produits et sauvez leurs vies!</p>
 
-            <button class="btn btn3">Aidez d'autres!</button>
+                    <button class="btn btn3">Aidez d'autres!</button>
+                </div>
+                <div class="col3">
+                    <img class="imgDon" src="images/dons.png" alt="dons">
+                </div>
+            </div>
+            <div class="row rowy quizz">
+
+                <div class="col3 web">
+                    <img class="imgDon" src="images/quizz.png" alt="dons">
+                </div>
+                <div class="col9">
+                    <h2 class="c4">Prenez notre quizz!<h2>
+                            <p>Vous avez quelques symptomes de la maladie coeliaque?</p>
+                            <p> Prenez un quizz réalisé par des spécialites pour le meilleur conseil!</p>
+                            <button class="btn btn4">Quizz</button>
+                </div>
+                <div class="col3 phone">
+                    <img class="imgDon" src="images/quizz.png" alt="dons">
+                </div>
+            </div>
         </div>
-        <div class="col3">
-            <img class="imgDon" src="images/dons.png" alt="dons">
+        <div class="col">
+            <div class="container">
+                <h4>Vous avez besoin d'un
+                    <span class="txt-rotate" data-period="2000" data-rotate='["medécin?","nutritioniste?","gastrologue?"]'></span>
+                </h4>
+            </div>
+
         </div>
     </div>
-    <div class="row quizz">
 
-        <div class="col3 web">
-            <img class="imgDon" src="images/quizz.png" alt="dons">
-        </div>
-        <div class="col9">
-            <h2 class="c4">Prenez notre quizz!<h2>
-                    <p>Vous avez quelques symptomes de la maladie coeliaque?</p>
-                    <p> Prenez un quizz réalisé par des spécialites pour le meilleur conseil!</p>
-                    <button class="btn btn4">Quizz</button>
-        </div>
-        <div class="col3 phone">
-            <img class="imgDon" src="images/quizz.png" alt="dons">
-        </div>
-    </div>
 
     <?php include("footer.php"); ?>
 
+    <script src="js/txtRotation.js"></script>
 
     <script src="js/main.js"></script>
 

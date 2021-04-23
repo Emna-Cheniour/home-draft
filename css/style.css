@@ -21,12 +21,7 @@ ul {
     padding: 0;
 }
 
-
-
-/*  grid*/
-
 * {
-    /*Pourr tout le document*/
     box-sizing: border-box;
     /* width= padding+width+border et Height= padding+height+border*/
     margin: 0;
@@ -34,6 +29,24 @@ ul {
     padding: 0;
     font-family: 'Poppins', sans-serif;
 }
+
+/* flex*/
+
+.rowy {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+/* Width */
+
 
 .col1 {
     width: 8.33%;
@@ -371,6 +384,7 @@ ul {
     }
 
 }
+
 @media screen and (max-width:950px) {
     .serviceRow {
         grid-template-columns: 1fr;
@@ -536,9 +550,20 @@ ul {
         }
     }
 }
+
 /* s
  * {
   background: #000 !important;
   color: #0f0 !important;
   outline: solid #f00 1px !important;
 }  */
+/*trials*/
+.maliste{
+    height: 60px;
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    background-color: #1C2942;
+    color: white;
+}
