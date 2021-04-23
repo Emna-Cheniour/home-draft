@@ -1,6 +1,8 @@
 <?php include("head.php"); ?>
 <body>
     <?php include("navbarDeconnecte.php"); ?>
+<!--logout button test-->
+    <div class="logoutBtn"><button><a href="logout.php">SE DECONNECTER</a></button></div>
     <div class="row poster">
         <div class="col8 posterDetails">
             <h2 class="c4">Celiac101</h2>
