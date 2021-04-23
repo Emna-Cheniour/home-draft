@@ -1,4 +1,7 @@
+<?php
 
+include_once 'isAuthentificated.php';
+?>
     <?php include("head.php"); ?>
 
 <body>
@@ -354,7 +357,7 @@
   <script src="Js/main.js"></script>
   <script src="Js/heart.js"></script>
   <script src="Js/searchBar.js"></script>
-  <script src="Js/drop.js"></script>
+  <script src="Js/filter.js"></script>
   
 </body>
 </html>
