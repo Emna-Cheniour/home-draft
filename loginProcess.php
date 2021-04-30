@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once ('autoload.php');
+include_once('autoload.php');
 
 
 
@@ -27,4 +27,3 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
         header('location:login_SignUp.php');
         }
 
-}
