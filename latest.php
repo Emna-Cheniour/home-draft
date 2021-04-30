@@ -1,6 +1,12 @@
 <?php
-include_once 'assets/mainHead.php';
 
+include_once 'assets/mainHead.php';
+if (isset($_POST['sendReview'])) {
+    echo $_POST['rating'];
+    echo $_POST['reviewComment'];
+    $reviewstat = "1";
+    $reviewContent = "Votre évaluation est ajoutée avec succès";
+}
 ?>
 <link rel="stylesheet" href="css/shopping.css">
 </head>
@@ -8,6 +14,7 @@ include_once 'assets/mainHead.php';
 <body>
     <?php include_once 'navbarConnecte.php' ?>
     <div class="containerCeliac">
+
         <div class="mainLatest">
 
             <h2>Latest Products</h2>
@@ -69,8 +76,42 @@ include_once 'assets/mainHead.php';
             </div>
         </div>
     </div>
+    <div class="addReview">
+        <h3>Voici les commentaires de nos clients</h3>
+        <h3> Et vous ?</h3>
+        <h3>Comment s'est passée votre expérience de shopping de chez nous? </h3>
+        <h3 class="btn btn1 openReview">Racontez nous!</h2>
+    </div>
+    <div class=" addReviewForm">
+        <h1 class="closeReview"> &times;</h1>
+        <img src="images/reviewForm.png" alt="">
+        <h3>Evaluez votre experience de shopping de chez Celiac101</h3>
+        <form action="latest.php" method="post">
+            <textarea name="reviewComment"></textarea>
+            <h3>Nottez la !</h3>
+            <div class="heart_section">
+                <i id="review1" class="far fa-heart"></i>
+                <i id="review2" class="far fa-heart"></i>
+                <i id="review3" class="far fa-heart"></i>
+                <i id="review4" class="far fa-heart"></i>
+                <i id="review5" class="far fa-heart"></i>
+            </div>
+            <h1 id="reviewRating">?/5</h1>
+            <input name="rating" id="stars" type="hidden" value="0">
+            <input class="btn btn1 submitReview" name="sendReview" type="submit">
+        </form>
+    </div>
+    <div class="reviewStat" id=<?php if (isset($reviewstat)) {echo $reviewstat ;} ?>></i><?php
+                                                        if ((isset($reviewstat))&&$reviewstat == 1) {
+                                                            echo '
+        <i class="fas fa-check-circle reviewIcon"> </i>';
+
+                                                            echo $reviewContent;
+                                                        } ?></div>
+    <div id="overlayAddReview"></div>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="js/shopping.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
