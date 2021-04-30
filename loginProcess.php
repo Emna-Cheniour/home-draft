@@ -2,10 +2,12 @@
 session_start();
 include_once ('autoload.php');
 
-$username = $_POST['username'];
-$password = $_POST['password'];
 
-if (isset($username) && isset($password)) {
+
+if (isset($_POST['username']) && isset($_POST['password'])) {
+  
+  $username = $_POST['username'];
+  $password = $_POST['password'];
   if(!empty($username) && !empty($password)){
         $user = new UserRepository();
         $response1 = $user->findByUsernamePwd($username,$password);
