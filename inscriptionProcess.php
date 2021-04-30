@@ -2,12 +2,13 @@
 session_start();
 include_once ("autoload.php");
 
+
+
+  if( (isset($_POST['username']))  && (isset($_POST['email']))  && (isset($_POST['password']))){
+    
 $username=$_POST['username'];
 $email=$_POST['email']; //  htmlSpecialchar($_POST['username'])
 $password=$_POST['password'];
-
-
-  if( (isset($username))  && (isset($email))  && (isset($password))){
 
       if(empty($username) || empty($email) || empty($password)){
         $_SESSION['requiredFieldsError']='Veuillez remplir tous vos informations';
