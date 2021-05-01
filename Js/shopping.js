@@ -67,7 +67,7 @@ reviewFive.addEventListener("click", () => {
 var starItems = document.querySelector('.heart_section ').children;
 
 var clicked = false;
-for (let i = 1; i < starItems.length; i++) {
+for (let i = 0; i < starItems.length; i++) {
 
 
   starItems[i].addEventListener('mouseover', () => {
@@ -76,6 +76,11 @@ for (let i = 1; i < starItems.length; i++) {
 
       starItems[j].classList.remove("far");
       starItems[j].classList.add("fas");
+    }
+    for (let j = i+1 ; j < starItems.length; j++) {
+
+      starItems[j].classList.add("far");
+      starItems[j].classList.remove("fas");
     }
     
 
@@ -107,7 +112,12 @@ for (let i = 1; i < starItems.length; i++) {
       }
     }
     else{
-      for (let k = clickedItem+1; k < starItems.length; k++) {
+      for (let k = clickedItem ; k >= 0; k--) {
+
+        starItems[k].classList.add("fas");
+        starItems[k].classList.remove("far");
+      }
+      for (let k = clickedItem+1 ; k < starItems.length; k++) {
 
         starItems[k].classList.add("far");
         starItems[k].classList.remove("fas");
