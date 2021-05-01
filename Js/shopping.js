@@ -34,6 +34,15 @@ closeReview.addEventListener("click", () => {
   addReviewForm.classList.remove("active");
   overlayAddReview.classList.remove("active");
   document.querySelector('body').style.overflow = "auto";
+  reviewHearts.value = 0;
+  reviewRating.innerHTML = "?/5";
+});
+overlayAddReview.addEventListener("click", () => {
+  addReviewForm.classList.remove("active");
+  overlayAddReview.classList.remove("active");
+  document.querySelector('body').style.overflow = "auto";
+  reviewHearts.value = 0;
+  reviewRating.innerHTML = "?/5";
 });
 
 var reviewOne = document.querySelector('#review1');
