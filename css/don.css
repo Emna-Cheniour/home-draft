@@ -1,0 +1,151 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css");
+body{
+    max-width: 60em;
+    padding: 0 20px;
+    margin: 6em auto 19em;
+}
+.contenu{
+    position:absolute;
+    min-height: 10em;
+    display: table-cell;
+    vertical-align: middle;
+    top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+}   
+.formContent{
+    background-color: #1c294211;
+    width: 660px;
+    height: 900px;
+    border-radius: 2px;
+    box-shadow: 0 0 10px #333;
+    top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+.container-Don{
+    height: 10%;
+    display:flex;
+    border-bottom: 1px solid #333;
+}
+.container-Don > *{
+    width: 330px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    font-weight: 600;
+    cursor: pointer;
+    border-right: 1px solid #00000038;
+    background: #3B556D;
+    background: -webkit-linear-gradient(to left, #1C2942, #3B556D);  
+    background: linear-gradient(to left, #1C2942, #3B556D); 
+    color: white;
+}
+.titleForm{
+    font-size: 30px;
+    font-weight: bolder;
+    text-align: center;
+    color: #137c8b;
+}
+#imageDonate{
+    width: 80px;
+    border: 0;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+.Form{
+    padding: 5px 25px;
+}
+.Form h4{
+    color: #1C2942;
+    padding: 5px 15px;
+}
+.Form label{
+    margin-left: 20px;
+}
+.input-icon{
+    position:relative;
+    padding-left: 10px; 
+}
+.Form input{
+    padding: 10px 50px;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+.input-icon i{
+    position:absolute;
+    color: #1C2942;
+    top:4px; 
+    padding:10px 9px; 
+    margin-left: 10px;
+}
+.Form i:hover{
+color: #137c8b !important;
+}
+#submitForm {
+    left: 30%;
+   font-size: 1.5rem;
+    padding: 15px 50px;
+    border: none;
+    border-radius:4px;
+    color:#fff;
+    margin-top: 2rem;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.35s;
+    outline: none;
+}
+.introDon{
+    padding-top: 30px;
+    text-align: center;
+    font-size: 1.5em;
+    border: 3px solid #5FC2BA;
+    border-radius: 50px;
+    border-collapse: collapse;
+    width: 60%;
+    top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: 5% auto;
+}  
+.formPay{
+    text-align: center;
+    top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+.formPay h1{
+    color: #137c8b;
+    margin: 40px 0;
+}
+.formPay .btn{
+    font-size: 1.5rem;
+    padding: 15px 35px;
+    border: none;
+    border-radius:4px;
+    color:#fff;
+    margin-top: 2rem;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.35s;
+    outline: none;
+}
+.formPay img{
+    width: 300px;
+    margin-bottom: 9%;
+}
+ /*
+ *{
+    background: #000 !important;
+    color: #0f0 !important;
+    outline: solid #f00 1px !important;
+   }
+   */
