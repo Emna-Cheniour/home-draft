@@ -77,11 +77,13 @@ for (let i = 1; i < starItems.length; i++) {
       starItems[j].classList.remove("far");
       starItems[j].classList.add("fas");
     }
+    
 
   });
 
   starItems[i].addEventListener('click', () => {
     clicked = true;
+    clickedItem=i;
     for (let j = i; j >= 0; j--) {
 
       starItems[j].classList.remove("far");
@@ -103,6 +105,14 @@ for (let i = 1; i < starItems.length; i++) {
         starItems[j].classList.add("far");
         starItems[j].classList.remove("fas");
       }
+    }
+    else{
+      for (let k = clickedItem+1; k < starItems.length; k++) {
+
+        starItems[k].classList.add("far");
+        starItems[k].classList.remove("fas");
+      }
+
     }
 
 
