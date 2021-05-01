@@ -20,7 +20,20 @@
 <div class="container">
 
 
+<!--<h1 class="glowing__header">
+  <span>C</span>
+  <span>E</span>
+  <span>L</span>
 
+  <span>I</span>
+  <span>A</span>
+  <span>C</span>
+
+  <span>1</span>
+  <span>0</span>
+  <span>1</span>
+</h1>
+-->
 <div class="rotate__logo">
   <h2 class="text">CELIAC101 Votre Guide</h2>
 </div>
@@ -76,7 +89,153 @@
 
       
     </div>
+
+    <div id="symptomes" class="symptom__wrapper">
+      <div class="symptom__header">
+        <img src="icons/doctorCheck.png" alt="">
+        <h2>Les Symptomes</h2>
+        <img src="icons/conditions.png" alt="">
+      </div>
+      
+      <div class="symptom__cards">
+
+          <div  class="symptom__card--item">
+            <div class="symptom__content">
+              <div class="card__face card__face--front">
+                <h3>Systèmes gastro-intestinaux</h3>
+                <img src="icons/stomach.png" alt="">
+              </div>
+
+              <div class="card__face card__face--back">
+                <img src="icons/symptoms.png" alt="">
+                <ul>
+                  <li>Diarrhé</li>
+                  <li>Constipation</li>
+                  <li>Douleurs abdominales</li>
+                  <li>Dyspepsie(reflux gastro-œsophagien) réfractaire</li>
+                  <li>Ballonement</li>
+                  <li>Selles pâles/nauséabondes</li>
+                </ul>
+              </div>
+              
+            </div>
+          </div>
+            
+                    
+
+            
+
+          <div class="symptom__card--item">
+            <div class="symptom__content">
+              <div class="card__face card__face--front">
+                <h3>Manifestations hépatiques</h3>
+                <img src="icons/liver.png" alt="">
+              </div>
+
+              <div class="card__face card__face--back">
+                <ul>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                </ul>
+              </div>
+
+            </div>
+            
+          </div>
+          
+
+          <div class="symptom__card--item">
+
+            <div class="symptom__content">
+
+              <div class="card__face card__face--front">
+                <h3>Manifestations du système nerveux</h3>
+                <img src="icons/nervous-system.png" alt="">
+              </div>
+
+              <div class="card__face card__face--back">
+                <img src="icons/symptoms.png" alt="">
+                <ul>
+                  <li>Neuropathie périphérique</li>
+                  <li>Ataxie inexpliquée</li>
+                  <li>Migraines/maux de tête</li>
+                  <li>Troubles psychiatriques (dépression,anxiété)</li>
+                  <li>Problèmes de mémoire</li>
+                  <li>Difficultés d’apprentissage</li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="symptom__card--item">
+          <div class="symptom__content">
+          <div class="card__face card__face--front">
+                <h3>Manifestations bucco-dentaires</h3>
+                <img src="icons/dental-checkup.png" alt="">
+              </div>
+
+              <div class="card__face card__face--back">
+              <ul>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="symptom__card--item">
+            <div class="symptom__content">
+              <div class="card__face card__face--front">
+                <h3>Fertilité et anomalies gynéco-obstétricales</h3>
+                <img src="icons/pregnant.png" alt="">
+              </div>
+
+              <div class="card__face card__face--back">
+              <ul>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="symptom__card--item">
+            <div class="symptom__content">
+              <div class="card__face card__face--front">
+                <h3>Manifestations musculo-squelettiques</h3>
+                <img src="icons/pain.png" alt="">
+              </div>
+
+              <div class="card__face card__face--back">
+              <ul>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+
+
+      </div>
+
+    </div>
   </div>
+
+  
 
  
 
@@ -139,7 +298,16 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
 <script src="js/circleTxt.js"></script>
-<script src="js/imageReveal.js"></script>
+<script src="js/cardTilt.js"></script>
+<script src="js/main.js"></script>
+<script type="text/javascript" src="js/vanilla-tilt.js"></script>
+
+<script type="text/javascript">
+	VanillaTilt.init(document.querySelectorAll(".symptom__card--item"), {
+		max: 25,
+		speed: 400
+	});
+</script>
 <?php include 'footer.php' ?>
 </body>
 </html>
