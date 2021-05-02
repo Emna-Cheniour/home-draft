@@ -4,7 +4,7 @@
     <ul class='navLinks'>
         <li><a href="acceuil.php">Acceuil </a></li>
         <li id="drop">Services </li>
-        <li><a href="#">Informations </a></li>
+        <li><a href="InfoPage.php">Informations </a></li>
     </ul>
     <div class="dropdownForPhone">
         <ul>
