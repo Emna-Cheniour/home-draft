@@ -36,6 +36,13 @@ closeReview.addEventListener("click", () => {
   document.querySelector('body').style.overflow = "auto";
   reviewHearts.value = 0;
   reviewRating.innerHTML = "?/5";
+  
+for (let i = 0; i < starItems.length; i++) {
+  
+  starItems[i].classList.remove("fas");
+  starItems[i].classList.add("far");
+
+}
 });
 overlayAddReview.addEventListener("click", () => {
   addReviewForm.classList.remove("active");
@@ -43,6 +50,13 @@ overlayAddReview.addEventListener("click", () => {
   document.querySelector('body').style.overflow = "auto";
   reviewHearts.value = 0;
   reviewRating.innerHTML = "?/5";
+    
+for (let i = 0; i < starItems.length; i++) {
+  
+  starItems[i].classList.remove("fas");
+  starItems[i].classList.add("far");
+
+}
 });
 
 var reviewOne = document.querySelector('#review1');
