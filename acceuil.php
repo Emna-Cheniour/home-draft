@@ -3,7 +3,7 @@
 <body>
 
     <?php include("navbarConnecte.php"); ?>
-
+    <button><a href="logout.php">SE DECONNECTER</a></button>
     <div class="row poster">
         <div class="col8 posterDetails">
             <div class="c4 sign">
