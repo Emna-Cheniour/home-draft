@@ -1,7 +1,4 @@
-<?php
 
-include_once 'isAuthentificated.php';
-?>
     <?php include("head.php"); ?>
 
 <body>

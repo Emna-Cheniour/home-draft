@@ -54,9 +54,6 @@
   width: 200%;
   border-radius: 5px;
   display: none;
-  /*display:flex;
-  flex-direction:row;
-  flex-wrap: wrap;*/
   z-index: 1;
 }
 
@@ -79,7 +76,6 @@
 .dropdown-list ul li button 
 {
   padding: 15px;
-  /*background-color: #5FC2BA;*/
   background-color: #0B162C;
   border-radius:10px ;
   border: none;

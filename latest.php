@@ -113,19 +113,20 @@ if (isset($_POST['sendReview'])) {
     <div id="overlayAddReview"></div>
     <div class="shopping">
         <div class="topSearch">
-            <form action="">
+            <form action="latest.php" method="POST">
                 <input type="text" placeholder="search for a product..">
                 <select name="Trier" id="">
+                    <option value="cat">newest</option>
                     <option value="">prix croissant</option>
                     <option value="dog">prix decroissant</option>
-                    <option value="cat">newest</option>
                 </select>
+
+                <div class="priceScroll"></div>
+                <div class="productCategories">
+                </div>
             </form>
         </div>
-        <div class="bottomShopping">
-            <div class="leftFilter"></div>
-            <div class="shoppingCards"></div>
-        </div>
+        <div class="shoppingCards"></div>
     </div>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="js/shopping.js"></script>
