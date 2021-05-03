@@ -60,7 +60,7 @@
           <img src="icons/info3.jpg" alt="">
         </div>
 
-        <div class="item">
+        <div class="item second">
         <img src="icons/info4.jpg" alt="">
           <p>C’est ce qui se produit chez les personnes cœliaques. Le corps se défend contre le gluten et cette réaction entraîne une inflammation de la paroi intestinale causant ainsi des lésions à divers degrés. Les villosités intestinales, des structures ressemblant à des doigts, deviennent atrophiées (endommagées) et immatures. En conséquence, elles ne possèdent plus toutes les qualités requises pour absorber efficacement les éléments nutritifs provenant des aliments digérés.
         </p>
@@ -92,7 +92,7 @@
 
     <div id="symptomes" class="symptom__wrapper">
       <div class="symptom__header">
-        <img src="icons/doctorCheck.png" alt="">
+        
         <h2>Les Symptomes</h2>
         <img src="icons/conditions.png" alt="">
       </div>
@@ -251,8 +251,28 @@
 
  
 
+      <div id="statistic" class="wavy">
+        <span style="--i:1;">M</span>
+        <span style="--i:2;">A</span>
+        <span style="--i:3;">L</span>
+        <span style="--i:4;">A</span>
+        <span style="--i:5;">D</span>
+        <span style="--i:6;">I</span>
+        <span style="--i:7;">E</span>
+        
+        <span style="--i:8;">C</span>
+        <span style="--i:9;">O</span>
+        <span style="--i:10;">U</span>
+        <span style="--i:11;">R</span>
+        <span style="--i:12;">A</span>
+        <span style="--i:13;">N</span>
+        <span style="--i:14;">T</span>
+        <span style="--i:15;">E</span>
+        <span style="--i:16;">?</span>
+      </div>
 
-      <div id="statistic" class="card__container">
+      <div  class="card__container">
+         
 
           <div class="info__card">
             <div class="circle">
@@ -292,6 +312,7 @@
             <img src="icons/cancer-cell.png" alt="">
           </div>
         </div>
+
 
 
   </div>
