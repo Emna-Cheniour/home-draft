@@ -21,7 +21,14 @@ if (isset($_SESSION['user'])) {
 </head>
 <body>
 
-  <div class="container">
+  <div class="container <?php 
+    if(isset($_SESSION['page'])){
+      if($_SESSION['page']=='inscription'){
+        echo "sign-up-mode";
+      }
+    }
+    unset($_SESSION['page']);
+  ?>" >
 
     <div class="forms__container">
 
