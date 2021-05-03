@@ -9,11 +9,10 @@
     <div class="form-group">
 
       <div class="dropdown">
-        <div class="default-option">Filtre</div>
+        <div class="default-option">Catégories</div>
 
         <div class="dropdown-list">
           <ul class="indicator">
-            <!--<li data-filter="all" class="active"><button><a href="#">Tous</a></button></li>-->
             <li><button><a href="#">Pâtes</a></button></li>
             <li><button><a href="#">Plat Végétarien</a></button></li>
             <li><button><a href="#">Salade</a></button></li>

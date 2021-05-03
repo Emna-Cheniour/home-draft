@@ -1,8 +1,15 @@
 var drop=document.querySelector('.default-option');
 var dropList=document.querySelector('.dropdown-list ul');
 var searchRecipeWrapper=document.querySelector('.search__wrapper .selectedAdded');
-//var dropListItem=document.querySelectorAll('.dropdown-list ul li');
 
+document.addEventListener('click', function(event) {
+    var isClickInsideElement = ((dropList.contains(event.target)) || (drop.contains(event.target)));
+    if (!isClickInsideElement) {
+      
+  dropList.classList.remove('active');
+
+    }
+});
 drop.addEventListener('click',(e)=>{
   dropList.classList.toggle('active');
 
@@ -25,7 +32,10 @@ select.forEach((element) => {
       selectedAdded.appendChild(selectedText);
       selectedAdded.appendChild(selectedClose);
       searchRecipeWrapper.appendChild(selectedAdded);
-
+      selectedClose.addEventListener('click',()=>{
+        selectedAdded.remove();
+        element.classList.remove('selected');
+      })
     }
     else{
       var selectedRemoved = document.querySelector("#"+elementText);
