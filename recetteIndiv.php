@@ -262,14 +262,14 @@
   <div class="star__rating--section">
     <div class="star__section">
       <h4>C'est terminé ! Qu'en avez-vous pensé ?</h4>
-      <a  href="#" >
+        <span class="stars">
         <i class="far fa-star"></i>
         <i class="far fa-star"></i>
         <i class="far fa-star"></i>
         <i class="far fa-star"></i>
         <i class="far fa-star"></i>
-      </a>
-
+     
+        </span>
     </div>
 
     <div class="add__image" >
