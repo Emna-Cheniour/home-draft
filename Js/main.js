@@ -14,3 +14,23 @@ show(dropIt,dropdiv,"block");
 show(dropIt,dropdivPhone,"inline-block");
 show(dropProfil,dropDivProfil,"block");
 /*//*/
+var specialists = document.querySelector(".specialists");
+
+(setInterval(() => {
+
+    var newkid = specialists.children[0];
+
+    specialists.replaceChild(specialists.children[1], specialists.children[0]);
+    specialists.appendChild(newkid);
+}, 5000));
+var center = function centerClass() {
+    i = 1;
+    specialists.children[i].classList.add("center");
+    if (specialists.children[i - 1].classList.contains("center")) {
+        specialists.children[i - 1].classList.remove("center");
+    }
+
+    i++;
+}
+center();
+(setInterval(center, 5000));

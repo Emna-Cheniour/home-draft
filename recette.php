@@ -9,7 +9,7 @@
     <div class="form-group">
 
       <div class="dropdown">
-        <div class="default-option">Catégories</div>
+        <div class="!-option">Catégories</div>
 
         <div class="dropdown-list">
           <ul class="indicator">

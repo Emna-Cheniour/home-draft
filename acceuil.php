@@ -106,12 +106,30 @@
             </div>
         </div>
         <div class="col">
-            <div class="container">
-                <h4>Vous avez besoin d'un
+            <div class="suggestionsSpecialist">
+                <h4 class="specialistsText">Vous avez besoin d'un
                     <span class="txt-rotate" data-period="2000" data-rotate='["medécin?","nutritioniste?","gastrologue?"]'></span>
                 </h4>
-            </div>
+                <div class="specialists">
+                    <?php
+                    $persons = array("Nawres", "Meriem", "Achref", "Ncib", "Ben Isamil", "Saidi");
+                    foreach ($persons as $person) {
+                    ?>
 
+                        <div class="specialist " id="element">
+                            <img src="images/nutritionist.png" alt="">
+                            <div class="infoSpecialist">
+                                <h4><?= $person ?></h4>
+                                <h5>profession occupation</h5>
+                            </div>
+                        </div>
+                    <?php
+                    }
+                    ?>
+
+                </div>
+
+            </div>
         </div>
     </div>
 

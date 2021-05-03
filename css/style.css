@@ -753,3 +753,55 @@ ul {
     background-color: #1C2942;
     color: white;
 }
+/* Scrolling specialists*/
+.suggestionSpecialist{
+    margin-top: auto;
+}
+.specialistsText{
+    text-align: center;
+    margin-top: 20px;
+    color: #5FC2BA;
+}
+.specialists{
+    height: 400px;
+    overflow: hidden;
+    justify-content: center;
+}
+
+.specialists .specialist{
+    background-color: #1C2942;
+    border-radius: 20px;
+    width: 350px;
+}
+.specialists #element{
+    display: block;
+    height: 100px;
+    padding: 10px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-left: calc(30% - 50px) ;
+    opacity: 1;
+    -webkit-transition: all 2s;
+    transition: all 2s;
+    color: #ffffff;
+    justify-content: center;
+}
+.specialists #element.center{
+    margin-left: 30%;
+    opacity: 2;
+    cursor: pointer;
+}
+.specialists #element img{
+    width: 50px;
+    display: inline-block;
+    border-radius: 50%;
+}
+.specialists #element .infoSpecialist{
+    display: inline-block;
+    line-height: 120px;
+    vertical-align: middle;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: #fff;
+}
