@@ -142,8 +142,23 @@
 {
   color:#fff;
 }
+.search__wrapper .selectedAdded{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.search__wrapper .selectedAdded div{
+padding: 10px;
+border: #0B162C solid 2px;
+border-radius:10px ;
+text-align: center;
+margin-right: 20px;
 
-
+}
+.search__wrapper .selectedAdded div span{
+  padding: 10px;
+  cursor: pointer;
+}
 #search {
   
   border: 1px solid grey;

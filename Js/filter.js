@@ -1,6 +1,6 @@
 var drop=document.querySelector('.default-option');
 var dropList=document.querySelector('.dropdown-list ul');
-var searchRecipeWrapper=document.querySelector('.search__wrapper');
+var searchRecipeWrapper=document.querySelector('.search__wrapper .selectedAdded');
 //var dropListItem=document.querySelectorAll('.dropdown-list ul li');
 
 drop.addEventListener('click',(e)=>{
@@ -13,7 +13,7 @@ var select=document.querySelectorAll('.dropdown-list ul li button');
 select.forEach((element) => {
   element.addEventListener('click',(e)=>{
     element.classList.toggle('selected');
-    var elementText=document.querySelectorAll('.dropdown-list ul li button a').innerHTML;
+    var elementText=element.children[0].innerHTML;
     if(element.classList.contains('selected')){
 
       var selectedAdded = document.createElement("div");
@@ -32,6 +32,4 @@ select.forEach((element) => {
       selectedRemoved.remove();
     }
 })
-})
-
-var removeFilters=document.querySelectorAll('.searchWrapper ul li button');
+});
