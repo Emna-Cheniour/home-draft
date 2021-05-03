@@ -101,14 +101,32 @@ if (isset($_POST['sendReview'])) {
             <input class="btn btn1 submitReview" name="sendReview" type="submit">
         </form>
     </div>
-    <div class="reviewStat" id=<?php if (isset($reviewstat)) {echo $reviewstat ;} ?>></i><?php
-                                                        if ((isset($reviewstat))&&$reviewstat == 1) {
-                                                            echo '
+    <div class="reviewStat" id=<?php if (isset($reviewstat)) {
+                                    echo $reviewstat;
+                                } ?>></i><?php
+                                            if ((isset($reviewstat)) && $reviewstat == 1) {
+                                                echo '
         <i class="fas fa-check-circle reviewIcon"> </i>';
 
-                                                            echo $reviewContent;
-                                                        } ?></div>
+                                                echo $reviewContent;
+                                            } ?></div>
     <div id="overlayAddReview"></div>
+    <div class="shopping">
+        <div class="topSearch">
+            <form action="">
+                <input type="text" placeholder="search for a product..">
+                <select name="Trier" id="">
+                    <option value="">prix croissant</option>
+                    <option value="dog">prix decroissant</option>
+                    <option value="cat">newest</option>
+                </select>
+            </form>
+        </div>
+        <div class="bottomShopping">
+            <div class="leftFilter"></div>
+            <div class="shoppingCards"></div>
+        </div>
+    </div>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="js/shopping.js"></script>
     <script src="js/main.js"></script>
