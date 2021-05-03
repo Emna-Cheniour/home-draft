@@ -9,7 +9,7 @@
             <div class="c4 sign">
                 <span class="fast-flicker">Celiac</span><span class="flicker">101</span>
             </div>
-            <p> Votre meilleur guide pour vivre avec la maladie coeliaque </p>
+            <p> Votre meilleur  pour vivre avec la maladie coeliaque </p>
             <p>Celiac 101 vous offre un ensemble de service qui facilitent votre quotidient et vous aident à vous adapter au régime alimentaire sans gluten
             </p>
             <p>Bienvenu au premier site web d'origine tunisienne pour les malades coeliaques. </p>
