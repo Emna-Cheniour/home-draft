@@ -12,6 +12,7 @@ $password=$_POST['password'];
 
       if(empty($username) || empty($email) || empty($password)){
         $_SESSION['requiredFieldsError']='Veuillez remplir tous vos informations';
+        $_SESSION['page']='inscription';
         header('location:login_SignUp.php');
       }
 
