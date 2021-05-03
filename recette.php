@@ -22,8 +22,13 @@
 
           </ul>
         </div>
-      </div>
-
+      </div class="trierPardiv">
+        <h5>Trier par:</h5>
+        <select name="" id="trierPar">
+        <option value="">Nouveautés</option>
+        <option value="">Prix croissant</option>
+        <option value="">Prix decroissant</option>
+        </select>
 
       <div class="search__input">
         <i class="fas fa-search" id="search__icon"></i>
