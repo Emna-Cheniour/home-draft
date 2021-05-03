@@ -133,12 +133,13 @@
               </div>
 
               <div class="card__face card__face--back">
+              <img src="icons/symptoms.png" alt="">
                 <ul>
-                  <li></li>
-                  <li></li>
-                  <li></li>
-                  <li></li>
-                  <li></li>
+                  <li>Élévation inexpliquée des enzymes hépatiques</li>
+                  <li>Les maladies hépatiques.</li>
+                  <li>La cholangite biliaire  primitive</li>
+                  <li>la cholangite sclérosante primitive</li>
+                  <li>Hépatites auto-immunes chroniques</li>
                 </ul>
               </div>
 
@@ -179,6 +180,7 @@
               </div>
 
               <div class="card__face card__face--back">
+              <img src="icons/symptoms.png" alt="">
               <ul>
                   <li></li>
                   <li></li>
@@ -198,6 +200,7 @@
               </div>
 
               <div class="card__face card__face--back">
+              <img src="icons/symptoms.png" alt="">
               <ul>
                   <li></li>
                   <li></li>
@@ -217,12 +220,12 @@
               </div>
 
               <div class="card__face card__face--back">
+              <img src="icons/symptoms.png" alt="">
               <ul>
-                  <li></li>
-                  <li></li>
-                  <li></li>
-                  <li></li>
-                  <li></li>
+                  <li>Atrophie musculaire</li>
+                  <li>Douleurs ostéo-articulaires</li>
+                  <li>Ostéopénie</li>
+                  <li>Ostéoporose précoce</li>
                 </ul>
               </div>
             </div>
