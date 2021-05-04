@@ -652,10 +652,10 @@ ul {
 .myFooter div>* {
     padding-top: 20px;
 }
-
+/*
 .socials a {
     padding-right: 30px;
-}
+}*/
 
 .aide {
     display: flex;

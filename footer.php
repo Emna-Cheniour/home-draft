@@ -3,11 +3,22 @@
         <span>Adresse : location 123 city town </span>
         <span>Telephone : +216 12 345 678 </span>
         <span>Réseaux sociaux:</span>
-        <div class="socials">
+        <!--<div class="socials">
             <a href=""><i class="fab fa-facebook"></i></a>
             <a href=""><i class="fab fa-instagram-square"></i></a>
             <a href=""><i class="fab fa-linkedin"></i></a>
-        </div>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-youtube-play"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+            <a href="#"><i class="fa fa-facebook-square"></i></a>
+    
+        </div>-->
+        <ul class="socials">
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li> <a href="#"><i class="fa fa-youtube-play"></i></a></li>
+            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
+        </ul>
 
         <div class="logo">
             <img class="logopic" src="images/logo1.png" alt="Logo">
