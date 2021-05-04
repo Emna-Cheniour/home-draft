@@ -16,6 +16,7 @@
         </div>
         <div class="col4 pimg"><img class="posterImg" src="images/poster picture.png" alt=""></div>
     </div>
+
     <div class="services">
         <h1 class="c4">Services</h1>
         <div class="serviceRow row">
@@ -75,7 +76,12 @@
             </div>
         </div>
     </div>
+
     <div class="row">
+
+
+
+
         <div class="col" style="flex: 1.5;">
             <div class="row rowy donation">
                 <div class="col9">
@@ -89,6 +95,7 @@
                     <img class="imgDon" src="images/dons.png" alt="dons">
                 </div>
             </div>
+
             <div class="row rowy quizz">
 
                 <div class="col3 web">
@@ -104,34 +111,52 @@
                     <img class="imgDon" src="images/quizz.png" alt="dons">
                 </div>
             </div>
-        </div>
-        <div class="col">
-            <div class="suggestionsSpecialist">
-                <h4 class="specialistsText">Vous avez besoin d'un
-                    <span class="txt-rotate" data-period="2000" data-rotate='["medécin?","nutritioniste?","gastrologue?"]'></span>
-                </h4>
-                <div class="specialists">
-                    <?php
-                    $persons = array("Nawres", "Meriem", "Achref", "Ncib", "Ben Isamil", "Saidi");
-                    foreach ($persons as $person) {
-                    ?>
 
-                        <div class="specialist " id="element">
-                            <img src="images/nutritionist.png" alt="">
-                            <div class="infoSpecialist">
-                                <h4><?= $person ?></h4>
-                                <h5>profession occupation</h5>
+        </div>
+
+
+
+
+    </div>
+
+    <div class="row">
+    
+
+        <div class="col specialist__section">
+
+                <div class="suggestionsSpecialist">
+
+                    <h4 class="specialistsText">Vous avez besoin d'un
+                        <span class="txt-rotate" data-period="2000" data-rotate='["medécin?","nutritioniste?","gastrologue?"]'></span>
+                    </h4>
+
+                    <div class="specialists">
+                        <?php
+                        $persons = array("Nawres", "Meriem", "Achref", "Ncib", "Ben Isamil", "Saidi");
+                        foreach ($persons as $person) {
+                        ?>
+
+                            <div class="specialist " id="element">
+                                <img src="images/nutritionist.png" alt="">
+                                <div class="infoSpecialist">
+                                    <h4><?= $person ?></h4>
+                                    <h5>profession occupation</h5>
+                                </div>
                             </div>
-                        </div>
-                    <?php
-                    }
-                    ?>
+                        <?php
+                        }
+                        ?>
+
+                    </div>
 
                 </div>
 
-            </div>
+              
         </div>
+
     </div>
+
+    
 
 
     <?php include("footer.php"); ?>

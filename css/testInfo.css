@@ -225,7 +225,7 @@ html
 }
 .intro__parag img:hover 
 {
-  transform: scale(1.02);
+  transform: translateY(-10px);
   border: 2px solid #1C2942;
 }
 
@@ -459,6 +459,7 @@ html
    background-color: #161623;
    border-radius: 20px;
    padding-top: 2em;
+   pointer-events: none;
  }
 
  .symptom__wrapper .symptom__header
@@ -510,6 +511,7 @@ html
  }
 .symptom__cards .symptom__card--item
  {
+  pointer-events:all;
    cursor: pointer;
    position: relative;
    width: 280px;
@@ -625,6 +627,50 @@ html
   color:#5FC2BA;
 }
 
+/* effects & treatement section */
+
+.effect__wrapper
+{
+  margin-top: 3rem;
+  
+  display: grid;
+  grid-template-columns:repeat(auto-fit,minmax(30rem,35rem)) ;
+  grid-gap: 3rem;
+  justify-content: center;
+  
+}
+.effect__wrapper .effect__item 
+{
+  background: linear-gradient(to right,#137c8b,#5FC2BA);
+  padding: 3em;
+  color:#fff;
+  
+  cursor: pointer;
+ border-radius: 20px;
+  
+}
+
+.effect__wrapper .effect__item:hover h2
+{
+
+  color:#1C2942;
+  
+  transform: scale(1.02);
+}
+
+
+.effect__wrapper .effect__item h2
+{
+  text-transform: uppercase;
+  margin-bottom: 1em;
+  text-align: center;
+  transition: 0.2s ease-in-out;
+}
+
+.effect__wrapper .effect__item:hover p
+{
+  color:#fff;
+}
 
 
 
@@ -877,4 +923,30 @@ html
   transform: scale(1.1);
   opacity: 1;
 }
+
+#scrollUpBtn
+{
+  position: fixed;
+  top: 76%;
+  left:88%;
+  display: none;
+ 
+}
+
+#scrollUpBtn img
+{
+  width: 80px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 

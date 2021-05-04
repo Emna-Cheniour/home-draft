@@ -737,13 +737,14 @@ ul {
     }
 }
 
-/* s
+/*
  * {
   background: #000 !important;
   color: #0f0 !important;
   outline: solid #f00 1px !important;
 }  */
 /*trials*/
+
 .maliste {
     height: 60px;
     width: 100px;
@@ -754,8 +755,19 @@ ul {
     color: white;
 }
 /* Scrolling specialists*/
+.col.specialist__section
+{
+    display: flex;
+    width: auto;
+    
+    
+    
+}
+
 .suggestionSpecialist{
+    
     margin-top: auto;
+    
 }
 .specialistsText{
     text-align: center;
@@ -772,6 +784,7 @@ ul {
     background-color: #1C2942;
     border-radius: 20px;
     width: 350px;
+    
 }
 .specialists #element{
     display: block;
@@ -785,6 +798,8 @@ ul {
     transition: all 2s;
     color: #ffffff;
     justify-content: center;
+    width: 400px;
+
 }
 .specialists #element.center{
     margin-left: 30%;
