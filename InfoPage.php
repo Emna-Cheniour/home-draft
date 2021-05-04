@@ -236,6 +236,52 @@
       </div>
 
     </div>
+
+    <div id="effect" class="wavy">
+        <span style="--i:1;">E</span>
+        <span style="--i:2;">F</span>
+        <span style="--i:3;">F</span>
+        <span style="--i:4;">E</span>
+        <span style="--i:5;">T</span>
+        <span style="--i:6;">S</span>
+        <span style="--i:7;">&</span>
+        
+        <span style="--i:8;">T</span>
+        <span style="--i:9;">R</span>
+        <span style="--i:10;">A</span>
+        <span style="--i:11;">I</span>
+        <span style="--i:12;">T</span>
+        <span style="--i:13;">E</span>
+        <span style="--i:14;">M</span>
+        <span style="--i:15;">E</span>
+        <span style="--i:16;">N</span>
+        <span style="--i:17;">T</span>
+        <span style="--i:18;">S</span>
+      </div>
+
+    <div class="effect__wrapper">
+
+      <div class="effect__item">
+        <h2>Effets à long terme</h2>
+        <p>Les personnes atteintes de la maladie coeliaque ont un risque 2 fois plus élevé de développer une maladie coronarienne, et un risque 4 fois plus élevé de développer de petits cancers de l’intestin.
+          <br><br>
+          La maladie coeliaque non traitée peut mener au développement d’autres troubles auto-immuns comme le diabète de type I et la sclérose en plaques (SP), et de nombreuses autres affections, y compris l’herpétiformie de dermatite (éruption cutanée qui démange), l’anémie, l’ostéoporose, l’infertilité et la fausse couche, les affections neurologiques comme l’épilepsie et les migraines, la petite taille, les maladies cardiaques et les cancers intestinaux.
+        </p>
+      </div>
+
+      <div class="effect__item">
+        <h2>Traitement</h2>
+        <p>Actuellement, le seul traitement pour la maladie coeliaque est l’adhésion à vie à un régime strict sans gluten. Les personnes vivant sans gluten doivent éviter les aliments avec du blé, du seigle et de l’orge, comme le pain et la bière.<br><br>
+
+        L’ingestion de petites quantités de gluten, comme la chapelure d’une planche à découper ou d’un grille-pain, peut causer des dommages à l’intestin grêle..
+        <br><br>
+        Les personnes atteintes de la maladie cœliaque doivent vérifier attentivement les étiquettes apposées sur les aliments préparés afin de repérer la présence de gluten
+      </p>
+      </div>
+    
+
+    </div>
+
   </div>
 
   
@@ -318,7 +364,14 @@
   </div>
 
 
+
 </div>
+
+<a href="#" id="scrollUpBtn">
+    <img src="icons/up-arrow (1).png" >
+  </a>
+  
+  <script type="js/scrollUpBtn.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
 <script src="js/circleTxt.js"></script>
