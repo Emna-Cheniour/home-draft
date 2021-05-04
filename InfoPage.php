@@ -273,7 +273,7 @@
         <h2>Traitement</h2>
         <p>Actuellement, le seul traitement pour la maladie coeliaque est l’adhésion à vie à un régime strict sans gluten. Les personnes vivant sans gluten doivent éviter les aliments avec du blé, du seigle et de l’orge, comme le pain et la bière.<br>
       <div class="effect__section-Btn">
-        <a href="recette.php">CELIAC101 vous offre une variétéde recettes sans-gluten<i class="fas fa-arrow-alt-circle-right"></i></a> 
+        <a href="recette.php">CELIAC101 vous offre une variété de recettes sans-gluten<i class="fas fa-arrow-alt-circle-right"></i></a> 
         </div>
       <p>
         L’ingestion de petites quantités de gluten, comme la chapelure d’une planche à découper ou d’un grille-pain, peut causer des dommages à l’intestin grêle..
