@@ -173,8 +173,8 @@
           </div>
 
           <div class="symptom__card--item">
-          <div class="symptom__content">
-          <div class="card__face card__face--front">
+            <div class="symptom__content">
+            <div class="card__face card__face--front">
                 <h3>Manifestations bucco-dentaires</h3>
                 <img src="icons/dental-checkup.png" alt="">
               </div>
@@ -182,11 +182,11 @@
               <div class="card__face card__face--back">
               <img src="icons/symptoms.png" alt="">
               <ul>
-                  <li></li>
-                  <li></li>
-                  <li></li>
-                  <li></li>
-                  <li></li>
+                  <li>Décoloration des dents</li>
+                  <li>Perte d’émail</li>
+                  <li>Délai de l’éruption dentaire</li>
+                  <li>Stomatite aphteuse récidivante</li>
+                  <li>Carie dentaire</li>
                 </ul>
               </div>
             </div>
@@ -202,11 +202,11 @@
               <div class="card__face card__face--back">
               <img src="icons/symptoms.png" alt="">
               <ul>
-                  <li></li>
-                  <li></li>
-                  <li></li>
-                  <li></li>
-                  <li></li>
+                  <li>Troubles de la fertilité</li>
+                  <li>Complications durant la grossesse</li>
+                  <li>Fausses couches à répétition</li>
+                  <li>Infertilité inexpliquée </li>
+                  
                 </ul>
               </div>
             </div>
@@ -271,14 +271,51 @@
 
       <div class="effect__item">
         <h2>Traitement</h2>
-        <p>Actuellement, le seul traitement pour la maladie coeliaque est l’adhésion à vie à un régime strict sans gluten. Les personnes vivant sans gluten doivent éviter les aliments avec du blé, du seigle et de l’orge, comme le pain et la bière.<br><br>
-
+        <p>Actuellement, le seul traitement pour la maladie coeliaque est l’adhésion à vie à un régime strict sans gluten. Les personnes vivant sans gluten doivent éviter les aliments avec du blé, du seigle et de l’orge, comme le pain et la bière.<br>
+      <div class="effect__section-Btn">
+        <a href="recette.php">CELIAC101 vous offre une variétéde recettes sans-gluten<i class="fas fa-arrow-alt-circle-right"></i></a> 
+        </div>
+      <p>
         L’ingestion de petites quantités de gluten, comme la chapelure d’une planche à découper ou d’un grille-pain, peut causer des dommages à l’intestin grêle..
         <br><br>
-        Les personnes atteintes de la maladie cœliaque doivent vérifier attentivement les étiquettes apposées sur les aliments préparés afin de repérer la présence de gluten
+        Les personnes atteintes de la maladie cœliaque doivent vérifier attentivement les étiquettes apposées sur les aliments préparés afin de repérer la présence de gluten.
+        
+        <div class="effect__section-Btn">
+        <a href="#">Profitez d'un journal alimentaire pour une vie saine et sans gluten<i class="fas fa-arrow-alt-circle-right"></i></a>
+        </div>
       </p>
       </div>
     
+
+    </div>
+
+    <div class="intro__wrapper last">
+
+        <div class="intro__header">
+          <h2>Maladie coeliaques chez les enfants</h2>
+        </div>
+
+        <div class="intro__parag">
+          <div class="item">
+            <p>
+              La maladie coeliaque peut se développer à tout moment après l’introduction du blé ou d’autres aliments contenant du gluten dans l’alimentation, généralement après l’âge de 6 à 9 mois. On ne sait pas pourquoi certains enfants tombent malades tôt dans la vie et d’autres ne tombent malades qu’après des années d’exposition. Il est très important de tester votre enfant aux premiers signes, ou si la maladie coeliaque se présente dans votre famille. Les parents au premier degré (parent, frère ou sœur, enfant) ont 1 chance sur 10 de développer eux-mêmes la maladie coeliaque.</p>
+            <img src="icons/kids.jpg" alt="">
+          
+            
+          </div>
+
+          <div class="item second">
+              <p>
+            Beaucoup d’enfants ont des symptômes bénins qui sont faciles à manquer, comme avoir des gaz excessifs, des douleurs abdominales ou de la constipation. D’autres enfants ont des symptômes plus graves qui peuvent entraîner un diagnostic plus précoce, y compris l’incapacité de prospérer, la perte de poids et les vomissements.
+
+            Heureusement, les enfants et les adolescents réagissent généralement bien au traitement avec le régime sans gluten. La plupart des enfants se sentent sensiblement mieux après deux semaines sur le régime et atteignent la taille normale, le poids, et la santé d’os.
+            </p>
+          
+          </div>
+          
+          
+        </div>
+
 
     </div>
 
