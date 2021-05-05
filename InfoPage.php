@@ -51,7 +51,7 @@
       </div>
 
       <div class="quizzBtn">
-        <a href="#">Vous avez quelques symptomes de la maladie coeliaque? Prenez notre Quizz<i class="fas fa-arrow-alt-circle-right"></i></a>
+        <a href="quizz.php">Vous avez quelques symptomes de la maladie coeliaque? Prenez notre Quizz<i class="fas fa-arrow-alt-circle-right"></i></a>
       </div>
 
       <div class="intro__parag">

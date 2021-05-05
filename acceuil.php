@@ -105,7 +105,7 @@
                     <h2 class="c4">Prenez notre quizz!<h2>
                             <p>Vous avez quelques symptomes de la maladie coeliaque?</p>
                             <p> Prenez un quizz réalisé par des spécialites pour le meilleur conseil!</p>
-                            <button class="btn btn4">Quizz</button>
+                            <button class="btn btn4"><a href="quizz.php">Quizz</a></button>
                 </div>
                 <div class="col3 phone">
                     <img class="imgDon" src="images/quizz.png" alt="dons">
