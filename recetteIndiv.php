@@ -7,12 +7,15 @@
   <title>Recette Indiv</title>
   <link rel="stylesheet" href="css/recipeIndivStyle.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/iconHover.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
 </head>
+
+<?php 
+include("assets/mainHead.php"); ?>
 <body>
   
 
-<body>
   <?php include("navbarRecetteIndividuelle.php"); ?>
   
 

@@ -1,4 +1,4 @@
-<?php include("head.php"); ?>
+<?php include("assets/mainHead.php"); ?>
 
 <body>
 

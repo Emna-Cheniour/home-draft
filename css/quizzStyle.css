@@ -1,0 +1,88 @@
+.quizz__container
+{
+  display: flex;
+  flex-direction: column;
+}
+
+.progress__container
+ {
+   margin: 3em 0 3em 0;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-top: 1px solid #999;
+   border-bottom: 1px solid #999;
+   padding: 1em;
+  
+ }
+ .progress__container h4
+{
+  text-transform: uppercase;
+  color:#137c8b ;
+}
+.progress__container .progress
+{
+  width: 100%;
+  margin-left: 2em;
+  margin-right: 2em;
+}
+.quizz__container .introduction__wrapper
+{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2em;
+  padding: 2em;
+
+}
+.quizz__container .introduction__wrapper h2
+{
+  color:#5FC2BA;
+  margin-bottom: 0.4em;
+}
+.quizz__container .introduction__wrapper img 
+{
+  border-radius: 50%;
+  border:1.5px solid #137c8b;
+  cursor: pointer;
+  width: 80px ;
+  height: 80px;
+  margin-bottom: 1em;
+  transition: 0.5s ease-in-out;
+  animation: UpAndDown 1.5s linear infinite;
+}
+
+@keyframes UpAndDown {
+  0%,100%{
+    transform: translateY(-10px);
+  }
+  20%{
+    transform: translateY(0);
+  }
+  40%{
+    transform: translateY(-8px);
+  }
+  60%{
+    transform: translateY(0);
+  }
+  80%{
+    transform: translateY(-8px);
+  }
+  
+}
+
+.quizz__container .introduction__wrapper p
+{
+  font-size: 1.3em;
+}
+
+.quizz__container .introduction__wrapper button
+{
+ 
+  padding:20px 30px 20px 30px;
+  
+}
+
+
