@@ -2,9 +2,13 @@
 {
   display: flex;
   flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 5em;
+  
 }
-
-.progress__container
+/* progress bar start */
+.quizz__container .progress__container
  {
    margin: 3em 0 3em 0;
    display: flex;
@@ -15,18 +19,31 @@
    padding: 1em;
   
  }
- .progress__container h4
+ .quizz__container .progress__container h4
 {
   text-transform: uppercase;
   color:#137c8b ;
 }
-.progress__container .progress
+.quizz__container .progress__container .progress
 {
   width: 100%;
+  
   margin-left: 2em;
   margin-right: 2em;
+  transition: 0.5s;
 }
-.quizz__container .introduction__wrapper
+/* progress bar end */
+
+/* quizz layout start*/
+.quizz__container .quizz__layout
+{
+  
+  position: relative;
+  display:flex;
+  z-index: 5;
+  
+}
+.quizz__container .quizz__layout .wrapper
 {
   position: relative;
   display: flex;
@@ -35,14 +52,31 @@
   align-items: center;
   margin: 2em;
   padding: 2em;
-
 }
-.quizz__container .introduction__wrapper h2
+/* wrapper questions*/
+.quizz__container .quizz__layout .wrapper.question
 {
-  color:#5FC2BA;
+  position: absolute;
+  transition: 0.3s ease-in;
+  justify-content: flex-start;
+  align-items: flex-start;
+ 
+}
+
+
+.quizz__container .quizz__layout .wrapper.introduce
+{
+  z-index: 2;
+  
+  
+}
+
+.quizz__container .quizz__layout .wrapper h2
+{
+  color:#137c8b;
   margin-bottom: 0.4em;
 }
-.quizz__container .introduction__wrapper img 
+.quizz__container .quizz__layout .introduce img 
 {
   border-radius: 50%;
   border:1.5px solid #137c8b;
@@ -73,16 +107,96 @@
   
 }
 
-.quizz__container .introduction__wrapper p
+.quizz__container .quizz__layout .wrapper p
 {
   font-size: 1.3em;
 }
 
-.quizz__container .introduction__wrapper button
+.quizz__container .quizz__layout .introduce button
 {
- 
-  padding:20px 30px 20px 30px;
+  
+  padding:20px 30px 20px 30px; 
+}
+
+.quizz__container .quizz__layout .question button
+{
+  width: 300px;
+  text-align: center;
   
 }
+.quizz__container .quizz__layout .wrapper button #right
+{
+  margin-left: 0.6em;
+  transition: 0.2s;
+}
+.quizz__container .quizz__layout .wrapper button:hover #right
+{
+  transform: translateX(50%);
+}
+
+.quizz__container .quizz__layout .question button #left
+{
+  margin-right: 0.6em;
+  transition: 0.2s;
+ 
+}
+.quizz__container .quizz__layout .question button:hover #left
+{
+  transform: translateX(-50%);
+}
+
+.quizz__container .quizz__layout .question .answers
+{
+  display:flex;
+  margin: 2em;
+  padding: 2em;
+
+}
+.quizz__container .quizz__layout .question .answers button 
+{
+  padding: 1em;
+  margin-right: 1em;
+  border-radius: 20px;
+  color:#137c8b;
+  font-size: 1.1em;
+  border: 1px solid #1C2942;
+  background: #fff;
+  transition: 0.2s ;
+  
+}
+
+.quizz__container .quizz__layout .question .answers button:hover
+{
+  background: #137c8b;
+  color:#fff;
+  font-weight: bold;
+  border: 1px solid #1C2942;
+}
+.quizz__container .quizz__layout .question .answers button.selected
+{
+  background: #137c8b;
+  color:#fff;
+  font-weight: bold;
+  border: 1px solid #1C2942;
+}
+
+
+
+
+
+.hidden
+{
+  z-index: 1;
+  opacity: 0;
+  pointer-events: none;
+}
+.wrapper.question.hidden
+{
+  transform: translateX(50px);
+  opacity: 0;
+  
+}
+
+
 
 

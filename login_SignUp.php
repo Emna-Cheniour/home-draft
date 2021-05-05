@@ -19,6 +19,7 @@ if (isset($_SESSION['user'])) {
 
   <title>LOGIN</title>
 </head>
+
 <body>
 
   <div class="container <?php 
@@ -28,7 +29,7 @@ if (isset($_SESSION['user'])) {
       }
     }
     unset($_SESSION['page']);
-  ?>" >
+    ?>">
 
     <div class="forms__container">
 
@@ -67,6 +68,7 @@ if (isset($_SESSION['user'])) {
         </form>
 
 
+
         <form action="inscriptionProcess.php" method="post" class="sign-up-form">
           <h2 class="title">S'inscrire</h2>
           <div class="input__field">
@@ -90,11 +92,14 @@ if (isset($_SESSION['user'])) {
           <input type="submit" value="S'inscrire" class="btn solid">
           
         </form>
-        
+
+  
         
       </div>
 
+
       <div class="panels__container">
+
         <div class="panel panel__left">
           <div class="content">
             <h3>Vous êtes nouveau ?</h3>
@@ -114,7 +119,9 @@ if (isset($_SESSION['user'])) {
 
           <img src="svg/undraw_welcome_cats_thqn.svg" class="image" alt="">
         </div>
+
       </div>
+
     </div>
 
     
