@@ -4,7 +4,7 @@
   flex-direction: column;
   position: relative;
   overflow: hidden;
-  margin-bottom: 5em;
+  margin-bottom: 200px;
   
 }
 /* progress bar start */
@@ -41,7 +41,7 @@
   position: relative;
   display:flex;
   z-index: 5;
-  
+  margin-bottom: 200px;
 }
 .quizz__container .quizz__layout .wrapper
 {
@@ -148,12 +148,14 @@
 .quizz__container .quizz__layout .question .answers
 {
   display:flex;
+  flex-wrap: wrap;
   margin: 2em;
-  padding: 2em;
+  padding: 1.7em;
 
 }
 .quizz__container .quizz__layout .question .answers button 
 {
+  margin-top: 1em;
   padding: 1em;
   margin-right: 1em;
   border-radius: 20px;
