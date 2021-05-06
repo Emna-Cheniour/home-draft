@@ -117,7 +117,10 @@ ul {
 .navbar-custom {
     background-color: #1c2942;
     height: 80px;
-    position: relative;
+    
+    position: sticky;
+    z-index: 999;
+    top:0;
 }
 
 .navbar-custom a,

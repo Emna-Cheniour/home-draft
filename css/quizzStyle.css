@@ -4,12 +4,13 @@
   flex-direction: column;
   position: relative;
   overflow: hidden;
-  margin-bottom: 5em;
+  margin-bottom: 200px;
   
 }
 /* progress bar start */
 .quizz__container .progress__container
  {
+  
    margin: 3em 0 3em 0;
    display: flex;
    justify-content: center;
@@ -17,6 +18,7 @@
    border-top: 1px solid #999;
    border-bottom: 1px solid #999;
    padding: 1em;
+   
   
  }
  .quizz__container .progress__container h4
@@ -31,6 +33,7 @@
   margin-left: 2em;
   margin-right: 2em;
   transition: 0.5s;
+  
 }
 /* progress bar end */
 
@@ -41,7 +44,7 @@
   position: relative;
   display:flex;
   z-index: 5;
-  
+  margin-bottom: 200px;
 }
 .quizz__container .quizz__layout .wrapper
 {
@@ -148,12 +151,16 @@
 .quizz__container .quizz__layout .question .answers
 {
   display:flex;
-  margin: 2em;
-  padding: 2em;
+  flex-wrap: wrap;
+  margin: 0em;
+  
+  padding: 1.7em;
+  
 
 }
 .quizz__container .quizz__layout .question .answers button 
 {
+  margin-top: 1em;
   padding: 1em;
   margin-right: 1em;
   border-radius: 20px;
