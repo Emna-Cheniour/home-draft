@@ -52,7 +52,7 @@ include_once 'head.php';
           <h2>Régime Alimentaire</h2>
           <p>Suivez-vous un régime strict sans gluten (pas d’ingestion de blé, de seigle ou d’orge)?</p>
           
-          <div class="answers" >
+          <div class="answers one__choice--question" >
             <button id="answerBtn">OUI</button>
             <button id="answerBtn">NON</button>
             
@@ -66,7 +66,7 @@ include_once 'head.php';
         <div id="question3" class="wrapper question hidden">
           <h2>Conditions générales</h2>
           <p>Veuillez sélectionner les conditions.</p>
-          <div class="answers one__choice--question" >
+          <div class="answers" >
             <button id="answerBtn">Anémie Inéxpliquée</button>
             <button id="answerBtn">Malnutrition ou carence de vitamine</button>
             <button id="answerBtn">Fatigue ou syndrome de fatigue chronique</button>
@@ -121,19 +121,6 @@ include_once 'head.php';
         </div>
 
         <div id="question7" class="wrapper question hidden">
-          <h2>QUESTION NUMERO 6</h2>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto animi rem quisquam facere. Corrupti, veniam corporis! Reprehenderit vero esse eaque deleniti fuga repellendus eos labore! Itaque atque amet molestiae obcaecati.
-          <div class="answers one__choice--question" >
-            <button id="answerBtn">YES</button>
-            <button id="answerBtn">NO</button>
-            <button id="answerBtn">UNSURE</button>
-          </div>
-
-          <button class="btn btn3" id="nextQuestionBtn" style="cursor:not-allowed" disabled='disabled'>Question Suivante<i id="right" class="fas fa-arrow-alt-circle-right"></i></button>
-          <button class="btn btn3" id="previousQuestionBtn" ><i id="left" class="fas fa-arrow-alt-circle-left"></i>Question Précédente</button>
-        </div>
-
-        <div id="question8" class="wrapper question hidden">
           <h2>QUESTION NUMERO 7</h2>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto animi rem quisquam facere. Corrupti, veniam corporis! Reprehenderit vero esse eaque deleniti fuga repellendus eos labore! Itaque atque amet molestiae obcaecati.
           <div class="answers one__choice--question" >
@@ -144,24 +131,12 @@ include_once 'head.php';
 
           <button class="btn btn3" id="nextQuestionBtn" style="cursor:not-allowed" disabled='disabled'>Question Suivante<i id="right" class="fas fa-arrow-alt-circle-right"></i></button>
           <button class="btn btn3" id="previousQuestionBtn" ><i id="left" class="fas fa-arrow-alt-circle-left"></i>Question Précédente</button>
-            
         </div>
 
-        <div id="question9" class="wrapper question hidden">
-          <h2>QUESTION NUMERO 9</h2>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto animi rem quisquam facere. Corrupti, veniam corporis! Reprehenderit vero esse eaque deleniti fuga repellendus eos labore! Itaque atque amet molestiae obcaecati.
-          <div class="answers one__choice--question" >
-            <button id="answerBtn">YES</button>
-            <button id="answerBtn">NO</button>
-            <button id="answerBtn">UNSURE</button>
-          </div>
+       
 
-          <button class="btn btn3" id="nextQuestionBtn" style="cursor:not-allowed" disabled='disabled'>Question Suivante<i id="right" class="fas fa-arrow-alt-circle-right"></i></button>
-          <button class="btn btn3" id="previousQuestionBtn" ><i id="left" class="fas fa-arrow-alt-circle-left"></i>Question Précédente</button>
-        </div>
-
-        <div id="question10" class="wrapper question hidden">
-          <h2>QUESTION NUMERO 10</h2>
+        <div id="question8" class="wrapper question hidden">
+          <h2>QUESTION NUMERO 8</h2>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto animi rem quisquam facere. Corrupti, veniam corporis! Reprehenderit vero esse eaque deleniti fuga repellendus eos labore! Itaque atque amet molestiae obcaecati.
           <div class="answers one__choice--question" >
             <button id="answerBtn">YES</button>
