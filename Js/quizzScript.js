@@ -5,7 +5,8 @@ const previousBtns=document.querySelectorAll('#previousQuestionBtn');
 const questions=document.querySelectorAll('.wrapper.question');
 const progressBar=document.querySelector('.progress-bar.progress-bar-striped.progress-bar-animated');
 const resultBtn=document.querySelector('#resultBtn');
-const answers=document.querySelectorAll('.answers');
+const questContainer=document.querySelectorAll('.answers');
+
 var score=0;
 
 // start button
@@ -31,81 +32,98 @@ resultBtn.addEventListener('click',(e)=>{
 
 // all the arrays have the same length=questions number
 
-for(let i=0; i<answers.length;i++){
+for(let k=0; k<questContainer.length;k++){
+
+  let answers=questContainer[k].children;
 
   // listen for answer section to enable next btns : only one choice question for now
-  answers[i].addEventListener('click',(e)=>{
-      if(answers[i].classList.contains('one__choice--question')){
-        let answerBtn=answers[i].children;
+  for(let i=0; i<answers.length;i++){
+
+    answers[i].addEventListener('click',(e)=>{
+      if(questContainer[k].classList.contains('one__choice--question')){
+        
         let selectedCount=0;
-        for(let j=0;j<answerBtn.length;j++){
-          if(answerBtn[j].classList.contains('selected')){
+        for(let j=0;j<answers.length;j++){
+          if(answers[j].classList.contains('selected')){
             selectedCount++;
           }
         }
         
         if(!selectedCount){
-          e.target.classList.add('selected');
-          nextBtns[i].removeAttribute('disabled');
-          nextBtns[i].style.cursor='pointer';
+          answers[i].classList.add('selected');
+          nextBtns[k].removeAttribute('disabled');
+          nextBtns[k].style.cursor='pointer';
           selectedCount++;
+          score++;
+          progressBar.style.width=(score)*12.5+"%";
+          progressBar.innerHTML=(score)*12.5+"%";
+
         }
         else {
-          for(let j=0;j<answerBtn.length;j++){
-            answerBtn[j].classList.remove('selected');
+          for(let j=0;j<answers.length;j++){
+            answers[j].classList.remove('selected');
             selectedCount--;
           }
-          e.target.classList.add('selected');
-          selectedCount++;
-        
+
+          answers[i].classList.add('selected');
+          selectedCount++;        
         }
       }
+
       else {
-        let answerBtn=answers[i].children;
         let selectedCount=0;
-        for(let j=0;j<answerBtn.length;j++){
-          if(answerBtn[j].classList.contains('selected')){
+        for(let j=0;j<answers.length;j++){
+          if(answers[j].classList.contains('selected')){
             selectedCount++;
           }
         }
-        if(!(e.target.classList.contains('selected'))){
-          e.target.classList.add('selected');
+        if(!selectedCount && !(answers[i].classList.contains('selected'))){
+          score++;
+          progressBar.style.width=(score)*12.5+"%";
+          progressBar.innerHTML=(score)*12.5+"%";
+        }
+      
+        if(!(answers[i].classList.contains('selected'))){
+          answers[i].classList.add('selected');
           selectedCount++;
         }
         else {
-          e.target.classList.remove('selected');
+          answers[i].classList.remove('selected');
           selectedCount--;
         }
         
         if(selectedCount){
-          nextBtns[i].removeAttribute('disabled');
-          nextBtns[i].style.cursor='pointer';
+          nextBtns[k].removeAttribute('disabled');
+          nextBtns[k].style.cursor='pointer';
         }
         else {
-          nextBtns[i].setAttribute('disabled','disabled');
-          nextBtns[i].style.cursor='not-allowed';
+          score--;
+          progressBar.style.width=(score)*12.5+"%";
+          progressBar.innerHTML=(score)*12.5+"%";
+          nextBtns[k].setAttribute('disabled','disabled');
+          nextBtns[k].style.cursor='not-allowed';
+
 
         } 
       }
+      
     });
 
+  }
+   
+
   // listen for next buttons
-    nextBtns[i].addEventListener('click',()=>{
-    questions[i].classList.add('hidden');
-    questions[i+1].classList.remove('hidden');
-    score++;
-    progressBar.style.width=(score)*12.5+"%";
-    progressBar.innerHTML=(score)*12.5+"%";
+    nextBtns[k].addEventListener('click',()=>{
+        questions[k].classList.add('hidden');
+        questions[k+1].classList.remove('hidden');
+        
     
     });
 
   //listen for previous buttons
-    previousBtns[i].addEventListener('click',(e)=>{
-    questions[i].classList.add('hidden');
-    questions[i-1].classList.remove('hidden');
-    score--;
-    progressBar.style.width=(score)*10+"%";
-    progressBar.innerHTML=(score)*10+"%";
+    previousBtns[k].addEventListener('click',(e)=>{
+        questions[k].classList.add('hidden');
+        questions[k-1].classList.remove('hidden');
     });
 }
 

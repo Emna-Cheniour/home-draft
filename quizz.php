@@ -64,7 +64,7 @@ include_once 'head.php';
         </div>
 
         <div id="question3" class="wrapper question hidden">
-          <h2>Conditions générales</h2>
+          <h2>Symptomes générales</h2>
           <p>Veuillez sélectionner les conditions.</p>
           <div class="answers" >
             <button id="answerBtn">Anémie Inéxpliquée</button>
@@ -79,12 +79,13 @@ include_once 'head.php';
         </div>
 
         <div id="question4" class="wrapper question hidden">
-          <h2>QUESTION NUMERO 4</h2>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto animi rem quisquam facere. Corrupti, veniam corporis! Reprehenderit vero esse eaque deleniti fuga repellendus eos labore! Itaque atque amet molestiae obcaecati.
-          <div class="answers one__choice--question" >
-            <button id="answerBtn">YES</button>
-            <button id="answerBtn">NO</button>
-            <button id="answerBtn">UNSURE</button>
+          <h2>Conditions gastro-intestinales</h2>
+          <p>Veuillez sélectionner les conditions.</p>
+          <div class="answers" >
+            <button id="answerBtn">Doubleurs Abdominales</button>
+            <button id="answerBtn">Ballonnements</button>
+            <button id="answerBtn">Intolérance au lactose</button>
+            <button id="answerBtn">Constipation</button>
           </div>
 
           <button class="btn btn3" id="nextQuestionBtn" style="cursor:not-allowed" disabled='disabled'>Question Suivante<i id="right" class="fas fa-arrow-alt-circle-right"></i></button>
@@ -93,12 +94,12 @@ include_once 'head.php';
         </div>
 
         <div id="question5" class="wrapper question hidden">
-          <h2>QUESTION NUMERO 5</h2>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto animi rem quisquam facere. Corrupti, veniam corporis! Reprehenderit vero esse eaque deleniti fuga repellendus eos labore! Itaque atque amet molestiae obcaecati.
-          <div class="answers one__choice--question" >
-            <button id="answerBtn">YES</button>
-            <button id="answerBtn">NO</button>
-            <button id="answerBtn">UNSURE</button>
+          <h2>Conditions squelettiques musculaires</h2>
+          <p>Veuillez sélectionner toutes les conditions</p>
+          <div class="answers " >
+            <button id="answerBtn">Ostéopénie ou ostéoporose</button>
+            <button id="answerBtn">Douleurs osseuses ou articulaires </button>
+            <button id="answerBtn">Engourdissement ou douleur dans les mains et les pieds (neuropathie périphérique)</button>
           </div>
 
           <button class="btn btn3" id="nextQuestionBtn" style="cursor:not-allowed" disabled='disabled'>Question Suivante<i id="right" class="fas fa-arrow-alt-circle-right"></i></button>
@@ -107,12 +108,14 @@ include_once 'head.php';
         </div>
 
         <div id="question6" class="wrapper question hidden">
-          <h2>QUESTION NUMERO 6</h2>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto animi rem quisquam facere. Corrupti, veniam corporis! Reprehenderit vero esse eaque deleniti fuga repellendus eos labore! Itaque atque amet molestiae obcaecati.
-          <div class="answers one__choice--question" >
-            <button id="answerBtn">YES</button>
-            <button id="answerBtn">NO</button>
-            <button id="answerBtn">UNSURE</button>
+          <h2>Troubles de reproduction</h2>
+          <p>Veuillez sélectionner toutes les conditions</p>
+          <div class="answers " >
+            <button id="answerBtn">Menstrual irregularities</button>
+            <button id="answerBtn">Infertilité</button>
+            <button id="answerBtn">Fausses couches</button>
+            <button id="answerBtn">Irrégularités menstruelles</button>
+
           </div>
 
           <button class="btn btn3" id="nextQuestionBtn" style="cursor:not-allowed" disabled='disabled'>Question Suivante<i id="right" class="fas fa-arrow-alt-circle-right"></i></button>
@@ -121,12 +124,12 @@ include_once 'head.php';
         </div>
 
         <div id="question7" class="wrapper question hidden">
-          <h2>QUESTION NUMERO 7</h2>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto animi rem quisquam facere. Corrupti, veniam corporis! Reprehenderit vero esse eaque deleniti fuga repellendus eos labore! Itaque atque amet molestiae obcaecati.
-          <div class="answers one__choice--question" >
-            <button id="answerBtn">YES</button>
-            <button id="answerBtn">NO</button>
-            <button id="answerBtn">UNSURE</button>
+          <h2>Symptomes Cutanées et Dentaires</h2>
+          <p>sélectionner toutes les conditions</p>
+          <div class="answers" >
+            <button id="answerBtn">Dents décolorées ou perte d’émail</button>
+            <button id="answerBtn">Éruption cutanée démangeaisons (herpétiformie de la dermatite)</button>
+            <button id="answerBtn">Éruption cutanée démangeaisons (herpétiformie de la dermatite)</button>
           </div>
 
           <button class="btn btn3" id="nextQuestionBtn" style="cursor:not-allowed" disabled='disabled'>Question Suivante<i id="right" class="fas fa-arrow-alt-circle-right"></i></button>
@@ -136,12 +139,13 @@ include_once 'head.php';
        
 
         <div id="question8" class="wrapper question hidden">
-          <h2>QUESTION NUMERO 8</h2>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto animi rem quisquam facere. Corrupti, veniam corporis! Reprehenderit vero esse eaque deleniti fuga repellendus eos labore! Itaque atque amet molestiae obcaecati.
-          <div class="answers one__choice--question" >
-            <button id="answerBtn">YES</button>
-            <button id="answerBtn">NO</button>
-            <button id="answerBtn">UNSURE</button>
+          <h2>Symptomes du système nerveux</h2>
+          <p>sélectionner toutes les conditions</p>
+          <div class="answers" >
+            <button id="answerBtn">Dépression</button>
+            <button id="answerBtn">Maux de tête ou migraine</button>
+            <button id="answerBtn">Brouillard de cerveau ou esprit brumeux</button>
+            <button id="answerBtn">TDAH</button>
           </div>
 
           <button class="btn btn3" id="resultBtn" style="cursor:not-allowed" disabled='disabled'>Résultat<i id="right" class="fas fa-arrow-alt-circle-right"></i></button>
