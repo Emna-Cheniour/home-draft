@@ -1,0 +1,58 @@
+.enteteFaq{
+    background-image: url(../svg/undraw_Questions_re_1fy7.svg);
+    background-size: cover;
+    background-position: center;
+    height: 220px;
+    text-align: center;
+    position:relative;
+}
+.titre{
+  font-size: 4em;
+  vertical-align: middle;
+  padding: 10px 0;
+}
+.soustitre{
+    font-size: 1.7em;
+    color: #137c8b;
+}
+.faq{
+    width: 90%;
+    max-width: 1000px;
+    margin: 2rem auto;
+}
+.faqContenu{
+    border-radius: 5px;
+    margin: 15px 0;
+    box-shadow: 0 2px 6px 0 #137c8b;
+}
+.faqQues{
+    padding: 10px 5px;
+    min-height: 60px;
+    font-weight: bold;
+    display: flex;
+    position: relative;
+    cursor: pointer;
+    align-items: center;
+}
+.faqQues::after{
+    content:"\002B" ;
+    font-size: 30px;
+    position: absolute;
+    right: 16px;
+}
+.faqQues:hover{
+    color: #137c8b !important;
+    }
+.faqResp{
+    display: none;
+    background-color:#1c294215 ;
+    position: relative;
+    padding: 15px;
+    line-height: 30px; 
+}
+.faqContenu.active .faqResp{
+    display: block;
+}
+.faqContenu.active .faqQues::after{
+    content: "\2212";
+}
