@@ -15,7 +15,7 @@
 
 <body>
 
-<?php include_once 'navbarConnecte.php'?>
+<?php include_once 'navbarDeconnecte.php'?>
 
 
 <div class="container">

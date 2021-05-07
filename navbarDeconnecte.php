@@ -22,8 +22,8 @@
         <ul></ul>
     </div>
     <ul class="righNavLinks">
-        <li><a href=""> <i title="Se connecter" class="fas fa-sign-in-alt"></i><a></li>
-        <li><a href=""> <i title="S'inscrire" class="fas fa-user-plus"></i><a></li>
+        <li><a href="login_SignUp.php"> <i title="Se connecter" class="fas fa-sign-in-alt"></i><a></li>
+        <li><a href="login_SignUp.php"> <i title="S'inscrire" class="fas fa-user-plus"></i><a></li>
     </ul>
 </div>
 

@@ -11,14 +11,18 @@
 .quizz__container .progress__container
  {
   
-   margin: 3em 0 3em 0;
+   
    display: flex;
    justify-content: center;
    align-items: center;
    border-top: 1px solid #999;
    border-bottom: 1px solid #999;
    padding: 1em;
+   position: fixed;
+   background-color: #fff;
+   z-index: 100000;
    
+   width: 100%;
   
  }
  .quizz__container .progress__container h4
@@ -40,7 +44,7 @@
 /* quizz layout start*/
 .quizz__container .quizz__layout
 {
-  
+  margin-top: 100px;
   position: relative;
   display:flex;
   z-index: 5;
@@ -63,7 +67,18 @@
   transition: 0.3s ease-in;
   justify-content: flex-start;
   align-items: flex-start;
+  
  
+}
+.quizz__container .quizz__layout .wrapper.question h2 img 
+{
+  width: 50px;
+  height: 50px;
+  transition: 0.5s ease-in-out;
+  animation: UpAndDown 1.5s linear infinite;
+  margin-left: 10px;
+  
+  cursor: pointer;
 }
 
 
@@ -176,7 +191,7 @@
 {
   background: #137c8b;
   color:#fff;
-  font-weight: bold;
+  font-weight: 400;
   border: 1px solid #1C2942;
 }
 .quizz__container .quizz__layout .question .answers button.selected

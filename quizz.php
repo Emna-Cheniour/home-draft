@@ -35,7 +35,8 @@ include_once 'head.php';
 
       
         <div id="question1" class="wrapper question hidden">
-          <h2>Membres de la famille</h2>
+          <h2>Membres de la famille<img src="icons/family.png" alt=""></h2>
+    
           <p>Avez-vous un membre directe de la famille (parent, frère ou sœur, enfant) atteint de la maladie coeliaque?</p>
           <div class="answers one__choice--question" >
             <button id="answerBtn">OUI</button>
@@ -65,12 +66,14 @@ include_once 'head.php';
 
         <div id="question3" class="wrapper question hidden">
           <h2>Symptomes générales</h2>
+          
           <p>Veuillez sélectionner les conditions.</p>
           <div class="answers" >
             <button id="answerBtn">Anémie Inéxpliquée</button>
             <button id="answerBtn">Malnutrition ou carence de vitamine</button>
             <button id="answerBtn">Fatigue ou syndrome de fatigue chronique</button>
             <button class="answerBtn">Carence en IgA</button>
+            <button id="answerBtn" class="none__btn">Rien de ce qui précède</button>
           </div>
 
           <button class="btn btn3" id="nextQuestionBtn" style="cursor:not-allowed" disabled='disabled'>Question Suivante<i id="right" class="fas fa-arrow-alt-circle-right"></i></button>
@@ -86,6 +89,7 @@ include_once 'head.php';
             <button id="answerBtn">Ballonnements</button>
             <button id="answerBtn">Intolérance au lactose</button>
             <button id="answerBtn">Constipation</button>
+            <button id="answerBtn none">Rien de ce qui précède</button>
           </div>
 
           <button class="btn btn3" id="nextQuestionBtn" style="cursor:not-allowed" disabled='disabled'>Question Suivante<i id="right" class="fas fa-arrow-alt-circle-right"></i></button>
@@ -100,6 +104,7 @@ include_once 'head.php';
             <button id="answerBtn">Ostéopénie ou ostéoporose</button>
             <button id="answerBtn">Douleurs osseuses ou articulaires </button>
             <button id="answerBtn">Engourdissement ou douleur dans les mains et les pieds (neuropathie périphérique)</button>
+            <button id="answerBtn none">Rien de ce qui précède</button>
           </div>
 
           <button class="btn btn3" id="nextQuestionBtn" style="cursor:not-allowed" disabled='disabled'>Question Suivante<i id="right" class="fas fa-arrow-alt-circle-right"></i></button>
@@ -115,6 +120,7 @@ include_once 'head.php';
             <button id="answerBtn">Infertilité</button>
             <button id="answerBtn">Fausses couches</button>
             <button id="answerBtn">Irrégularités menstruelles</button>
+            <button id="answerBtn none">Rien de ce qui précède</button>
 
           </div>
 
@@ -129,14 +135,12 @@ include_once 'head.php';
           <div class="answers" >
             <button id="answerBtn">Dents décolorées ou perte d’émail</button>
             <button id="answerBtn">Éruption cutanée démangeaisons (herpétiformie de la dermatite)</button>
-            <button id="answerBtn">Éruption cutanée démangeaisons (herpétiformie de la dermatite)</button>
+            <button id="answerBtn none">Rien de ce qui précède</button>
           </div>
 
           <button class="btn btn3" id="nextQuestionBtn" style="cursor:not-allowed" disabled='disabled'>Question Suivante<i id="right" class="fas fa-arrow-alt-circle-right"></i></button>
           <button class="btn btn3" id="previousQuestionBtn" ><i id="left" class="fas fa-arrow-alt-circle-left"></i>Question Précédente</button>
         </div>
-
-       
 
         <div id="question8" class="wrapper question hidden">
           <h2>Symptomes du système nerveux</h2>
@@ -146,10 +150,17 @@ include_once 'head.php';
             <button id="answerBtn">Maux de tête ou migraine</button>
             <button id="answerBtn">Brouillard de cerveau ou esprit brumeux</button>
             <button id="answerBtn">TDAH</button>
+            <button id="answerBtn none">Rien de ce qui précède</button>
           </div>
 
-          <button class="btn btn3" id="resultBtn" style="cursor:not-allowed" disabled='disabled'>Résultat<i id="right" class="fas fa-arrow-alt-circle-right"></i></button>
+          <button class="btn btn3" id="nextQuestionBtn" style="cursor:not-allowed" disabled='disabled'>Résultat<i id="right" class="fas fa-arrow-alt-circle-right"></i></button>
           <button class="btn btn3" id="previousQuestionBtn" ><i id="left" class="fas fa-arrow-alt-circle-left"></i>Question Précédente</button>
+            
+        </div>
+
+        <div id="result" class="wrapper question hidden">
+          <h2>RESULTAT DU QUIZZ</h2>
+          <p>Félicitations</p>
             
         </div>
 
