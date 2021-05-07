@@ -39,9 +39,9 @@ include_once 'head.php';
     
           <p>Avez-vous un membre directe de la famille (parent, frère ou sœur, enfant) atteint de la maladie coeliaque?</p>
           <div class="answers one__choice--question" >
-            <button id="answerBtn">OUI</button>
-            <button id="answerBtn">NON</button>
-            <button id="answerBtn">PAS SURE</button>
+            <button id="answerBtn" class="answerBtn">OUI</button>
+            <button id="answerBtn" class="answerBtn">NON</button>
+            <button id="answerBtn" class="answerBtn">PAS SURE</button>
           </div>
 
           <button class="btn btn3"  disabled='disabled' style="cursor:not-allowed" id="nextQuestionBtn">Question Suivante<i id="right" class="fas fa-arrow-alt-circle-right"></i></button>
@@ -54,8 +54,8 @@ include_once 'head.php';
           <p>Suivez-vous un régime strict sans gluten (pas d’ingestion de blé, de seigle ou d’orge)?</p>
           
           <div class="answers one__choice--question" >
-            <button id="answerBtn">OUI</button>
-            <button id="answerBtn">NON</button>
+            <button id="answerBtn" class="answerBtn">OUI</button>
+            <button id="answerBtn" class="answerBtn">NON</button>
             
           </div>
 
@@ -69,11 +69,11 @@ include_once 'head.php';
           
           <p>Veuillez sélectionner les conditions.</p>
           <div class="answers" >
-            <button id="answerBtn">Anémie Inéxpliquée</button>
-            <button id="answerBtn">Malnutrition ou carence de vitamine</button>
-            <button id="answerBtn">Fatigue ou syndrome de fatigue chronique</button>
-            <button class="answerBtn">Carence en IgA</button>
-            <button id="answerBtn" class="none__btn">Rien de ce qui précède</button>
+            <button id="answerBtn" class="answerBtn">Anémie Inéxpliquée</button>
+            <button id="answerBtn" class="answerBtn">Malnutrition ou carence de vitamine</button>
+            <button id="answerBtn" class="answerBtn">Fatigue ou syndrome de fatigue chronique</button>
+            <button class="answerBtn" class="answerBtn">Carence en IgA</button>
+            <button id="none__btn">Rien de ce qui précède</button>
           </div>
 
           <button class="btn btn3" id="nextQuestionBtn" style="cursor:not-allowed" disabled='disabled'>Question Suivante<i id="right" class="fas fa-arrow-alt-circle-right"></i></button>
@@ -85,11 +85,11 @@ include_once 'head.php';
           <h2>Conditions gastro-intestinales</h2>
           <p>Veuillez sélectionner les conditions.</p>
           <div class="answers" >
-            <button id="answerBtn">Doubleurs Abdominales</button>
-            <button id="answerBtn">Ballonnements</button>
-            <button id="answerBtn">Intolérance au lactose</button>
-            <button id="answerBtn">Constipation</button>
-            <button id="answerBtn none">Rien de ce qui précède</button>
+            <button id="answerBtn" class="answerBtn">Doubleurs Abdominales</button>
+            <button id="answerBtn" class="answerBtn">Ballonnements</button>
+            <button id="answerBtn" class="answerBtn">Intolérance au lactose</button>
+            <button id="answerBtn" class="answerBtn">Constipation</button>
+            <button id="none__btn">Rien de ce qui précède</button>
           </div>
 
           <button class="btn btn3" id="nextQuestionBtn" style="cursor:not-allowed" disabled='disabled'>Question Suivante<i id="right" class="fas fa-arrow-alt-circle-right"></i></button>
@@ -101,9 +101,9 @@ include_once 'head.php';
           <h2>Conditions squelettiques musculaires</h2>
           <p>Veuillez sélectionner toutes les conditions</p>
           <div class="answers " >
-            <button id="answerBtn">Ostéopénie ou ostéoporose</button>
-            <button id="answerBtn">Douleurs osseuses ou articulaires </button>
-            <button id="answerBtn">Engourdissement ou douleur dans les mains et les pieds (neuropathie périphérique)</button>
+            <button id="answerBtn " class="answerBtn">Ostéopénie ou ostéoporose</button>
+            <button id="answerBtn" class="answerBtn">Douleurs osseuses ou articulaires </button>
+            <button id="answerBtn" class="answerBtn">Engourdissement ou douleur dans les mains et les pieds (neuropathie périphérique)</button>
             <button id="answerBtn none">Rien de ce qui précède</button>
           </div>
 
@@ -116,11 +116,11 @@ include_once 'head.php';
           <h2>Troubles de reproduction</h2>
           <p>Veuillez sélectionner toutes les conditions</p>
           <div class="answers " >
-            <button id="answerBtn">Menstrual irregularities</button>
-            <button id="answerBtn">Infertilité</button>
-            <button id="answerBtn">Fausses couches</button>
-            <button id="answerBtn">Irrégularités menstruelles</button>
-            <button id="answerBtn none">Rien de ce qui précède</button>
+            <button id="answerBtn" class="answerBtn">Menstrual irregularities</button>
+            <button id="answerBtn" class="answerBtn">Infertilité</button>
+            <button id="answerBtn" class="answerBtn">Fausses couches</button>
+            <button id="answerBtn" class="answerBtn">Irrégularités menstruelles</button>
+            <button id="none__btn">Rien de ce qui précède</button>
 
           </div>
 
@@ -133,9 +133,9 @@ include_once 'head.php';
           <h2>Symptomes Cutanées et Dentaires</h2>
           <p>sélectionner toutes les conditions</p>
           <div class="answers" >
-            <button id="answerBtn">Dents décolorées ou perte d’émail</button>
-            <button id="answerBtn">Éruption cutanée démangeaisons (herpétiformie de la dermatite)</button>
-            <button id="answerBtn none">Rien de ce qui précède</button>
+            <button id="answerBtn " class="answerBtn">Dents décolorées ou perte d’émail</button>
+            <button id="answerBtn" class="answerBtn">Éruption cutanée démangeaisons (herpétiformie de la dermatite)</button>
+            <button id="none__btn">Rien de ce qui précède</button>
           </div>
 
           <button class="btn btn3" id="nextQuestionBtn" style="cursor:not-allowed" disabled='disabled'>Question Suivante<i id="right" class="fas fa-arrow-alt-circle-right"></i></button>
@@ -146,11 +146,11 @@ include_once 'head.php';
           <h2>Symptomes du système nerveux</h2>
           <p>sélectionner toutes les conditions</p>
           <div class="answers" >
-            <button id="answerBtn">Dépression</button>
-            <button id="answerBtn">Maux de tête ou migraine</button>
-            <button id="answerBtn">Brouillard de cerveau ou esprit brumeux</button>
-            <button id="answerBtn">TDAH</button>
-            <button id="answerBtn none">Rien de ce qui précède</button>
+            <button id="answerBtn" class="answerBtn">Dépression</button>
+            <button id="answerBtn" class="answerBtn">Maux de tête ou migraine</button>
+            <button id="answerBtn" class="answerBtn">Brouillard de cerveau ou esprit brumeux</button>
+            <button id="answerBtn" class="answerBtn">TDAH</button>
+            <button id="none__btn">Rien de ce qui précède</button>
           </div>
 
           <button class="btn btn3" id="nextQuestionBtn" style="cursor:not-allowed" disabled='disabled'>Résultat<i id="right" class="fas fa-arrow-alt-circle-right"></i></button>
@@ -160,7 +160,7 @@ include_once 'head.php';
 
         <div id="result" class="wrapper question hidden">
           <h2>RESULTAT DU QUIZZ</h2>
-          <p>Félicitations</p>
+          
             
         </div>
 

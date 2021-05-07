@@ -63,7 +63,7 @@
                     <br>
                     Découvrez maintenant leurs réponses correctes, faciles à comprendre et brèves !
                 </p>
-                <div class="services__btn"><a class="btn btn1">FAQ</a></div>
+                <div class="services__btn"><a href="faq.php" class="btn btn1">FAQ</a></div>
             </div>
             <div class="service col4">
                 <img src="images/nutritionist.png">

@@ -16,7 +16,7 @@
             <li><a href="#">Contacter un specialiste</a></li>
         </ul>
         <ul>
-            <li><a href="#">FAQ</a></li>
+            <li><a href="faq.php">FAQ</a></li>
             <li><a href="recette.php">Recettes</a></li>
         </ul>
         <ul></ul>
