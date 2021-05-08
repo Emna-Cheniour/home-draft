@@ -13,38 +13,44 @@ if (isset($_POST['sendReview'])) {
 
 <body>
     <?php include_once 'navbarConnecte.php' ?>
-    <div class="containerCeliac">
 
-        <div class="mainLatest">
+    <h2 class="latestTitle">Nouveautés</h2>
+    <div class="mainLatest">
 
-            <h2>Latest Products</h2>
-            <div class="cardLatest">
-                <div class="circle">
-                </div>
-                <div class="content">
-                    <h2>Pepsi cola</h2>
-                    <p>Refrshing SOda from the UK </p>
-                </div>
-                <img src="images/pepsi.png" alt="">
+        <div class="cardLatest">
+            <div class="circle">
             </div>
-            <div class="cardLatest">
-                <div class="circle">
-                </div>
-                <div class="content">
-                    <h2>Pepsi cola</h2>
-                    <p>Refrshing SOda from the UK </p>
-                </div>
-                <img src="images/pepsi.png" alt="">
+            <div class="content">
+                <h2>Pepsi cola</h2>
+                <p>Refrshing SOda from the UK </p>
             </div>
-            <div class="cardLatest">
-                <div class="circle">
-                </div>
-                <div class="content">
-                    <h2>Pepsi cola</h2>
-                    <p>Refrshing SOda from the UK </p>
-                </div>
-                <img src="images/pepsi.png" alt="">
+            <img src="images/pepsi.png" alt="">
+        </div>
+        <div class="cardLatest">
+            <div class="circle">
             </div>
+            <div class="content">
+                <h2>Pepsi cola</h2>
+                <p>Refrshing SOda from the UK </p>
+            </div>
+            <img src="images/pepsi.png" alt="">
+        </div>
+        <div class="cardLatest">
+            <div class="circle">
+            </div>
+            <div class="content">
+                <h2>Pepsi cola</h2>
+                <p>Refrshing SOda from the UK </p>
+            </div>
+            <img src="images/pepsi.png" alt="">
+        </div>
+    </div>
+    <div class="reviewWrapper">
+        <div class="addReview">
+            <h3>Voici les commentaires de nos clients</h3>
+            <h3> Et vous ?</h3>
+            <h3>Comment s'est passée votre expérience de shopping de chez nous? </h3>
+            <h3 class="btn btn1 openReview">Racontez nous!</h2>
         </div>
         <div class="reviews">
             <div class="swiper-container">
@@ -76,12 +82,6 @@ if (isset($_POST['sendReview'])) {
             </div>
         </div>
     </div>
-    <div class="addReview">
-        <h3>Voici les commentaires de nos clients</h3>
-        <h3> Et vous ?</h3>
-        <h3>Comment s'est passée votre expérience de shopping de chez nous? </h3>
-        <h3 class="btn btn1 openReview">Racontez nous!</h2>
-    </div>
     <div class=" addReviewForm">
         <h1 class="closeReview"> &times;</h1>
         <img src="images/reviewForm.png" alt="">
@@ -111,26 +111,97 @@ if (isset($_POST['sendReview'])) {
                                                 echo $reviewContent;
                                             } ?></div>
     <div id="overlayAddReview"></div>
-    <div class="shopping">
-        <div class="topSearch">
-            <form action="latest.php" method="POST">
-                <input type="text" placeholder="search for a product..">
-                <select name="Trier" id="">
-                    <option value="cat">newest</option>
-                    <option value="">prix croissant</option>
-                    <option value="dog">prix decroissant</option>
-                </select>
+    <div class="productsss">
 
-                <div class="priceScroll"></div>
-                <div class="productCategories">
+        <div class="containerProducts">
+
+
+            <div class="searchProduct">
+                <i class="fas fa-search" id="search__icon"></i>
+                <input class="search" placeholder="Rechercher..." type="text">
+
+            </div>
+            <div class="productCategories ">
+                <div class="productCategory">
+
+                    <h4>Produits</h4>
+                    <i id="more" class="fas fa-plus"></i>
+                    <div style="clear: both"></div>
                 </div>
-            </form>
+                <div id="productCategoryOptions" class="productCategoryOptions">
+
+                    <div>
+                        <input type="checkbox" name="" id="">
+                        <label for="">Biscuits</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="" id="">
+                        <label for="">Farine</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="" id="">
+                        <label for="">Pain</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="" id="">
+                        <label for="">Pâtes</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="" id="">
+                        <label for="">Cupcake</label>
+                    </div>
+                </div>
+                <div class="ProductPriceRange">
+                    <div class="ProductPrice">
+                        <h4>Prix</h4>
+                        <i id="reset" class="fas fa-redo"></i>
+                        <div style="clear: both"></div>
+                    </div>
+                    <div class="" id="amount">                     
+                    <h3 id="amountmin"> </h3>
+                    <h3 id="amountmax"></h3>
+                    </div>  
+                    <div id="slider-range"></div>
+                    <input type="hidden" id="min" value="100">
+                    <input type="hidden" id="max" value="800">
+
+                </div>
+
+            </div>
+
         </div>
-        <div class="shoppingCards"></div>
+        <div class="productsResult">
+            <div class="trierProduits">
+                <select name="" id="">
+                    <option value="">Nouveau produits</option>
+
+                    <option value="">Prix Croissant</option>
+
+                    <option value="">Prix Décroissant</option>
+
+                </select>
+                
+                <div style="clear: both"></div>
+            </div>
+            <div class="searchFilters">
+                
+            </div>
+            <div class="productCards">
+
+            </div>
+        </div>
+
     </div>
+    <button id="button">Hiiiiii</button>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="js/shopping.js"></script>
-    <script src="js/main.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="rangePrice.js"> </script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/shopping2.js"></script>
 </body>
 
 </html>
