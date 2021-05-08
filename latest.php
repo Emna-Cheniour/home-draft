@@ -112,7 +112,15 @@ if (isset($_POST['sendReview'])) {
                         <div class="swiper-slide swiperCommentaireContent">
                             <div class="review">
                                 <img src="images/right-quote.png" class="quote" alt="quote">
+                                <input id="reviewNote" type="hidden" value="<?= $x ?>" >
                                 <div class="reviewContent">
+                                    <div class="reviewNote">
+                                        <i class="far fa-heart"></i>
+                                        <i class="far fa-heart"></i>
+                                        <i class="far fa-heart"></i>
+                                        <i class="far fa-heart"></i>
+                                        <i class="far fa-heart"></i>
+                                    </div>
                                     <p>Lorem ipsum dolor sit amet, consesteur de
                                         la meuiileure propagande de la ville de saint
                                         exupery il etait un homme bon mais rien ne
@@ -162,7 +170,7 @@ if (isset($_POST['sendReview'])) {
                                                 echo $reviewContent;
                                             } ?></div>
     <div id="overlayAddReview"></div>
-    <div class="productsss">
+    <div id="startShopping" class="productsss">
 
         <div class="containerProducts">
 
@@ -223,6 +231,7 @@ if (isset($_POST['sendReview'])) {
         </div>
         <div class="productsResult">
             <div class="trierProduits">
+                <h3>Trier par:</h3>
                 <select name="" id="">
                     <option value="">Nouveau produits</option>
 
@@ -232,8 +241,9 @@ if (isset($_POST['sendReview'])) {
 
                 </select>
 
-                <div style="clear: both"></div>
             </div>
+
+            <div style="clear: both"></div>
             <div class="searchFilters">
 
             </div>
@@ -243,7 +253,6 @@ if (isset($_POST['sendReview'])) {
         </div>
 
     </div>
-    <button id="button">Hiiiiii</button>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="js/shopping.js"></script>
