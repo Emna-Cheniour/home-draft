@@ -13,7 +13,58 @@ if (isset($_POST['sendReview'])) {
 
 <body>
     <?php include_once 'navbarConnecte.php' ?>
+    <div class="swiper-container shoppingPoster">
+        <div class="swiper-wrapper shoppingPosterWrapper">
+            <div class="swiper-slide shoppingPosterSlide">
+                <div class="leftSlide">
+                    <h2>Bienvenue à Celiac101 : The Shop</h2>
+                    <h5>Une collection de produits sans gluten variée avec des prix raisonnables. </h5>
+                    <button class="btn btn1">Commencez votre shopping</button>
+                </div>
+                <div class="rightSlide">
+                    <img src="images/shopWithUs.png" alt="">
+                </div>
+            </div>
+            <div class="swiper-slide shoppingPosterSlide">
+                <div class="leftSlide">
+                    <h2>Livraison à domicile</h2>
+                    <h5>Celiac101 garantit une livraison rapide , ponctuelle et très satisfaisante. </h5>
+                    <button class="btn btn1">Commencez votre shopping</button>
+                </div>
+                <div class="rightSlide">
+                    <img src="images/deliveryposter.png" alt="">
+                </div>
+            </div>
+            <div class="swiper-slide shoppingPosterSlide">
+                <div class="leftSlide">
+                    <h2>Méthodes de Paiement</h2>
+                    <h5>Vous pouvez soit payer à la livraison soit payer électroniquement en toute sécurité. </h5>
+                    <button class="btn btn1">Commencez votre shopping</button>
+                </div>
+                <div class="rightSlide">
+                    <img src="images/electroOuLivraison.png" alt="">
+                </div>
+            </div>
+            <div class="swiper-slide shoppingPosterSlide">
+                <div class="leftSlide">
+                    <h2>Points de vente</h2>
+                    <h5>Trouvez tous nos produits dans les adresses suivantes: </h5>
+                    <h6>xxxx</h6>
+                    <h6>xxxx</h6>
+                    <button class="btn btn1">Commencez votre shopping</button>
+                </div>
+                <div class="rightSlide">
+                    <img src="images/pointdevente.png" alt="">
+                </div>
+            </div>
 
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination shoppingPosterPagination"></div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next shoppingPosterNext"></div>
+        <div class="swiper-button-prev shoppingPosterPrev"></div>
+    </div>
     <h2 class="latestTitle">Nouveautés</h2>
     <div class="mainLatest">
 
@@ -53,12 +104,12 @@ if (isset($_POST['sendReview'])) {
             <h3 class="btn btn1 openReview">Racontez nous!</h2>
         </div>
         <div class="reviews">
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
+            <div class="swiper-container swiperCommentaires">
+                <div class="swiper-wrapper swiperCommentaire">
                     <?php
                     for ($x = 0; $x < 5; $x++) {
                     ?>
-                        <div class="swiper-slide">
+                        <div class="swiper-slide swiperCommentaireContent">
                             <div class="review">
                                 <img src="images/right-quote.png" class="quote" alt="quote">
                                 <div class="reviewContent">
@@ -157,10 +208,10 @@ if (isset($_POST['sendReview'])) {
                         <i id="reset" class="fas fa-redo"></i>
                         <div style="clear: both"></div>
                     </div>
-                    <div class="" id="amount">                     
-                    <h3 id="amountmin"> </h3>
-                    <h3 id="amountmax"></h3>
-                    </div>  
+                    <div class="" id="amount">
+                        <h3 id="amountmin"> </h3>
+                        <h3 id="amountmax"></h3>
+                    </div>
                     <div id="slider-range"></div>
                     <input type="hidden" id="min" value="100">
                     <input type="hidden" id="max" value="800">
@@ -180,11 +231,11 @@ if (isset($_POST['sendReview'])) {
                     <option value="">Prix Décroissant</option>
 
                 </select>
-                
+
                 <div style="clear: both"></div>
             </div>
             <div class="searchFilters">
-                
+
             </div>
             <div class="productCards">
 

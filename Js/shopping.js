@@ -1,4 +1,23 @@
-var swiper = new Swiper('.swiper-container', {
+/*Swiper Pour Poster*/
+var swiper = new Swiper('.shoppingPoster', {
+  autoplay: {
+    delay: 5000,
+  },
+  effect: 'fade',
+  slidesPerView: 1,
+  spaceBetween: 30,
+  loop: true,
+  pagination: {
+    el: '.shoppingPosterPagination',
+    clickable: true,
+  },
+  navigation: {
+    nextEl: '.shoppingPosterNext',
+    prevEl: '.shoppingPosterPrev',
+  },
+});
+/*Swiper pour commentaires*/
+var swiper = new Swiper('.swiperCommentaires', {
 
   effect: 'coverflow',
   grabCursor: true,
@@ -119,10 +138,10 @@ resetButton.addEventListener('click', () => {
   a["maxPrice"] = $maxPrice;
   $(".productCards").load("cards.php", a);
 });
-/* ajax for trier par */ 
-$(".trierProduits select").change(function(){
+/* ajax for trier par */
+$(".trierProduits select").change(function () {
   var selectedTri = $(this).children("option:selected").text().trim();
-  
+
   a["tri"] = selectedTri;
   $(".productCards").load("cards.php", a);
 

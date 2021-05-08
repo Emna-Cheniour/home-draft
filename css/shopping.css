@@ -1,7 +1,57 @@
 .containerCeliac {
     padding: 10px;
 }
+/*Poster*/
 
+
+.shoppingPoster {
+    margin-left: auto;
+    margin-right: auto;
+    height: 500px;
+}
+
+.shoppingPosterSlide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.leftSlide {
+    padding: 20px;
+}
+.leftSlide{
+    
+}
+.leftSlide h2{
+    color: #3498db;
+    font-size: 40px;
+    letter-spacing: 2px;
+    padding:20px;
+}
+.leftSlide h5{
+    color: #0B162C;
+    font-size: 20px;
+    letter-spacing: 2px;
+    padding:20px;
+}
+
+.leftSlide h6{
+    color: #0B162C;
+    font-size: 18px;
+    letter-spacing: 2px;
+    padding-top:10px;
+}
+.rightSlide {
+    padding: 20px;
+}
+.rightSlide img{
+    height: 400px;
+}
+
+/*/*/
 
 /*LATEST*/
 .latestTitle{
@@ -122,13 +172,14 @@
     overflow: hidden;
 }
 
-.swiper-container {
+.swiperCommentaires{
+
     margin: 0 30px 0;
     padding-top: 20px;
     padding-bottom: 20px;
 }
 
-.swiper-slide {
+.swiperCommentaireContent {
     background-position: center;
     background-size: cover;
     width: 350px;
@@ -138,7 +189,7 @@
     border-radius: 20px;
 }
 
-.swiper-slide-active {
+.swiper-slide-active.swiperCommentaireContent {
     filter: blur(0px);
     background: #0B162C;
 
