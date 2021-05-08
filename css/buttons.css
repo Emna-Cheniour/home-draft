@@ -53,7 +53,7 @@ body{
 .btn1:hover,.btn2:hover a{
   color: #fff;
 }
-.btn3:hover,.btn4:hover a{
+.btn3:hover,.btn4:hover {
   
   color: #5FC2BA;
 }
@@ -68,6 +68,11 @@ body{
   
   color: #137c8b;
 }
+.btn3.don:hover a,.btn4.don:hover a{
+  
+  color: #137c8b;
+}
+
 .btn::before{
   content: "";
   position: absolute;
