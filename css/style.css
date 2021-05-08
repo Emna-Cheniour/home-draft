@@ -826,3 +826,6 @@ ul {
     letter-spacing: 1px;
     color: #fff;
 }
+#button{
+    display: none;
+}

@@ -46,4 +46,12 @@ class Repository
         $response->execute([$username,$email,$password]);
         return $response->fetch(PDO::FETCH_OBJ);
     }
+    public function showCategory($categories){
+        
+        $request="select * from ".$this->tableName ." WHERE category= ".$categories[0];
+            
+        $response =$this->bd->prepare($request);
+        $response->execute([$categories[0]]);
+        return $response->fetch(PDO::FETCH_OBJ);
+    }
   }
