@@ -10,8 +10,9 @@ body{
 }
 
 /* Hover Effect Blue Button */
-.btn.services{
+.btn.btnServ{
   border: 1px solid #3498db;
+  
 }
 .btn.don{
   border: 1px solid #137c8b;
@@ -34,7 +35,7 @@ body{
   color:#fff;
   transition: 0.8s;
 }
-.btn1.services,.btn2.services
+.btn1.btnServ,.btn2.btnServ
 {
   color: #3498db;
 }
@@ -78,7 +79,7 @@ body{
   transition: 0.8s;
 }
 
-.btn.services::before
+.btn.btnServ::before
 {
   background: #3498db;
 }

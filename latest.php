@@ -19,7 +19,7 @@ if (isset($_POST['sendReview'])) {
                 <div class="leftSlide">
                     <h2>Bienvenue à Celiac101 : The Shop</h2>
                     <h5>Une collection de produits sans gluten variée avec des prix raisonnables. </h5>
-                    <button class="btn btn1">Commencez votre shopping</button>
+                    <button class="btn btn1 btnServ">Commencez votre shopping</button>
                 </div>
                 <div class="rightSlide">
                     <img src="images/shopWithUs.png" alt="">
@@ -29,7 +29,7 @@ if (isset($_POST['sendReview'])) {
                 <div class="leftSlide">
                     <h2>Livraison à domicile</h2>
                     <h5>Celiac101 garantit une livraison rapide , ponctuelle et très satisfaisante. </h5>
-                    <button class="btn btn1">Commencez votre shopping</button>
+                    <button class="btn btn1 btnServ">Commencez votre shopping</button>
                 </div>
                 <div class="rightSlide">
                     <img src="images/deliveryposter.png" alt="">
@@ -39,7 +39,7 @@ if (isset($_POST['sendReview'])) {
                 <div class="leftSlide">
                     <h2>Méthodes de Paiement</h2>
                     <h5>Vous pouvez soit payer à la livraison soit payer électroniquement en toute sécurité. </h5>
-                    <button class="btn btn1">Commencez votre shopping</button>
+                    <button class="btn btn1 btnServ">Commencez votre shopping</button>
                 </div>
                 <div class="rightSlide">
                     <img src="images/electroOuLivraison.png" alt="">
@@ -51,7 +51,7 @@ if (isset($_POST['sendReview'])) {
                     <h5>Trouvez tous nos produits dans les adresses suivantes: </h5>
                     <h6>xxxx</h6>
                     <h6>xxxx</h6>
-                    <button class="btn btn1">Commencez votre shopping</button>
+                    <button class="btn btn1 btnServ">Commencez votre shopping</button>
                 </div>
                 <div class="rightSlide">
                     <img src="images/pointdevente.png" alt="">
