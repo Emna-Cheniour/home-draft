@@ -17,7 +17,7 @@
         </ul>
         <ul>
             <li><a href="#">FAQ</a></li>
-            <li><a href="recette.php">Recettes</a></li>
+            <li><a href="#">Recettes</a></li>
         </ul>
         <ul></ul>
     </div>
@@ -38,7 +38,7 @@
         <li><a href="#">Contacter un specialiste</a></li>
     </ul>
     <ul>
-        <li><a href="#">FAQ</a></li>
+        <li><a href="faq.php">FAQ</a></li>
         <li><a href="#">Recettes</a></li>
     </ul>
     <ul></ul>
@@ -46,7 +46,7 @@
 <div class="dropdownProfil">
     <ul>
     <li><i class="fas fa-cogs"></i><a href="#">Modifier Profil</a></li>
-    <li><i class="fas fa-sign-out-alt"><a href="logout.php"></i>Se Deconnecter</a></li>
+    <li><i class="fas fa-sign-out-alt"></i><a href="logout.php">Se Deconnecter</a></li>
     
     </ul>
 </div>

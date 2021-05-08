@@ -10,7 +10,12 @@ body{
 }
 
 /* Hover Effect Blue Button */
-
+.btn.services{
+  border: 1px solid #3498db;
+}
+.btn.don{
+  border: 1px solid #137c8b;
+}
 .btn{
   border: 1px solid #5FC2BA;
   background: none;
@@ -29,6 +34,15 @@ body{
   color:#fff;
   transition: 0.8s;
 }
+.btn1.services,.btn2.services
+{
+  color: #3498db;
+}
+.btn1.don,.btn2.don
+{
+  color: #137c8b;
+}
+
 .btn1,.btn2{
   color: #5FC2BA;
 }
@@ -49,6 +63,10 @@ body{
   
   color: #5FC2BA;
 }
+.btn3.don:hover,.btn4.don:hover{
+  
+  color: #137c8b;
+}
 .btn::before{
   content: "";
   position: absolute;
@@ -58,6 +76,15 @@ body{
   background: #5FC2BA;
   z-index: -1;
   transition: 0.8s;
+}
+
+.btn.services::before
+{
+  background: #3498db;
+}
+.btn.don::before
+{
+  background: #137c8b;
 }
 
 .btn1::before,.btn3::before{
@@ -77,6 +104,10 @@ body{
 .btn3:hover::before,.btn4:hover::before{
   height: 0%;
 }
+
+/*services__btn*/
+
+ 
 .slide__btn {
   
   font-size: 1.5rem;

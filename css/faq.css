@@ -1,11 +1,28 @@
+.faq__container
+{
+   margin-top: 0px;
+   margin-bottom: 200px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+
 .enteteFaq{
+    
     background-image: url(../svg/undraw_Questions_re_1fy7.svg);
-    background-size: cover;
+    background-size:100%;
     background-position: center;
-    height: 220px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     text-align: center;
     position:relative;
+    
+    
 }
+
 .titre{
   font-size: 4em;
   vertical-align: middle;
@@ -19,6 +36,7 @@
     width: 90%;
     max-width: 1000px;
     margin: 2rem auto;
+    margin-top: 50px;
 }
 .faqContenu{
     border-radius: 5px;

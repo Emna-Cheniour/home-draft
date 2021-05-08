@@ -1,20 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="css/faq.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-    <title>FAQ</title>
-</head>
+<?php include_once 'head.php' ?>
 <body>
+<?php include_once 'navbarConnecte.php'?>
+
+<div class="faq__container">
+
     <div class="enteteFaq">
-    <p class="titre">FAQ</p>
-    <p class="soustitre"> Tout ce que vous voulez savoir sur  </p>
-    <p class="soustitre">la maladie coeliaque</p>
+        
+        <p class="titre">FAQ</p>
+        <p class="soustitre"> Tout ce que vous voulez savoir sur  </p>
+        <p class="soustitre">la maladie coeliaque</p>
+        
     </div>
+
     <div class="faq">
         <div class="faqContenu">
             <div class="faqQues">
@@ -80,7 +77,13 @@
             </div>
         </div>
         </div>
-       
+   </div>
+
+
+</div>
+
+    <?php include_once 'footer.php'?>
     <script src="Js/faq.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
