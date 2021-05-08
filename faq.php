@@ -1,6 +1,7 @@
 <?php include_once 'head.php' ?>
 <body>
 <?php include_once 'navbarConnecte.php'?>
+
 <div class="faq__container">
 
     <div class="enteteFaq">
@@ -80,6 +81,7 @@
 
 
 </div>
+
     <?php include_once 'footer.php'?>
     <script src="Js/faq.js"></script>
     <script src="js/main.js"></script>

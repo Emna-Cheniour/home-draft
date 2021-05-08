@@ -50,7 +50,7 @@ include_once 'head.php';
         </div>
 
         <div id="question2" class="wrapper question hidden">
-          <h2>Régime Alimentaire</h2>
+          <h2>Régime Alimentaire<img src="icons/diet.png" alt=""></h2>
           <p>Suivez-vous un régime strict sans gluten (pas d’ingestion de blé, de seigle ou d’orge)?</p>
           
           <div class="answers one__choice--question" >
@@ -65,7 +65,7 @@ include_once 'head.php';
         </div>
 
         <div id="question3" class="wrapper question hidden">
-          <h2>Symptomes générales</h2>
+          <h2>Symptomes générales<img src="icons/symptoms.png" alt=""></h2>
           
           <p>Veuillez sélectionner les conditions.</p>
           <div class="answers" >
@@ -73,7 +73,7 @@ include_once 'head.php';
             <button id="answerBtn" class="answerBtn">Malnutrition ou carence de vitamine</button>
             <button id="answerBtn" class="answerBtn">Fatigue ou syndrome de fatigue chronique</button>
             <button class="answerBtn" class="answerBtn">Carence en IgA</button>
-            <button id="none__btn">Rien de ce qui précède</button>
+            <button id="answerBtn" class="answerBtn none__btn">Rien de ce qui précède</button>
           </div>
 
           <button class="btn btn3" id="nextQuestionBtn" style="cursor:not-allowed" disabled='disabled'>Question Suivante<i id="right" class="fas fa-arrow-alt-circle-right"></i></button>
@@ -82,14 +82,14 @@ include_once 'head.php';
         </div>
 
         <div id="question4" class="wrapper question hidden">
-          <h2>Conditions gastro-intestinales</h2>
+          <h2>Conditions gastro-intestinales<img src="icons/stomach.png" alt=""></h2>
           <p>Veuillez sélectionner les conditions.</p>
           <div class="answers" >
             <button id="answerBtn" class="answerBtn">Doubleurs Abdominales</button>
             <button id="answerBtn" class="answerBtn">Ballonnements</button>
             <button id="answerBtn" class="answerBtn">Intolérance au lactose</button>
             <button id="answerBtn" class="answerBtn">Constipation</button>
-            <button id="none__btn">Rien de ce qui précède</button>
+            <button id="answerBtn" class="answerBtn none__btn">Rien de ce qui précède</button>
           </div>
 
           <button class="btn btn3" id="nextQuestionBtn" style="cursor:not-allowed" disabled='disabled'>Question Suivante<i id="right" class="fas fa-arrow-alt-circle-right"></i></button>
@@ -98,13 +98,13 @@ include_once 'head.php';
         </div>
 
         <div id="question5" class="wrapper question hidden">
-          <h2>Conditions squelettiques musculaires</h2>
+          <h2>Conditions squelettiques musculaires<img src="icons/x-ray.png" alt=""></h2>
           <p>Veuillez sélectionner toutes les conditions</p>
           <div class="answers " >
             <button id="answerBtn " class="answerBtn">Ostéopénie ou ostéoporose</button>
             <button id="answerBtn" class="answerBtn">Douleurs osseuses ou articulaires </button>
             <button id="answerBtn" class="answerBtn">Engourdissement ou douleur dans les mains et les pieds (neuropathie périphérique)</button>
-            <button id="answerBtn none">Rien de ce qui précède</button>
+            <button id="answerBtn" class="answerBtn none__btn"">Rien de ce qui précède</button>
           </div>
 
           <button class="btn btn3" id="nextQuestionBtn" style="cursor:not-allowed" disabled='disabled'>Question Suivante<i id="right" class="fas fa-arrow-alt-circle-right"></i></button>
@@ -113,14 +113,14 @@ include_once 'head.php';
         </div>
 
         <div id="question6" class="wrapper question hidden">
-          <h2>Troubles de reproduction</h2>
+          <h2>Troubles de reproduction<img src="icons/pregnant.png" alt=""></h2>
           <p>Veuillez sélectionner toutes les conditions</p>
           <div class="answers " >
             <button id="answerBtn" class="answerBtn">Menstrual irregularities</button>
             <button id="answerBtn" class="answerBtn">Infertilité</button>
             <button id="answerBtn" class="answerBtn">Fausses couches</button>
             <button id="answerBtn" class="answerBtn">Irrégularités menstruelles</button>
-            <button id="none__btn">Rien de ce qui précède</button>
+            <button id="answerBtn" class="answerBtn none__btn">Rien de ce qui précède</button>
 
           </div>
 
@@ -130,12 +130,12 @@ include_once 'head.php';
         </div>
 
         <div id="question7" class="wrapper question hidden">
-          <h2>Symptomes Cutanées et Dentaires</h2>
+          <h2>Symptomes Cutanées et Dentaires<img src="icons/dental-care.png" alt=""></h2>
           <p>sélectionner toutes les conditions</p>
           <div class="answers" >
             <button id="answerBtn " class="answerBtn">Dents décolorées ou perte d’émail</button>
             <button id="answerBtn" class="answerBtn">Éruption cutanée démangeaisons (herpétiformie de la dermatite)</button>
-            <button id="none__btn">Rien de ce qui précède</button>
+            <button id="answerBtn" class="answerBtn none__btn">Rien de ce qui précède</button>
           </div>
 
           <button class="btn btn3" id="nextQuestionBtn" style="cursor:not-allowed" disabled='disabled'>Question Suivante<i id="right" class="fas fa-arrow-alt-circle-right"></i></button>
@@ -143,14 +143,14 @@ include_once 'head.php';
         </div>
 
         <div id="question8" class="wrapper question hidden">
-          <h2>Symptomes du système nerveux</h2>
+          <h2>Symptomes du système nerveux<img src="icons/brain.png" alt=""></h2>
           <p>sélectionner toutes les conditions</p>
           <div class="answers" >
             <button id="answerBtn" class="answerBtn">Dépression</button>
             <button id="answerBtn" class="answerBtn">Maux de tête ou migraine</button>
             <button id="answerBtn" class="answerBtn">Brouillard de cerveau ou esprit brumeux</button>
             <button id="answerBtn" class="answerBtn">TDAH</button>
-            <button id="none__btn">Rien de ce qui précède</button>
+            <button id="answerBtn" class="answerBtn none__btn">Rien de ce qui précède</button>
           </div>
 
           <button class="btn btn3" id="nextQuestionBtn" style="cursor:not-allowed" disabled='disabled'>Résultat<i id="right" class="fas fa-arrow-alt-circle-right"></i></button>

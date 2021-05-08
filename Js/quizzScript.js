@@ -32,18 +32,18 @@ nextBtns[questionNbr-2].addEventListener('click',(e)=>{
 
 
         var quizzResult = document.createElement('p');
-        var content="";
+    
 
-        if(!finalResult){
+        if(finalResult==0){
           quizzResult.innerHTML= "Your quizz score is: "+finalResult+"<br> safe ";
           console.log("alo1")
         }
 
-        if(finalResult<=7){
+        else if(1<=finalResult<=7){
           console.log("alo2")
           quizzResult.innerHTML= "Your quizz score is: "+finalResult+"<br> unlikely but be careful";
         } 
-        if(finalResult>=8){
+        else{
           console.log("alo3");
           quizzResult.innerHTML= "Your quizz score is: "+finalResult+"<br> ALERT!!!! It is very likely that you have celiac disease! If you wanna contact specialists <br> wanna know more about celiac disease ?";
         }
