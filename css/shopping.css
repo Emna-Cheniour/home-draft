@@ -44,11 +44,26 @@
     letter-spacing: 2px;
     padding-top:10px;
 }
+.leftSlide button{
+}
 .rightSlide {
     padding: 20px;
 }
 .rightSlide img{
     height: 400px;
+    margin-right: 20px;
+}
+
+
+@media only screen and (max-width: 800px) {
+    
+.shoppingPosterSlide {
+    grid-template-columns: 1fr;
+}
+.shoppingPoster {
+    height: 800px;
+}
+
 }
 
 /*/*/
