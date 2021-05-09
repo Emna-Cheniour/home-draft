@@ -5,7 +5,9 @@ const previousBtns=document.querySelectorAll('#previousQuestionBtn');
 const questions=document.querySelectorAll('.wrapper.question');
 const progressBar=document.querySelector('.progress-bar.progress-bar-striped.progress-bar-animated');
 const questContainer=document.querySelectorAll('.answers');
-const noneBtn=document.querySelectorAll('#none__btn');
+const noneBtn=document.querySelectorAll('.answerBtn.none__btn');
+
+
 
 const questionNbr=questions.length;
 var score=0;
@@ -24,34 +26,7 @@ previousBtns[0].addEventListener('click',()=>{
 });
 
 // result button for the last question of the quizz
-nextBtns[questionNbr-2].addEventListener('click',(e)=>{
 
-        questions[questionNbr-2].classList.add('hidden');
-        questions[questionNbr-1].classList.remove('hidden');
-        console.log(finalResult);
-
-
-        var quizzResult = document.createElement('p');
-    
-
-        if(finalResult==0){
-          quizzResult.innerHTML= "Your quizz score is: "+finalResult+"<br> safe ";
-          console.log("alo1")
-        }
-
-        else if(1<=finalResult<=7){
-          console.log("alo2")
-          quizzResult.innerHTML= "Your quizz score is: "+finalResult+"<br> unlikely but be careful";
-        } 
-        else{
-          console.log("alo3");
-          quizzResult.innerHTML= "Your quizz score is: "+finalResult+"<br> ALERT!!!! It is very likely that you have celiac disease! If you wanna contact specialists <br> wanna know more about celiac disease ?";
-        }
-
-        
-        questions[questionNbr-1].appendChild(quizzResult);
-
-});
 
 function countSelectedAnswers(answers){
   let selectedCount=0;
@@ -76,7 +51,7 @@ function countPositiveSelectedAnswers(answers){
 function countValidSelectedAnswers(answers){
   let selectedCount=0;
         for(let j=0;j<answers.length;j++){
-          if((answers[j].textContent)!="Rien de ce qui précède" && answers[j].classList.contains('selected')){
+          if(answers[j].classList.contains('selected') && answers[j].classList.contains('valid') ){
             selectedCount++;
           }
         }
@@ -119,7 +94,7 @@ for(let k=0;k<questContainer.length;k++){
                   selectedCount++;        
                 }
 
-                finalResult+=countPositiveSelectedAnswers(answers);
+                
               }
 
 
@@ -132,19 +107,31 @@ for(let k=0;k<questContainer.length;k++){
   {
     questContainer[k].addEventListener('click',(e)=>{
 
+      
       nextBtns[k].removeAttribute('disabled');
       nextBtns[k].style.cursor='pointer';
       
        selectedCount=countSelectedAnswers(answers);
        //first selected--> increase score & update progress bar
-      if(!selectedCount && !(e.target.classList.contains('selected'))){
+      if(!selectedCount  && !(e.target.classList.contains('selected answerBtn'))){
          score++;
          progressBar.style.width=(score)*12.5+"%";
          progressBar.innerHTML=(score)*12.5+"%";
        }
 
-       if((e.target).classList.contains('answerBtn')){
-        e.target.classList.toggle('selected');
+       if((e.target).classList.contains('valid')){
+         noneBtn[k-2].classList.remove('selected');
+         e.target.classList.toggle('selected');
+       }
+       
+
+      if((e.target).classList.contains('none__btn')){
+        
+          for(let j=0;j<answers.length;j++){
+            if(answers[j].classList.contains('valid'))
+               answers[j].classList.remove('selected');
+          }
+          e.target.classList.toggle('selected');
        }
 
        // if no btn is selected disable next btn and decrease score & update progress bar
@@ -155,11 +142,7 @@ for(let k=0;k<questContainer.length;k++){
          progressBar.innerHTML=(score)*12.5+"%";
          nextBtns[k].setAttribute('disabled','disabled');
          nextBtns[k].style.cursor='not-allowed';
-       } 
-      
-       finalResult+=countValidSelectedAnswers(answers);
-      
-       
+       }
      
     });
 
@@ -170,8 +153,13 @@ for(let k=0;k<questContainer.length;k++){
   
    // listen for next buttons
    nextBtns[k].addEventListener('click',()=>{
+
+      finalResult+=countPositiveSelectedAnswers(answers);
+      finalResult+=countValidSelectedAnswers(answers);
       questions[k].classList.add('hidden');
       questions[k+1].classList.remove('hidden');
+      console.log(finalResult);
+      
     
     });
 
@@ -183,45 +171,36 @@ for(let k=0;k<questContainer.length;k++){
 
 }
 
-// null result btns
+nextBtns[questionNbr-2].addEventListener('click',(e)=>{
 
-/*
-
-for(let k=0;k<noneBtn.length;k++){
-
-    let answers=questContainer[k+2].children;
-    let selectedCount=0;
-
-    noneBtn[k].addEventListener('click',(e)=>{
-      console.log(e);
-      
-       selectedCount=countSelectedAnswers(answers);
-       //first selected--> increase score & update progress bar
-      if(!selectedCount && !(noneBtn[k].classList.contains('selected'))){
-        console.log(selectedCount)
-         score++;
-         progressBar.style.width=(score)*12.5+"%";
-         progressBar.innerHTML=(score)*12.5+"%";
-         nextBtns[k].removeAttribute('disabled');
-         nextBtns[k].style.cursor='pointer';
-       }
-      
-      selectedCount=countSelectedAnswers(answers);
-      if(selectedCount){
-
-      for(let j=0;j<answers.length;j++){
-        answers[j].classList.remove('selected');
-      }
-      noneBtn[k].classList.add('selected');
-    }
-      
-      
-      
+  //finalResult+=countValidSelectedAnswers(questContainer[questionNbr-2].children);
+  questions[questionNbr-2].classList.add('hidden');
+  questions[questionNbr-1].classList.remove('hidden');
+  //console.log(finalResult);
 
 
-      });
-}
-*/
+  var quizzResult = document.createElement('p');
+
+
+  if(finalResult==0){
+    quizzResult.innerHTML= "Your quizz score is: "+finalResult+"<br> safe ";
+    console.log("alo1")
+  }
+
+  else if(1<=finalResult<=7){
+    console.log("alo2")
+    quizzResult.innerHTML= "Your quizz score is: "+finalResult+"<br> unlikely but be careful";
+  } 
+  else{
+    console.log("alo3");
+    quizzResult.innerHTML= "Your quizz score is: "+finalResult+"<br> ALERT!!!! It is very likely that you have celiac disease! If you wanna contact specialists <br> wanna know more about celiac disease ?";
+  }
+
+  
+  questions[questionNbr-1].appendChild(quizzResult);
+
+});
+
 
 
 
