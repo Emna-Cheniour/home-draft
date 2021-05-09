@@ -35,7 +35,11 @@ body{
   color:#fff;
   transition: 0.8s;
 }
-.btn1.btnServ,.btn2.btnServ
+.btn1.btnServ, .btn2.btnServ
+{
+  color: #3498db;
+}
+.btn1.btnServ a, .btn2.btnServ a
 {
   color: #3498db;
 }
@@ -50,7 +54,7 @@ body{
 .btn3,.btn4{
   color: #fff;
 }
-.btn1:hover,.btn2:hover a{
+.btn1:hover a,.btn2:hover a{
   color: #fff;
 }
 .btn3:hover,.btn4:hover {
