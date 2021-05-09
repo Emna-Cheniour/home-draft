@@ -27,7 +27,7 @@
                     <br>
                     Visitez notre catalogue et jouissez de la qualité au meilleur prix.
                 </p>
-                <div class="services__btn"><a href="" class="btn btn1 btnServ">Catalogue</a></div>
+                <div class="services__btn"><a href="latest.php" class="btn btn1 btnServ">Catalogue</a></div>
             </div>
             <div class="service col4">
                 <img src="images/recette.png">
