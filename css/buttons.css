@@ -35,7 +35,7 @@ body{
   color:#fff;
   transition: 0.8s;
 }
-.btn1.btnServ, .btn2.btnServ
+.btn1.btnServ, .btn2.btnServ 
 {
   color: #3498db;
 }
