@@ -40,6 +40,8 @@ var swiper = new Swiper('.swiperCommentaires', {
   },
 });
 /*Review form*/
+var note = document.querySelectorAll('#reviewNote');
+var noteHearts = document.querySelectorAll('.reviewNote');
 var closeReview = document.querySelector('.closeReview');
 var openReview = document.querySelector('.openReview');
 var addReviewForm = document.querySelector('.addReviewForm');
@@ -189,6 +191,16 @@ for (var inp of elements) {
 /*/*/
 
 /*//*/
+
+for (var indice = 0; indice < note.length; indice++) {
+  for (let j = 0; j < parseInt(note[indice].value); j++) {
+
+    noteHearts[indice].children[j].classList.remove("far");
+    noteHearts[indice].children[j].classList.add("fas");
+
+  }
+}
+
 openReview.addEventListener("click", () => {
   addReviewForm.classList.add("active");
   overlayAddReview.classList.add("active");
