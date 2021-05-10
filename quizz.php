@@ -158,16 +158,29 @@ include_once 'head.php';
             
         </div>
 
-        <div id="result" class="wrapper question hidden">
-          <h2>RESULTAT DU QUIZZ</h2>
+        <div id="result" class="wrapper question result hidden">
+          <h2>Merci d’avoir terminé l’outil d’évaluation des symptômes</h2>
+
+          <div class="result__header">
+          <img src="" alt="">
+            <h4>
+              
+              
+            </h4>
+            
+            
+          </div>
+
+          <div class="result__content">
+            <p>
           
+            </p>
+           
+            <a href="" class="btn btn3"><i id="right" class="fas fa-arrow-alt-circle-right"></i></a>
+          </div>
             
         </div>
 
-        
-      
-        
-        
 
       </div>
 
