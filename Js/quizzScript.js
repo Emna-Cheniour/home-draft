@@ -173,31 +173,37 @@ for(let k=0;k<questContainer.length;k++){
 
 nextBtns[questionNbr-2].addEventListener('click',(e)=>{
 
-  //finalResult+=countValidSelectedAnswers(questContainer[questionNbr-2].children);
   questions[questionNbr-2].classList.add('hidden');
   questions[questionNbr-1].classList.remove('hidden');
-  //console.log(finalResult);
 
-
-  var quizzResult = document.createElement('p');
-
-
-  if(finalResult==0){
-    quizzResult.innerHTML= "Your quizz score is: "+finalResult+"<br> safe ";
-    console.log("alo1")
-  }
-
-  else if(1<=finalResult<=7){
-    console.log("alo2")
-    quizzResult.innerHTML= "Your quizz score is: "+finalResult+"<br> unlikely but be careful";
-  } 
-  else{
-    console.log("alo3");
-    quizzResult.innerHTML= "Your quizz score is: "+finalResult+"<br> ALERT!!!! It is very likely that you have celiac disease! If you wanna contact specialists <br> wanna know more about celiac disease ?";
-  }
-
+  let result__header=document.querySelector('.result__header');
+  let header=document.querySelector('.result__header h4');
+  let icon=document.querySelector('.result__header img');
   
-  questions[questionNbr-1].appendChild(quizzResult);
+  let result__content=document.querySelector('.result__content');
+  let parag=document.querySelector('.result__content p');
+  var link = document.querySelector('.result__content a');
+ 
+  switch(true){
+    case (finalResult==0):
+      header.textContent="Vos réponses indiquent que vous n’êtes pas à un risque accru de maladie coeliaque";
+      icon.setAttribute('src','icons/safe.png');
+      parag.innerHTML="Cependant, puisqu’il y a plus de 200 symptômes connus liés à la maladie coeliaque, il est important de discuter avec votre médecin de tous les symptômes inexpliqués que vous pourriez avoir"
+      link.setAttribute('href','acceuil.php');
+      link.innerHTML="Pour plus d'informations<i id='right' class='fas fa-arrow-alt-circle-right'></i>";
+      break;
+    default:
+      header.textContent="Vos réponses indiquent que vous pourriez être à un risque accru de maladie coeliaque";
+      icon.setAttribute('src','icons/dangerous.png');
+      parag.innerHTML="Nous vous recommandons de prendre rendez-vous avec votre médecin pour discuter du dépistage de la maladie coeliaque."
+      link.setAttribute('href','acceuil.php');
+      link.innerHTML="Consulter nos spécialistes<i id='right' class='fas fa-arrow-alt-circle-right'></i>";
+
+  }
+  
+  questions[questionNbr-1].appendChild(result__header);
+  questions[questionNbr-1].appendChild(result__content);
+
 
 });
 
