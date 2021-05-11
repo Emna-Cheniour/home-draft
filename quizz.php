@@ -176,7 +176,7 @@ include_once 'head.php';
           
             </p>
            
-            <a href="" class="btn btn3"><i id="right" class="fas fa-arrow-alt-circle-right"></i></a>
+            <a href="" class="btn btn3"></a>
           </div>
             
         </div>
