@@ -1,0 +1,253 @@
+
+.profile__body
+{
+  margin:50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.percent__box
+{
+  position: relative;
+  width: 300px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /*box-shadow: 0 30px 60px rgba(0,0,0,.2);*/
+}
+
+.percent__box .percent
+{
+  position: relative;
+  width: 150px;
+  height: 150px;
+}
+.percent__box .percent svg 
+{
+  position: relative;
+  width: 150px;
+  height: 150px;
+}
+
+.percent__box .percent svg circle
+{
+  fill: none;
+  stroke-width: 10;
+  stroke: #000;
+  transform: translate(5px,5px);
+  width: 150px;
+  height: 150px;
+  stroke-dasharray:440 ;
+  stroke-dashoffset: 440;
+  stroke-linecap: round;
+}
+.percent__box .percent svg circle:nth-child(1)
+{
+  stroke-dasharray:0;
+  stroke:#f3f3f3;
+}
+.percent__box .percent svg circle:nth-child(2)
+{
+  stroke-dashoffset:calc(440 - (440 * 87) / 100);
+  stroke:#137c8b;
+}
+
+.percent__box .percent .number
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color:#999;
+
+
+}
+
+.percent__box .percent .number h2
+{
+  font-size: 48px;
+}
+
+.percent__box .percent .number h2 span
+{
+  font-size: 24px;
+}
+
+.percent__box text
+{
+  padding:10px 0 0;
+  color:#999;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.profile__container
+{
+  width: 540px;
+  height: 450px;
+  margin: 0 auto;
+  position: relative;
+  margin-top: 10%;
+  box-shadow: 2px 5px 20px rgba(119,199,199,.5);
+  margin-bottom: 100px;
+}
+
+.profile__container .leftbox
+{
+  float: left;
+  top:-5%;
+  left:5% ;
+  position: absolute;
+  width: 15%;
+  height: 110%;
+  background:#5FC2BA;
+  box-shadow: 3px 3px 10px rgba(119,199,199,.5);
+  border: .1em solid #fff;
+}
+
+.profile__container .leftbox nav a
+{
+  list-style: none;
+  padding: 35px;
+  color:#fff;
+  font-size: 1.1em;
+  display: block;
+  transition: all .3s ease-in-out;
+  cursor: pointer;
+}
+
+.profile__container .leftbox nav a:hover
+{
+  color:#1C2942;
+  transform: scale(1.02);
+}
+
+.profile__container .leftbox nav a:first-child
+{
+  margin-top: 7px;
+}
+.profile__container .leftbox nav a.active
+{
+  color:#1C2942;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.profile__container .rightbox
+{
+  width: 60%;
+  margin-left: 27%;
+
+}
+.profile__container .rightbox .tabShow
+{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position:absolute;
+  
+ 
+}
+
+.profile__container .rightbox .tabShow h2
+{
+  color:#137c8b;
+  font-size: 1.2em;
+
+  margin-top: 1em;
+}
+
+.profile__container .rightbox .tabShow h4
+{
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-left: 2px;
+  margin-top: 10px;
+  font-size: 0.7em;
+}
+
+.profile__container .rightbox .tabShow input 
+{
+  border: 0;
+  border-bottom: 1px solid #1C2942;
+  width: 50%;
+  padding: 7px 0;
+  outline: none;
+}
+
+
+.profile__container .rightbox .tabShow.hidden
+{
+  display: none;
+
+}
+
+.profile__container .rightbox .tabShow.profile
+{
+  display: flex;
+  flex-direction: column;
+}
+.profile__container .rightbox .tabShow button 
+{
+  width: fit-content;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
