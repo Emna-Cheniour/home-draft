@@ -1,9 +1,10 @@
 <?php include_once 'head.php' ?>
 
 <body>
-  <?php include_once 'navbarConnecte.php'?>
 
+<?php include_once 'navbarConnecte.php'?>
   <div class="profile__body">
+
 
       <div class="percent__box">
             <div class="percent">
@@ -21,6 +22,7 @@
       </div>
 
       <div class="profile__container">
+
             <div class="leftbox">
               <nav>
                 <a class="Icontab active">
@@ -28,125 +30,189 @@
                 </a>
 
                 <a class="Icontab">
-                  <i class="fa fa-credit-card"></i>
-                </a>
-
-                <a class="Icontab">
-                  <i class="fa fa-tv"></i>
-                </a>
-
-                <a class="Icontab">
-                  <i class="fa fa-tasks"></i>
+                  <i class="fas fa-address-book"></i>
                 </a>
 
                 <a class="Icontab">
                   <i class="fa fa-cog"></i>
                 </a>
+
+                <a class="Icontab">
+                <i class="fas fa-heart"></i>
+                </a>
               </nav>
             </div>
 
             <div class="rightbox">
-              <div class="profile tabShow">
-                <h2>Personal Info</h2>
-                <h4>Fullname</h4>
-                <input class="input" type="text" value="votre nom">
+              <form method="post" action="" class="profile tabShow">
 
-                <h4>Date de naissance</h4>
-                <input class="input" type="date">
+                <div class="content">
+                  <div class="info">
+                        <div class="wavy">
+                            <span style="--i:1;">M</span>
+                            <span style="--i:2;">O</span>
+                            <span style="--i:3;">N</span>
+                            <span style="--i:4;"></span>
+                            <span style="--i:4;">P</span>
+                            <span style="--i:5;">R</span>
+                            <span style="--i:6;">O</span>
+                            <span style="--i:7;">F</span>
+                            
+                            <span style="--i:8;">I</span>
+                            <span style="--i:9;">L</span>
+                            <span style="--i:10;">E</span>
 
-                <h4>Sexe</h4>
-                <input class="input" type="text" value="sexe">
+                        </div>
 
-                <h4>Email</h4>
-                <input class="input" type="text" value="example@example.com">
+                        <h4>Nom</h4>
+                        <input class="input" type="text" placeholder="Nom">
 
-                <h4>Mot de passe</h4>
-                <input class="input" type="password" value="brightcode">
+                        <h4>Prénom</h4>
+                        <input class="input" type="text" placeholder="Prénom">
 
-                <button class="btn btn3">Modifier</button>
-              </div>
+                        
 
-              <div class="payment tabShow hidden">
-                <h2>Mode de paiment</h2>
-                <h4>Fullname</h4>
-                <input class="input" type="text" value="votre nom">
+                        <h4>Date de naissance</h4>
+                        <input class="input" type="date" >
 
-                <h4>Date de naissance</h4>
-                <input class="input" type="date">
+                        <h4>Sexe</h4>
+                          <div class="radio__container">
+                            <input type="radio" name="sexe"><span>Femme</span>
+                            <input type="radio" name="sexe"><span>Homme</span>
+                          </div>
+                  </div>
+                    
+                  <div class="image">
+                    <img src="svg/undraw_profile_pic_ic5t.svg" alt="">
+                    
+                  </div>    
+                
+                </div>
+                
+                
+        
 
-                <h4>Sexe</h4>
-                <input class="input" type="text" value="sexe">
+                <button typ="submit" class="btn btn3">Modifier</button>
+                
+              </form>
 
-                <h4>Email</h4>
-                <input class="input" type="text" value="example@example.com">
+              <form method="post" action="" class="contact tabShow hidden">
+                <div class="content">
+                  <div class="info">
+                    <div class="wavy">
+                                <span style="--i:1;">C</span>
+                                <span style="--i:2;">O</span>
+                                <span style="--i:3;">N</span>
+                    
+                                <span style="--i:4;">T</span>
+                                <span style="--i:5;">A</span>
+                                <span style="--i:6;">C</span>
+                                <span style="--i:7;">T</span>
+                              
+                              
 
-                <h4>Mot de passe</h4>
-                <input class="input" type="password" value="brightcode">
+                    </div>
+                    <h4>Adresse</h4>
+                    <input class="input" type="adress" placeholder="Adresse">
 
-                <button class="btn btn3">Modifier</button>
-              </div>
+                    <h4>Email</h4>
+                    <input class="input" type="email" placeholder="example@example.com">
 
-              <div class="favourite tabShow hidden">
-                <h2>Personal Info</h2>
-                <h4>Fullname</h4>
-                <input class="input" type="text" value="votre nom">
+                    <h4>Numéro de Téléphone</h4>
+                    <input class="input" placeholder="+216">
+                  </div>
 
-                <h4>Date de naissance</h4>
-                <input class="input" type="date">
+                  <div class="image">
+                    <img src="svg/undraw_contact_us_15o2.svg" alt="">
+                    
+                  </div> 
 
-                <h4>Sexe</h4>
-                <input class="input" type="text" value="sexe">
+                  
 
-                <h4>Email</h4>
-                <input class="input" type="text" value="example@example.com">
+                </div>
+                    
+                <button type="submit" class="btn btn3">Modifier</button>
+              </form>
 
-                <h4>Mot de passe</h4>
-                <input class="input" type="password" value="brightcode">
 
-                <button class="btn btn3">Modifier</button>
-              </div>
+              <form method="post" action="" class="setting tabShow hidden">
+                  <div class="content">
+                    <div class="info">
+                        <div class="wavy">
+                                  <span style="--i:1;">P</span>
+                                  <span style="--i:2;">A</span>
+                                  <span style="--i:3;">R</span>
+                                  <span style="--i:4;">A</span>
+                                  <span style="--i:5;">M</span>
+                                  <span style="--i:6;">E</span>
+                                  <span style="--i:7;">T</span>
+                                  <span style="--i:8;">R</span>
+                                  
+                                  <span style="--i:9;">E</span>
+                                  <span style="--i:10;">S</span>
+                                  <span style="--i:11;">C</span>
+                                  <span style="--i:12;">O</span>
+                                  <span style="--i:13;">M</span>
+                                  <span style="--i:14;">P</span>
+                                  <span style="--i:15;">T</span>
+                                  <span style="--i:16;">E</span>
 
-              <div class="privacy tabShow hidden">
-                <h2>Info privées</h2>
-                <h4>Fullname</h4>
-                <input class="input" type="text" value="votre nom">
+                         </div>
 
-                <h4>Date de naissance</h4>
-                <input class="input" type="date">
+                        <h4>Nom d'utilisateur</h4>
+                        <input class="input" type="text" placeholder="Nom d'utilisateur">
 
-                <h4>Sexe</h4>
-                <input class="input" type="text" value="sexe">
 
-                <h4>Email</h4>
-                <input class="input" type="text" value="example@example.com">
+                        <h4>Mot de passe</h4>
+                        <input class="input" type="password" value="brightcode">
+                    </div>
 
-                <h4>Mot de passe</h4>
-                <input class="input" type="password" value="brightcode">
+                    <div class="image">
+                    <img src="svg/undraw_accept_terms_4in8.svg" alt="">
+                    
+                  </div> 
+                  </div>
+               
 
-                <button class="btn btn3">Modifier</button>
-              </div>
+                <button type="submit" class="btn btn3">Modifier</button>
+              </form>
 
-              <div class="setting tabShow hidden">
-                <h2>Paramètres compte</h2>
-                <h4>Fullname</h4>
-                <input class="input" type="text" value="votre nom">
+              <form method="post" action="" class="favourite tabShow hidden">
+                <div class="content">
+                  <div class="info">
+                      <div class="wavy">
+                                <span style="--i:1;">F</span>
+                                <span style="--i:2;">A</span>
+                                <span style="--i:3;">V</span>
+                                <span style="--i:4;">O</span>
+                                <span style="--i:5;">R</span>
+                                <span style="--i:6;">I</span>
+                                <span style="--i:7;">S</span>
+                                
 
-                <h4>Date de naissance</h4>
-                <input class="input" type="date">
+                      </div>
+                      <ul>
+                        <li><a href="#">Recette1</a></li>
+                        <li><a href="#">Recette2</a></li>
+                        <li><a href="#">Recette3</a></li>
+                        <li><a href="#">Recette4</a></li>
+                        <li><a href="#">Recette5</a></li>
+                      </ul>
+                  </div>
 
-                <h4>Sexe</h4>
-                <input class="input" type="text" value="sexe">
+                  <div class="image">
+                    <img src="svg/undraw_Wishlist_re_m7tv.svg" alt="">
+                    
+                  </div> 
+                </div>
+                
 
-                <h4>Email</h4>
-                <input class="input" type="text" value="example@example.com">
-
-                <h4>Mot de passe</h4>
-                <input class="input" type="password" value="brightcode">
-
-                <button class="btn btn3">Modifier</button>
-              </div>
+                <button type="submit" class="btn btn3">Modifier</button>
+              </form>
 
             </div>
+
+            
       </div>
 
  </div>
