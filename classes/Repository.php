@@ -5,8 +5,7 @@ class Repository
 {
     public $bd;
     public $tableName;
-    public function __construct($tableName)
-    {
+    public function __construct($tableName){
         $this->tableName = $tableName;
         $this->bd = ConnexionBD::getInstance();
     }
@@ -53,5 +52,13 @@ class Repository
         $response =$this->bd->prepare($request);
         $response->execute([$categories[0]]);
         return $response->fetch(PDO::FETCH_OBJ);
+    }
+
+    public function showRecipe($id){
+        $request = "select * from ".$this->tableName ." where id = ?";
+        $response =$this->bd->prepare($request);
+        $response->execute([$id]);
+        return $response->fetch(PDO::FETCH_OBJ);
+
     }
   }
