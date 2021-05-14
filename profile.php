@@ -191,23 +191,106 @@
                                 
 
                       </div>
-                      <ul>
-                        <li><a href="#">Recette1</a></li>
-                        <li><a href="#">Recette2</a></li>
-                        <li><a href="#">Recette3</a></li>
-                        <li><a href="#">Recette4</a></li>
-                        <li><a href="#">Recette5</a></li>
-                      </ul>
+
+                      <div class="recipe__cards">
+                        <div class="recipe__card">
+                          <h6>RECETTE1</h6>
+                          <div class="card__links">
+                            <a href=""><i class="fas fa-trash"></i></a>
+                            <a href="recetteIndiv.php"><i class="fas fa-plus"></i></a>
+                          </div>
+                          
+                        </div>
+                        <div class="recipe__card">
+                          <h6>RECETTE1</h6>
+                          <div class="card__links">
+                            <a href=""><i class="fas fa-trash"></i></a>
+                            <a href="recetteIndiv.php"><i class="fas fa-plus"></i></a>
+                          </div>
+                          
+                        </div>
+                        <div class="recipe__card">
+                          <h6>RECETTE1</h6>
+                          <div class="card__links">
+                            <a href=""><i class="fas fa-trash"></i></a>
+                            <a href="recetteIndiv.php"><i class="fas fa-plus"></i></a>
+                          </div>
+                          
+                        </div>
+                        <div class="recipe__card">
+                          <h6>RECETTE1</h6>
+                          <div class="card__links">
+                            <a href=""><i class="fas fa-trash"></i></a>
+                            <a href="recetteIndiv.php"><i class="fas fa-plus"></i></a>
+                          </div>
+                          
+                        </div>
+                        <div class="recipe__card">
+                          <h6>RECETTE1</h6>
+                          <div class="card__links">
+                            <a href=""><i class="fas fa-trash"></i></a>
+                            <a href="recetteIndiv.php"><i class="fas fa-plus"></i></a>
+                          </div>
+                          
+                        </div>
+                        <div class="recipe__card">
+                          <h6>RECETTE1</h6>
+                          <div class="card__links">
+                            <a href=""><i class="fas fa-trash"></i></a>
+                            <a href="recetteIndiv.php"><i class="fas fa-plus"></i></a>
+                          </div>
+                          
+                        </div>
+                        <div class="recipe__card">
+                          <h6>RECETTE1</h6>
+                          <div class="card__links">
+                            <a href=""><i class="fas fa-trash"></i></a>
+                            <a href="recetteIndiv.php"><i class="fas fa-plus"></i></a>
+                          </div>
+                          
+                        </div>
+                        <div class="recipe__card">
+                          <h6>RECETTE1</h6>
+                          <div class="card__links">
+                            <a href=""><i id="delete" class="fas fa-trash"></i></a>
+                            <a href="recetteIndiv.php"><i class="fas fa-plus"></i></a>
+                          </div>
+                          
+                        </div>
+                        
+                        
+                      </div>
+
+                      <div>
+                          <ul class="pagination pagination-sm">
+                            <li class="page-item disabled">
+                              <a class="page-link" href="#">&laquo;</a>
+                            </li>
+                            <li class="page-item active">
+                              <a class="page-link" href="#">1</a>
+                            </li>
+                            <li class="page-item">
+                              <a class="page-link" href="#">2</a>
+                            </li>
+                            <li class="page-item">
+                              <a class="page-link" href="#">3</a>
+                            </li>
+                            <li class="page-item">
+                              <a class="page-link" href="#">4</a>
+                            </li>
+                            <li class="page-item">
+                              <a class="page-link" href="#">5</a>
+                            </li>
+                            <li class="page-item">
+                              <a class="page-link" href="#">&raquo;</a>
+                            </li>
+                          </ul>
+                      </div>
                   </div>
 
-                  <div class="image">
-                    <img src="svg/undraw_Wishlist_re_m7tv.svg" alt="">
-                    
-                  </div> 
+                  
                 </div>
                 
-
-                <button type="submit" class="btn btn3">Modifier</button>
               </form>
 
             </div>

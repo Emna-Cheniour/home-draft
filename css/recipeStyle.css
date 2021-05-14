@@ -254,6 +254,7 @@ margin-bottom: 20px;
   /*margin-left: 5.5em;*/
   border-bottom: 1px  ;
   border-style:ridge;
+  font-size: 2em;
   
   
   
@@ -332,7 +333,10 @@ margin-bottom: 20px;
 }
 
 
-
+.card__options .btn.btn1
+{
+  border: none;
+}
 .heart 
 {
   animation: heart 0.5s linear;

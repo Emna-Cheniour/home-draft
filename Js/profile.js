@@ -19,3 +19,13 @@ for(let i=0;i<icons.length;i++){
   });
 
 }
+
+/* delete recipe from favourite list */
+var deleteIcon=document.querySelectorAll('#delete');
+var cards=document.querySelector('.recipe__cards');
+var card=document.querySelectorAll('.recipe__card');
+for(let i=0;i<deleteIcon.length;i++){
+  deleteIcon[i].addEventListener('click',()=>{
+    card[i].style.display='none';
+  });
+}
