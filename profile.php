@@ -45,10 +45,7 @@
 
             <div class="rightbox">
               <form method="post" action="" class="profile tabShow">
-
-                <div class="content">
-                  <div class="info">
-                        <div class="wavy">
+                <div class="wavy">
                             <span style="--i:1;">M</span>
                             <span style="--i:2;">O</span>
                             <span style="--i:3;">N</span>
@@ -63,6 +60,9 @@
                             <span style="--i:10;">E</span>
 
                         </div>
+                <div class="content">
+                  <div class="info">
+                        
 
                         <h4>Nom</h4>
                         <input class="input" type="text" placeholder="Nom">
@@ -85,7 +85,7 @@
                   <div class="image">
                     <img src="svg/undraw_profile_pic_ic5t.svg" alt="">
                     
-                  </div>    
+                  </div>   
                 
                 </div>
                 
@@ -97,9 +97,7 @@
               </form>
 
               <form method="post" action="" class="contact tabShow hidden">
-                <div class="content">
-                  <div class="info">
-                    <div class="wavy">
+                <div class="wavy">
                                 <span style="--i:1;">C</span>
                                 <span style="--i:2;">O</span>
                                 <span style="--i:3;">N</span>
@@ -112,6 +110,11 @@
                               
 
                     </div>
+                <div class="content">
+                  <div class="info">
+                  
+                   
+
                     <h4>Adresse</h4>
                     <input class="input" type="adress" placeholder="Adresse">
 
@@ -123,7 +126,7 @@
                   </div>
 
                   <div class="image">
-                    <img src="svg/undraw_contact_us_15o2.svg" alt="">
+                    <img src="svg/undraw_healthy_options_sdo3.svg" alt="">
                     
                   </div> 
 
@@ -136,9 +139,7 @@
 
 
               <form method="post" action="" class="setting tabShow hidden">
-                  <div class="content">
-                    <div class="info">
-                        <div class="wavy">
+                <div class="wavy">
                                   <span style="--i:1;">P</span>
                                   <span style="--i:2;">A</span>
                                   <span style="--i:3;">R</span>
@@ -150,14 +151,12 @@
                                   
                                   <span style="--i:9;">E</span>
                                   <span style="--i:10;">S</span>
-                                  <span style="--i:11;">C</span>
-                                  <span style="--i:12;">O</span>
-                                  <span style="--i:13;">M</span>
-                                  <span style="--i:14;">P</span>
-                                  <span style="--i:15;">T</span>
-                                  <span style="--i:16;">E</span>
+                              
 
                          </div>
+                  <div class="content">
+                    <div class="info">
+                        
 
                         <h4>Nom d'utilisateur</h4>
                         <input class="input" type="text" placeholder="Nom d'utilisateur">
@@ -178,9 +177,7 @@
               </form>
 
               <form method="post" action="" class="favourite tabShow hidden">
-                <div class="content">
-                  <div class="info">
-                      <div class="wavy">
+                <div class="wavy">
                                 <span style="--i:1;">F</span>
                                 <span style="--i:2;">A</span>
                                 <span style="--i:3;">V</span>
@@ -191,6 +188,9 @@
                                 
 
                       </div>
+                <div class="content">
+                  <div class="info">
+                      
 
                       <div class="recipe__cards">
                         <div class="recipe__card">
@@ -209,55 +209,6 @@
                           </div>
                           
                         </div>
-                        <div class="recipe__card">
-                          <h6>RECETTE1</h6>
-                          <div class="card__links">
-                            <a href=""><i class="fas fa-trash"></i></a>
-                            <a href="recetteIndiv.php"><i class="fas fa-plus"></i></a>
-                          </div>
-                          
-                        </div>
-                        <div class="recipe__card">
-                          <h6>RECETTE1</h6>
-                          <div class="card__links">
-                            <a href=""><i class="fas fa-trash"></i></a>
-                            <a href="recetteIndiv.php"><i class="fas fa-plus"></i></a>
-                          </div>
-                          
-                        </div>
-                        <div class="recipe__card">
-                          <h6>RECETTE1</h6>
-                          <div class="card__links">
-                            <a href=""><i class="fas fa-trash"></i></a>
-                            <a href="recetteIndiv.php"><i class="fas fa-plus"></i></a>
-                          </div>
-                          
-                        </div>
-                        <div class="recipe__card">
-                          <h6>RECETTE1</h6>
-                          <div class="card__links">
-                            <a href=""><i class="fas fa-trash"></i></a>
-                            <a href="recetteIndiv.php"><i class="fas fa-plus"></i></a>
-                          </div>
-                          
-                        </div>
-                        <div class="recipe__card">
-                          <h6>RECETTE1</h6>
-                          <div class="card__links">
-                            <a href=""><i class="fas fa-trash"></i></a>
-                            <a href="recetteIndiv.php"><i class="fas fa-plus"></i></a>
-                          </div>
-                          
-                        </div>
-                        <div class="recipe__card">
-                          <h6>RECETTE1</h6>
-                          <div class="card__links">
-                            <a href=""><i id="delete" class="fas fa-trash"></i></a>
-                            <a href="recetteIndiv.php"><i class="fas fa-plus"></i></a>
-                          </div>
-                          
-                        </div>
-                        
                         
                       </div>
 
@@ -303,7 +254,7 @@
   
 
 
-<!-- <?php //include_once('footer.php'); ?>-->
+  <?php include_once('footer.php'); ?>
   <script src="js/main.js"></script>
   <script src="js/profile.js"></script>
 </body>
