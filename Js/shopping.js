@@ -2,6 +2,7 @@
 var swiper = new Swiper('.shoppingPoster', {
   autoplay: {
     delay: 5000,
+    disableOnInteraction: false
   },
   effect: 'fade',
   slidesPerView: 1,
