@@ -16,6 +16,12 @@ class Repository
         $response->execute([$username]);
         return $response->fetch(PDO::FETCH_OBJ);
     }
+    public function findByOne($key,$value) {
+        $request = "select * from ".$this->tableName ." where ".$key."='".$value."'";
+        $response =$this->bd->prepare($request);
+        $response->execute();
+        return $response->fetch(PDO::FETCH_OBJ);
+    }
 
     public function findByEmail($email) {
         $request = "select * from ".$this->tableName ." where email = ?";
@@ -60,5 +66,30 @@ class Repository
         $response->execute([$id]);
         return $response->fetch(PDO::FETCH_OBJ);
 
+    }
+
+    public function update($id1,$id2){
+
+        $request="UPDATE " .$this->tableName." SET ".$id1."='".$id2."'";
+        $response =$this->bd->prepare($request);
+        $response->execute();
+        return $response->fetch(PDO::FETCH_OBJ);
+    }
+
+    public function addPerson($val1,$val2,$val3){
+
+        $request = "INSERT INTO ".$this->tableName. "(username,email,password) VALUES ('".$val1."','".$val2."','".$val3."')" ; 
+        $response=$this->bd->prepare($request);
+        $response->execute();
+        return $response->fetch(PDO::FETCH_OBJ);
+        
+    }
+
+    public function updatePic($id1,$img){
+
+        $request="UPDATE " .$this->tableName." SET ".$id1."='".addslashes($img)."'";
+        $response =$this->bd->prepare($request);
+        $response->execute();
+        return $response->fetch(PDO::FETCH_OBJ);
     }
   }
