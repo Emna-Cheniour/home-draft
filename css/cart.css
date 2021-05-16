@@ -1,0 +1,75 @@
+
+.wrapp{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+.navbarCart {
+    margin: 3%;
+    display: flex;
+    flex-direction: column;
+}
+.navbarCartElementWrapper{
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    width:20%;
+    overflow: visible;
+}
+
+.navbarCart .navbarCartElement {
+    padding: 5px;
+    width: 100%;
+    background-color: white;
+    border: 1px solid #1C2942;
+    padding: 10px;
+    border-bottom: 1px solid #1C2942;
+    text-align: center;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: #1C2942;
+}
+
+.navbarCart .navbarCartElementWrapper:hover {
+    width: 70%;
+    overflow: visible;
+}
+
+.navbarCart .navbarCartElement h5 {
+    display: none;
+}
+
+.navbarCart .navbarCartElement:hover h5 {
+    display: inline-block;
+}
+
+.navbarCart .navbarCartElement * {
+    padding: 10px;
+}
+
+.navbarCart .navbarCartElement:hover {
+    border-bottom: 1px solid #1C2942;
+    color: white;
+    background-color: #1C2942;
+}
+
+.navbarCart .navbarCartElementWrapper.active .navbarCartElement{
+    border-bottom: 1px solid #1C2942;
+    color: white;
+    background-color: #1C2942;
+
+
+}
+.arrow-right {
+    width: 0;
+    height: 0;
+    vertical-align: middle;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid #1C2942;
+    display: none;
+}
+.navbarCartElementWrapper:hover .arrow-right ,.navbarCartElementWrapper.active .arrow-right{
+display: inline-block;
+}

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/colors.css">
     <link rel="stylesheet" href="css/buttons.css">
     <link rel="stylesheet" href="css/iconHover.css">
+    <link rel="stylesheet" href="css/hover.css" media="all">
     <link rel="stylesheet" href="css/quizzStyle.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
     <link rel="stylesheet" href="css/recipeStyle.css">
