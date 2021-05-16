@@ -1,5 +1,6 @@
 <?php
 include_once 'assets/mainHead.php';
+$cartIsEmpty=1;
 ?>
 <link rel="stylesheet" href="css/cart.css">
 </head>
@@ -11,14 +12,14 @@ include_once 'assets/mainHead.php';
             <div class="navbarCartElementWrapper active">
                 <div class="navbarCartElement ">
                     <i class="fas fa-shopping-cart "></i>
-                    <h5>Cart</h5>
+                    <h5>Panier</h5>
                 </div>
                 <div class="arrow-right"></div>
             </div>
             <div class="navbarCartElementWrapper">
                 <div class="navbarCartElement">
                     <i class="fas fa-hand-holding-heart"></i>
-                    <h5>Donations</h5>
+                    <h5>Dons</h5>
                 </div>
                 <div class="arrow-right"></div>
             </div>
@@ -37,7 +38,14 @@ include_once 'assets/mainHead.php';
                 <div class="arrow-right"></div>
             </div>
         </div>
-        <div>hi</div>
+        <div>
+            <?php if($cartIsEmpty){?>
+            <div class="panierVide">
+                <h2>Votre panier est vide ... Revenez au catalogue et remplissez le !</h2>
+                <img src="images/emptyCart.png" alt="">
+            </div>
+            <?php } ?>
+        </div>
     </div>
 
     <?php include_once 'assets/scripts.php' ?>
