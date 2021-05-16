@@ -6,12 +6,12 @@ include_once ("autoload.php");
 
   if( (isset($_POST['username']))  && (isset($_POST['email']))  && (isset($_POST['password']))){
     
-$username=$_POST['username'];
-$email=$_POST['email']; //  htmlSpecialchar($_POST['username'])
-$password=$_POST['password'];
+      $username=$_POST['username'];
+      $email=$_POST['email']; 
+      $password=$_POST['password'];
 
       if(empty($username) || empty($email) || empty($password)){
-        $_SESSION['requiredFieldsError']='Veuillez remplir tous vos informations';
+        $_SESSION['requiredFieldsError']='Veuillez remplir toutes vos informations';
         $_SESSION['page']='inscription';
         header('location:login_SignUp.php');
       }
@@ -40,13 +40,11 @@ $password=$_POST['password'];
         }
         else {
           
-          $user = new UserRepository();
-          $request = "INSERT INTO ".$user->tableName. "(username,email,password) VALUES ('".$username."','".$email."','".$password."')";
+            $user = new UserRepository();
+            $user->addUser($username,$email,$password);
+            header('location:acceuil.php');
+        }
           
-        $response=$user->bd->prepare($request);
-        $response->execute();
-        $_SESSION['user']=$username;
-        header('location:acceuil.php');
           
         }
 
