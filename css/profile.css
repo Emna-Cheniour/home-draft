@@ -164,7 +164,7 @@
 .profile__container .rightbox
 {
  
-  margin-left: 27%;
+  margin-left: 23%;
 
 }
 .profile__container .rightbox .tabShow
@@ -212,7 +212,7 @@
  
 }
 
-.profile__container .rightbox .tabShow input 
+.profile__container .rightbox .tabShow .input 
 {
   border: 0;
   border-bottom: 1px solid #1C2942;
@@ -220,8 +220,17 @@
   padding: 7px 0;
   outline: none;
   color:#333;
+  width: 250px;
+
 
 }
+
+.profile__container .rightbox .tabShow.contact .content .image img
+ {
+margin-left: 100px;
+cursor: pointer;
+}
+
 
 
 .profile__container .rightbox .tabShow.hidden
@@ -260,6 +269,13 @@
 .profile__container .rightbox .tabShow .content .image img 
 {
   width:60%;
+
+}
+
+.profile__container .rightbox .tabShow.profile .content .image img 
+{
+  width:40%;
+  margin-bottom: 50px;
 
 }
 
@@ -326,7 +342,7 @@
  
   .profile__container
   {
-    height: 650px;
+    height: 700px;
 
   }
 
@@ -335,11 +351,20 @@
     flex-direction: column;
 
   }
-  .profile__container .rightbox .tabShow .content .image img
+  .profile__container .rightbox .tabShow.profile .content .image img
   {
     width:100px;
   
 
+  }
+  .profile__container .rightbox .tabShow.contact .content .image img
+ {
+margin-left: 0px;
+}
+
+  .profile__container .rightbox .tabShow .content .image img
+  {
+    width:170px;
   }
 
 }

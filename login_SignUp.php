@@ -41,7 +41,7 @@ if (isset($_SESSION['user'])) {
           <h2 class="title">Se connecter</h2>
           <div class="input__field">
             <i class="fas fa-user"></i>
-            <input type="text" name="username" placeholder="Nom d'utilisateur ou email">
+            <input type="text" name="username" placeholder="Nom d'utilisateur">
           </div>
           <div class="input__field">
             <i class="fas fa-lock"></i>
