@@ -9,6 +9,5 @@ foreach($query1 as $key => $val) {
     $infoCount++;
   }
 }
-echo $infoCount;
 
 ?>

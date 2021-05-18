@@ -10,10 +10,6 @@ include_once 'head.php' ;
 
 <body>
 
-
-
-
-
 <?php 
 include_once 'profileProgress.php';
 include_once 'navbarConnecte.php'?>
@@ -58,7 +54,7 @@ include_once 'navbarConnecte.php'?>
             </div>
 
             <div class="rightbox">
-              <form method="post" action="infoProcess.php" class="profile tabShow">
+              <form method="post" action="infoProcess.php" enctype="multipart/form-data" class="profile tabShow">
                 <div class="wavy">
                             <span style="--i:1;">M</span>
                             <span style="--i:2;">O</span>
@@ -130,15 +126,15 @@ include_once 'navbarConnecte.php'?>
                   <div class="image" >
               
                     
-                       
-                  <!--<input type="file" name="profileImg" type="image" placeholder="image">-->
-                        <img src="<?php $user=new UserRepository();
+                  <!--<input type="file" name="profileImg" id="image" placeholder="image">-->
+                  
+                        <img src=" <?php $user=new UserRepository();
                       $query1=$user->findByUsername($_SESSION['user']);
                    
                 
                       if(!empty($query1->profileImg)){
                        
-                        echo 'data:image/jpeg;base64,".base64_encode($profileImg)."';
+                        echo 'data:image/jpeg;base64,".base64_encode($user->profileImg)."';
                       } else if (!empty($query1->sexe)) {
                           if($query1->sexe=='female') {
                             echo 'svg/undraw_female_avatar_w3jk.svg';
@@ -148,7 +144,7 @@ include_once 'navbarConnecte.php'?>
                      } 
                      else echo 'svg/undraw_male_avatar_323b.svg'; ?> " 
 
-                       alt="">
+                       >
                        
                        
                     
