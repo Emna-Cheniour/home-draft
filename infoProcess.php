@@ -10,7 +10,6 @@ $users = new UserRepository();
 if (isset($_POST['firstname']) && !(empty($_POST['firstname']))) {
   $firstname=$_POST['firstname'];
   $users->update('firstname', $firstname);
-
 }
 if (isset($_POST['lastname']) && !(empty($_POST['lastname']))) {
   $lastname=$_POST['lastname'];
@@ -34,8 +33,8 @@ if (isset($_FILES['profileImg']) && !empty($_FILES['profileImg'])) {
     $_SESSION['imageSizeError'] = 'Image size is too big !try again ...';
   }
 }
-
 header('location:profile.php');
+
 
 // Second Form: contact Form 
 $users = new UserRepository();
@@ -49,6 +48,11 @@ if (isset($_POST['adresse']) && !(empty($_POST['adresse']))) {
 if (isset($_POST['telephone']) && !(empty($_POST['telephone']))) {
   $telephone=$_POST['telephone'];
   $users->update('telephone', $telephone);
+}
+
+if (isset($_POST['password']) && !(empty($_POST['password']))) {
+  $password=$_POST['password'];
+  $users->update('password', $password);
 }
 
 header('location:profile.php');

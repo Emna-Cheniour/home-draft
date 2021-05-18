@@ -42,6 +42,7 @@ include_once ("autoload.php");
           
             $user = new UserRepository();
             $user->addUser($username,$email,$password);
+            $_SESSION['user']=$username;
             header('location:acceuil.php');
         }
           
@@ -51,7 +52,7 @@ include_once ("autoload.php");
         
 
       }
-  }
+  
 
 
 ?>

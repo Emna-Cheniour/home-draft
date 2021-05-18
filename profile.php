@@ -2,13 +2,21 @@
 include_once 'autoload.php';
 
 include_once 'isAuthentificated.php';
-include_once 'head.php' ?>
+include_once 'head.php' ;
+
+?>
 
 
 
 <body>
 
-<?php include_once 'navbarConnecte.php'?>
+
+
+
+
+<?php 
+include_once 'profileProgress.php';
+include_once 'navbarConnecte.php'?>
   <div class="profile__body">
 
 
@@ -16,11 +24,11 @@ include_once 'head.php' ?>
             <div class="percent">
               <svg>
                 <circle cx="70" cy="70" r="70"></circle>
-                <circle cx="70" cy="70" r="70"></circle>
+                <circle style="--i:<?php echo $infoCount*10 ; ?>;" cx="70" cy="70" r="70"></circle>
               </svg>
 
               <div class="number">
-                <h2>87<span>%</span></h2>
+                <h2><?php echo $infoCount*10 ;?><span>%</span></h2>
               </div>
             </div>
 
@@ -73,27 +81,30 @@ include_once 'head.php' ?>
                         <h4>Nom</h4>
                         <input class="input" name="lastname" type="text" value="<?php $user=new UserRepository();
         $query1=$user->findByUsername($_SESSION['user']);
-        $lastname=$query1->lastname;
-        if(!empty($lastname)){
-          echo $lastname;
-        } ?> " placeholder="Nom">
+        
+        if(!empty($query1->lastname)){
+         
+          echo $query1->lastname;
+        } else ?>" placeholder ="Nom">
 
                         <h4>Prénom</h4>
                         <input class="input" name="firstname" type="text" value="<?php $user=new UserRepository();
         $query1=$user->findByUsername($_SESSION['user']);
-        $firstname=$query1->firstname;
-        if(!empty($firstname)){
-          echo $firstname;
-        } ?> " placeholder="Prénom">
+        
+          if (!empty($query1->firstname)){
+         
+          echo $query1->firstname;
+          
+          } else ?>" placeholder="Prénom">
 
                         
 
                         <h4>Date de naissance</h4>
                         <input name="birthday" class="input" type="Date" value="<?php $user=new UserRepository();
         $query1=$user->findByUsername($_SESSION['user']);
-        $birthday=$query1->birthday;
-        if(!empty($birthday)){
-          echo $birthday;
+        
+        if(!empty($query1->birthday)){
+          echo $query1->birthday;
         }
          
         
@@ -103,14 +114,13 @@ include_once 'head.php' ?>
                           <div class="radio__container">
                             <?php $user=new UserRepository();
         $query1=$user->findByUsername($_SESSION['user']);
-        $sexe=$query1->sexe;
         
        ?>
-                            <input type="radio" name="sexe" value="female" <?php if(!empty($sexe) && ($sexe=='female')){
+                            <input type="radio" name="sexe" value="female" <?php if(!empty($query1->sexe) && ($query1->sexe=='female')){
                               echo 'checked';
           
         } ?>><span>Femme</span>
-                            <input type="radio" name="sexe" value="male" <?php if(!empty($sexe) && ($sexe=='male')){
+                            <input type="radio" name="sexe" value="male" <?php if(!empty($query1->sexe) && ($query1->sexe=='male')){
                               echo 'checked';
           
         } ?>><span>Homme</span>
@@ -124,18 +134,19 @@ include_once 'head.php' ?>
                   <!--<input type="file" name="profileImg" type="image" placeholder="image">-->
                         <img src="<?php $user=new UserRepository();
                       $query1=$user->findByUsername($_SESSION['user']);
-                      $sexe=$query1->sexe;
-                      $profileImg=$query1->profileImg;
-                      if(!empty($profileImg)){
+                   
+                
+                      if(!empty($query1->profileImg)){
                        
                         echo 'data:image/jpeg;base64,".base64_encode($profileImg)."';
-                      } else if (!empty($sexe)) {
-                          if($sexe=='female') {
+                      } else if (!empty($query1->sexe)) {
+                          if($query1->sexe=='female') {
                             echo 'svg/undraw_female_avatar_w3jk.svg';
                           } else {
                             echo 'svg/undraw_male_avatar_323b.svg';
                           }
-                     } ?> " 
+                     } 
+                     else echo 'svg/undraw_male_avatar_323b.svg'; ?> " 
 
                        alt="">
                        
@@ -149,6 +160,7 @@ include_once 'head.php' ?>
         
 
                 <button typ="submit" class="btn btn3">Modifier</button>
+
                 
               </form>
 
@@ -174,24 +186,26 @@ include_once 'head.php' ?>
                     <h4>Adresse</h4>
                     <input class="input" name="adresse" type="adress" value="<?php $user=new UserRepository();
         $query1=$user->findByUsername($_SESSION['user']);
-        $adresse=$query1->adresse;
-        if(!empty($adresse)){
-          echo $adresse;
-        } ?> " placeholder="Adresse">
+  
+        if(!empty($query1->adresse)){
+          echo $query1->adresse;
+        } else ?>" placeholder="Adresse">
 
                     <h4>Email</h4>
                     <input class="input" name="email" type="email" value="<?php $user=new UserRepository();
         $query1=$user->findByUsername($_SESSION['user']);
-        echo $query1->email;
-        ?>">
+       if (!empty($query1->email)){
+         echo $query1->email;
+       };
+         ?>">
 
                     <h4>Numéro de Téléphone</h4>
                     <input name="telephone" class="input" value="<?php $user=new UserRepository();
         $query1=$user->findByUsername($_SESSION['user']);
-        $telephone=$query1->telephone;
-        if(!empty($telephone)){
-          echo $telephone;
-        } ?> " placeholder="+216">
+    
+        if(!empty($query1->telephone)){
+          echo $query1->telephone;
+        } else ?>" placeholder="+216">
                   </div>
 
                   <div class="image">

@@ -1,8 +1,12 @@
-<?php include("head.php"); ?>
+<?php include("head.php"); 
+//include 'isAuthentificated.php';
+?>
 
 <body>
 
-    <?php include("navbarConnecte.php"); ?>
+    <?php include("navbarConnecte.php"); 
+   // include_once 'profileProgress.php';
+    ?>
     
     <div class="row poster">
         <div class="col8 posterDetails">

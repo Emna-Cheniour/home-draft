@@ -51,7 +51,7 @@
 }
 .percent__box .percent svg circle:nth-child(2)
 {
-  stroke-dashoffset:calc(440 - (440 * 87) / 100);
+  stroke-dashoffset:calc(440 - (440 * var(--i)) / 100);
   stroke:#137c8b;
 }
 
