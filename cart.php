@@ -16,6 +16,13 @@ $cartIsEmpty = 1;
                 </div>
                 <div class="arrow-right"></div>
             </div>
+            <div id="catalogue" class="navbarCartElementWrapper">
+                <a  href="shopping.php" class="navbarCartElement">
+                    <i class="fas fa-book-open"></i>
+                    <h5>Catalogue</h5>
+                </a>
+                <div class="arrow-right"></div>
+            </div>
             <div class="navbarCartElementWrapper">
                 <div class="navbarCartElement">
                     <i class="fas fa-hand-holding-heart"></i>
@@ -36,7 +43,9 @@ $cartIsEmpty = 1;
                     <h5>Orders</h5>
                 </div>
                 <div class="arrow-right"></div>
-            </div>
+            </div> 
+       
+            
         </div>
         <div>
             <?php if ($cartIsEmpty) { ?>
@@ -48,7 +57,7 @@ $cartIsEmpty = 1;
                     <i class="fas fa-shopping-cart "></i>
                     <i class="fas fa-shopping-cart "></i>
                     </div>
-                    <h2>Votre panier est vide ... Revenez au catalogue et remplissez le !</h2>
+                    <div><h2 id="visiterCatalogue">Votre panier est vide ... Revenez au catalogue et remplissez le !</h2></div>
                 </div>
             <?php } ?>
         </div>
