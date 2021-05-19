@@ -1,8 +1,28 @@
-<?php include("head.php"); ?>
+<?php include("head.php"); 
+//include 'isAuthentificated.php';
+
+
+?>
 
 <body>
+<?php 
+    session_start();
+    if (isset($_SESSION['user'])){
 
-    <?php include("navbarConnecte.php"); ?>
+       $username=$_SESSION['user'];
+       include("navbarConnecte.php"); 
+       include_once 'profileProgress.php';
+        $infoCount*=10;
+        if ($infoCount!=100){
+            echo "<h2>Bienvenu $username <br>Votre profile est à $infoCount %</h2>";
+        }
+                
+    } else {
+        include("navbarDeconnecte.php"); 
+    }
+
+   
+?>
     
     <div class="row poster">
         <div class="col8 posterDetails">

@@ -44,13 +44,7 @@ class Repository
         return $response->fetch(PDO::FETCH_OBJ);
     }
 
-    public function addUser($username,$email,$password){
-        $request="INSERT INTO ".$this->tableName. "(username,email,password) VALUES ('".$username."',,'".$email."','".$password."')";
-        $response=$this->bd->prepare($request);
-
-        $response->execute([$username,$email,$password]);
-        return $response->fetch(PDO::FETCH_OBJ);
-    }
+    
     public function showCategory($categories){
         
         $request="select * from ".$this->tableName ." WHERE category= ".$categories[0];
@@ -70,13 +64,15 @@ class Repository
 
     public function update($id1,$id2){
 
+        
         $request="UPDATE " .$this->tableName." SET ".$id1."='".$id2."'";
+
         $response =$this->bd->prepare($request);
         $response->execute();
         return $response->fetch(PDO::FETCH_OBJ);
     }
 
-    public function addPerson($val1,$val2,$val3){
+    public function addUser($val1,$val2,$val3){
 
         $request = "INSERT INTO ".$this->tableName. "(username,email,password) VALUES ('".$val1."','".$val2."','".$val3."')" ; 
         $response=$this->bd->prepare($request);
@@ -84,7 +80,7 @@ class Repository
         return $response->fetch(PDO::FETCH_OBJ);
         
     }
-
+  
     public function updatePic($id1,$img){
 
         $request="UPDATE " .$this->tableName." SET ".$id1."='".addslashes($img)."'";

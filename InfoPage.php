@@ -14,8 +14,11 @@
 </head>
 
 <body>
-
-<?php include_once 'navbarDeconnecte.php'?>
+<?php 
+    session_start();
+    if (isset($_SESSION['user'])){
+       include("navbarConnecte.php"); 
+    } else include_once 'navbarDeconnecte.php'?>
 
 
 <div class="container">
