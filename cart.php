@@ -1,6 +1,6 @@
 <?php
 include_once 'assets/mainHead.php';
-$cartIsEmpty=1;
+$cartIsEmpty = 1;
 ?>
 <link rel="stylesheet" href="css/cart.css">
 </head>
@@ -39,14 +39,21 @@ $cartIsEmpty=1;
             </div>
         </div>
         <div>
-            <?php if($cartIsEmpty){?>
-            <div class="panierVide">
-                <h2>Votre panier est vide ... Revenez au catalogue et remplissez le !</h2>
-                <img src="images/emptyCart.png" alt="">
-            </div>
+            <?php if ($cartIsEmpty) { ?>
+                <div class="panierVide">
+
+                    <div class="load">
+                    <i class="fas fa-shopping-cart "></i>
+                    <i class="fas fa-shopping-cart "></i>
+                    <i class="fas fa-shopping-cart "></i>
+                    <i class="fas fa-shopping-cart "></i>
+                    </div>
+                    <h2>Votre panier est vide ... Revenez au catalogue et remplissez le !</h2>
+                </div>
             <?php } ?>
         </div>
     </div>
+
 
     <?php include_once 'assets/scripts.php' ?>
     <?php include_once 'footer.php' ?>
