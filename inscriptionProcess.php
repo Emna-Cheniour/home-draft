@@ -4,24 +4,31 @@ include_once ("autoload.php");
 
 
 
-  if( (isset($_POST['username']))  && (isset($_POST['email']))  && (isset($_POST['password']))){
+  if( (isset($_POST['username']))  && (isset($_POST['email']))  && (isset($_POST['password'])) && (isset($_POST['confirmedPassword']))){
     
       $username=$_POST['username'];
       $email=$_POST['email']; 
       $password=$_POST['password'];
+      $confirmedPassword=$_POST['confirmedPassword'];
 
       if(empty($username) || empty($email) || empty($password)){
-        $_SESSION['requiredFieldsError']='Veuillez remplir toutes vos informations';
+        $_SESSION['inscriptionError']='Veuillez remplir toutes vos informations';
         $_SESSION['page']='inscription';
         header('location:login_SignUp.php');
       }
 
 
       
-     /* else if (strlen($password) <8){
-        $_SESSION['shortPwdError']='Faible mot de passe.Veuillez réessayer';
+      else if (strlen($password) <8){
+        $_SESSION['inscriptionError']='Faible mot de passe.Veuillez réessayer';
+        $_SESSION['page']='inscription';
         header('location:login_SignUp.php');
-      }*/
+      }
+      else if ($confirmedPassword!=$password){
+        $_SESSION['inscriptionError']='Veuillez vérifier votre mot de passe';
+        $_SESSION['page']='inscription';
+        header('location:login_SignUp.php');
+      }
 
 
 
@@ -31,11 +38,13 @@ include_once ("autoload.php");
         $query2=$user->findByEmail($email);
 
         if($query1){
-          $_SESSION['usedUsername']="Nom d'utilisateur n'est pas disponible";
+          $_SESSION['inscriptionError']="Nom d'utilisateur n'est pas disponible";
+          $_SESSION['page']='inscription';
           header('location:login_SignUp.php');
         }
         else if($query2){
-          $_SESSION['usedEmail']="Cette adresse est déjà existante";
+          $_SESSION['inscriptionError']="Cette adresse est déjà existante";
+          $_SESSION['page']='inscription';
           header('location:login_SignUp.php');
         }
         else {

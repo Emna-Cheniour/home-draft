@@ -64,7 +64,9 @@ class Repository
 
     public function update($id1,$id2){
 
+        
         $request="UPDATE " .$this->tableName." SET ".$id1."='".$id2."'";
+
         $response =$this->bd->prepare($request);
         $response->execute();
         return $response->fetch(PDO::FETCH_OBJ);
@@ -78,7 +80,7 @@ class Repository
         return $response->fetch(PDO::FETCH_OBJ);
         
     }
-
+  
     public function updatePic($id1,$img){
 
         $request="UPDATE " .$this->tableName." SET ".$id1."='".addslashes($img)."'";

@@ -35,26 +35,57 @@ include_once 'navbarConnecte.php'?>
 
             <div class="leftbox">
               <nav>
-                <a class="Icontab active">
-                  <i class="fa fa-user"></i>
+                <a class="Icontab <?php 
+        if(!isset($_SESSION['contactError']) && !isset($_SESSION['settingError'])){
+         
+            echo "active";
+          
+       
+        }  ;
+        
+
+        ?>">
+                <i class="fa fa-user"></i>
                 </a>
 
-                <a class="Icontab">
+                <a class="Icontab <?php 
+        if(isset($_SESSION['contactError'])){
+            echo "active";
+          }
+      
+
+        ?>">
                   <i class="fas fa-address-book"></i>
                 </a>
 
-                <a class="Icontab">
+                <a class="Icontab <?php 
+        if(isset($_SESSION['settingError'])){
+            
+            echo "active";
+          }
+        
+
+
+        ?>">
                   <i class="fa fa-cog"></i>
                 </a>
 
-                <a class="Icontab">
+                <a class="Icontab ">
                 <i class="fas fa-heart"></i>
                 </a>
               </nav>
             </div>
 
             <div class="rightbox">
-              <form method="post" action="infoProcess.php" enctype="multipart/form-data" class="profile tabShow">
+              <form method="post" action="profileProcess.php" enctype="multipart/form-data" class="profile tabShow <?php 
+    if(isset($_SESSION['settingError']) || isset($_SESSION['contactError'])){
+      
+        echo "hidden";
+      
+    } 
+    
+
+    ?>">
                 <div class="wavy">
                             <span style="--i:1;">M</span>
                             <span style="--i:2;">O</span>
@@ -71,80 +102,92 @@ include_once 'navbarConnecte.php'?>
 
                         </div>
                 <div class="content">
+
                   <div class="info">
                         
 
                         <h4>Nom</h4>
                         <input class="input" name="lastname" type="text" value="<?php $user=new UserRepository();
-        $query1=$user->findByUsername($_SESSION['user']);
-        
-        if(!empty($query1->lastname)){
-         
-          echo $query1->lastname;
-        } else ?>" placeholder ="Nom">
+                        $query1=$user->findByUsername($_SESSION['user']);
+                        
+                        if(!empty($query1->lastname)){
+                        
+                          echo $query1->lastname;
+                        } else ?>" placeholder ="Nom">
 
                         <h4>Prénom</h4>
                         <input class="input" name="firstname" type="text" value="<?php $user=new UserRepository();
-        $query1=$user->findByUsername($_SESSION['user']);
+                        $query1=$user->findByUsername($_SESSION['user']);
         
-          if (!empty($query1->firstname)){
-         
-          echo $query1->firstname;
-          
-          } else ?>" placeholder="Prénom">
+                              if (!empty($query1->firstname)){
+                            
+                              echo $query1->firstname;
+                              
+                              } else ?>" placeholder="Prénom">
 
                         
 
                         <h4>Date de naissance</h4>
                         <input name="birthday" class="input" type="Date" value="<?php $user=new UserRepository();
-        $query1=$user->findByUsername($_SESSION['user']);
-        
-        if(!empty($query1->birthday)){
-          echo $query1->birthday;
-        }
-         
-        
-      ?>"  >
+                                  $query1=$user->findByUsername($_SESSION['user']);
+                                  
+                                  if(!empty($query1->birthday)){
+                                    echo $query1->birthday;
+                                  }
+                                  
+                                  
+                                ?>"  >
 
                         <h4>Sexe</h4>
                           <div class="radio__container">
-                            <?php $user=new UserRepository();
-        $query1=$user->findByUsername($_SESSION['user']);
-        
-       ?>
-                            <input type="radio" name="sexe" value="female" <?php if(!empty($query1->sexe) && ($query1->sexe=='female')){
-                              echo 'checked';
+                                            <?php $user=new UserRepository();
+                        $query1=$user->findByUsername($_SESSION['user']);
+                        
+                      ?>
+                                            <input type="radio" name="sexe" value="female" <?php if(!empty($query1->sexe) && ($query1->sexe=='female')){
+                                              echo 'checked';
+                          
+                        } ?>><span>Femme</span>
+                                            <input type="radio" name="sexe" value="male" <?php if(!empty($query1->sexe) && ($query1->sexe=='male')){
+                                              echo 'checked';
           
-        } ?>><span>Femme</span>
-                            <input type="radio" name="sexe" value="male" <?php if(!empty($query1->sexe) && ($query1->sexe=='male')){
-                              echo 'checked';
-          
-        } ?>><span>Homme</span>
-                          </div>
-                  </div>
+                        } ?>><span>Homme</span>
+                                          </div>
+                                          <?php 
+                          if(isset($_SESSION['profileError'])){
+
+                          
+                        ?>
+                        <div class="alert alert-danger">
+                            <?php echo $_SESSION['profileError']; ?>
+                        </div>
+                        <?php } unset($_SESSION['profileError']); ?>
+                                  </div>
+
+                          
                     
                   <div class="image" >
               
                     
-                  <!--<input type="file" name="profileImg" id="image" placeholder="image">-->
+                     <!--<input type="file" name="profileImg" id="image" placeholder="image">-->
                   
-                        <img src=" <?php $user=new UserRepository();
-                      $query1=$user->findByUsername($_SESSION['user']);
-                   
-                
-                      if(!empty($query1->profileImg)){
-                       
-                        echo 'data:image/jpeg;base64,".base64_encode($user->profileImg)."';
-                      } else if (!empty($query1->sexe)) {
-                          if($query1->sexe=='female') {
-                            echo 'svg/undraw_female_avatar_w3jk.svg';
-                          } else {
-                            echo 'svg/undraw_male_avatar_323b.svg';
-                          }
-                     } 
-                     else echo 'svg/undraw_male_avatar_323b.svg'; ?> " 
+                              <img src=" <?php $user=new UserRepository();
+                            $query1=$user->findByUsername($_SESSION['user']);
+                        
+                      
+                            if(!empty($query1->profileImg)){
+                            
+                              echo 'data:image/jpeg;base64,".base64_encode($user->profileImg)."';
+                            } else if (!empty($query1->sexe)) {
+                                if($query1->sexe=='female') {
+                                  echo 'svg/undraw_female_avatar_w3jk.svg';
+                                } else {
+                                  echo 'svg/undraw_male_avatar_323b.svg';
+                                }
+                          } 
+                          else echo 'svg/undraw_male_avatar_323b.svg'; ?> " 
 
-                       >
+                            >
                        
                        
                     
@@ -160,7 +203,14 @@ include_once 'navbarConnecte.php'?>
                 
               </form>
 
-              <form method="post" action="infoProcess.php" class="contact tabShow hidden">
+              <form method="post" action="contactProcess.php" class="contact tabShow <?php 
+    if(!isset($_SESSION['contactError'])){
+        echo "hidden";
+      }
+    
+    
+
+    ?>">
                 <div class="wavy">
                                 <span style="--i:1;">C</span>
                                 <span style="--i:2;">O</span>
@@ -202,6 +252,18 @@ include_once 'navbarConnecte.php'?>
         if(!empty($query1->telephone)){
           echo $query1->telephone;
         } else ?>" placeholder="+216">
+
+ <?php 
+                          if(isset($_SESSION['contactError'])){
+
+                          
+                        ?>
+                        <div class="alert alert-danger">
+                            <?php echo $_SESSION['contactError']; ?>
+                        </div>
+                        <?php } unset($_SESSION['contactError']); ?>
+
+        
                   </div>
 
                   <div class="image">
@@ -217,7 +279,16 @@ include_once 'navbarConnecte.php'?>
               </form>
 
 
-              <form method="post" action="infoProcess.php" class="setting tabShow hidden">
+              <form method="post" action="infoProcess.php" class="setting tabShow <?php 
+    if(!isset($_SESSION['settingError'])){
+     
+        echo "hidden";
+      
+    
+    } 
+    
+
+    ?>">
                 <div class="wavy">
                                   <span style="--i:1;">P</span>
                                   <span style="--i:2;">A</span>
@@ -235,20 +306,30 @@ include_once 'navbarConnecte.php'?>
                 </div>
                   <div class="content">
                     <div class="info">
-                        
-
-                        <h4>Nom d'utilisateur</h4>
-                        <input class="input" name="username" type="text" value="<?php $username=$_SESSION['user'];
-                        echo $username;
-                        ?>">
+        
 
 
-                        <h4>Mot de passe</h4>
+                        <h4>Ancien mot de passe</h4>
                         <input class="input" name="password" type="password" placeholder="<?php $user=new UserRepository();
         $query1=$user->findByUsername($_SESSION['user']);
         echo $query1->password;
 
         ?>">
+                      <h4>Nouveau mot de passe</h4>
+                      <input class="input" name="password" type="password" placeholder="Mot de passe">
+
+                        <h4>Confirmer nouveau mot de passe</h4>
+                        <input class="input" name="passwordConfirmed" type="password">
+
+                        <?php 
+                          if(isset($_SESSION['settingError'])){
+
+                          
+                        ?>
+                        <div class="alert alert-danger">
+                            <?php echo $_SESSION['settingError']; ?>
+                        </div>
+                        <?php } unset($_SESSION['settingError']); ?>
                     </div>
 
                     <div class="image">

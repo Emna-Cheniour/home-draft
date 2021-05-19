@@ -10,13 +10,13 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
     if (!empty($username) && !empty($password)) {
         $user = new UserRepository();
         $response1 = $user->findByUsernamePwd($username, $password);
-       // $response2 = $user->findByEmailPwd($username, $password);
+       
         
-        if ($response1 || $response2) {
+        if ($response1) {
             $_SESSION['user']=$username;
             header('location:acceuil.php');
         } else {
-            $_SESSION['IncorrectFieldsError']="Veuillez vérifier vos informations personnelles.";
+            $_SESSION['IncorrectFieldsError']="Veuillez vérifier vos informations personnelles";
             header('location:login_SignUp.php');
         }
     } else {
