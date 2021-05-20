@@ -18,22 +18,19 @@ if (isset($_FILES['profileImg']) && !empty($_FILES['profileImg'])) {
   }
 }*/
 
+if ((empty($_POST['password'])) || (empty($_POST['passwordConfirmed'])) || ($_POST['passwordConfirmed']!=$_POST['password'])){
+  $_SESSION['settingError']='Veuillez vérifier les informations saisies';
+  $_SESSION['page']='setting';
+  $_SESSION['pageIcon']='active';
+}
+else {
+
+  $password=$_POST['password'];
+  $users->update('password', $password);
 
 
-
-
-
-  if (isset($_POST['password']) && !(empty($_POST['password'])) && isset($_POST['passwordConfirmed']) && !(empty($_POST['passwordConfirmed'])) && ($_POST['passwordConfirmed']==$_POST['password'])){
-      
-      $password=$_POST['password'];
-      $users->update('password', $password);
-    
-  }
-  else {
-    $_SESSION['settingError']='Veuillez vérifier les informations saisies';
-    $_SESSION['page']='setting';
-    $_SESSION['pageIcon']='active';
-  }
+}
+ 
 
 
 header('location:profile.php');
