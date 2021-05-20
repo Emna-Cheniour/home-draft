@@ -95,11 +95,15 @@
 .panierVide {
     position: relative;
     padding: 20px;
-    color: #1c294277;
-    text-align: center;
+    color: #3B556D;
 
 }
-
+.panierVide div{
+    text-align: center;
+}
+.panierVide div h2{
+    display:inline-block; 
+}
 .panierVide img {
     max-width: 50%;
     max-height: 50%;
