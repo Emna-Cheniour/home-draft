@@ -620,72 +620,6 @@ ul {
     }
 }
 
-/*Footer*/
-.myFooter {
-    background-color: #1c2942;
-}
-
-.cp {
-    color: gray !important;
-    width: 100%;
-    padding-left: calc(50% - 233px);
-    text-align: center;
-}
-
-.myFooter>div {
-    padding: 20px 40px 20px;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.myFooter a {
-    color: white;
-}
-
-.myFooter a :hover,
-.myFooter * a:hover {
-    font-weight: bold;
-    color: #3b556d !important;
-    cursor: pointer;
-}
-
-.logo a {
-    vertical-align: middle;
-}
-
-.myFooter div>* {
-    padding-top: 20px;
-}
-/*
-.socials a {
-    padding-right: 30px;
-}*/
-
-.aide {
-    display: flex;
-    flex-direction: column;
-
-}
-
-.aide a {
-    padding: 10px 20px 0px;
-
-}
-
-@media screen and (max-width:700px) {
-
-    .myFooter {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .myFooter div {
-        width: 100% !important;
-    }
-
-}
 
 /* Dons*/
 .donation,
@@ -829,3 +763,45 @@ ul {
 #button{
     display: none;
 }
+/*Swiper*/
+.specialistsAd{
+    height: 360px;
+  }
+  
+  .swiper-container {
+    height: 100%
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+  .specialistAd {
+      height: 100px;
+      width: 300px;
+      background-color: #1C2942;
+      border-radius: 30px;
+      padding: 10px;
+      color: white;
+      text-align: center;
+  }
+.specialistAd img{
+max-width: 70%;
+max-height: 70%;
+float: left;
+  }

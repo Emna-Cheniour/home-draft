@@ -23,7 +23,7 @@
     </div>
     <ul class="righNavLinks">
         <li><a href=""> <i title="Dons" class="fas fa-donate"></i><a></li>
-        <li><a href=""> <i title="Chariot" class="fas fa-shopping-cart"></i><a></li>
+        <li><a href="cart.php"> <i title="Chariot" class="fas fa-shopping-cart"></i><a></li>
         <li id="dropProfil"> <i title="profil" class="fas fa-user"></i></li>
     </ul>
 </div>
