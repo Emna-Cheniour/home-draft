@@ -1,0 +1,533 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    color: #0B162C;
+}
+
+a,
+a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+ul {
+    /*  Eliminer le margin et le padding qui viennet par défaut par une liste ul*/
+    margin: 0;
+    padding: 0;
+}
+
+button{
+    width: 150px;
+}
+
+
+ button:hover {
+    cursor: pointer;
+    font-size: 1.08rem;
+    transition: 0.3s ease-in;
+
+}
+
+
+/*  grid*/
+
+* {
+    /*Pourr tout le document*/
+    box-sizing: border-box;
+    /* width= padding+width+border et Height= padding+height+border*/
+    margin: 0;
+    border: 0px;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.col1 {
+    width: 8.33%;
+}
+
+.col2 {
+    width: 16.66%;
+}
+
+.col3 {
+    width: 25%;
+}
+
+.col4 {
+    width: 33.33%;
+}
+
+.col5 {
+    width: 41.66%;
+}
+
+.col6 {
+    width: 50%;
+}
+
+.col7 {
+    width: 58.33%;
+}
+
+.col8 {
+    width: 66.66%;
+}
+
+.col9 {
+    width: 75%;
+}
+
+.col10 {
+    width: 83.33%;
+}
+
+.col11 {
+    width: 91.66%;
+}
+
+.col12 {
+    width: 100%;
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+
+.row {
+    margin: 0;
+    /* redefinir proprieté de la classe du theme de bootstrap*/
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Barre de navigation */
+.navbar-custom {
+    background-color: #1c2942;
+    height: 80px;
+    position: relative;
+}
+
+.navbar-custom ul li:hover,
+.navbar-custom ul li a:hover,
+.dropdownService ul li a:hover,
+.dropdownProfil ul li a:hover,
+.dropdownProfil ul li:hover {
+    font-weight: bold;
+    color: #3b556d !important;
+    cursor: pointer;
+
+}
+
+.logopic {
+    height: 80px;
+    padding: 5px;
+    vertical-align: middle;
+}
+
+.pagename {
+    font-weight: bold;
+    line-height: 80px;
+    padding: 0 0 0 5px;
+    font-size: 30px;
+    vertical-align: middle;
+    background-size: 100%;
+    cursor: pointer;
+    background-image: linear-gradient(to right, #bbd2c5, #536976);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+
+}
+
+.navLinks {
+    display: inline-block;
+    margin: 0 0 0 25px;
+    font-size: 20px;
+    vertical-align: middle;
+}
+
+.navLinks li {
+    display: inline-block;
+    color: white;
+    margin: 0 20px 0;
+}
+
+.righNavLinks {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    height: 80px;
+    margin: 0 25px 0 0;
+    font-size: 20px;
+    vertical-align: middle;
+}
+
+.righNavLinks li {
+    padding: 0 20px 0;
+    display: inline-block;
+    line-height: 80px;
+    color: white;
+}
+
+@media only screen and (max-width: 900px) {
+    /* Barre de navigation */
+
+    .navLinks {
+        display: block;
+        margin: 0;
+
+    }
+
+    .righNavLinks {
+        display: block;
+        position: static;
+        margin: 0;
+    }
+
+    .navbar-custom {
+        height: auto;
+        text-align: center;
+    }
+}
+
+/* Dropdown services*/
+.dropdownService {
+    display: none;
+    width: 420px;
+    margin-left: 378.883px;
+    background-color: #1c2942;
+    margin-top: 2px;
+    text-decoration: none;
+    visibility: visible;
+    z-index: 40;
+    position: absolute;
+}
+
+.dropdownService ul li {
+    display: inline-block;
+    width: 203px;
+    font-size: 15px;
+    list-style-type: none;
+    color: white;
+    padding: 5px;
+}
+
+.dropdownForPhone {
+    width: 0px;
+    margin: 0;
+    padding: 0;
+    visibility: hidden;
+    display: inline-block;
+}
+
+.dropdownForPhone * {
+    width: 0;
+    height: 0;
+}
+
+.dropPhone {
+    display: none !important;
+}
+
+@media only screen and (max-width: 900px) {
+
+    /* Dropdown services*/
+    .dropPhone {
+        display: inline-block !important;
+    }
+
+    .dropdownService {
+        height: 0;
+        margin: 0;
+        padding: 0;
+        visibility: hidden;
+    }
+
+    .dropdownForPhone {
+        width: 420px;
+        text-decoration: none;
+        height: auto;
+        visibility: visible;
+        display: none;
+        margin: 15px auto 0;
+
+    }
+
+    .dropdownForPhone * {
+        width: initial;
+        height: initial;
+    }
+
+    .dropdownForPhone ul li {
+        display: inline-block;
+        width: 203px;
+        font-size: 15px;
+        list-style-type: none;
+        color: white;
+        padding: 5px;
+    }
+
+}
+
+/* Dropdown profil*/
+.dropdownProfil {
+    display: none;
+    width: 160px;
+    background-color: #1c2942;
+    margin-top: 2px;
+    text-decoration: none;
+    visibility: visible;
+    z-index: 40;
+    position: absolute;
+    right: 50px;
+
+}
+
+.dropdownProfil ul li {
+    font-size: 15px;
+    list-style-type: none;
+    color: white;
+    padding: 5px;
+}
+
+.dropdownProfil ul li i {
+    padding-right: 10px;
+}
+
+@media only screen and (max-width: 900px) {
+    .dropdownProfil {
+        right: calc(50% - 75px);
+        justify-self: center;
+
+    }
+}
+
+/*Services*/
+.services {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+}
+.c4 {
+    animation-duration: 3s;
+    animation-name: slidein;
+  }
+  
+  @keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%;
+    }
+  
+    to {
+      margin-left: 500px;
+      width: 77%;
+    }
+  }
+
+.serviceRow {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.service {
+    margin: 20px 50px 20px;
+    height: 350px;
+    width: 350px;
+    border-radius: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow:20px 20px 50px 10px grey inset;
+    color: #3B556D;
+    background-color: #0b162c1a;
+    transition: 0.3s ease-in;
+}
+
+.service img {
+    margin: 0px 0px 20px;
+    border-radius: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content:initial;
+    width: 100%;
+    height: 170px;
+}
+.service h2 {
+    text-align: center;
+    color: #1C2942;
+    font-size: 20px;
+}
+.fbpage a{
+    text-align: center;
+    color: #1C2942;
+    font-size: 20px;
+}
+.fbpage a:hover{
+    color: white;
+}
+.service p {
+    height: 120px;
+    text-align: center;
+    vertical-align: middle;
+    justify-content: center;
+    padding: 10px;
+    font-size: 15px;
+}
+
+.services__btn {
+    align-self: center;
+}
+
+.service:hover {
+    transform: scale(1.085);
+    transition: 0.3s ease-in;
+    cursor: pointer;
+}
+.card__btn
+{ padding:0.5rem;
+  font-family: inherit;
+  font-weight: bold;
+  border: none;
+  width: 80%;
+  height: 40px;
+  /*border:2px solid #2193b0;*/
+  color:#0B162C;
+  background: transparent;
+  border-radius: 20px;
+  transition:background 0.2s , color 0.2s;
+ 
+  
+}
+
+.card__btn a 
+{
+  text-decoration: none;
+  color:#0B162C;
+}
+.card__btn:hover
+{
+  background-color: #0B162C;
+}
+.card__btn:hover a
+{
+  color:white;
+}
+@media screen and (max-width: 1300px) {
+    .serviceRow {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+
+}
+
+@media screen and (max-width:768px) {
+    .serviceRow {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Poster*/
+
+/*Footer*/
+.myFooter {
+    background-color: #1c2942;
+}
+
+.cp {
+    color: gray !important;
+    width: 100%;
+    padding-left: calc(50% - 233px);
+    text-align: center;
+}
+
+.myFooter>div {
+    padding: 20px 40px 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.myFooter a :hover,
+.myFooter * a:hover {
+    font-weight: bold;
+    color: #3b556d !important;
+    cursor: pointer;
+}
+
+.logo a {
+    vertical-align: middle;
+}
+
+.myFooter div>* {
+    padding-top: 20px;
+}
+
+.socials a {
+    padding-right: 30px;
+}
+
+.aide {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.aide a {
+    padding: 10px 20px 0px;
+
+}
+
+@media screen and (max-width:700px) {
+
+    .myFooter {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .myFooter div {
+        width: 100% !important;
+    }
+
+}
+
+
+
+@media screen and (max-width:1100px) {
+   .donation div,.quizz div {
+       width: 100%;
+   }
+
+@media only screen and (max-width: 1100px) {
+    .phone{
+        display: block;
+    }
+    .web{
+        display: none;
+    }
+}
+
+ }
+/* * {
+  background: #000 !important;
+  color: #0f0 !important;
+  outline: solid #f00 1px !important;
+} */
