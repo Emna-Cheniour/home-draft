@@ -74,7 +74,7 @@
                     <br>
                     Decouvrez les localisations des restaurants en Tunisie avec des repas sans gluten et plus.
                 </p>
-                <div class="services__btn"><a href="#" class="btn btn2 btnServ">Carte</a></div>
+                <div class="services__btn"><a href="Restaurant.php" class="btn btn2 btnServ">Carte</a></div>
             </div>
             <div class="service col4">
                 <img src="images/faq.png">

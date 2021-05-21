@@ -27,21 +27,33 @@ include_once('autoload.php');
           </ul>
         </div>
       </div class="trierPardiv">
-        <h5>Trier par:</h5>
-        <select name="" id="trierPar">
-        <option value="">Nouveautés</option>
-        <option value="">Prix croissant</option>
-        <option value="">Prix decroissant</option>
-        </select>
 
-      <div class="search__input">
-        <i class="fas fa-search" id="search__icon"></i>
-        <input id="search" placeholder="Rechercher..." type="text">
+         <!--<h5>Trier par:</h5>
+          <select name="" id="trierPar">
+            <option value="">Nouveautés</option>
+            <option value="">Prix croissant</option>
+            <option value="">Prix decroissant</option>
+          </select> -->
+          
+        <div class="search">
+          <div class="icon">
+
+          </div>
+          <div class="input">
+            <input type="text" placeholder="Rechercher" id="mysearch">
+          </div>
+          <span class="clear"></span>
+        </div>
+
+     
+        
 
       </div>
 
-    </div>
+
+    
     <div class="selectedAdded"></div>
+   
   </div>
 
 
