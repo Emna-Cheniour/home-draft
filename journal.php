@@ -1,5 +1,7 @@
-<?php include_once 'head.php' ?>
+<?php include_once 'assets/mainHead.php' ?>
+<link rel="stylesheet" href="css/journal.css">
 <link rel="stylesheet" href="css/shopping.css">
+</head>
 <body>
 <?php include_once 'navbarConnecte.php'?>
 

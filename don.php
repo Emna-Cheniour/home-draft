@@ -1,4 +1,7 @@
-<?php include_once 'head.php'?>
+<?php include_once 'assets/mainHead.php' ?>
+<link href="css/counter.css" rel="stylesheet">
+<link rel="stylesheet" href="css/don.css">
+</head>
 <body>
 <?php include_once 'navbarConnecte.php'?>
 
@@ -168,7 +171,7 @@
     <?php include_once 'footer.php' ?>
     <script src="js/main.js"></script>
     <script src="Js/don.js"></script>
-    <script src="jquery.counterup.min.js"></script>
+    <script src="js/jquery.counterup.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
     <script>
         jQuery(document).ready(function( $ )
