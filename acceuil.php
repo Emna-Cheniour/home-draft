@@ -161,61 +161,46 @@
 
     </div>
     <div class="specialistsAd">
-        <div class="swiper-container">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
+        <div class="swiper-container specialistsContainer">
+            <div class="swiper-wrapper specialistsWrapper">
+                <div class="swiper-slide specialistSlide">
                     <div class="specialistAd">
                         <img src="images/nutritionist.png" alt="">
                         <h4>Nom Prénom</h4>
                         <h5>Fonction</h5>
                     </div>
                 </div>
-                <div class="swiper-slide">
+                <div class="swiper-slide specialistSlide">
                     <div class="specialistAd">
                         <img src="images/nutritionist.png" alt="">
                         <h4>Nom Prénom</h4>
                         <h5>Fonction</h5>
                     </div>
                 </div>
-                <div class="swiper-slide">
+                <div class="swiper-slide specialistSlide">
                     <div class="specialistAd">
                         <img src="images/nutritionist.png" alt="">
                         <h4>Nom Prénom</h4>
                         <h5>Fonction</h5>
                     </div>
                 </div>
-                <div class="swiper-slide">
+                <div class="swiper-slide specialistSlide">
                     <div class="specialistAd">
                         <img src="images/nutritionist.png" alt="">
                         <h4>Nom Prénom</h4>
                         <h5>Fonction</h5>
                     </div>
                 </div>
-                <div class="swiper-slide">
+                <div class="swiper-slide specialistSlide">
                     <div class="specialistAd">
                         <img src="images/nutritionist.png" alt="">
                         <h4>Nom Prénom</h4>
                         <h5>Fonction</h5>
                     </div>
                 </div>
-                <div class="swiper-slide">
-                    <div class="specialistAd">
-                        <img src="images/nutritionist.png" alt="">
-                        <h4>Nom Prénom</h4>
-                        <h5>Fonction</h5>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="specialistAd">
-                        <img src="images/nutritionist.png" alt="">
-                        <h4>Nom Prénom</h4>
-                        <h5>Fonction</h5>
-                    </div>
-                </div>
+          
             </div>
         </div>
-        <!-- Add Pagination -->
-        <div class="swiper-pagination"></div>
     </div>
     </div>
 

@@ -5,14 +5,11 @@ const dropProfil = document.querySelector("#dropProfil");
 const dropDivProfil = document.querySelector(".dropdownProfil");
 
 /*/Swiper*/
-var swiper = new Swiper('.swiper-container', {
+var swiper = new Swiper('.specialistsContainer', {
     direction: 'vertical',
     slidesPerView: 3,
     loop: true,
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-    },
+ 
     autoplay: {
         delay: 5000,
         disableOnInteraction: false,
