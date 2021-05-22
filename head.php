@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/iconHover.css">
     <link rel="stylesheet" href="css/quizzStyle.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+    <link rel="stylesheet" href="css/shopping.css">
     <link rel="stylesheet" href="css/recipeStyle.css">
     <link rel="stylesheet" href="css/faq.css">
     <link rel="stylesheet" href="css/testInfo.css">

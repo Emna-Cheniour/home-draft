@@ -42,7 +42,7 @@ include_once('autoload.php');
           <div class="input">
             <input type="text" placeholder="Rechercher" id="mysearch">
           </div>
-          <span class="clear"></span>
+          <span class="clear" ></span>
         </div>
 
      
