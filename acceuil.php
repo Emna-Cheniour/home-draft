@@ -1,10 +1,11 @@
-<?php include("head.php");
+<?php include("assets/mainHead.php");
 
 //include 'isAuthentificated.php';
 
 
-?>
 
+?>
+</head>
 <body>
     <?php
     session_start();
