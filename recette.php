@@ -1,8 +1,11 @@
-<?php include("head.php"); 
+<?php 
 session_start();
+include_once 'assets/mainHead.php';
 include_once('autoload.php');
 ?>
-<body>
+
+</head>
+
 
   <?php include("navbarConnecte.php"); ?>
 <div class="recipe--page__container">

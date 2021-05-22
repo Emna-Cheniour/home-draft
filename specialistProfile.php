@@ -2,7 +2,8 @@
 include_once 'autoload.php';
 
 include_once 'isAuthentificated.php';
-include_once 'head.php' ;
+include_once 'assets/mainHead.php' ;
+include_once 'assets/bootstrapAsset.php'
 
 
 ?>
@@ -53,30 +54,14 @@ include_once 'navbarConnecte.php'?>
             </div>
           </div>
 
-          <div class="addReviewForm">
-        <h1 class="closeReview"> &times;</h1>
-        <img src="images/reviewForm.png" alt="">
-        <h3>Evaluez votre experience de shopping de chez Celiac101</h3>
-        <form action="latest.php" method="post">
-            <textarea name="reviewComment"></textarea>
-            <h3>Nottez la !</h3>
-            <div class="heart_section">
-                <i id="review1" class="far fa-heart"></i>
-                <i id="review2" class="far fa-heart"></i>
-                <i id="review3" class="far fa-heart"></i>
-                <i id="review4" class="far fa-heart"></i>
-                <i id="review5" class="far fa-heart"></i>
-            </div>
-            <h1 id="reviewRating">?/5</h1>
-            <input name="rating" id="stars" type="hidden" value="0">
-            <input class="btn btn1 submitReview" name="sendReview" type="submit">
-        </form>
-    </div>
+          
+          
+        </div>
 
 
         </div>
 
-    </div>
+    
 
 </div>
 
