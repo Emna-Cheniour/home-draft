@@ -399,6 +399,10 @@ ul {
 }
 
 /* Poster*/
+.poster {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
 .sign {
     letter-spacing: 2;
     font-family: "Clip";

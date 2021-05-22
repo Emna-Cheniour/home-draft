@@ -25,8 +25,8 @@
 
     ?>
 
-    <div class="row poster">
-        <div class="col8 posterDetails">
+    <div class="poster">
+        <div class="posterDetails">
             <div class="c4 sign">
                 <span class="fast-flicker">Celiac</span><span class="flicker">101</span>
             </div>
@@ -35,7 +35,7 @@
             </p>
             <p>Bienvenu au premier site web d'origine tunisienne pour les malades coeliaques. </p>
         </div>
-        <div class="col4 pimg"><img class="posterImg" src="images/poster picture.png" alt=""></div>
+        <div class="pimg"><img class="posterImg" src="images/poster picture.png" alt=""></div>
     </div>
 
     <div class="services">
