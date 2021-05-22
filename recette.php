@@ -1,8 +1,12 @@
-<?php include("assets/mainHead.php"); ?>
-
+<?php include("head.php"); 
+session_start();
+include_once('autoload.php');
+?>
 <body>
 
   <?php include("navbarConnecte.php"); ?>
+<div class="recipe--page__container">
+
 
   <div class="search__wrapper">
 
@@ -42,11 +46,17 @@
 
 
   <div class="card__wrapper">
-
+   <?php for($i=1;$i<3;$i++){
+          ?>
     <div class="card">
+     
       <div class="card__body">
         <img src="icons/reciper1.jpg" class="card__img">
-        <h2 class="card__title">Bowl Chia</h2>
+        <?php 
+           $recette=new RecipeRepository();
+           $query=$recette->showRecipe($i);
+        ?>
+        <h2 class="card__title"><?php echo $query->title ?></h2>
 
         <div class="card__detail">
           <div class="detail__field">
@@ -64,297 +74,31 @@
             <span class="expression">Servings</span>
           </div>
         </div>
-        <p class="card__description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum tempore corrupti culpa minima velit, et,</p>
+        <p class="card__description"><?php echo $query->description ?></p>
       </div>
+
       <div class="card__options">
-        <button class="card__btn"><a href="recetteIndiv.php">Voir Recette</a></button>
+         <a href="recetteIndiv.php" class="btn btn1 don" >Voir Recette</a>
 
         <div class="card__icons">
           <a class="like">
             <i class="fa fa-heart" aria-hidden="true"></i>
-          </a>
-
-          <img class="add" src="icons/plus.png">
+           </a>
 
         </div>
+
       </div>
 
     </div>
-
-    <div class="card">
-      <div class="card__body">
-        <img src="icons/reciper2.jpg" class="card__img">
-        <h2 class="card__title">Recipe2</h2>
-        <div class="card__detail">
-          <div class="detail__field">
-            <span class="number">20</span>
-            <span class="expression">Minutes</span>
-          </div>
-
-          <div class="detail__field">
-            <span class="number">5</span>
-            <span class="expression">Ingredients</span>
-          </div>
-
-          <div class="detail__field">
-            <span class="number">4-6</span>
-            <span class="expression">Servings</span>
-          </div>
-        </div>
-        <p class="card__description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum tempore corrupti culpa minima velit, et,</p>
-      </div>
-      <div class="card__options">
-        <button class="card__btn"><a href="#">Voir Recette</a></button>
-        <div class="card__icons">
-          <a class="like">
-            <i class="fa fa-heart" aria-hidden="true"></i>
-          </a>
-          <img src="icons/plus.png">
-        </div>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="card__body">
-        <img src="icons/reciper3.jpg" class="card__img">
-        <h2 class="card__title">Recipe3</h2>
-        <div class="card__detail">
-          <div class="detail__field">
-            <span class="number">20</span>
-            <span class="expression">Minutes</span>
-          </div>
-
-          <div class="detail__field">
-            <span class="number">5</span>
-            <span class="expression">Ingredients</span>
-          </div>
-
-          <div class="detail__field">
-            <span class="number">4-6</span>
-            <span class="expression">Servings</span>
-          </div>
-        </div>
-        <p class="card__description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum tempore corrupti culpa minima velit, et, </p>
-      </div>
-      <div class="card__options">
-        <button class="card__btn"><a href="#">Voir Recette</a></button>
-        <div class="card__icons">
-          <a class="like">
-            <i class="fa fa-heart" aria-hidden="true"></i>
-          </a>
-          <img src="icons/plus.png">
-        </div>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="card__body">
-        <img src="icons/reciper4.jpg" class="card__img">
-        <h2 class="card__title">Recipe4</h2>
-        <div class="card__detail">
-          <div class="detail__field">
-            <span class="number">20</span>
-            <span class="expression">Minutes</span>
-          </div>
-
-          <div class="detail__field">
-            <span class="number">5</span>
-            <span class="expression">Ingredients</span>
-          </div>
-
-          <div class="detail__field">
-            <span class="number">4-6</span>
-            <span class="expression">Servings</span>
-          </div>
-        </div>
-        <p class="card__description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum tempore corrupti culpa minima velit, et,</p>
-      </div>
-      <div class="card__options">
-        <button class="card__btn"><a href="#">Voir Recette</a></button>
-        <div class="card__icons">
-          <a class="like">
-            <i class="fa fa-heart" aria-hidden="true"></i>
-          </a>
-          <img src="icons/plus.png">
-        </div>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="card__body">
-        <img src="icons/reciper5.jpg" class="card__img">
-        <h2 class="card__title">Recipe5</h2>
-        <div class="card__detail">
-          <div class="detail__field">
-            <span class="number">20</span>
-            <span class="expression">Minutes</span>
-          </div>
-
-          <div class="detail__field">
-            <span class="number">5</span>
-            <span class="expression">Ingredients</span>
-          </div>
-
-          <div class="detail__field">
-            <span class="number">4-6</span>
-            <span class="expression">Servings</span>
-          </div>
-        </div>
-        <p class="card__description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum tempore corrupti culpa minima velit, et,</p>
-      </div>
-      <div class="card__options">
-        <button class="card__btn"><a href="#">Voir Recette</a></button>
-        <div class="card__icons">
-          <a class="like">
-            <i class="fa fa-heart" aria-hidden="true"></i>
-          </a>
-          <img src="icons/plus.png">
-        </div>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="card__body">
-        <img src="icons/reciper6.jpg" class="card__img">
-        <h2 class="card__title">Recipe6</h2>
-        <div class="card__detail">
-          <div class="detail__field">
-            <span class="number">20</span>
-            <span class="expression">Minutes</span>
-          </div>
-
-          <div class="detail__field">
-            <span class="number">5</span>
-            <span class="expression">Ingredients</span>
-          </div>
-
-          <div class="detail__field">
-            <span class="number">4-6</span>
-            <span class="expression">Servings</span>
-          </div>
-        </div>
-        <p class="card__description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum tempore corrupti culpa minima velit, et,</p>
-      </div>
-      <div class="card__options">
-        <button class="card__btn"><a href="#">Voir Recette</a></button>
-        <div class="card__icons">
-          <a class="like">
-            <i class="fa fa-heart" aria-hidden="true"></i>
-          </a>
-
-          <img src="icons/plus.png">
-        </div>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="card__body">
-        <img src="icons/reciper7.jpg" class="card__img">
-        <h2 class="card__title">Recipe7</h2>
-        <div class="card__detail">
-          <div class="detail__field">
-            <span class="number">20</span>
-            <span class="expression">Minutes</span>
-          </div>
-
-          <div class="detail__field">
-            <span class="number">5</span>
-            <span class="expression">Ingredients</span>
-          </div>
-
-          <div class="detail__field">
-            <span class="number">4-6</span>
-            <span class="expression">Servings</span>
-          </div>
-        </div>
-        <p class="card__description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum tempore corrupti culpa minima velit, et,</p>
-      </div>
-      <div class="card__options">
-        <button class="card__btn"><a href="#">Voir Recette</a></button>
-        <div class="card__icons">
-
-          <a class="like">
-            <i class="fa fa-heart" aria-hidden="true"></i>
-          </a>
-          <img src="icons/plus.png">
-        </div>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="card__body">
-        <img src="icons/reciper8.jpg" class="card__img">
-        <h2 class="card__title">Recipe8</h2>
-        <div class="card__detail">
-          <div class="detail__field">
-            <span class="number">20</span>
-            <span class="expression">Minutes</span>
-          </div>
-
-          <div class="detail__field">
-            <span class="number">5</span>
-            <span class="expression">Ingredients</span>
-          </div>
-
-          <div class="detail__field">
-            <span class="number">4-6</span>
-            <span class="expression">Servings</span>
-          </div>
-        </div>
-        <p class="card__description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum tempore corrupti culpa minima velit, et,</p>
-      </div>
-      <div class="card__options">
-        <button class="card__btn"><a href="#">Voir Recette</a></button>
-        <div class="card__icons">
-          <a class="like">
-            <i class="fa fa-heart" aria-hidden="true"></i>
-          </a>
-          <img src="icons/plus.png">
-        </div>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="card__body">
-        <img src="icons/reciper9.jpg" class="card__img">
-        <h2 class="card__title">Recipe9</h2>
-        <div class="card__detail">
-          <div class="detail__field">
-            <span class="number">20</span>
-            <span class="expression">Minutes</span>
-          </div>
-
-          <div class="detail__field">
-            <span class="number">5</span>
-            <span class="expression">Ingredients</span>
-          </div>
-
-          <div class="detail__field">
-            <span class="number">4-6</span>
-            <span class="expression">Servings</span>
-          </div>
-        </div>
-        <p class="card__description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum tempore corrupti culpa minima velit, et,</p>
-      </div>
-      <div class="card__options">
-        <button class="card__btn"><a href="#">Voir Recette</a></button>
-        <div class="card__icons">
-          <a class="like">
-            <i class="fa fa-heart" aria-hidden="true"></i>
-          </a>
-          <img src="icons/plus.png">
-        </div>
-      </div>
-    </div>
-
-
+  <?php } ?>
 
   </div>
 
 
 
 
-
+</div>
+<?php include 'footer.php' ?>
   <script src="Js/main.js"></script>
   <script src="Js/heart.js"></script>
   <script src="Js/searchBar.js"></script>

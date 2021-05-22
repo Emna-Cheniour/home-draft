@@ -1,8 +1,18 @@
-<?php include_once 'head.php' ?>
+<?php 
+include_once 'autoload.php';
+
+include_once 'isAuthentificated.php';
+include_once 'head.php' ;
+
+?>
+
+
 
 <body>
 
-<?php include_once 'navbarConnecte.php'?>
+<?php 
+include_once 'profileProgress.php';
+include_once 'navbarConnecte.php'?>
   <div class="profile__body">
 
 
@@ -10,11 +20,11 @@
             <div class="percent">
               <svg>
                 <circle cx="70" cy="70" r="70"></circle>
-                <circle cx="70" cy="70" r="70"></circle>
+                <circle style="--i:<?php echo $infoCount*10 ; ?>;" cx="70" cy="70" r="70"></circle>
               </svg>
 
               <div class="number">
-                <h2>87<span>%</span></h2>
+                <h2><?php echo $infoCount*10 ;?><span>%</span></h2>
               </div>
             </div>
 
@@ -25,30 +35,58 @@
 
             <div class="leftbox">
               <nav>
-                <a class="Icontab active">
-                  <i class="fa fa-user"></i>
+                <a class="Icontab <?php 
+        if(!isset($_SESSION['contactError']) && !isset($_SESSION['settingError'])){
+         
+            echo "active";
+          
+       
+        }  ;
+        
+
+        ?>">
+                <i class="fa fa-user"></i>
                 </a>
 
-                <a class="Icontab">
+                <a class="Icontab <?php 
+        if(isset($_SESSION['contactError'])){
+            echo "active";
+          }
+      
+
+        ?>">
                   <i class="fas fa-address-book"></i>
                 </a>
 
-                <a class="Icontab">
+                <a class="Icontab <?php 
+        if(isset($_SESSION['settingError'])){
+            
+            echo "active";
+          }
+        
+
+
+        ?>">
                   <i class="fa fa-cog"></i>
                 </a>
 
-                <a class="Icontab">
+                <a class="Icontab ">
                 <i class="fas fa-heart"></i>
                 </a>
               </nav>
             </div>
 
             <div class="rightbox">
-              <form method="post" action="" class="profile tabShow">
+              <form method="post" action="profileProcess.php" enctype="multipart/form-data" class="profile tabShow <?php 
+    if(isset($_SESSION['settingError']) || isset($_SESSION['contactError'])){
+      
+        echo "hidden";
+      
+    } 
+    
 
-                <div class="content">
-                  <div class="info">
-                        <div class="wavy">
+    ?>">
+                <div class="wavy">
                             <span style="--i:1;">M</span>
                             <span style="--i:2;">O</span>
                             <span style="--i:3;">N</span>
@@ -63,29 +101,97 @@
                             <span style="--i:10;">E</span>
 
                         </div>
+                <div class="content">
+
+                  <div class="info">
+                        
 
                         <h4>Nom</h4>
-                        <input class="input" type="text" placeholder="Nom">
+                        <input class="input" name="lastname" type="text" value="<?php $user=new UserRepository();
+                        $query1=$user->findByUsername($_SESSION['user']);
+                        
+                        if(!empty($query1->lastname)){
+                        
+                          echo $query1->lastname;
+                        } else ?>" placeholder ="Nom">
 
                         <h4>Prénom</h4>
-                        <input class="input" type="text" placeholder="Prénom">
+                        <input class="input" name="firstname" type="text" value="<?php $user=new UserRepository();
+                        $query1=$user->findByUsername($_SESSION['user']);
+        
+                              if (!empty($query1->firstname)){
+                            
+                              echo $query1->firstname;
+                              
+                              } else ?>" placeholder="Prénom">
 
                         
 
                         <h4>Date de naissance</h4>
-                        <input class="input" type="date" >
+                        <input name="birthday" class="input" type="Date" value="<?php $user=new UserRepository();
+                                  $query1=$user->findByUsername($_SESSION['user']);
+                                  
+                                  if(!empty($query1->birthday)){
+                                    echo $query1->birthday;
+                                  }
+                                  
+                                  
+                                ?>"  >
 
                         <h4>Sexe</h4>
                           <div class="radio__container">
-                            <input type="radio" name="sexe"><span>Femme</span>
-                            <input type="radio" name="sexe"><span>Homme</span>
-                          </div>
-                  </div>
+                                            <?php $user=new UserRepository();
+                        $query1=$user->findByUsername($_SESSION['user']);
+                        
+                      ?>
+                                            <input type="radio" name="sexe" value="female" <?php if(!empty($query1->sexe) && ($query1->sexe=='female')){
+                                              echo 'checked';
+                          
+                        } ?>><span>Femme</span>
+                                            <input type="radio" name="sexe" value="male" <?php if(!empty($query1->sexe) && ($query1->sexe=='male')){
+                                              echo 'checked';
+          
+                        } ?>><span>Homme</span>
+                                          </div>
+                                          <?php 
+                          if(isset($_SESSION['profileError'])){
+
+                          
+                        ?>
+                        <div class="alert alert-danger">
+                            <?php echo $_SESSION['profileError']; ?>
+                        </div>
+                        <?php } unset($_SESSION['profileError']); ?>
+                                  </div>
+
+                          
                     
-                  <div class="image">
-                    <img src="svg/undraw_profile_pic_ic5t.svg" alt="">
+                  <div class="image" >
+              
                     
-                  </div>    
+                     <!--<input type="file" name="profileImg" id="image" placeholder="image">-->
+                  
+                              <img src=" <?php $user=new UserRepository();
+                            $query1=$user->findByUsername($_SESSION['user']);
+                        
+                      
+                            if(!empty($query1->profileImg)){
+                            
+                              echo 'data:image/jpeg;base64,".base64_encode($user->profileImg)."';
+                            } else if (!empty($query1->sexe)) {
+                                if($query1->sexe=='female') {
+                                  echo 'svg/undraw_female_avatar_w3jk.svg';
+                                } else {
+                                  echo 'svg/undraw_male_avatar_323b.svg';
+                                }
+                          } 
+                          else echo 'svg/undraw_male_avatar_323b.svg'; ?> " 
+
+                            >
+                       
+                       
+                    
+                  </div>   
                 
                 </div>
                 
@@ -93,13 +199,19 @@
         
 
                 <button typ="submit" class="btn btn3">Modifier</button>
+
                 
               </form>
 
-              <form method="post" action="" class="contact tabShow hidden">
-                <div class="content">
-                  <div class="info">
-                    <div class="wavy">
+              <form method="post" action="contactProcess.php" class="contact tabShow <?php 
+    if(!isset($_SESSION['contactError'])){
+        echo "hidden";
+      }
+    
+    
+
+    ?>">
+                <div class="wavy">
                                 <span style="--i:1;">C</span>
                                 <span style="--i:2;">O</span>
                                 <span style="--i:3;">N</span>
@@ -112,14 +224,46 @@
                               
 
                     </div>
+                <div class="content">
+                  <div class="info">
+                  
+                   
+
                     <h4>Adresse</h4>
-                    <input class="input" type="adress" placeholder="Adresse">
+                    <input class="input" name="adresse" type="adress" value="<?php $user=new UserRepository();
+        $query1=$user->findByUsername($_SESSION['user']);
+  
+        if(!empty($query1->adresse)){
+          echo $query1->adresse;
+        } else ?>" placeholder="Adresse">
 
                     <h4>Email</h4>
-                    <input class="input" type="email" placeholder="example@example.com">
+                    <input class="input" name="email" type="email" value="<?php $user=new UserRepository();
+        $query1=$user->findByUsername($_SESSION['user']);
+       if (!empty($query1->email)){
+         echo $query1->email;
+       };
+         ?>">
 
                     <h4>Numéro de Téléphone</h4>
-                    <input class="input" placeholder="+216">
+                    <input name="telephone" class="input" value="<?php $user=new UserRepository();
+        $query1=$user->findByUsername($_SESSION['user']);
+    
+        if(!empty($query1->telephone)){
+          echo $query1->telephone;
+        } else ?>" placeholder="+216">
+
+ <?php 
+                          if(isset($_SESSION['contactError'])){
+
+                          
+                        ?>
+                        <div class="alert alert-danger">
+                            <?php echo $_SESSION['contactError']; ?>
+                        </div>
+                        <?php } unset($_SESSION['contactError']); ?>
+
+        
                   </div>
 
                   <div class="image">
@@ -135,10 +279,17 @@
               </form>
 
 
-              <form method="post" action="" class="setting tabShow hidden">
-                  <div class="content">
-                    <div class="info">
-                        <div class="wavy">
+              <form method="post" action="infoProcess.php" class="setting tabShow <?php 
+    if(!isset($_SESSION['settingError'])){
+     
+        echo "hidden";
+      
+    
+    } 
+    
+
+    ?>">
+                <div class="wavy">
                                   <span style="--i:1;">P</span>
                                   <span style="--i:2;">A</span>
                                   <span style="--i:3;">R</span>
@@ -150,21 +301,35 @@
                                   
                                   <span style="--i:9;">E</span>
                                   <span style="--i:10;">S</span>
-                                  <span style="--i:11;">C</span>
-                                  <span style="--i:12;">O</span>
-                                  <span style="--i:13;">M</span>
-                                  <span style="--i:14;">P</span>
-                                  <span style="--i:15;">T</span>
-                                  <span style="--i:16;">E</span>
+                              
 
-                         </div>
-
-                        <h4>Nom d'utilisateur</h4>
-                        <input class="input" type="text" placeholder="Nom d'utilisateur">
+                </div>
+                  <div class="content">
+                    <div class="info">
+        
 
 
-                        <h4>Mot de passe</h4>
-                        <input class="input" type="password" value="brightcode">
+                        <h4>Ancien mot de passe</h4>
+                        <input class="input" name="password" type="password" placeholder="<?php $user=new UserRepository();
+        $query1=$user->findByUsername($_SESSION['user']);
+        echo $query1->password;
+
+        ?>">
+                      <h4>Nouveau mot de passe</h4>
+                      <input class="input" name="password" type="password" placeholder="Mot de passe">
+
+                        <h4>Confirmer nouveau mot de passe</h4>
+                        <input class="input" name="passwordConfirmed" type="password">
+
+                        <?php 
+                          if(isset($_SESSION['settingError'])){
+
+                          
+                        ?>
+                        <div class="alert alert-danger">
+                            <?php echo $_SESSION['settingError']; ?>
+                        </div>
+                        <?php } unset($_SESSION['settingError']); ?>
                     </div>
 
                     <div class="image">
@@ -177,10 +342,8 @@
                 <button type="submit" class="btn btn3">Modifier</button>
               </form>
 
-              <form method="post" action="" class="favourite tabShow hidden">
-                <div class="content">
-                  <div class="info">
-                      <div class="wavy">
+              <form method="post" action="infoProcess.php" class="favourite tabShow hidden">
+                <div class="wavy">
                                 <span style="--i:1;">F</span>
                                 <span style="--i:2;">A</span>
                                 <span style="--i:3;">V</span>
@@ -191,23 +354,60 @@
                                 
 
                       </div>
-                      <ul>
-                        <li><a href="#">Recette1</a></li>
-                        <li><a href="#">Recette2</a></li>
-                        <li><a href="#">Recette3</a></li>
-                        <li><a href="#">Recette4</a></li>
-                        <li><a href="#">Recette5</a></li>
-                      </ul>
+                <div class="content">
+                  <div class="info">
+                      
+
+                      <div class="recipe__cards">
+                        <div class="recipe__card">
+                          <h6>RECETTE1</h6>
+                          <div class="card__links">
+                            <a href=""><i class="fas fa-trash"></i></a>
+                            <a href="recetteIndiv.php"><i class="fas fa-plus"></i></a>
+                          </div>
+                          
+                        </div>
+                        <div class="recipe__card">
+                          <h6>RECETTE1</h6>
+                          <div class="card__links">
+                            <a href=""><i class="fas fa-trash"></i></a>
+                            <a href="recetteIndiv.php"><i class="fas fa-plus"></i></a>
+                          </div>
+                          
+                        </div>
+                        
+                      </div>
+
+                      <div>
+                          <ul class="pagination pagination-sm">
+                            <li class="page-item disabled">
+                              <a class="page-link" href="#">&laquo;</a>
+                            </li>
+                            <li class="page-item active">
+                              <a class="page-link" href="#">1</a>
+                            </li>
+                            <li class="page-item">
+                              <a class="page-link" href="#">2</a>
+                            </li>
+                            <li class="page-item">
+                              <a class="page-link" href="#">3</a>
+                            </li>
+                            <li class="page-item">
+                              <a class="page-link" href="#">4</a>
+                            </li>
+                            <li class="page-item">
+                              <a class="page-link" href="#">5</a>
+                            </li>
+                            <li class="page-item">
+                              <a class="page-link" href="#">&raquo;</a>
+                            </li>
+                          </ul>
+                      </div>
                   </div>
 
-                  <div class="image">
-                    <img src="svg/undraw_Wishlist_re_m7tv.svg" alt="">
-                    
-                  </div> 
+                  
                 </div>
                 
-
-                <button type="submit" class="btn btn3">Modifier</button>
               </form>
 
             </div>
@@ -220,7 +420,7 @@
   
 
 
-<!-- <?php //include_once('footer.php'); ?>-->
+  <?php include_once('footer.php'); ?>
   <script src="js/main.js"></script>
   <script src="js/profile.js"></script>
 </body>

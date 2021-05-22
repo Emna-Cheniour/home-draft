@@ -98,41 +98,23 @@ form.sign-up-form
 }
 
 .alert.alert-danger {
-  position: absolute;
+  position:relative;
   padding: 0.75rem 1.25rem;
   border: 1px solid transparent;
   border-radius: 55px;
   color: #78281f;
   background-color: #fadbd8;
   border-color: #f8cdc8;
-  margin-top: 100px;
   transition: 0.5s ease-in-out;
   display: flex;
-  animation-name: fade;
-  animation-duration: 5s;
-  animation-fill-mode: forwards;
-  animation-delay: 3s;
   cursor: pointer;
 }
 
-.alert.alert-danger:hover
-{
-  
-}
 .alert.alert-danger a i
 {
   margin-top: 3px;
   margin-left: 5px;
 }
-
-
-.errorIcon
-{
-  width: 20px;
-  height: 20px;
-  cursor: pointer;
-}
-
 
 
 .title

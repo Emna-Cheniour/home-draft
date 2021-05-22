@@ -1,9 +1,29 @@
-<?php include("head.php"); ?>
+<?php include("head.php");
+
+//include 'isAuthentificated.php';
+
+
+?>
 
 <body>
+    <?php
+    session_start();
+    if (isset($_SESSION['user'])) {
 
-    <?php include("navbarConnecte.php"); ?>
-    
+        $username = $_SESSION['user'];
+        include("navbarConnecte.php");
+        include_once 'profileProgress.php';
+        $infoCount *= 10;
+        if ($infoCount != 100) {
+            echo "<h2>Bienvenu $username <br>Votre profile est à $infoCount %</h2>";
+        }
+    } else {
+        include("navbarDeconnecte.php");
+    }
+
+
+    ?>
+
     <div class="row poster">
         <div class="col8 posterDetails">
             <div class="c4 sign">
@@ -27,7 +47,7 @@
                     <br>
                     Visitez notre catalogue et jouissez de la qualité au meilleur prix.
                 </p>
-                <div class="services__btn"><a href="latest.php" class="btn btn1 btnServ">Catalogue</a></div>
+                <div class="services__btn"><a href="shopping.php" class="btn btn1 btnServ">Catalogue</a></div>
             </div>
             <div class="service col4">
                 <img src="images/recette.png">
@@ -54,7 +74,7 @@
                     <br>
                     Decouvrez les localisations des restaurants en Tunisie avec des repas sans gluten et plus.
                 </p>
-                <div class="services__btn"><a href="#" class="btn btn2 btnServ">Carte</a></div>
+                <div class="services__btn"><a href="Restaurant.php" class="btn btn2 btnServ">Carte</a></div>
             </div>
             <div class="service col4">
                 <img src="images/faq.png">
@@ -120,49 +140,90 @@
     </div>
 
     <div class="row">
-    
+
 
         <div class="col specialist__section">
 
-                <div class="suggestionsSpecialist">
+            <div class="suggestionsSpecialist">
 
-                    <h4 class="specialistsText">Vous avez besoin d'un
-                        <span class="txt-rotate" data-period="2000" data-rotate='["medécin?","nutritioniste?","gastrologue?"]'></span>
-                    </h4>
+                <h4 class="specialistsText">Vous avez besoin d'un
+                    <span class="txt-rotate" data-period="2000" data-rotate='["medécin?","nutritioniste?","gastrologue?"]'></span>
+                </h4>
 
-                    <div class="specialists">
-                        <?php
-                        $persons = array("Nawres", "Meriem", "Achref", "Ncib", "Ben Isamil", "Saidi");
-                        foreach ($persons as $person) {
-                        ?>
 
-                            <div class="specialist " id="element">
-                                <img src="images/nutritionist.png" alt="">
-                                <div class="infoSpecialist">
-                                    <h4><?= $person ?></h4>
-                                    <h5>profession occupation</h5>
-                                </div>
-                            </div>
-                        <?php
-                        }
-                        ?>
+            </div>
 
-                    </div>
-
-                </div>
-
-              
         </div>
+
 
     </div>
 
-    
+    </div>
+    <div class="specialistsAd">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="specialistAd">
+                        <img src="images/nutritionist.png" alt="">
+                        <h4>Nom Prénom</h4>
+                        <h5>Fonction</h5>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="specialistAd">
+                        <img src="images/nutritionist.png" alt="">
+                        <h4>Nom Prénom</h4>
+                        <h5>Fonction</h5>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="specialistAd">
+                        <img src="images/nutritionist.png" alt="">
+                        <h4>Nom Prénom</h4>
+                        <h5>Fonction</h5>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="specialistAd">
+                        <img src="images/nutritionist.png" alt="">
+                        <h4>Nom Prénom</h4>
+                        <h5>Fonction</h5>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="specialistAd">
+                        <img src="images/nutritionist.png" alt="">
+                        <h4>Nom Prénom</h4>
+                        <h5>Fonction</h5>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="specialistAd">
+                        <img src="images/nutritionist.png" alt="">
+                        <h4>Nom Prénom</h4>
+                        <h5>Fonction</h5>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="specialistAd">
+                        <img src="images/nutritionist.png" alt="">
+                        <h4>Nom Prénom</h4>
+                        <h5>Fonction</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+    </div>
+
 
 
     <?php include("footer.php"); ?>
 
+    <?php include_once 'assets/scripts.php' ?>
     <script src="js/txtRotation.js"></script>
-
     <script src="js/main.js"></script>
 
 </body>

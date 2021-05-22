@@ -14,7 +14,7 @@ if (isset($_SESSION['user'])) {
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="css/login_SignUpStyle.css">
+    <link rel="stylesheet" href="css/login_SignUpStyle.css">
  
 
   <title>LOGIN</title>
@@ -41,7 +41,7 @@ if (isset($_SESSION['user'])) {
           <h2 class="title">Se connecter</h2>
           <div class="input__field">
             <i class="fas fa-user"></i>
-            <input type="text" name="username" placeholder="Nom d'utilisateur ou email">
+            <input type="text" name="username" placeholder="Nom d'utilisateur">
           </div>
           <div class="input__field">
             <i class="fas fa-lock"></i>
@@ -51,7 +51,6 @@ if (isset($_SESSION['user'])) {
                 <div class="alert alert-danger" class="close">
                   
                   <?= $_SESSION['IncorrectFieldsError'] ?>
-                  <!--<img class="errorIcon" src="icons/error.png" alt="">-->
                   <a><i class="fas fa-times"></i></a>
                 
                 </div>
@@ -86,8 +85,25 @@ if (isset($_SESSION['user'])) {
 
           <div class="input__field">
             <i class="fas fa-lock"></i>
-            <input type="password" name="password" placeholder="Confirmer votre mot de passe">
+            <input type="password" name="confirmedPassword" placeholder="Confirmer votre mot de passe">
           </div>
+
+          <?php 
+            if(isset($_SESSION['inscriptionError'])){ ?>
+
+              <div class="alert alert-danger" class="close">
+                  
+                  <?= $_SESSION['inscriptionError'] ?>
+                  <a><i class="fas fa-times"></i></a>
+                
+                </div>
+              
+            <?php }
+            unset($_SESSION['inscriptionError']);
+            ?>
+
+          
+          
 
           <input type="submit" value="S'inscrire" class="btn solid">
           

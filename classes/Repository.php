@@ -5,8 +5,7 @@ class Repository
 {
     public $bd;
     public $tableName;
-    public function __construct($tableName)
-    {
+    public function __construct($tableName){
         $this->tableName = $tableName;
         $this->bd = ConnexionBD::getInstance();
     }
@@ -15,6 +14,12 @@ class Repository
         $request = "select * from ".$this->tableName ." where username = ?";
         $response =$this->bd->prepare($request);
         $response->execute([$username]);
+        return $response->fetch(PDO::FETCH_OBJ);
+    }
+    public function findByOne($key,$value) {
+        $request = "select * from ".$this->tableName ." where ".$key."='".$value."'";
+        $response =$this->bd->prepare($request);
+        $response->execute();
         return $response->fetch(PDO::FETCH_OBJ);
     }
 
@@ -39,19 +44,48 @@ class Repository
         return $response->fetch(PDO::FETCH_OBJ);
     }
 
-    public function addUser($username,$email,$password){
-        $request="INSERT INTO ".$this->tableName. "(username,email,password) VALUES ('".$username."',,'".$email."','".$password."')";
-        $response=$this->bd->prepare($request);
-
-        $response->execute([$username,$email,$password]);
-        return $response->fetch(PDO::FETCH_OBJ);
-    }
+    
     public function showCategory($categories){
         
         $request="select * from ".$this->tableName ." WHERE category= ".$categories[0];
             
         $response =$this->bd->prepare($request);
         $response->execute([$categories[0]]);
+        return $response->fetch(PDO::FETCH_OBJ);
+    }
+
+    public function showRecipe($id){
+        $request = "select * from ".$this->tableName ." where id = ?";
+        $response =$this->bd->prepare($request);
+        $response->execute([$id]);
+        return $response->fetch(PDO::FETCH_OBJ);
+
+    }
+
+    public function update($id1,$id2){
+
+        
+        $request="UPDATE " .$this->tableName." SET ".$id1."='".$id2."'";
+
+        $response =$this->bd->prepare($request);
+        $response->execute();
+        return $response->fetch(PDO::FETCH_OBJ);
+    }
+
+    public function addUser($val1,$val2,$val3){
+
+        $request = "INSERT INTO ".$this->tableName. "(username,email,password) VALUES ('".$val1."','".$val2."','".$val3."')" ; 
+        $response=$this->bd->prepare($request);
+        $response->execute();
+        return $response->fetch(PDO::FETCH_OBJ);
+        
+    }
+  
+    public function updatePic($id1,$img){
+
+        $request="UPDATE " .$this->tableName." SET ".$id1."='".addslashes($img)."'";
+        $response =$this->bd->prepare($request);
+        $response->execute();
         return $response->fetch(PDO::FETCH_OBJ);
     }
   }

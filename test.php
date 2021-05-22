@@ -1,45 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <script src="rangePrice.js">
- 
-  </script>
-  <style>
-      #slider-range {
-  border-top-right-radius: 10px !important;
-  border-bottom-right-radius: 10px !important;
-  border-top-left-radius: 10px !important;
-  border-bottom-left-radius: 10px !important;
-  height: 6px;
-  border: 1px solid #3B556D !important;
-}
-#slider-range div {
-  background: #3B556D !important;
-  border-radius: 8px !important;
-}
-#slider-range span {
-  background: #3B556D;
-  margin-top: -3px;
-  width: 21px;
-  height: 21px;
-  border-radius: 10px;
-  border: 0px;
-}
-  </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="test.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 </head>
 <body>
- 
-<p>
-  <input type="text" id="amount"  style="border:0; color:#3B556D; font-weight:bold;">
-</p>
- 
-<div id="slider-range"></div>
- 
- 
+    <div class="div">
+        <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">Slide 1</div>
+      <div class="swiper-slide">Slide 2</div>
+      <div class="swiper-slide">Slide 3</div>
+      <div class="swiper-slide">Slide 4</div>
+      <div class="swiper-slide">Slide 5</div>
+      <div class="swiper-slide">Slide 6</div>
+      <div class="swiper-slide">Slide 7</div>
+      <div class="swiper-slide">Slide 8</div>
+      <div class="swiper-slide">Slide 9</div>
+      <div class="swiper-slide">Slide 10</div>
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+  </div>
+  </div>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="test.js"></script>
 </body>
 </html>
