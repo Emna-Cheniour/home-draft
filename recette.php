@@ -1,7 +1,8 @@
-<?php include("head.php"); 
+<?php include("assets/mainHead.php"); 
 session_start();
 include_once('autoload.php');
 ?>
+</head>
 <body>
 
   <?php include("navbarConnecte.php"); ?>
