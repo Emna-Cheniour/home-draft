@@ -62,29 +62,41 @@ $cartIsEmpty = 0;
                     </div>
                 </div>
             <?php } else { ?>
-                <div class="cartElement">
-                    <div class="info">
-                        <h2>A product</h2>
-                        <h3>Prix : 5</h3>
-                        <h3>Quantité : 3</h3>
-                        <h3>Total : 15</h3>
-                    </div>
-                    <div class="gestion">
-                        <span>
-                            <i class="fas fa-eye"></i>
-                        </span>
-                        <span class="shopped">
-                            <i class="fas fa-shopping-cart"></i>
-                            <h4>1</h4>
+                <div class="cartElementWrapper">
+
+                    <div class="cartElement">
+                        <div class="info">
+                            <h6>12345 -</h6>
+                            <h4>Farine schar</h4>
+                            <div class="details">
+                                <h6>Prix : 5</h6>
+                                <h6>Quantité : 3</h6>
+                                <h6>Total : 15</h6>
+                            </div>
+                        </div>
+                        <div class="gestion">
                             <span>
-                                <i class="fas fa-plus addCart"></i>
-                                <i class="fas fa-minus removeCart"></i>
+                                <i class="fas fa-eye"></i>
                             </span>
-                        </span>
-                        <span>
-                            <i class="fas fa-times-circle"></i>
-                        </span>
+                            <span class="shopped">
+                                <i class="fas fa-shopping-cart"></i>
+                                <h4>1</h4>
+                                <span>
+                                    <i class="fas fa-plus addCart"></i>
+                                    <i class="fas fa-minus removeCart"></i>
+                                </span>
+                            </span>
+                            <span>
+                                <i class="fas fa-times-circle"></i>
+                            </span>
+                        </div>
                     </div>
+                    <div class="details">
+                        <h6>Prix : 5</h6>
+                        <h6>Quantité : 3</h6>
+                        <h6>Total : 15</h6>
+                    </div>
+
                 </div>
             <?php } ?>
         </div>
