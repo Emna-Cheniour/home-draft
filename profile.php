@@ -2,7 +2,8 @@
 include_once 'autoload.php';
 
 include_once 'isAuthentificated.php';
-include_once 'head.php' ;
+include_once 'assets/mainHead.php' ;
+include_once 'assets/bootstrapAsset.php';
 
 ?>
 

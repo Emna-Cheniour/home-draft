@@ -1,7 +1,8 @@
 <?php
 
 
-include_once 'head.php';
+include_once 'assets/bootstrapAsset.php';
+include_once 'assets/mainHead.php'
 ?>
 <body>
   <?php include_once('navbarConnecte.php');?>
