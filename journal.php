@@ -40,7 +40,7 @@
     <div class="imgJournal"><img src="icons/produitLaitier.png"></div>
     <h6>Celiac 101</h6>
     <p class="card-text">Cliquez ici pour voir ce que vous est permis et ce que vous est interdit </p>
-    <a href="journalIndiv.php" class="card-link btn btn4">Voir Journal</a>
+    <a href="journalIndiv.php" class="card-link"><button class="btn btn4">Voir Journal</button></a>
   </div>
 </div>
 <div class="card cardJournal col">
@@ -49,7 +49,7 @@
     <div class="imgJournal"><img src="icons/conserve.png"></div>
     <h6>Celiac 101</h6>
     <p class="card-text">Cliquez ici pour voir ce que vous est permis et ce que vous est interdit </p>
-    <a href="#" class="card-link btn btn3">Voir Journal</a>
+    <a href="journalIndiv.php" class="card-link"><button class="btn btn3">Voir Journal</button></a>
   </div>
 </div>
 <div class="card cardJournal col">
@@ -58,7 +58,7 @@
     <div class="imgJournal"><img src="icons/oil.png"></div>
     <h6>Celiac 101</h6>
     <p class="card-text">Cliquez ici pour voir ce que vous est permis et ce que vous est interdit </p>
-    <a href="#" class="card-link btn btn4">Voir Journal</a>
+    <a href="journalIndiv.php" class="card-link"><button class="btn btn4">Voir Journal</button></a>
   </div>
 </div>
     <div class="card cardJournal col">
@@ -67,7 +67,7 @@
     <div class="imgJournal"><img src="icons/meat.png"></div>
     <h6>Celiac 101</h6>
     <p class="card-text">Cliquez ici pour voir ce que vous est permis et ce que vous est interdit </p>
-    <a href="#" class="card-link btn btn4">Voir Journal</a>
+    <a href="journalIndiv.php" class="card-link"><button class="btn btn4">Voir Journal</button></a>
   </div>
 </div>
 <div class="card cardJournal col">
@@ -76,7 +76,7 @@
     <div class="imgJournal"><img src="icons/chicken.png"></div>
     <h6>Celiac 101</h6>
     <p class="card-text">Cliquez ici pour voir ce que vous est permis et ce que vous est interdit </p>
-    <a href="#" class="card-link btn btn3">Voir Journal</a>
+    <a href="journalIndiv.php" class="card-link"><button class="btn btn4">Voir Journal</button></a>
   </div>
 </div>
 <div class="card cardJournal col">
@@ -85,7 +85,7 @@
     <div class="imgJournal"><img src="icons/fish.png"></div>
     <h6>Celiac 101</h6>
     <p class="card-text">Cliquez ici pour voir ce que vous est permis et ce que vous est interdit </p>
-    <a href="#" class="card-link btn btn4">Voir Journal</a>
+    <a href="journalIndiv.php" class="card-link"><button class="btn btn4">Voir Journal</button></a>
   </div>
 </div>
 <div class="card cardJournal col">
@@ -94,7 +94,7 @@
     <div class="imgJournal"><img src="icons/chocolat.png"></div>
     <h6>Celiac 101</h6>
     <p class="card-text">Cliquez ici pour voir ce que vous est permis et ce que vous est interdit </p>
-    <a href="#" class="card-link btn btn4">Voir Journal</a>
+    <a href="journalIndiv.php" class="card-link"><button class="btn btn4">Voir Journal</button></a>
   </div>
 </div>
 <div class="card cardJournal col">
@@ -103,7 +103,7 @@
     <div class="imgJournal"><img src="icons/pates.png"></div>
     <h6>Celiac 101</h6>
     <p class="card-text">Cliquez ici pour voir ce que vous est permis et ce que vous est interdit </p>
-    <a href="#" class="card-link btn btn3">Voir Journal</a>
+    <a href="journalIndiv.php" class="card-link"><button class="btn btn4">Voir Journal</button></a>
   </div>
 </div>
 <div class="card cardJournal col">
@@ -112,7 +112,7 @@
     <div class="imgJournal"><img src="icons/drink.png"></div>
     <h6>Celiac 101</h6>
     <p class="card-text">Cliquez ici pour voir ce que vous est permis et ce que vous est interdit </p>
-    <a href="#" class="card-link btn btn4">Voir Journal</a>
+    <a href="journalIndiv.php" class="card-link"><button class="btn btn4">Voir Journal</button></a>
   </div>
 </div>
 <div class="card cardJournal col">
@@ -121,7 +121,7 @@
     <div class="imgJournal"><img src="icons/fruits.png"></div>
     <h6>Celiac 101</h6>
     <p class="card-text">Cliquez ici pour voir ce que vous est permis et ce que vous est interdit </p>
-    <a href="#" class="card-link btn btn4">Voir Journal</a>
+    <a href="journalIndiv.php" class="card-link"><button class="btn btn4">Voir Journal</button></a>
   </div>
 </div>
 <div class="card cardJournal col">
@@ -130,7 +130,7 @@
     <div class="imgJournal"><img src="icons/vegetable.png"></div>
     <h6>Celiac 101</h6>
     <p class="card-text">Cliquez ici pour voir ce que vous est permis et ce que vous est interdit </p>
-    <a href="#" class="card-link btn btn4">Voir Journal</a>
+    <a href="journalIndiv.php" class="card-link"><button class="btn btn4">Voir Journal</button></a>
   </div>
 </div>
 <div class="card cardJournal col">
@@ -139,7 +139,7 @@
     <div class="imgJournal"><img src="icons/cake-slice.png"></div>
     <h6>Celiac 101</h6>
     <p class="card-text">Cliquez ici pour voir ce que vous est permis et ce que vous est interdit </p>
-    <a href="#" class="card-link btn btn3">Voir Journal</a>
+    <a href="journalIndiv.php" class="card-link"><button class="btn btn4">Voir Journal</button></a>
   </div>
 </div>
 
