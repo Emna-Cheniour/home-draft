@@ -162,7 +162,7 @@
                     </h3>
                     <div>
                     <img src="images/fooddonation.png"></div>
-                    <span><button type="button" class="btn btn3 don" name="revenirCat"><a href="latest.php">Revenier au catalogue</a></button>
+                    <span><a href="shopping.php"><button type="button" class="btn btn3 don" name="revenirCat">Revenier au catalogue</button></a>
                     <button type="submit" class="btn btn3 don" name="submitPay">Payer maintenant</button></span>
                 </form>
 

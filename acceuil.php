@@ -48,7 +48,7 @@
                     <br>
                     Visitez notre catalogue et jouissez de la qualité au meilleur prix.
                 </p>
-                <div class="services__btn" ><a href="shopping.php" class="btn btn1 btnServ">Catalogue</a></div>
+                <div class="services__btn" ><a href="shopping.php" ><button class="btn btn1 btnServ">Catalogue</button></a></div>
             </div>
             <div class="service col4">
                 <img src="images/recette.png">
@@ -57,7 +57,7 @@
                     <br>
                     Pour ceci, Celiac101 vous offre des recettes testées et leurs démarches simplifiées.
                 </p>
-                <div class="services__btn"><a href="recette.php" class="btn btn2 btnServ">Recettes</a></div>
+                <div class="services__btn"><a href="recette.php" ><button class="btn btn2 btnServ">Recettes</button></a></div>
             </div>
             <div class="service col4">
                 <img src="images/aliment.png">
@@ -66,7 +66,7 @@
                     <br>
                     Notre journal des aliments omettera toute incertitude !
                 </p>
-                <div class="services__btn"><a href="#" class="btn btn1 btnServ">Journal</a></div>
+                <div class="services__btn"><a href="Journal.php"><button class="btn btn1 btnServ" >Journal</button></a></div>
             </div>
             <div class="service col4">
                 <img src="images/resto.png">
@@ -75,7 +75,7 @@
                     <br>
                     Decouvrez les localisations des restaurants en Tunisie avec des repas sans gluten et plus.
                 </p>
-                <div class="services__btn"><a href="Restaurant.php" class="btn btn2 btnServ">Carte</a></div>
+                <div class="services__btn"><a href="Restaurant.php"><button class="btn btn2 btnServ">Carte</button></a></div>
             </div>
             <div class="service col4">
                 <img src="images/faq.png">
@@ -84,7 +84,7 @@
                     <br>
                     Découvrez maintenant leurs réponses correctes, faciles à comprendre et brèves !
                 </p>
-                <div class="services__btn"><a href="faq.php" class="btn btn1 btnServ">FAQ</a></div>
+                <div class="services__btn"><a href="faq.php"><button class="btn btn1 btnServ">FAQ</button></a></div>
             </div>
             <div class="service col4">
                 <img src="images/nutritionist.png">
@@ -93,7 +93,7 @@
                     <br>
                     Vous pouvez les contacter et demander leurs conseils.
                 </p>
-                <div class="services__btn"><a class="btn btn2 btnServ">Contacter</a></div>
+                <div class="services__btn"><a href=""><button class="btn btn2 btnServ">Contacter</button></a></div>
             </div>
         </div>
     </div>
@@ -110,7 +110,7 @@
                     <p>Vivre sans gluten est couteux voire irréalisable pour certains malades.</p>
                     <p> Faites un dons monétaire ou de produits et sauvez leurs vies!</p>
 
-                    <a href="don.php" class="btn btn3">Aidez d'autres!</a>
+                    <a href="don.php"><button class="btn btn3">Aidez d'autres!</button></a>
                 </div>
                 <div class="col3">
                     <img class="imgDon" src="images/dons.png" alt="dons">
@@ -126,7 +126,7 @@
                     <h2 class="c4">Prenez notre quizz!<h2>
                             <p>Vous avez quelques symptomes de la maladie coeliaque?</p>
                             <p> Prenez un quizz réalisé par des spécialites pour le meilleur conseil!</p>
-                            <a class="btn btn4" href="quizz.php">Quizz</a>
+                            <a href="quizz.php"><button class="btn btn4">Quizz</button></a>
                 </div>
                 <div class="col3 phone">
                     <img class="imgDon" src="images/quizz.png" alt="dons">
