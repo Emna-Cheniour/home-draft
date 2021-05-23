@@ -20,11 +20,6 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/testInfo.css">
-<<<<<<< HEAD
-    <link rel="stylesheet" href="css/journalIndiv.css">
-    <link rel="stylesheet" href="css/faq.css">
-=======
->>>>>>> 407c3909c61e66745e4a269e3adbfc248db032ef
     <link rel="stylesheet" href="css/profile.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
