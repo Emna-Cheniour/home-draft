@@ -795,6 +795,9 @@ ul {
     -webkit-align-items: center;
     align-items: center;
   }
+  .swiper-slide.swiper-slide-active.specialistSlide  + .specialistSlide{
+    padding-left: 50px;
+  }
   .specialistAd {
       height: 100px;
       width: 300px;

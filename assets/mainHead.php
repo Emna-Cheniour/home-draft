@@ -18,7 +18,6 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/testInfo.css">
     <link rel="stylesheet" href="css/journalIndiv.css">
-    <link rel="stylesheet" href="css/journal.css">
     <link rel="stylesheet" href="css/faq.css">
     <link rel="stylesheet" href="css/profile.css">
     <link href="css/don.css" rel="stylesheet">

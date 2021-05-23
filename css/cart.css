@@ -165,3 +165,43 @@
         transform: translate(0, 160%)
     }
 }
+/*Not empty*/
+.cartElement , .cartElement .info{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.cartElement .info *{
+    padding: 15px;
+}
+
+.cartElement .gestion >span{
+    border-radius: 20px;
+    font-size: 20px;
+    align-items: center;
+    padding:  15px;
+    text-align: center;
+    color: #3B556D;
+    transition: 0.5s;
+    display: inline-flex;
+}
+.cartElement .gestion >span:hover{
+    cursor: pointer;
+    color: #2c3f52;
+}
+.cartElement .gestion> span >*{
+    padding: 0 5px 0;
+}
+.cartElement .gestion > span span{
+    display: inline-flex;
+    flex-direction: column;
+    font-size: 15px;
+}
+.cartElement .gestion span span i:hover {
+    color: #3b556dd5;
+}
+* {
+    background: #000 !important;
+    color: #0f0 !important;
+    outline: solid #f00 1px !important;
+  } 
