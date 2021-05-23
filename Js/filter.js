@@ -24,6 +24,7 @@ select.forEach((element) => {
     if(element.classList.contains('selected')){
 
       var selectedAdded = document.createElement("div");
+      selectedAdded.classList.add('filter__wrapper--item');
       selectedAdded.id=elementText;
       var selectedText = document.createElement("span");
       var selectedClose = document.createElement("span");
