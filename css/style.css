@@ -117,8 +117,6 @@ ul {
 .navbar-custom {
     background-color: #1c2942;
     height: 80px;
-    
-    position: sticky;
     z-index: 999;
     top:0;
 }
@@ -795,6 +793,9 @@ ul {
     -ms-flex-align: center;
     -webkit-align-items: center;
     align-items: center;
+  }
+  .swiper-slide.swiper-slide-active.specialistSlide  + .specialistSlide{
+    padding-left: 50px;
   }
   .specialistAd {
       height: 100px;

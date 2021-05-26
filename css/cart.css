@@ -98,12 +98,15 @@
     color: #3B556D;
 
 }
-.panierVide div{
+
+.panierVide div {
     text-align: center;
 }
-.panierVide div h2{
-    display:inline-block; 
+
+.panierVide div h2 {
+    display: inline-block;
 }
+
 .panierVide img {
     max-width: 50%;
     max-height: 50%;
@@ -164,4 +167,98 @@
     75% {
         transform: translate(0, 160%)
     }
+}
+
+/*Not empty*/
+.cartElementWrapper{
+    border-bottom: #137c8b solid 2px;
+    display: flex;
+    flex-direction: column;
+}
+.cartElement,
+.cartElement .info,
+.cartElementWrapper .details {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+.cartElementWrapper>.details {
+    display: none;
+    margin: auto;
+
+}
+
+.cartElement .info *,
+.cartElementWrapper .details * {
+    padding: 15px;
+}
+
+.cartElement .gestion {
+    margin-left: auto;
+}
+
+.cartElement .gestion>span {
+    border-radius: 20px;
+    font-size: 20px;
+    align-items: center;
+    padding: 15px;
+    text-align: center;
+    color: #3B556D;
+    transition: 0.5s;
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+
+.cartElement .gestion>span:hover {
+    cursor: pointer;
+    color: #2c3f52;
+}
+
+.cartElement .gestion>span>* {
+    padding: 0 5px 0;
+}
+
+.cartElement .gestion>span span {
+    display: inline-flex;
+    flex-direction: column;
+    font-size: 15px;
+    flex-wrap: wrap;
+}
+
+.cartElement .gestion span span i:hover {
+    color: #3b556dd5;
+}
+
+@media only screen and (max-width: 900px) {
+    .cartElement {
+        flex-direction: row;
+    }
+
+    .cartElement .info .details {
+        display: none;
+    }
+
+    .cartElementWrapper .details {
+        display: inline-flex;
+    }
+
+    .cartElement .gestion {
+        margin-left: auto;
+    }
+
+}
+
+@media only screen and (max-width:580px) {
+    .cartElement {
+        flex-direction: column;
+    }
+
+    .cartElement .gestion {
+        margin-left: unset;
+        margin: auto;
+    }
+
 }

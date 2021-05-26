@@ -1,7 +1,9 @@
+var emptyCart=document.querySelector('.panierVide');
 var width = document.querySelector('#catalogue a').offsetWidth;
 var myLineHover;
 var myLine;
-document.querySelector('#catalogue a').addEventListener("mouseover", () => {
+if(emptyCart){
+    document.querySelector('#catalogue a').addEventListener("mouseover", () => {
 
     width = document.querySelector('#catalogue a').offsetWidth;
     myLine.remove()
@@ -61,3 +63,4 @@ myLine = new LeaderLine(
 myLine.setOptions({
     startSocketGravity: [-200, -100]
 });
+}
