@@ -255,7 +255,7 @@ if (isset($_POST['sendReview'])) {
 
     </div>
     <?php include_once 'assets/scripts.php' ?>
-    <script src="testnav.js"></script>
+
     <script src="js/shopping.js"></script>
     <script src="js/main.js"></script>
 </body>

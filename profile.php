@@ -422,7 +422,8 @@ include_once 'navbarCo.php'?>
 
 
   <?php include_once('footer.php'); ?>
-  <script src="testnav.js"></script>
+  <?php include_once 'assets/scripts.php' ?>
+
   <script src="js/main.js"></script>
   <script src="js/profile.js"></script>
 </body>

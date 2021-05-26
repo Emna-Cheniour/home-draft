@@ -99,7 +99,8 @@
 
     <script src="Js/map.js"></script>
     <script src="Js/main.js"></script>
-    <script src="testnav.js"></script>
+    
+    <?php include_once 'assets/scripts.php' ?>
 </body>
 
 </html>

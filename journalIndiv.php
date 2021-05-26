@@ -76,6 +76,7 @@
     </div>
     </div>
     <?php include_once 'footer.php'?>
-    <script src="testnav.js"></script>
+    <?php include_once 'assets/scripts.php' ?>
+
 </body>
 </html>

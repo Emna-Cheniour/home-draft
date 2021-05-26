@@ -193,6 +193,7 @@ include_once 'assets/mainHead.php'
 
 
   <?php include_once('footer.php'); ?>
+  <?php include_once 'assets/scripts.php' ?>
   <script src="testnav.js"></script>
   <script src="js/main.js"></script>
   <script src="js/quizzScript.js"></script>

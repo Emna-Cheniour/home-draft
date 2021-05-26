@@ -169,6 +169,7 @@
             </div>
 </div>
     <?php include_once 'footer.php' ?>
+    <?php include_once 'assets/scripts.php' ?>
     <script src="js/main.js"></script>
     <script src="Js/don.js"></script>
     <script src="testnav.js"></script>
