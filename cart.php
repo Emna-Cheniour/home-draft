@@ -6,7 +6,7 @@ $cartIsEmpty = 1;
 </head>
 
 <body>
-    <?php include_once 'navbarConnecte.php' ?>
+    <?php include_once 'navbarCo.php' ?>
     <div class="wrapp">
         <div class="navbarCart">
             <div class="navbarCartElementWrapper active">
@@ -67,6 +67,7 @@ $cartIsEmpty = 1;
     <?php include_once 'assets/scripts.php' ?>
     <?php include_once 'footer.php' ?>
     <script src="js/cart.js"></script>
+    <script src="testnav.js"></script>
 </body>
 
 </html>

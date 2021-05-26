@@ -7,8 +7,8 @@
 <?php 
     session_start();
     if (isset($_SESSION['user'])){
-       include("navbarConnecte.php"); 
-    } else include_once 'navbarDeconnecte.php'?>
+       include("navbarCo.php"); 
+    } else include_once 'navbarDeco.php'?>
 
 
 <div class="container">
@@ -417,5 +417,6 @@
 	});
 </script>
 <?php include 'footer.php' ?>
+<script src="testnav.js"></script>
 </body>
 </html>

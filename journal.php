@@ -3,7 +3,7 @@
 <link rel="stylesheet" href="css/shopping.css">
 </head>
 <body>
-<?php include_once 'navbarConnecte.php'?>
+<?php include_once 'navbarCo.php'?>
 
 <div id="effect" class="wavy titreJournal">
         <span style="--i:1;">J</span>
@@ -146,5 +146,6 @@
 </div>
 </div>
 <?php include_once 'footer.php'?>
+<script src="testnav.js"></script>
 </body>
 </html>

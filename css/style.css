@@ -145,19 +145,20 @@ ul {
 }
 
 .pagename {
-    font-weight: bold;
-    line-height: 80px;
-    padding: 0 0 0 5px;
-    font-size: 30px;
-    vertical-align: middle;
-    background-size: 100%;
+    background-size:100%;
+    font-weight: 500;
+    align-items: center;
     cursor: pointer;
-    background-image: linear-gradient(to right, #bbd2c5, #536976);
-    background-size: 100%;
+    text-decoration: none;
+    font-size: 2rem;
+    background-image:  linear-gradient(to right, #fff, #076585);
+    background-size:100%;
     -webkit-background-clip: text;
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
+    align-self: center;
+  
 
 }
 

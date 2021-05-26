@@ -6,7 +6,7 @@ include_once 'assets/mainHead.php';
 </head>
 
 <body>
-    <?php include_once 'navbarConnecte.php' ?>
+    <?php include_once 'navbarCo.php' ?>
     <div class="product">
         <div class="swiper-container productImageContainer">
             <div class="swiper-wrapper productImageWrapper">
@@ -68,6 +68,7 @@ include_once 'assets/mainHead.php';
     <?php include_once 'assets/scripts.php' ?>
     <?php include_once 'footer.php' ?>
     <script src="js/product.js"></script>
+    <script src="testnav.js"></script>
 </body>
 
 </html>

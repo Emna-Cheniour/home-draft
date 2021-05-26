@@ -5,7 +5,7 @@ include_once 'assets/bootstrapAsset.php';
 include_once 'assets/mainHead.php'
 ?>
 <body>
-  <?php include_once('navbarConnecte.php');?>
+  <?php include_once('navbarCo.php');?>
 
   <div class="quizz__container">
 
@@ -193,6 +193,7 @@ include_once 'assets/mainHead.php'
 
 
   <?php include_once('footer.php'); ?>
+  <script src="testnav.js"></script>
   <script src="js/main.js"></script>
   <script src="js/quizzScript.js"></script>
 </body>

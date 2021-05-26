@@ -25,3 +25,11 @@ function show(x,y,d){ //Fonction pour afficher ou enlever un element par clic su
 show(dropIt,dropdiv,"block");
 show(dropIt,dropdivPhone,"inline-block");
 show(dropProfil,dropDivProfil,"block");
+/*
+const dropIt= document.querySelector('#drop');
+const dropdiv = document.querySelector(".dropdownService");
+
+dropIt.addEventListener('click',()=>{
+
+  dropdiv.classList.toggle('display');
+});*/

@@ -22,7 +22,7 @@
 </head>
 
 <body>
-    <?php include("navbarConnecte.php"); ?>
+    <?php include("navbarCo.php"); ?>
     <div class="services">
         <h1 class="c4">Les Restaurants Coeliaques</h1>
         <br>
@@ -99,6 +99,7 @@
 
     <script src="Js/map.js"></script>
     <script src="Js/main.js"></script>
+    <script src="testnav.js"></script>
 </body>
 
 </html>

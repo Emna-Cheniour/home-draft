@@ -3,7 +3,7 @@
 <link rel="stylesheet" href="css/don.css">
 </head>
 <body>
-<?php include_once 'navbarConnecte.php'?>
+<?php include_once 'navbarCo.php'?>
 
 <div class="contenu">
 
@@ -171,6 +171,7 @@
     <?php include_once 'footer.php' ?>
     <script src="js/main.js"></script>
     <script src="Js/don.js"></script>
+    <script src="testnav.js"></script>
     <script src="js/jquery.counterup.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
     <script>

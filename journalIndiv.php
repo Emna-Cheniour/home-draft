@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="css/journalIndiv.css">
 </head>
 <body>
-<?php include_once 'navbarConnecte.php'?>
+<?php include_once 'navbarCo.php'?>
 
 <body>
 <div class="journalIndivContainer">
@@ -76,5 +76,6 @@
     </div>
     </div>
     <?php include_once 'footer.php'?>
+    <script src="testnav.js"></script>
 </body>
 </html>

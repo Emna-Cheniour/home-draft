@@ -10,7 +10,7 @@ include("assets/mainHead.php"); ?>
 <body>
   
 
-  <?php include("navbarRecetteIndividuelle.php"); ?>
+  <?php include("navbarCo.php"); ?>
   
 
 <div class="path__link">
@@ -294,6 +294,8 @@ include("assets/mainHead.php"); ?>
 <script src="Js/starHover.js"></script>
 
 <!--<script src="js/serving.js"></script>-->
+<script src="testnav.js"></script>
+
 <script src="Js/slide.js"></script>
 </body>
 </html>
