@@ -39,6 +39,7 @@ include_once 'navbarCo.php'?>
 
         <div class="field reveal" id="Apropos">
           
+          <img src="svg/undraw_medicine_b1ol.svg" alt="">
           <h2>Monsieur flen fouleni</h2>
           <h3>Gastrologue</h3>
           <h4>Adresse: rue123 tunis blablabla cabinet</h4>
@@ -46,6 +47,7 @@ include_once 'navbarCo.php'?>
 
         <div class="field reveal" id="contact">
           
+          <img src="svg/undraw_contact_us_15o2.svg" alt="">
           <h2>Contacter Votre médecin</h2>
           <div class="contact__container">
             <div class="discussion">
