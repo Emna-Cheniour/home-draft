@@ -8,7 +8,7 @@
     margin: auto 5%;
     display: flex;
     flex-direction: column;
-    z-index: 99;
+    z-index: 9;
 }
 
 .navbarCartElementWrapper {
@@ -17,7 +17,7 @@
     align-items: center;
     width: 20%;
     overflow: visible;
-    z-index: 99;
+    z-index: 9;
 }
 
 .navbarCart .navbarCartElement {
@@ -170,18 +170,25 @@
 }
 
 /*Not empty*/
-.cartElementWrapper{
-    border-bottom: #137c8b solid 2px;
+.cartElements {
+    padding: 20px;
+}
+
+.cartElementWrapper {
+    border-bottom: #137c8b solid 3px;
     display: flex;
     flex-direction: column;
 }
+
 .cartElement,
 .cartElement .info,
 .cartElementWrapper .details {
     display: flex;
     flex-direction: row;
     align-items: center;
-    flex-wrap: wrap;
+}
+
+.cartElement .info {
     margin: auto;
 }
 
@@ -205,11 +212,9 @@
     font-size: 20px;
     align-items: center;
     padding: 15px;
-    text-align: center;
-    color: #3B556D;
+    color: #137c8b;
     transition: 0.5s;
     display: inline-flex;
-    flex-wrap: wrap;
 }
 
 .cartElement .gestion>span:hover {
@@ -225,7 +230,6 @@
     display: inline-flex;
     flex-direction: column;
     font-size: 15px;
-    flex-wrap: wrap;
 }
 
 .cartElement .gestion span span i:hover {
@@ -262,3 +266,168 @@
     }
 
 }
+
+/*Rest*/
+.cartElements .total,
+.cartElements .adresse ,
+.cartElements .tel,
+.cartElements .confirm 
+{
+    text-align: center;
+    padding: 10px;
+}
+
+.cartElements .total :nth-child(2),
+.cartElements .adresse :nth-child(2),
+.cartElements .tel :nth-child(2) {
+
+    color: #137c8b;
+}
+
+.cartElements .total span,
+.cartElements .adresse span ,.cartElements .tel span {
+    font-size: 20px;
+    padding: 5px;
+    font-weight: 500;
+}
+.cartElements .adresse img {
+    height: 40px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.cartElements .tel img ,.cartElements .total img{ 
+    height: 30px;
+    display: inline-block;
+    vertical-align: middle;
+
+}
+.cartElements .adresse button {
+    padding: 5px;
+    font-size: 15px;
+    letter-spacing: 2px;
+    margin-left: 5px;
+}
+.cartElements .adresse button::before {
+    background-color: #137c8b;
+}
+
+.cartElements .adresse button:hover {
+    color: #137c8b;
+    border-color: #137c8b;
+}
+
+.cartElements .tel input {
+    border: #137c8b solid 2px;
+    border-radius: 20px;
+    padding: 5px;
+    color: #193B48;
+    letter-spacing: 2px;
+    outline: none;
+    width: 200px;
+    margin: auto;
+}
+.cartElements .confirm input {
+    text-align: center;
+    border: #137c8b solid 2px;
+    border-radius: 20px;
+    padding: 10px;
+    color: #137c8b;
+    background-color: #fff;
+    letter-spacing: 2px;
+    outline: none;
+    margin: auto;
+    font-size: 20px;
+}
+
+.cartElements .confirm input:hover{
+    border: #137c8b solid 2px;
+   color: white;
+   background-color: #137c8b;
+
+}
+.cartElements .confirm input::before {
+    color: unset;
+    background-color: unset;
+}
+
+/*overlay*/
+#overlayCart {
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.534);
+    pointer-events: none;
+    transition: 200ms ease-in-out;
+}
+
+#overlayCart.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.locationPopUp {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    z-index: 12;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    max-width: 80%;
+    background-color: #fff;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    border: 5px solid #0B162C;
+    padding: 20px;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    border-radius: 20px;
+    color: #3498db;
+}
+
+.locationPopUp.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.closeLocationPopUp {
+    padding: 0 10px 0;
+    margin-left: auto;
+    cursor: pointer;
+    color: #0B162C;
+
+}
+.locationPopUp span{
+    color: #0B162C;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing:1px;
+}
+.locationPopUp .saveAdress label{
+    display: inline-block;
+    color: #0B162C;
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing:1px;
+    vertical-align: middle;
+}
+.locationPopUp .saveAdress input{
+    display: inline-block;
+    color: #0B162C;
+    font-size: 15px;
+    font-weight: 300;
+    vertical-align: middle;
+}
+#mapAddress {
+    height: 400px;
+    max-width: 90%;
+    border-radius: 10%;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+   }
+   

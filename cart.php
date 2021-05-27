@@ -62,49 +62,162 @@ $cartIsEmpty = 0;
                     </div>
                 </div>
             <?php } else { ?>
-                <div class="cartElementWrapper">
-
-                    <div class="cartElement">
-                        <div class="info">
-                            <h6>12345 -</h6>
-                            <h4>Farine schar</h4>
-                            <div class="details">
-                                <h6>Prix : 5</h6>
-                                <h6>Quantité : 3</h6>
-                                <h6>Total : 15</h6>
+                <div class="cartElements">
+                    <div class="cartElementWrapper">
+                        <div class="cartElement">
+                            <div class="info">
+                                <h6>12345 -</h6>
+                                <h4>Farine schar</h4>
+                                <div class="details">
+                                    <h6>Prix : 5</h6>
+                                    <h6>Quantité : 3</h6>
+                                    <h6>Total : 15</h6>
+                                </div>
+                            </div>
+                            <div class="gestion">
+                                <span>
+                                    <i class="fas fa-eye"></i>
+                                </span>
+                                <span class="shopped">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <h4>1</h4>
+                                    <span>
+                                        <i class="fas fa-plus addCart"></i>
+                                        <i class="fas fa-minus removeCart"></i>
+                                    </span>
+                                </span>
+                                <span>
+                                    <i class="removeElement fas fa-times-circle"></i>
+                                </span>
                             </div>
                         </div>
-                        <div class="gestion">
-                            <span>
-                                <i class="fas fa-eye"></i>
-                            </span>
-                            <span class="shopped">
-                                <i class="fas fa-shopping-cart"></i>
-                                <h4>1</h4>
-                                <span>
-                                    <i class="fas fa-plus addCart"></i>
-                                    <i class="fas fa-minus removeCart"></i>
-                                </span>
-                            </span>
-                            <span>
-                                <i class="fas fa-times-circle"></i>
-                            </span>
+                        <div class="details">
+                            <h6>Prix : 5</h6>
+                            <h6>Quantité : 3</h6>
+                            <h6>Total : 15</h6>
                         </div>
                     </div>
-                    <div class="details">
-                        <h6>Prix : 5</h6>
-                        <h6>Quantité : 3</h6>
-                        <h6>Total : 15</h6>
+                    <div class="cartElementWrapper">
+                        <div class="cartElement">
+                            <div class="info">
+                                <h6>12345 -</h6>
+                                <h4>Farine schar</h4>
+                                <div class="details">
+                                    <h6>Prix : 5</h6>
+                                    <h6>Quantité : 3</h6>
+                                    <h6>Total : 15</h6>
+                                </div>
+                            </div>
+                            <div class="gestion">
+                                <span>
+                                    <i class="fas fa-eye"></i>
+                                </span>
+                                <span class="shopped">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <h4>1</h4>
+                                    <span>
+                                        <i class="fas fa-plus addCart"></i>
+                                        <i class="fas fa-minus removeCart"></i>
+                                    </span>
+                                </span>
+                                <span>
+                                    <i class="removeElement fas fa-times-circle"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="details">
+                            <h6>Prix : 5</h6>
+                            <h6>Quantité : 3</h6>
+                            <h6>Total : 15</h6>
+                        </div>
+                    </div>
+                    <div class="cartElementWrapper">
+
+                        <div class="cartElement">
+                            <div class="info">
+                                <h6>12345 -</h6>
+                                <h4>Farine schar</h4>
+                                <div class="details">
+                                    <h6>Prix : 5</h6>
+                                    <h6>Quantité : 3</h6>
+                                    <h6>Total : 15</h6>
+                                </div>
+                            </div>
+                            <div class="gestion">
+                                <span>
+                                    <i class="fas fa-eye"></i>
+                                </span>
+                                <span class="shopped">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <h4>1</h4>
+                                    <span>
+                                        <i class="fas fa-plus addCart"></i>
+                                        <i class="fas fa-minus removeCart"></i>
+                                    </span>
+                                </span>
+                                <span>
+                                    <i class="removeElement fas fa-times-circle"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="details">
+                            <h6>Prix : 5</h6>
+                            <h6>Quantité : 3</h6>
+                            <h6>Total : 15</h6>
+                        </div>
+                    </div>
+                    <div class="total">
+                        <img src="images/totalCart.jpg" alt="">
+                        <span>Total:</span>
+                        <span>15.00 Dt</span>
+                    </div>
+                    <div class="tel">
+                        <img src="images/telCart.png" alt="">
+                        <span>Telephone: </span>
+                        <input type="text" value="97782808">
+                    </div>
+                    <div class="adresse">
+                        <img src="images/adresseCart.png" alt="">
+                        <span>Adresse: </span>
+                        <span>73 rue du Général Ailleret
+
+                            <button id="changeLocation" class="btn btn3">Changer Adresse</button>
+                        </span>
+                        <!-- if has adress in profile show it as default-->
+
+                        <!-- if not
+                        <button class="btn btn3">Add Location</button>
+                        -->
                     </div>
 
+                    <div class="confirm">
+                        <input  type="submit" value="Valider mes achats">
+                    </div>
+                </div>
+
+                <div class=" locationPopUp">
+                    <h1 class="closeLocationPopUp"> &times;</h1>
+                    <span>Veuillez choisir une adresse </span>
+                    <div id="mapAddress"></div>
+                    <div class="saveAdress">
+                    <label for="saveAdrs">Ajouter cette adresse à mes adresses</label>
+                    <input id="saveAdrs" type="checkbox">
+                    </div>
+                    <button class="btn btn3 " id="mybtn1">Confirmer</button>
                 </div>
             <?php } ?>
         </div>
     </div>
 
 
+    <div id="overlayCart" class=""></div>
+    <div class="sendPost"></div>
     <?php include_once 'assets/scripts.php' ?>
     <?php include_once 'footer.php' ?>
+    <!--script pour map-->
+    
+    
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQpw0VdM_Cpj50OfKTRMJbP1SK7wzYcAE&callback=initMap" type="text/javascript"></script>
     <script src="js/cart.js"></script>
 </body>
 
