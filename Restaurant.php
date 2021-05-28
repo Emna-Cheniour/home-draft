@@ -19,7 +19,7 @@
 </head>
 
 <body>
-    <?php include("navbarConnecte.php"); ?>
+    <?php include("navbarCo.php"); ?>
     <div class="services">
         <h1 class="c4">Les Restaurants Coeliaques</h1>
         <br>
@@ -99,6 +99,9 @@
  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQpw0VdM_Cpj50OfKTRMJbP1SK7wzYcAE&callback=initMap" type="text/javascript">
     </script>
     <script src="Js/map.js"></script>
+    <script src="Js/main.js"></script>
+    
+    <?php include_once 'assets/scripts.php' ?>
 </body>
 
 </html>

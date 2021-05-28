@@ -7,7 +7,7 @@ include_once('autoload.php');
 </head>
 
 
-  <?php include("navbarConnecte.php"); ?>
+  <?php include("navbarCo.php"); ?>
 <div class="recipe--page__container">
 
 
@@ -118,6 +118,7 @@ include_once('autoload.php');
   <script src="Js/heart.js"></script>
   <script src="Js/searchBar.js"></script>
   <script src="Js/filter.js"></script>
+  <script src="testnav.js"></script>
 
 </body>
 

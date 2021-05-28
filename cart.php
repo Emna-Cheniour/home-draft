@@ -6,7 +6,7 @@ $cartIsEmpty = 0;
 </head>
 
 <body>
-    <?php include_once 'navbarConnecte.php' ?>
+    <?php include_once 'navbarCo.php' ?>
     <div class="wrapp">
         <div class="navbarCart">
             <div class="navbarCartElementWrapper active">
@@ -219,6 +219,7 @@ $cartIsEmpty = 0;
     
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQpw0VdM_Cpj50OfKTRMJbP1SK7wzYcAE&callback=initMap" type="text/javascript"></script>
     <script src="js/cart.js"></script>
+    <script src="testnav.js"></script>
 </body>
 
 </html>

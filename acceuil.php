@@ -12,14 +12,14 @@
     if (isset($_SESSION['user'])) {
 
         $username = $_SESSION['user'];
-        include("navbarConnecte.php");
+        include("navbarCo.php");
         include_once 'profileProgress.php';
         $infoCount *= 10;
         if ($infoCount != 100) {
             echo "<h2>Bienvenu $username <br>Votre profile est à $infoCount %</h2>";
         }
     } else {
-        include("navbarDeconnecte.php");
+        include("navbarDeco.php");
     }
 
 
@@ -93,7 +93,7 @@
                     <br>
                     Vous pouvez les contacter et demander leurs conseils.
                 </p>
-                <div class="services__btn"><a href=""><button class="btn btn2 btnServ">Contacter</button></a></div>
+                <div class="services__btn"><a href="specialistProfile.php"><button class="btn btn2 btnServ">Contacter</button></a></div>
             </div>
         </div>
     </div>
@@ -211,6 +211,7 @@
     <?php include_once 'assets/scripts.php' ?>
     <script src="js/txtRotation.js"></script>
     <script src="js/main.js"></script>
+    <script src="testnav.js"></script>
 
 </body>
 

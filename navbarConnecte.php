@@ -27,7 +27,6 @@
         <li id="dropProfil"> <i title="profil" class="fas fa-user"></i></li>
     </ul>
 </div>
-
 <div class="dropdownService">
     <ul>
         <li><a href="#">Catalogue des produits</a></li>
@@ -50,5 +49,3 @@
     
     </ul>
 </div>
-
-

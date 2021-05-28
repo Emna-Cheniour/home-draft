@@ -12,7 +12,7 @@ if (isset($_POST['sendReview'])) {
 </head>
 
 <body>
-    <?php include_once 'navbarConnecte.php' ?>
+    <?php include_once 'navbarCo.php' ?>
     <div class="swiper-container shoppingPoster">
         <div class="swiper-wrapper shoppingPosterWrapper">
             <div class="swiper-slide shoppingPosterSlide">
@@ -255,6 +255,7 @@ if (isset($_POST['sendReview'])) {
 
     </div>
     <?php include_once 'assets/scripts.php' ?>
+
     <script src="js/shopping.js"></script>
     <script src="js/main.js"></script>
 </body>

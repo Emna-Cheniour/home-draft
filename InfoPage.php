@@ -7,8 +7,8 @@
 <?php 
     session_start();
     if (isset($_SESSION['user'])){
-       include("navbarConnecte.php"); 
-    } else include_once 'navbarDeconnecte.php'?>
+       include("navbarCo.php"); 
+    } else include_once 'navbarDeco.php'?>
 
 
 <div class="container">
@@ -401,6 +401,8 @@
 <a href="#" id="scrollUpBtn">
     <img src="icons/up-arrow (1).png" >
   </a>
+  <?php include 'footer.php' ?>
+<?php include_once 'assets/scripts.php' ?>
   
   <script type="js/scrollUpBtn.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
@@ -416,6 +418,9 @@
 		speed: 400
 	});
 </script>
-<?php include 'footer.php' ?>
+
+
+
+
 </body>
 </html>

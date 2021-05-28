@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="css/faq.css">
 </head>
 <body>
-<?php include_once 'navbarConnecte.php'?>
+<?php include_once 'navbarCo.php'?>
 
 <div class="faq__container">
 
@@ -119,7 +119,9 @@
 </div>
 
     <?php include_once 'footer.php'?>
+    <?php include_once 'assets/scripts.php' ?>
     <script src="Js/faq.js"></script>
     <script src="js/main.js"></script>
+    <script src="testnav.js"></script>
 </body>
 </html>
