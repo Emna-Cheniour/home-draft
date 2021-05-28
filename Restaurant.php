@@ -99,9 +99,18 @@
  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQpw0VdM_Cpj50OfKTRMJbP1SK7wzYcAE&callback=initMap" type="text/javascript">
     </script>
     <script src="Js/map.js"></script>
+<<<<<<< HEAD
+<<<<<<< HEAD
     <script src="Js/main.js"></script>
     
     <?php include_once 'assets/scripts.php' ?>
+=======
+>>>>>>> dce0743cf958c4b028e79a7d77439021d63418d5
+=======
+    <script src="Js/main.js"></script>
+    
+  
+>>>>>>> 79114c385e7087f436129d59848c28a30aa9ff03
 </body>
 
 </html>
