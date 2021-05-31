@@ -24,7 +24,7 @@ include_once 'navbarCo.php'?>
       <li><a href="#profile" >Profil Médecin</a></li>
       <li><a href="#Apropos">A propos</a></li>
       <li><a href="#contact">Contact</a></li>
-      <li><a href="#">Retour</a></li>
+      <li><a href="specialistGroup.php">Retour</a></li>
       
     </ul>
 

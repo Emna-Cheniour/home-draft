@@ -93,7 +93,7 @@
                     <br>
                     Vous pouvez les contacter et demander leurs conseils.
                 </p>
-                <div class="services__btn"><a href="specialistProfile.php"><button class="btn btn2 btnServ">Contacter</button></a></div>
+                <div class="services__btn"><a href="specialistGroup.php"><button class="btn btn2 btnServ">Contacter</button></a></div>
             </div>
         </div>
     </div>

@@ -34,7 +34,7 @@
           
           <div class="service__hidden">
              <a href="Restaurant.php">Localisations</a>
-              <a href="specialistProfile.php">Contacter un specialiste</a>
+              <a href="specialistGroup.php">Contacter un specialiste</a>
           </div>
               
           
@@ -48,7 +48,7 @@
             
         
           </div>
-          <div class="link__item"><a href="InfoPage">Maladie Coeliaque</a></li>
+          <div class="link__item"><a href="InfoPage.php">Maladie Coeliaque</a></li>
     </div>
 
     
