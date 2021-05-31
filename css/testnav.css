@@ -185,9 +185,8 @@ header nav .nav__links .link__item .hidden__services .service__hidden a:hover,he
 {
   color:#5FC2BA;
   background: none;
-  border-radius: 20px;
-  height: 40px;
-  line-height: 40px;
+ 
+  
 
 }
 
@@ -253,7 +252,7 @@ header nav .nav__links .link__item .hidden__services .service__hidden a:hover,he
 
   header nav .nav__links .link__item .hidden__services
 {
-  background: #3B556D;
+  
   
 
   position: relative;
@@ -277,6 +276,11 @@ header nav .nav__links .link__item .hidden__services .service__hidden
   align-items: center;
   height: 80px;
   line-height: 80px;
+}
+
+header nav .nav__links .link__item .hidden__services .service__hidden a:hover 
+{
+  
 }
 
 
