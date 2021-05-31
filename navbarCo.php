@@ -23,7 +23,7 @@
           </div>
 
           <div class="link__item">
-            <a href="#" id="dropService">Services</a>
+            <a id="dropService">Services</a>
             <div class="hidden__services">
 
               <div class="service__hidden">
@@ -59,9 +59,9 @@
 
   <div class="right__nav__links">
       
-         <a href=""> <i title="Dons" class="fas fa-donate"></i><a></li>
-        <a href="cart.php"> <i title="Chariot" class="fas fa-shopping-cart"></i><a></li>
-        <a href="#" id="dropProfilIcon"> <i title="profil" class="fas fa-user"></i></li>
+         <a href="don.php"> <i title="Dons" class="fas fa-donate"></i><a>
+        <a href="cart.php"> <i title="Chariot" class="fas fa-shopping-cart"></i><a>
+        <a id="dropProfilIcon"> <i title="profil" class="fas fa-user"></i></a>
         <a class="menu-toggle"><i class="fa fa-bars" aria-hidden="true"></i></a>
 
         <div class="profile__hidden">

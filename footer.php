@@ -1,3 +1,6 @@
+<a href="#" id="scrollUpBtn">
+    <img src="icons/up-arrow (1).png" >
+  </a>
 <div class="myFooter">
     <div class="info">
         <div>

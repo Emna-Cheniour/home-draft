@@ -275,7 +275,7 @@
         Les personnes atteintes de la maladie cœliaque doivent vérifier attentivement les étiquettes apposées sur les aliments préparés afin de repérer la présence de gluten.
         
         <div class="effect__section-Btn">
-        <a href="#">Profitez d'un journal alimentaire pour une vie saine et sans gluten<i class="fas fa-arrow-alt-circle-right"></i></a>
+        <a href="journal.php">Profitez d'un journal alimentaire pour une vie saine et sans gluten<i class="fas fa-arrow-alt-circle-right"></i></a>
         </div>
       </p>
       </div>
@@ -398,13 +398,11 @@
 
 </div>
 
-<a href="#" id="scrollUpBtn">
-    <img src="icons/up-arrow (1).png" >
-  </a>
+
   <?php include 'footer.php' ?>
 <?php include_once 'assets/scripts.php' ?>
   
-  <script type="js/scrollUpBtn.js"></script>
+ 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
 <script src="js/circleTxt.js"></script>
