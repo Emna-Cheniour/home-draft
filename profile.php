@@ -12,8 +12,10 @@ include_once 'assets/bootstrapAsset.php';
 <body>
 
 <?php 
+include_once 'navbarCo.php';
 include_once 'profileProgress.php';
-include_once 'navbarCo.php'?>
+?>
+
   <div class="profile__body">
 
 
@@ -424,7 +426,7 @@ include_once 'navbarCo.php'?>
   <?php include_once('footer.php'); ?>
   <?php include_once 'assets/scripts.php' ?>
 
-  <script src="js/main.js"></script>
+ 
   <script src="js/profile.js"></script>
 </body>
 <html>

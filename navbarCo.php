@@ -61,7 +61,7 @@
       
          <a href="don.php"> <i title="Dons" class="fas fa-donate"></i><a>
         <a href="cart.php"> <i title="Chariot" class="fas fa-shopping-cart"></i><a>
-        <a id="dropProfilIcon"> <i title="profil" class="fas fa-user"></i></a>
+        <a id="dropProfilIcon"> <i title="profil" style="color:#fff" class="fas fa-user"></i></a>
         <a class="menu-toggle"><i class="fa fa-bars" aria-hidden="true"></i></a>
 
         <div class="profile__hidden">
@@ -87,13 +87,7 @@
   
   
 
-    <script src="testnav.js"></script>
-    
-
-    
-</body>
-</html>
-
+  
 
 
 

@@ -1,25 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php 
+include_once 'assets/mainHead.php';
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/bootstrap.min (1).css">
-   
-    <link rel="stylesheet" href="css/map.css">
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
-    <link rel="stylesheet" href="css/resto.css">
-    <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/colors.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
-
-    <title>Celiac101</title>
-
-</head>
+?>
+<link rel="stylesheet" href="css/resto.css">
+<link rel="stylesheet" href="css/map.css">
 
 <body>
-    <?php include("navbarCo.php"); ?>
+    <?php include "navbarCo.php" ?>
     <div class="services">
         <h1 class="c4">Les Restaurants Coeliaques</h1>
         <br>
@@ -99,18 +86,12 @@
  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQpw0VdM_Cpj50OfKTRMJbP1SK7wzYcAE&callback=initMap" type="text/javascript">
     </script>
     <script src="Js/map.js"></script>
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <script src="Js/main.js"></script>
+
     
     <?php include_once 'assets/scripts.php' ?>
-=======
->>>>>>> dce0743cf958c4b028e79a7d77439021d63418d5
-=======
-    <script src="Js/main.js"></script>
+
     
-  
->>>>>>> 79114c385e7087f436129d59848c28a30aa9ff03
+
 </body>
 
 </html>

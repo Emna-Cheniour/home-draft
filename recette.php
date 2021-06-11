@@ -69,7 +69,7 @@ include_once('autoload.php');
         <img src="icons/reciper1.jpg" class="card__img">
         <?php 
            $recette=new RecipeRepository();
-           $query=$recette->showRecipe($i);
+           $query=$recette->showElement($i);
         ?>
         <h2 class="card__title"><?php echo $query->title ?></h2>
 
