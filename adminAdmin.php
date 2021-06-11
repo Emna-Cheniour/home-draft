@@ -7,7 +7,9 @@
 
 <body>
 
-
+<div class="container">
+  
+</div>
 <table class="table table-hover">
   <thead>
     <tr>
@@ -45,9 +47,11 @@
    
   </tbody>
 </table>
+<div class="container">
 
 <div class="add__admin">
-<div class="wavy">
+
+  <div class="wavy">
                             <span style="--i:1;">A</span>
                             <span style="--i:2;">J</span>
                             <span style="--i:3;">O</span>
@@ -68,22 +72,26 @@
                             <span style="--i:16;">I</span>
                             <span style="--i:17;">N</span>
 
-                        </div>
+  </div>
 
-<form>
-  <div class="form-group">
-    <label for="exampleInputEmail1">Adresse Email</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Entrer adresse email">
+  <form>
+    <div class="form-group">
+     
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Entrer adresse email">
+    
+    </div>
+    <div class="form-group">
+      
+      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Mot De Passe">
+    </div>
   
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">Mot De Passe</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Mot De Passe">
-  </div>
-  
-  <button type="submit" class="btn btn3">Submit</button>
-</form>
+    <button type="submit" class="btn btn3">Submit</button>
+  </form>
+
 </div>
+
+</div>
+
 
 <script src="js/admin.js"></script>
 
