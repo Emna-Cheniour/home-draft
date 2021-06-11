@@ -388,6 +388,65 @@ margin-left: 0px;
 }
 
 
+.admin__fonctions
+  {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+  }
+ .section__admin .hidden__options
+ {
+    display: none;
+
+ }
+.delete
+{
+    cursor: pointer;
+    
+}
+
+.delete:hover
+{
+    color:#137c8b;
+    
+}
+
+
+.add__admin
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4em;
+
+    padding: 2em;
+   
+    
+}
+
+
+
+.add__admin form 
+{
+
+    width: 100%;
+
+}
+
+ .section__admin .hidden__options.display
+ {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+ }
+
+
+
+
 
 
 

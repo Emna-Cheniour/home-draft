@@ -17,10 +17,7 @@ menuBar.addEventListener('click',()=>{
 const dropIt= document.querySelector('#drop');
 const dropdiv = document.querySelector(".dropdownService");
 
-dropIt.addEventListener('click',()=>{
 
-  dropdiv.classList.toggle('display');
-});
 
 
 const hiddenProfile=document.querySelector('.profile__hidden');

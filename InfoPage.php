@@ -14,25 +14,6 @@
 
 <div class="container">
 
-
-<!--<h1 class="glowing__header">
-  <span>C</span>
-  <span>E</span>
-  <span>L</span>
-
-  <span>I</span>
-  <span>A</span>
-  <span>C</span>
-
-  <span>1</span>
-  <span>0</span>
-  <span>1</span>
-</h1>
--->
-<div class="rotate__logo">
-  <h2 class="text">CELIAC101 Votre Guide</h2>
-</div>
-
   <div class="info__container">
     <div class="intro__wrapper">
 
@@ -401,14 +382,16 @@
 
 
   <?php include 'footer.php' ?>
-<?php include_once 'assets/scripts.php' ?>
   
- 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
 <script src="js/circleTxt.js"></script>
 <script src="js/cardTilt.js"></script>
-<script src="js/main.js"></script>
+<script src="testnav.js"></script>
+
+    <script src="js/main.js"></script>
+    <script src="js/txtRotation.js"></script>
+    <script type="js/scrollUpBtn.js"></script>
+    <script src="js/testnav.js"></script>
+
 <script type="text/javascript" src="js/vanilla-tilt.js"></script>
 
 <script type="text/javascript">

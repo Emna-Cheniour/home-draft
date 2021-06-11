@@ -87,8 +87,13 @@ include_once 'assets/mainHead.php';
     </script>
     <script src="Js/map.js"></script>
 
+
     
     <?php include_once 'assets/scripts.php' ?>
+    <script src="js/main.js"></script>
+   
+    <script type="js/scrollUpBtn.js"></script>
+    <script src="js/testnav.js"></script>
 
     
 

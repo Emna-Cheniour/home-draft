@@ -317,6 +317,10 @@ $cartIsEmpty = 0;
     </div>-->
         <?php include_once 'assets/scripts.php' ?>
         <?php include_once 'footer.php' ?>
+        <script src="js/main.js"></script>
+    <script src="js/txtRotation.js"></script>
+    <script type="js/scrollUpBtn.js"></script>
+    <script src="js/testnav.js"></script>
         <!--script pour map-->
 
 

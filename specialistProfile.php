@@ -78,9 +78,13 @@ include_once 'navbarCo.php'?>
 
 
 <?php include_once 'footer.php' ?>
-<?php include_once 'assets/scripts.php' ?>
+
+<script src="js/specialistIndiv.js"></script>
 
 <script src="js/main.js"></script>
+   
+    <script type="js/scrollUpBtn.js"></script>
+    <script src="js/testnav.js"></script>
 <script src="js/specialistIndiv.js"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>

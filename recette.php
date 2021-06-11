@@ -30,22 +30,15 @@ include_once('autoload.php');
           </ul>
         </div>
       </div class="trierPardiv">
-
-         <!--<h5>Trier par:</h5>
-          <select name="" id="trierPar">
-            <option value="">Nouveautés</option>
-            <option value="">Prix croissant</option>
-            <option value="">Prix decroissant</option>
-          </select> -->
           
         <div class="search">
-          <div class="icon">
+            <div class="icon">
 
-          </div>
-          <div class="input">
-            <input type="text" placeholder="Rechercher" id="mysearch">
-          </div>
-          <span class="clear" ></span>
+            </div>
+            <div class="input">
+              <input type="text" placeholder="Rechercher" id="mysearch">
+            </div>
+             <span class="clear" ></span>
         </div>
 
      
@@ -116,11 +109,14 @@ include_once('autoload.php');
 
 </div>
 <?php include 'footer.php' ?>
-  <script src="Js/main.js"></script>
+<script src="js/main.js"></script>
+   
+    <script type="js/scrollUpBtn.js"></script>
+    <script src="js/testnav.js"></script>
   <script src="Js/heart.js"></script>
   <script src="Js/searchBar.js"></script>
   <script src="Js/filter.js"></script>
-  <script src="testnav.js"></script>
+ 
 
 </body>
 

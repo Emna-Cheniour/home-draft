@@ -8,41 +8,7 @@ include_once 'assets/bootstrapAsset.php';
 <div class="container">
   
 </div>
-<table class="table table-hover">
-  <thead>
-    <tr>
-      <th scope="col"><h4 style="color:#5FC2BA">Nom</h4></th>
-      <th scope="col"><h4 style="color:#5FC2BA">Prénom</h4></th>
-      <th scope="col"><h4 style="color:#5FC2BA">Email</h4></th>
-      <th scope="col"><h4 style="color:#5FC2BA">Profession</h4></th>
-      <th scope="col"><h4 style="color:#5FC2BA">Adresse</h4></th>
-      <th scope="col"><h4 style="color:#5FC2BA">Numéro De Téléphone</h4></th>
-      <th scope="col"></th>
-      
-      
-    </tr>
 
-  </thead>
-  <tbody>
-  <tbody>
-    <tr class="user__row">
-      <td>Ncib</td>
-      <td>Nawres</td>
-      <td>nawresncib@yahoo.com</td>
-      <td>Gastrologue</td>
-      <td>Ariana</td>
-      <td>55265847</td>
-      <td><i class="fas fa-trash delete"></i></td>
-    </tr>
-
-   
-
-  </tbody>
-   
-   
-   
-  </tbody>
-</table>
 <div class="container add">
   
   <div class="add__admin">
@@ -61,49 +27,43 @@ include_once 'assets/bootstrapAsset.php';
                               <span style="--i:10;">N</span>
                               <span style="--i:11;"></span>
                               <span style="--i:12;"></span>
-                              <span style="--i:13;">S</span>
-                              <span style="--i:14;">P</span>
-                              <span style="--i:15;">E</span>
-                              <span style="--i:16;">C</span>
-                              <span style="--i:17;">I</span>
-                              <span style="--i:18;">A</span>
-                              <span style="--i:19;">L</span>
-                              <span style="--i:20;">I</span>
-                              <span style="--i:21;">S</span>
+                              <span style="--i:13;">R</span>
+                              <span style="--i:14;">E</span>
+                              <span style="--i:15;">S</span>
+                              <span style="--i:16;">T</span>
+                              <span style="--i:17;">A</span>
+                              <span style="--i:18;">U</span>
+                              <span style="--i:19;">R</span>
+                              <span style="--i:20;">A</span>
+                              <span style="--i:21;">N</span>
                               <span style="--i:22;">T</span>
-                              <span style="--i:23;">E</span>
+                              
 
     </div>
 
-    <form>
+    <form method="post"  enctype="multipart/form-data">
       <div class="form-group">
         
-        <input type="text" class="form-control" placeholder="Nom Spécialiste">
+        <input type="text" class="form-control" placeholder="Nom Restaurant">
       
       </div>
 
       <div class="form-group">
 
-        <input type="text" class="form-control" placeholder="Prénom Spécialiste">
+        <input type="text" class="form-control" placeholder="Description">
       
       </div>
 
-      <div class="form-group">
-
-        
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email Spécialiste">
-      
-      </div>
 
       <div class="form-group">
       
-        <input type="text" class="form-control" placeholder="Profession">
+        <input type="text" class="form-control" placeholder="Horaire">
       
       </div>
 
       <div class="form-group">
       
-        <input type="text" class="form-control" placeholder="Adresse Spécialiste">
+        <input type="file" class="form-control" placeholder="Image">
       
       </div>
 
