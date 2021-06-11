@@ -11,7 +11,7 @@ class Repository
         $this->bd = ConnexionBD::getInstance();
     }
 
-    public function findByUsername($username)
+    /* public function findByUsername($username)
     {
         $request = "select * from " . $this->tableName . " where username = ?";
         $response = $this->bd->prepare($request);
@@ -42,7 +42,7 @@ class Repository
         $response = $this->bd->prepare($request);
         $response->execute([$id1, $id2]);
         return $response->fetch(PDO::FETCH_OBJ);
-    }
+    }*/
     public function findBy($criterias)
     {
         reset($criterias);
@@ -62,13 +62,42 @@ class Repository
 
         return $response->fetchAll(PDO::FETCH_OBJ);
     }
-    public function findOneBy($key, $value)
+    public function findOneBy($criterias)
     {
-        $request = "select * from " . $this->tableName . " where " . $key . "= ?";
+        reset($criterias);
+        $first_key = key($criterias);
+        $request = "select * from " . $this->tableName . " Where " . $first_key . "= ?  ";
+
+        foreach (array_slice($criterias, 1) as $key => $value) {
+            $request = $request . " and  " . $key . " = ?";
+        }
         $response = $this->bd->prepare($request);
-        $response->bindValue(1, $value);
+        $i = 1;
+        foreach ($criterias as $criteria) {
+            $response->bindValue($i, $criteria);
+            $i++;
+        }
         $response->execute();
+
         return $response->fetch(PDO::FETCH_OBJ);
+    }
+    public function findByNumbered($criterias, $limit, $offset)
+    {
+        $result = $this->findBy($criterias);
+        $start = $offset;
+        if ($limit >= count($result)) {
+            $limit = count($result);
+        }
+        
+        $end = $offset + $limit - 1;
+        if ($offset > count($result)) {
+            return Null;
+        }
+
+        for ($i = 0; $i <= $end - $start; $i++) {
+            $final[$i] = $result[$i + $start];
+        }
+        return $final;
     }
     public function findAll()
     {
