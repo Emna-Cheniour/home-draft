@@ -97,7 +97,9 @@ include_once('autoload.php');
 
         <div class="card__icons">
           <a class="like">
+            
             <i class="fa fa-heart" aria-hidden="true"></i>
+            
            </a>
 
         </div>
