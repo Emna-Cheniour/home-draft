@@ -123,23 +123,20 @@ class Repository
     public function update($criterias)
     {
 
-        $request = "update " . $this->tableName . " set " . key($criterias['value']) . "=?";
+        $request = "update " . $this->tableName . " set " . array_key_first($criterias['value']) . "=?";
         foreach (array_slice($criterias['value'], 1) as $keyValue => $criteriaValue) {
             $request = $request . " , " . $keyValue . " = ?";
         }
-        var_dump($criterias['where']);
-        $request = $request . " Where" . $criterias['where'][0] . "=?";
+        $request = $request . " Where " . array_key_first($criterias['where']) . "=?";
         foreach (array_slice($criterias['where'], 1) as $keyWhere => $criteriaWhere) {
             $request = $request . " and where  " . $keyWhere . " = ?";
         }
-        var_dump($request);
         $response = $this->bd->prepare($request);
         $i = 1;
         foreach ($criterias['value'] as $keyValue => $criteriaValue) {
             $response->bindValue($i, $criteriaValue);
             $i++;
         }
-        $i = 1;
         foreach ($criterias['where'] as $keyValue => $criteriaWhere) {
             $response->bindValue($i, $criteriaWhere);
             $i++;
