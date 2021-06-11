@@ -6,6 +6,7 @@ include_once 'assets/mainHead.php';
 <link rel="stylesheet" href="css/map.css">
 
 <body>
+<?php include_once 'preloader.php' ?>
     <?php include "navbarCo.php" ?>
     <div class="services">
         <h1 class="c4">Les Restaurants Coeliaques</h1>

@@ -13,6 +13,7 @@ if (isset($_POST['sendReview'])) {
 </head>
 
 <body>
+    <?php include_once 'preloader.php' ?>
     <?php include_once 'navbarCo.php' ?>
     <div class="swiper-container shoppingPoster">
         <div class="swiper-wrapper shoppingPosterWrapper">

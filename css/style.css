@@ -734,6 +734,4 @@ float: left;
     display: flex;
     flex-direction: column;
  }
- input[type=file]{
-     color:transparent;
- }
+

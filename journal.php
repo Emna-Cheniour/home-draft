@@ -3,6 +3,7 @@
 <link rel="stylesheet" href="css/shopping.css">
 </head>
 <body>
+<?php include_once 'preloader.php' ?>
 <?php include_once 'navbarCo.php'?>
 
 <div id="effect" class="wavy titreJournal">

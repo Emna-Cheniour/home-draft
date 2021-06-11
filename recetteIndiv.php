@@ -9,7 +9,7 @@ include("assets/mainHead.php"); ?>
 </head>
 <body>
   
-
+<?php include_once 'preloader.php' ?>
   <?php include("navbarCo.php"); ?>
   
 

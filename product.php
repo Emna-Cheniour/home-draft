@@ -6,6 +6,7 @@ include_once 'assets/mainHead.php';
 </head>
 
 <body>
+<?php include_once 'preloader.php' ?>
     <?php include_once 'navbarCo.php' ?>
     <div class="product">
         <div class="swiper-container productImageContainer">
