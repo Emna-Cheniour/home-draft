@@ -9,6 +9,7 @@ if (isset($_POST['sendReview'])) {
 }
 ?>
 <link rel="stylesheet" href="css/shopping.css">
+<link rel="stylesheet" href="css/product.css">
 </head>
 
 <body>
@@ -30,7 +31,7 @@ if (isset($_POST['sendReview'])) {
                     <h2>Livraison à domicile</h2>
                     <h5>Celiac101 garantit une livraison rapide , ponctuelle et très satisfaisante. </h5>
                     <a href=""><button class="btn btn1 btnServ">Commencez votre shopping</button></a>
-                    
+
                 </div>
                 <div class="rightSlide">
                     <img src="images/deliveryposter.png" alt="">
@@ -72,30 +73,23 @@ if (isset($_POST['sendReview'])) {
         <div class="cardLatest">
             <div class="circle">
             </div>
+            <img src="images/farine shar.png" alt="">
             <div class="content">
-                <h2>Pepsi cola</h2>
-                <p>Refrshing SOda from the UK </p>
+                <div class="productDetails">
+                    <h4>Farine Sans Gluten Mix It Universal – Schar</h4>
+                    <h4>45 Dt</h4>
+                </div>
             </div>
-            <img src="images/pepsi.png" alt="">
+            <div class="view">
+                <div class="productDetails">
+                    <a>
+                        <i class="fas fa-eye"></i>
+                        <h4>View product</h4>
+                    </a>
+                </div>
+            </div>
         </div>
-        <div class="cardLatest">
-            <div class="circle">
-            </div>
-            <div class="content">
-                <h2>Pepsi cola</h2>
-                <p>Refrshing SOda from the UK </p>
-            </div>
-            <img src="images/pepsi.png" alt="">
-        </div>
-        <div class="cardLatest">
-            <div class="circle">
-            </div>
-            <div class="content">
-                <h2>Pepsi cola</h2>
-                <p>Refrshing SOda from the UK </p>
-            </div>
-            <img src="images/pepsi.png" alt="">
-        </div>
+
     </div>
     <div class="reviewWrapper">
         <div class="addReview">
@@ -113,7 +107,7 @@ if (isset($_POST['sendReview'])) {
                         <div class="swiper-slide swiperCommentaireContent">
                             <div class="review">
                                 <img src="images/right-quote.png" class="quote" alt="quote">
-                                <input id="reviewNote" type="hidden" value="<?= $x ?>" >
+                                <input id="reviewNote" type="hidden" value="<?= $x ?>">
                                 <div class="reviewContent">
                                     <div class="reviewNote">
                                         <i class="far fa-heart"></i>

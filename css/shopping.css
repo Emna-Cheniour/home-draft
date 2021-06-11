@@ -121,15 +121,14 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #0B162C;
+    background-color:#2f3b539e;
     clip-path: circle(110px at center);
     transition: 0.5s;
 
 }
 
 .cardLatest:hover .circle::before {
-
-    background-color: #0B162C;
+    background-color:#2f3b539e;
     clip-path: circle(300px at center);
     border-radius: 30px;
 
@@ -155,15 +154,17 @@
     flex-direction: column;
     vertical-align: center;
     position: absolute;
-    height: 50%;
+    height: 30%;
     margin-top: 20px;
     padding: 20px 20px 20px 40px;
     transition: 0.5s;
     opacity: 0;
     visibility: hidden;
-
+   ;
 }
-
+.cardLatest .content *, .cardLatest .view *{
+     color: white !important
+}
 .cardLatest:hover .content {
     top: 0;
     opacity: 1;
@@ -171,19 +172,26 @@
     margin-bottom: 10px;
 }
 
-.cardLatest .content h2 {
-    color: white;
-    font-size: 2em;
-    line-height: 1em;
-
+.cardLatest .view {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    vertical-align: center;
+    position: absolute;
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+   
 }
 
-.cardLatest .content p {
-    color: white;
-
-
+.cardLatest:hover .view {
+    bottom: 0;
+    opacity: 1;
+    visibility: visible;
 }
-
+.view  .productDetails>a{
+    margin: 5px ;
+}
 /*REVIEWS*/
 .reviews {
     position: relative;
@@ -201,10 +209,13 @@
 }
 
 .swiperCommentaireContent {
+    
+    padding: 40px;
+    padding-top: 90px;
+    position: relative;
     background-position: center;
     background-size: cover;
     width: 300px;
-    height: 400px;
     background: #0b162c57;
     filter: blur(4px);
     border-radius: 20px;
@@ -218,9 +229,6 @@
 }
 
 .review {
-    position: relative;
-    padding: 40px;
-    padding-top: 90px;
     color: #fff;
 }
 
