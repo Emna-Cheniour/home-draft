@@ -69,7 +69,10 @@ include_once 'assets/mainHead.php';
     <?php include_once 'assets/scripts.php' ?>
     <?php include_once 'footer.php' ?>
     <script src="js/product.js"></script>
-    <script src="testnav.js"></script>
+    <script src="js/main.js"></script>
+   
+    <script type="js/scrollUpBtn.js"></script>
+    <script src="js/testnav.js"></script>
 </body>
 
 </html>

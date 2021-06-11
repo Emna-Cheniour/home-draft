@@ -172,8 +172,12 @@
     <?php include_once 'footer.php' ?>
     <?php include_once 'assets/scripts.php' ?>
     <script src="js/main.js"></script>
+
+    <script type="js/scrollUpBtn.js"></script>
+    <script src="js/testnav.js"></script>
+
     <script src="Js/don.js"></script>
-    <script src="testnav.js"></script>
+   
     <script src="js/jquery.counterup.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
     <script>

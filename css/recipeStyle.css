@@ -410,13 +410,14 @@ margin-bottom: 20px;
 
 .search
 {
-  position: relative;
+  position: sticky;
   width: 60px;
   height: 60px;
-  background-color: #2193b0;
+
   border-radius: 60px;
   transition: 0.5s;
-  box-shadow: 0 0 0 5px #2193b0;
+  box-shadow: 0 0 0 3px #0B162C;
+  background: #f5f5f5;
   overflow: hidden;
 }
 .search .icon
@@ -426,7 +427,8 @@ margin-bottom: 20px;
   left:0;
   width: 60px;
   height: 60px;
-  background: #2193b0;
+
+  background: #f5f5f5;
   border-radius: 60px;
   display: flex;
   align-items: center;
@@ -441,7 +443,7 @@ margin-bottom: 20px;
   position:absolute;
   width: 15px;
   height: 15px;
-  border:3px solid #fff;
+  border:3px solid #0B162C;
   border-radius: 50%;
   transform: translate(-4px,-4px) 
 }
@@ -453,7 +455,7 @@ margin-bottom: 20px;
   position:absolute;
   width: 3px;
   height: 12px;
-  background: #fff;
+  background: #0B162C;
   transform: translate(6px,6px) rotate(315deg);
   
 }
@@ -480,6 +482,7 @@ margin-bottom: 20px;
   justify-content: center;
   align-items: center;
   
+  
 
 }
 
@@ -493,13 +496,13 @@ margin-bottom: 20px;
   border: none;
   outline: none;
   font-size: 18px;
-  background: #2193b0;
+ background: #f5f5f5;
   padding: 10px 0;
   
 }
 .search .input input::placeholder
 {
-  color:#fff;
+
 }
 
 .search .clear 
@@ -522,7 +525,7 @@ margin-bottom: 20px;
   content: '';
   width: 1px;
   height: 15px;
-  background-color: #fff;
+  background-color: #0B162C;
   transform: rotate(45deg);
 }
 .search .clear::after
@@ -531,7 +534,7 @@ margin-bottom: 20px;
   content: '';
   width: 1px;
   height: 15px;
-  background-color: #fff;
+  background-color: #0B162C;
   transform: rotate(315deg);
 }
 

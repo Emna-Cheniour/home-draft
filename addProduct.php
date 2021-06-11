@@ -38,28 +38,28 @@ include_once 'assets/bootstrapAsset.php';
 
     </div>
 
-    <form>
+    <form method="post"  enctype="multipart/form-data">
       <div class="form-group">
         
-        <input type="text" class="form-control" placeholder="Nom Produit">
+        <input type="text" name="name" class="form-control" placeholder="Nom Produit">
       
       </div>
 
       <div class="form-group">
         
-        <input type="text" class="form-control" placeholder="Description Produit">
+        <input type="text" class="form-control" name="description" placeholder="Description Produit">
       
       </div>
 
       <div class="form-group">
         
-        <input type="text" class="form-control" value="0.0 DT">
+        <input type="text" class="form-control" name="price" value="0.0 DT">
       
       </div>
 
       <div class="form-group">
         
-        <input type="text" class="form-control" placeholder="Promotion Produit" value="0 %">
+        <input type="text" class="form-control" name="promotion" placeholder="Promotion Produit" value="0 %">
       
       </div>
 

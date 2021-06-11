@@ -221,6 +221,8 @@
 <?php include_once 'assets/scripts.php' ?>
     <script src="js/main.js"></script>
     <script src="js/txtRotation.js"></script>
+    <script type="js/scrollUpBtn.js"></script>
+    <script src="js/testnav.js"></script>
    
 
 </body>

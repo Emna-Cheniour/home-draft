@@ -44,20 +44,20 @@ include_once 'assets/bootstrapAsset.php';
       <div class="addForm">
       <div class="form-group">
         
-        <input type="text" class="form-control" name="title" placeholder="Titre Recette">
+        <input type="text" name="title" class="form-control" name="title" placeholder="Titre Recette">
       
       </div>
 
       <div class="form-group">
 
-        <input type="text" class="form-control" name="description" placeholder="Description">
+        <input type="text" name="description" class="form-control" name="description" placeholder="Description">
       
       </div>
 
 
       <div class="form-group">
       
-        <input type="text" class="form-control" name="time" placeholder="Durée">
+        <input type="text" name="time" class="form-control" name="time" placeholder="Durée">
       
       </div>
 

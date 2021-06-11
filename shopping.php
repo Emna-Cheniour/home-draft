@@ -176,6 +176,7 @@ if (isset($_POST['sendReview'])) {
                 <input class="search" placeholder="Rechercher..." type="text">
 
             </div>
+          
             <div class="productCategories ">
                 <div class="productCategory">
 
@@ -253,6 +254,9 @@ if (isset($_POST['sendReview'])) {
 
     <script src="js/shopping.js"></script>
     <script src="js/main.js"></script>
+   
+   <script type="js/scrollUpBtn.js"></script>
+   <script src="js/testnav.js"></script>
 </body>
 
 </html>
