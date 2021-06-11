@@ -1,7 +1,14 @@
 <?php 
+session_start();
 
   include 'assets/bootstrapAsset.php';
+  include_once 'assets/mainHead.php';
+
+  
+
+include_once('autoload.php');
 ?>
+
 
 
 <body>
@@ -48,19 +55,28 @@ include_once 'navbarCo.php'?>
 
   
    <div class="card__wrapper">
+   <?php 
+   $doctor=new DoctorRepository();
+   ?>
+
+   
 
     <div class="card">
      
       <div class="card__body">
         <img src="images/nutritionist.png" class="card__img spec">
-        <h2 class="card__title spec">DOCTEUR1</h2>
+        <?php 
+           
+           $query=$doctor->showElement(1);
+        ?>
+        <h2 class="card__title spec"><?php echo $query->name?></h2>
 
         <div class="card__detail">
     
           </div>
 
         <p class="card__description spec">
-          GASTROLOGUE
+        <?php echo $query->profession?>
         </p>
 
         <div class="card__options">
@@ -71,61 +87,9 @@ include_once 'navbarCo.php'?>
     
 
     </div>
-
-    <div class="card">
-     
-     <div class="card__body">
-       <img src="images/nutritionist.png" class="card__img spec" >
-       <h2 class="card__title spec">DOCTEUR1</h2>
-
-       <div class="card__detail">
-   
-         </div>
-
-       <p class="card__description spec">
-         GASTROLOGUE
-       </p>
-
-       <div class="card__options">
-          <a href="specialistProfile.php" class="btn btn1 don" >Voir Profil</a>
-        </div>
-     </div>
-
-   
-
-   </div>
-
-
-   <div class="card">
-     
-     <div class="card__body">
-       <img src="images/nutritionist.png" class="card__img spec">
-       <h2 class="card__title spec">DOCTEUR1</h2>
-
-
-       <div class="card__detail">
-   
-         </div>
-       <p class="card__description spec">
-         GASTROLOGUE
-       </p>
-
-       <div class="card__options">
-          <a href="specialistProfile.php" class="btn btn1 don" >Voir Profil</a>
-        </div>
-     </div>
-
-   
-
-   </div>
-    
-    
-
     
   
   </div>
-
-
 
 
 

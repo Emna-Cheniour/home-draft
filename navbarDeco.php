@@ -64,27 +64,21 @@
         
         <a href="login_SignUp.php"> <i title="Se connecter" class="fas fa-sign-in-alt"></i><a>
         <a href="login_SignUp.php"> <i title="S'inscrire" class="fas fa-user-plus"></i><a>
-    
+        <a class="menu-toggle"><i class="fa fa-bars" aria-hidden="true"></i></a>
+
+        
         
     </div>
 
     
-    
 
-  
-
-
-  
 </header>
+
+
   
   
 
-    <script src="testnav.js"></script>
     
-
-    
-</body>
-</html>
 
 
 

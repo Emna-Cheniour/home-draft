@@ -189,14 +189,14 @@ nextBtns[questionNbr-2].addEventListener('click',(e)=>{
       header.textContent="Vos réponses indiquent que vous n’êtes pas à un risque accru de maladie coeliaque";
       icon.setAttribute('src','icons/safe.png');
       parag.innerHTML="Cependant, puisqu’il y a plus de 200 symptômes connus liés à la maladie coeliaque, il est important de discuter avec votre médecin de tous les symptômes inexpliqués que vous pourriez avoir"
-      link.setAttribute('href','acceuil.php');
+      link.setAttribute('href','InfoPage.php');
       link.innerHTML="Pour plus d'informations<i id='right' class='fas fa-arrow-alt-circle-right'></i>";
       break;
     default:
       header.textContent="Vos réponses indiquent que vous pourriez être à un risque accru de maladie coeliaque";
       icon.setAttribute('src','icons/dangerous.png');
       parag.innerHTML="Nous vous recommandons de prendre rendez-vous avec votre médecin pour discuter du dépistage de la maladie coeliaque."
-      link.setAttribute('href','acceuil.php');
+      link.setAttribute('href','profileGroup.php');
       link.innerHTML="Consulter nos spécialistes<i id='right' class='fas fa-arrow-alt-circle-right'></i>";
 
   }

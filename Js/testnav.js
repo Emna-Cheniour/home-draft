@@ -6,15 +6,6 @@ service.addEventListener('click',()=>{
   hiddenService.classList.toggle("blockDisplay");
 });
 
-const hiddenProfile=document.querySelector('.profile__hidden');
-const profile=document.querySelector('#dropProfilIcon');
-
-profile.addEventListener('click',()=>{
-
-  hiddenProfile.classList.toggle('active');
-});
-
-
 const menuBar=document.querySelector('.menu-toggle');
 const menu=document.querySelector('header nav');
 
@@ -30,3 +21,14 @@ dropIt.addEventListener('click',()=>{
 
   dropdiv.classList.toggle('display');
 });
+
+
+const hiddenProfile=document.querySelector('.profile__hidden');
+const profile=document.querySelector('#dropProfilIcon');
+
+profile.addEventListener('click',()=>{
+
+  hiddenProfile.classList.toggle('active');
+});
+
+

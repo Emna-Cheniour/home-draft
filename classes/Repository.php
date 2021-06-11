@@ -54,13 +54,17 @@ class Repository
         return $response->fetch(PDO::FETCH_OBJ);
     }
 
-    public function showRecipe($id){
+    public function showElement($id){
         $request = "select * from ".$this->tableName ." where id = ?";
         $response =$this->bd->prepare($request);
         $response->execute([$id]);
+
         return $response->fetch(PDO::FETCH_OBJ);
 
+
     }
+
+   
 
     public function update($id1,$id2){
 
@@ -80,6 +84,52 @@ class Repository
         return $response->fetch(PDO::FETCH_OBJ);
         
     }
+
+    public function addRecipe($val1,$val2,$val3){
+
+        $request = "INSERT INTO ".$this->tableName. "(username,email,password) VALUES ('".$val1."','".$val2."','".$val3."')" ; 
+        $response=$this->bd->prepare($request);
+        $response->execute();
+        return $response->fetch(PDO::FETCH_OBJ);
+        
+    }
+
+    public function addIngredient($val1,$val2,$val3){
+
+        $request = "INSERT INTO ".$this->tableName. "(username,email,password) VALUES ('".$val1."','".$val2."','".$val3."')" ; 
+        $response=$this->bd->prepare($request);
+        $response->execute();
+        return $response->fetch(PDO::FETCH_OBJ);
+        
+    }
+
+    public function addDoctor($val1,$val2,$val3,$val4,$val5,$val6){
+
+        $request = "INSERT INTO ".$this->tableName. "(name,profession,email,adresse,telephoneProfessionnel,telephonePersonnel) VALUES ('".$val1."','".$val2."','".$val3."','".$val4."','".$val5."','".$val6."')" ; 
+        $response=$this->bd->prepare($request);
+        $response->execute();
+        return $response->fetch(PDO::FETCH_OBJ);
+        
+    }
+
+    public function addJournal($val1,$val2,$val3){
+
+        $request = "INSERT INTO ".$this->tableName. "(username,email,password) VALUES ('".$val1."','".$val2."','".$val3."')" ; 
+        $response=$this->bd->prepare($request);
+        $response->execute();
+        return $response->fetch(PDO::FETCH_OBJ);
+        
+    }
+    public function addRestaurant($val1,$val2,$val3){
+
+        $request = "INSERT INTO ".$this->tableName. "(username,email,password) VALUES ('".$val1."','".$val2."','".$val3."')" ; 
+        $response=$this->bd->prepare($request);
+        $response->execute();
+        return $response->fetch(PDO::FETCH_OBJ);
+        
+    }
+
+
   
     public function updatePic($id1,$img){
 
