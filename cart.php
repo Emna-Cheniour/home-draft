@@ -3,9 +3,16 @@ include_once 'assets/mainHead.php';
 $cartIsEmpty = 0;
 ?>
 <link rel="stylesheet" href="css/cart.css">
+<link rel="stylesheet" href="css/loading.css">
 </head>
 
 <body>
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+            <div class="loader-section section-left"></div>
+            <div class="loader-section section-right"></div>
+ 
+</div>
     <?php include_once 'navbarCo.php' ?>
     <div class="wrapp">
         <div class="navbarCart">
@@ -316,6 +323,7 @@ $cartIsEmpty = 0;
         <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQpw0VdM_Cpj50OfKTRMJbP1SK7wzYcAE&callback=initMap" type="text/javascript"></script>
         <script src="js/cart.js"></script>
         <script src="testnav.js"></script>
+        <script src="js/loading.js"></script>
 </body>
 
 </html>
