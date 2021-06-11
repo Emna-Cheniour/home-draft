@@ -41,59 +41,26 @@ include_once 'assets/bootstrapAsset.php';
     <form>
       <div class="form-group">
         
-        <input type="text" class="form-control" placeholder="Nom Produit">
+        <input type="text" class="form-control" placeholder="Nom Aliment">
       
       </div>
 
       <div class="form-group">
-        
-        <input type="text" class="form-control" placeholder="Description Produit">
       
-      </div>
+      <h6>Catégorie</h6>
 
-      <div class="form-group">
-        
-        <input type="text" class="form-control" value="0.0 DT">
-      
-      </div>
+      <select name="category" id="">
+        <option value="produit laitiers">Produits Laitiers</option>
+        <option value="conserves">Conserves</option>
+        <option value="lipide">Lipides</option>
+      </select>
 
-      <div class="form-group">
-        
-        <input type="text" class="form-control" placeholder="Promotion Produit" value="0 %">
-      
-      </div>
-
-      <div class="multiple img">
-        <div class="form-group">
-
-          <!--<button  style="width:100px;" id="images" onclick="document.querySelector('#formFile').click();return false">Upload</button>-->
-          
-          <input class="form-control" name="recipeImg" id="formFile" type="file"  accep="image/" >
-
-          <i class="fas fa-plus" id="plusIcon" style="margin:10px 0 0 10px; cursor:pointer"></i>
-          <i class="fas fa-minus" id="minus" style="margin:10px 0 0 10px; cursor:pointer"></i>
-
-        </div>
     
     </div>
+    <input type="radio" name="permission" value="autorisé" style="margin:0 10px 0 10px"><span>Autorisé</span>
 
-
-    <div class="multiple cat">
-      <div class="form-group">
-          <input type="text" name="category" class="form-control" placeholder="Entrer Catégorie" style="margin-right:10px">
-
-          <i class="fas fa-plus" id="plusIcon" style="margin:10px 0 0 10px; cursor:pointer"></i>
-          <i class="fas fa-minus" id="minus" style="margin:10px 0 0 10px; cursor:pointer"></i>
-
-        </div>
-
-    </div>  
-
-
-      
-
-     
-    
+    <input type="radio" name="permission" value="non autorisé" style="margin:0 10px 0 10px"><span>Non Autorisé</span>
+    <br><br>
       
     
       <button type="submit" class="btn btn3">Submit</button>

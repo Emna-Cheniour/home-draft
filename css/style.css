@@ -738,3 +738,7 @@ float: left;
  }
 
 >>>>>>> 1946704277f9fa702799c4fa88ce1d76c5c0e5d2
+
+ input[type=file]{
+     color:transparent;
+ }
