@@ -6,7 +6,7 @@ include_once('autoload.php');
 
 </head>
 
-
+<?php include_once 'preloader.php' ?>
   <?php include("navbarCo.php"); ?>
 <div class="recipe--page__container">
 
