@@ -297,5 +297,7 @@ include("assets/mainHead.php"); ?>
 <script src="testnav.js"></script>
 
 <script src="Js/slide.js"></script>
+<?php include 'footer.php' ?>
+<?php include_once 'assets/scripts.php' ?>
 </body>
 </html>

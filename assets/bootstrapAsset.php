@@ -30,5 +30,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="css/iconHover.css">
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+    <link rel="stylesheet" href="css/specialistGroup.css">
     <title>Celiac101</title>
 </head>

@@ -12,6 +12,12 @@
   color: white;
 }
 
+#dropService,#dropProfilIcon
+{
+
+  cursor: pointer;
+}
+
 .navbar-custom li:hover,
 .navbar-custom li a:hover,
 .dropdownService li a:hover,
@@ -124,6 +130,8 @@
   display: block;
 }
 
+
+
   .navLinks
   {
    position: absolute;
@@ -133,6 +141,7 @@
    top:80px;
    left:-110%;
    transition: 0.5s;
+   overflow:scroll;
 
   }
   
