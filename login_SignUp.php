@@ -21,7 +21,6 @@ if (isset($_SESSION['user'])) {
 </head>
 
 <body>
-
   <div class="container <?php 
     if(isset($_SESSION['page'])){
       if($_SESSION['page']=='inscription'){
