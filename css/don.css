@@ -3,10 +3,7 @@
 .contenu{
     
     padding: 0 20px;
-    
-    
     min-height: 10em;
-    
     vertical-align: middle;
     margin:-30px 0 100px 0;
 }   
@@ -15,8 +12,6 @@
 {
     width:auto;
     padding: 2em;
-    
-    
 }
 .formContent{
     background-color: #1c294211;
