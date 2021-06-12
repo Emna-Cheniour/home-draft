@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 include_once 'assets/bootstrapAsset.php';
 ?>
 
@@ -76,43 +76,58 @@ include_once 'assets/bootstrapAsset.php';
 
     </div>
 
-    <form>
+    <form method="post" action="addSpecialistProcess.php">
       <div class="form-group">
         
-        <input type="text" class="form-control" placeholder="Nom Spécialiste">
+        <input type="text" name="lastName" class="form-control" placeholder="Nom Spécialiste">
       
       </div>
 
       <div class="form-group">
 
-        <input type="text" class="form-control" placeholder="Prénom Spécialiste">
+        <input type="text" name="firstName" class="form-control" placeholder="Prénom Spécialiste">
       
       </div>
 
       <div class="form-group">
 
         
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email Spécialiste">
+        <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email Spécialiste">
       
       </div>
 
       <div class="form-group">
       
-        <input type="text" class="form-control" placeholder="Profession">
+        <input type="text" name="profession" class="form-control" placeholder="Profession">
       
       </div>
 
       <div class="form-group">
       
-        <input type="text" class="form-control" placeholder="Adresse Spécialiste">
+        <input type="text" name="adress" class="form-control" placeholder="Adresse Spécialiste">
       
       </div>
 
       <div class="form-group">
         
-        <input type="text" class="form-control" placeholder="Numéro De Téléphone">
+        <input type="text" name="phoneNumber" class="form-control" placeholder="Numéro De Téléphone">
       
       </div>
+
+      <?php 
+            if(isset($_SESSION['addError'])){ ?>
+
+              <div class="alert alert-danger" class="close">
+                  
+                  <?= $_SESSION['addError'] ?>
+                  <a><i class="fas fa-times"></i></a>
+                
+                </div>
+              
+            <?php }
+            unset($_SESSION['addError']);
+            ?>
+
       
     
       <button type="submit" class="btn btn3">Submit</button>
