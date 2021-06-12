@@ -1,13 +1,18 @@
 <?php
-
+session_start();
 include_once 'assets/bootstrapAsset.php';
+include_once 'autoload.php';
+
+if(isset($_POST['addFood'])){
+  
+}
+
+
 ?>
 
 <body>
-<?php include_once 'preloader.php' ?>
-<div class="container">
-  
-</div>
+
+
 
 <div class="container add">
   
@@ -38,10 +43,10 @@ include_once 'assets/bootstrapAsset.php';
 
     </div>
 
-    <form>
+    <form method="post" action="addFoodElement.php">
       <div class="form-group">
         
-        <input type="text" class="form-control" placeholder="Nom Aliment">
+        <input type="text" class="form-control" name="name" placeholder="Nom Aliment">
       
       </div>
 
@@ -50,9 +55,14 @@ include_once 'assets/bootstrapAsset.php';
       <h6>Catégorie</h6>
 
       <select name="category" id="">
-        <option value="produit laitiers">Produits Laitiers</option>
-        <option value="conserves">Conserves</option>
-        <option value="lipide">Lipides</option>
+      <?php 
+        $categoryRepo=new FoodCategoryRepository();
+        $categorys=$categoryRepo->findAll();
+        foreach($categorys as $cat){
+      ?>
+        <option value="<?php echo $cat['name'] ?>"><?php echo $cat['name'] ?></option>
+
+       <?php } ?>
       </select>
 
     

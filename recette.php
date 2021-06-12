@@ -2,11 +2,16 @@
 session_start();
 include_once 'assets/mainHead.php';
 include_once('autoload.php');
+
+$recettes=new RecipeRepository();
+$recette=$recettes->findBy(array('id'=> $_GET['id']));
+
+$images=new recipeImageRepository();
+$recipeImg=$images->findBy(array('id'=> $recette->id));
 ?>
 
 </head>
 
-<?php include_once 'preloader.php' ?>
 
   <?php include("navbarCo.php"); ?>
 <div class="recipe--page__container">
@@ -21,12 +26,12 @@ include_once('autoload.php');
 
         <div class="dropdown-list">
           <ul class="indicator">
-            <li><button><a href="#">Pâtes</a></button></li>
-            <li><button><a href="#">Plat Végétarien</a></button></li>
-            <li><button><a href="#">Salade</a></button></li>
-            <li><button><a href="#">Smoothie</a></button></li>
-            <li><button><a href="#">Plat Tunisien</a></button></li>
-            <li><button><a href="#">Pâtisseries</a></button></li>
+          <?php 
+            $recipeCats=new RecipeCatgeoryRepository();
+            foreach($recipeCats as $recipeCatItem)
+          ?>
+            <li><button><a href="?<?php echo $recipeCatItem['id']?>"><?php echo $recipeCatItem?></a></button></li>
+            
 
           </ul>
         </div>
@@ -54,40 +59,52 @@ include_once('autoload.php');
   </div>
 
 
+
   <div class="card__wrapper">
-   <?php for($i=1;$i<3;$i++){
+   <?php 
+   $recetteRepo=new RecipeRepository();
+   if(isset($_GET['id'])){
+     $recetteCat=$recipeCats->findBy(array('id'=>$recette->id));
+   }
+   $recettes=$recette->findAll();
+
+   
+   foreach($recettes as $recette){
+     $images=new recipeImageRepository();
+     $recipeImg=$images->findBy(array('id'=>$recette->id));
+     $ingredients=new IngredientRepository();
+     
+     $ingredient=$ingredients->findBy(array('id'=>$recette->id));
           ?>
     <div class="card">
      
       <div class="card__body">
-        <img src="icons/reciper1.jpg" class="card__img">
-        <?php 
-           $recette=new RecipeRepository();
-           $query=$recette->showElement($i);
-        ?>
-        <h2 class="card__title"><?php echo $query->title ?></h2>
+        <img src="<?php 'data:image/jpeg;base64,".base64_encode($recipeImg[0]->image)."' ?>" class="card__img">
+  
+
+        <h2 class="card__title"><?php echo $recette->title ?></h2>
 
         <div class="card__detail">
           <div class="detail__field">
-            <span class="number">20</span>
+            <span class="number"><?php echo $recette->time ?></span>
             <span class="expression">Minutes</span>
           </div>
 
           <div class="detail__field">
-            <span class="number">5</span>
+            <span class="number"><?php echo $ingredient->countRow()?></span>
             <span class="expression">Ingredients</span>
           </div>
 
           <div class="detail__field">
-            <span class="number">4-6</span>
-            <span class="expression">Servings</span>
+            <span class="number">Difficulté</span>
+            <span class="expression"><?php echo $recette->time?></span>
           </div>
         </div>
-        <p class="card__description"><?php echo $query->description ?></p>
+        <p class="card__description"><?php echo $recette->description ?></p>
       </div>
 
       <div class="card__options">
-         <a href="recetteIndiv.php" class="btn btn1 don" >Voir Recette</a>
+         <a href="recetteIndiv?<?php echo ($recette->id)?>.php" class="btn btn1 don" >Voir Recette</a>
 
         <div class="card__icons">
           <a class="like">

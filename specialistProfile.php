@@ -1,9 +1,15 @@
 <?php 
 include_once 'autoload.php';
 
-include_once 'isAuthentificated.php';
+
 include_once 'assets/mainHead.php' ;
-include_once 'assets/bootstrapAsset.php'
+include_once 'assets/bootstrapAsset.php';
+include_once 'autoload.php';
+
+$specialistRepo=new SpecialistRepository();
+$specialistId=$_GET['id'];
+$specialist=$specialistRepo->findBy($specialistId);
+
 
 
 ?>
@@ -35,7 +41,7 @@ include_once 'navbarCo.php'?>
 
         <div class="field" id="profile">
           <img src="images/nutritionist.png" alt="">
-            <h2>Monsieur flen fouleni</h2>
+            <h2><?php echo $specialist['lastName'] .''. $specialist['firstName'] ?></h2>
             
             <h4>Réseaux Sociaux</h4>
         </div>
@@ -43,9 +49,9 @@ include_once 'navbarCo.php'?>
         <div class="field reveal" id="Apropos">
           
           <img src="svg/undraw_medicine_b1ol.svg" alt="">
-          <h2>Monsieur flen fouleni</h2>
-          <h3>Gastrologue</h3>
-          <h4>Adresse: rue123 tunis blablabla cabinet</h4>
+          <h2><?php echo $specialist['description'] ?></h2>
+          <h3><?php echo $specialist['profession'] ?></h3>
+          <h4><?php echo $specialist['address'] ?></h4>
         </div>
 
         <div class="field reveal" id="contact">
@@ -54,10 +60,10 @@ include_once 'navbarCo.php'?>
           <h2>Contacter Votre médecin</h2>
           <div class="contact__container">
             <div class="discussion">
-                <a href="#"><i class="fas fa-sms"></i>discussion</a>
+                <a href="#"><i class="fas fa-sms"></i><?php echo $specialist['email'] ?></a>
             </div>
-            <div class="contact">
-              <a  class="openReview"><i class="fas fa-envelope-open-text"></i>send a message</a>
+            <div class="discussion">
+                <a href="#"><i class="fas fa-sms"></i><?php echo $specialist['phoneNumber'] ?></a>
             </div>
           </div>
 

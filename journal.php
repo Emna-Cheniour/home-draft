@@ -1,4 +1,9 @@
-<?php include_once 'assets/mainHead.php' ?>
+<?php include_once 'assets/mainHead.php';
+include_once 'autoload.php';
+
+$foodCatgeoryRepo=new FoodCatgeoryRepository();
+$foodCat=$foodCatgeoryRepo->findAll();
+?>
 <link rel="stylesheet" href="css/journal.css">
 <link rel="stylesheet" href="css/shopping.css">
 </head>
@@ -32,124 +37,34 @@
         <span style="--i:18;">I</span>
         <span style="--i:19;">R</span>
         <span style="--i:20;">E</span>
-      </div>
-      <div class="searchJournal__input">
+</div>
+<div class="searchJournal__input">
         <i class="fas fa-search" id="search__icon"></i>
         <input id="search" placeholder="Rechercher..." type="text">
 
-      </div>
-<div class="journal_container">
-    <div class="row">
-<div class="card cardJournal col">
-  <div class="card-body">
-    <h4 class="card-title">Produits Laitiers</h4>
-    <div class="imgJournal"><img src="icons/produitLaitier.png"></div>
-    <h6>Celiac 101</h6>
-    <p class="card-text">Cliquez ici pour voir ce que vous est permis et ce que vous est interdit </p>
-    <a href="journalIndiv.php" class="card-link"><button class="btn btn4">Voir Journal</button></a>
-  </div>
-</div>
-<div class="card cardJournal col">
-  <div class="card-body">
-    <h4 class="card-title">Conserves</h4>
-    <div class="imgJournal"><img src="icons/conserve.png"></div>
-    <h6>Celiac 101</h6>
-    <p class="card-text">Cliquez ici pour voir ce que vous est permis et ce que vous est interdit </p>
-    <a href="journalIndiv.php" class="card-link"><button class="btn btn3">Voir Journal</button></a>
-  </div>
-</div>
-<div class="card cardJournal col">
-  <div class="card-body">
-    <h4 class="card-title">Lipides</h4>
-    <div class="imgJournal"><img src="icons/oil.png"></div>
-    <h6>Celiac 101</h6>
-    <p class="card-text">Cliquez ici pour voir ce que vous est permis et ce que vous est interdit </p>
-    <a href="journalIndiv.php" class="card-link"><button class="btn btn4">Voir Journal</button></a>
-  </div>
-</div>
-    <div class="card cardJournal col">
-  <div class="card-body">
-    <h4 class="card-title">Viande</h4>
-    <div class="imgJournal"><img src="icons/meat.png"></div>
-    <h6>Celiac 101</h6>
-    <p class="card-text">Cliquez ici pour voir ce que vous est permis et ce que vous est interdit </p>
-    <a href="journalIndiv.php" class="card-link"><button class="btn btn4">Voir Journal</button></a>
-  </div>
-</div>
-<div class="card cardJournal col">
-  <div class="card-body">
-    <h4 class="card-title">Volailles</h4>
-    <div class="imgJournal"><img src="icons/chicken.png"></div>
-    <h6>Celiac 101</h6>
-    <p class="card-text">Cliquez ici pour voir ce que vous est permis et ce que vous est interdit </p>
-    <a href="journalIndiv.php" class="card-link"><button class="btn btn4">Voir Journal</button></a>
-  </div>
-</div>
-<div class="card cardJournal col">
-  <div class="card-body">
-    <h4 class="card-title">Poissons</h4>
-    <div class="imgJournal"><img src="icons/fish.png"></div>
-    <h6>Celiac 101</h6>
-    <p class="card-text">Cliquez ici pour voir ce que vous est permis et ce que vous est interdit </p>
-    <a href="journalIndiv.php" class="card-link"><button class="btn btn4">Voir Journal</button></a>
-  </div>
-</div>
-<div class="card cardJournal col">
-  <div class="card-body">
-    <h4 class="card-title">Chocolat</h4>
-    <div class="imgJournal"><img src="icons/chocolat.png"></div>
-    <h6>Celiac 101</h6>
-    <p class="card-text">Cliquez ici pour voir ce que vous est permis et ce que vous est interdit </p>
-    <a href="journalIndiv.php" class="card-link"><button class="btn btn4">Voir Journal</button></a>
-  </div>
-</div>
-<div class="card cardJournal col">
-  <div class="card-body">
-    <h4 class="card-title">Pâtes</h4>
-    <div class="imgJournal"><img src="icons/pates.png"></div>
-    <h6>Celiac 101</h6>
-    <p class="card-text">Cliquez ici pour voir ce que vous est permis et ce que vous est interdit </p>
-    <a href="journalIndiv.php" class="card-link"><button class="btn btn4">Voir Journal</button></a>
-  </div>
-</div>
-<div class="card cardJournal col">
-  <div class="card-body">
-    <h4 class="card-title">Boissons</h4>
-    <div class="imgJournal"><img src="icons/drink.png"></div>
-    <h6>Celiac 101</h6>
-    <p class="card-text">Cliquez ici pour voir ce que vous est permis et ce que vous est interdit </p>
-    <a href="journalIndiv.php" class="card-link"><button class="btn btn4">Voir Journal</button></a>
-  </div>
-</div>
-<div class="card cardJournal col">
-  <div class="card-body">
-    <h4 class="card-title">Fruits, Fruits Secs et Noix</h4>
-    <div class="imgJournal"><img src="icons/fruits.png"></div>
-    <h6>Celiac 101</h6>
-    <p class="card-text">Cliquez ici pour voir ce que vous est permis et ce que vous est interdit </p>
-    <a href="journalIndiv.php" class="card-link"><button class="btn btn4">Voir Journal</button></a>
-  </div>
-</div>
-<div class="card cardJournal col">
-  <div class="card-body">
-    <h4 class="card-title">Légumes et Légumineuses</h4>
-    <div class="imgJournal"><img src="icons/vegetable.png"></div>
-    <h6>Celiac 101</h6>
-    <p class="card-text">Cliquez ici pour voir ce que vous est permis et ce que vous est interdit </p>
-    <a href="journalIndiv.php" class="card-link"><button class="btn btn4">Voir Journal</button></a>
-  </div>
-</div>
-<div class="card cardJournal col">
-  <div class="card-body">
-    <h4 class="card-title">Patisserie et Gourmandise</h4>
-    <div class="imgJournal"><img src="icons/cake-slice.png"></div>
-    <h6>Celiac 101</h6>
-    <p class="card-text">Cliquez ici pour voir ce que vous est permis et ce que vous est interdit </p>
-    <a href="journalIndiv.php" class="card-link"><button class="btn btn4">Voir Journal</button></a>
-  </div>
 </div>
 
-</div>
+<div class="journal_container">
+
+    <div class="row">
+
+    <?php foreach($foodCat as $cat ){ ?>
+
+      <div class="card cardJournal col">
+        <div class="card-body">
+            <h4 class="card-title"><?php $cat->name?></h4>
+            <div class="imgJournal"><img src="<?php echo 'data:image/jpeg;base64,".base64_encode($cat->image)."' ?>"></div>
+            <h6>Celiac 101</h6>
+            <p class="card-text">Cliquez ici pour voir ce que vous est permis et ce que vous est interdit </p>
+            <a href="journalIndiv.php?<?php echo $cat->id ?>" class="card-link"><button class="btn btn4">Voir Journal</button></a>
+        </div>
+      </div>
+
+    <?php } ?>
+
+
+    </div>
+
 </div>
 <?php include_once 'footer.php'?>
 

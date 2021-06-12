@@ -56,7 +56,7 @@
             </div>
 
             <div class="contenuForm">
-                <form class="formDon">
+                <form class="formDon"  method="post" action="don-checkout.php">
                     </br>
                     <div class="titleForm"><img id="imageDonate" src="icons/donate.png">Faire un Don</div>
                     </br>
@@ -111,7 +111,7 @@
                         <h4>Montant de Don :</h4>
                             <div class="input-icon">
                             <i id="iconForm" class="fas fa-hand-holding-usd"></i>
-                            <input class="inputForm" type="number" min="10" required>DT</div>
+                            <input class="inputForm" type="text" name="amount" min="10" required>DT</div>
                         </td>
                         </tr>
                         <tr>
@@ -152,6 +152,13 @@
                     </table>
                     
                     <button type="submit" id="submitForm" class="btn btn3 don" name="submitForm">Faire un Don</button>
+                    <script
+                src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                data-key="pk_test_51J1SzJE3gsjF0BrLVeytp4haD9b0CDM5IbkhmTDnCVDYrNekt7CXbwdjdgheujajglAOcMr4Y0lMX3j08b2RbXv400PpkHkqjz"
+                
+                data-currency="inr"
+                data-locale="auto">
+                </script>
                 </form>
             </div>
 

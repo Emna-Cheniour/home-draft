@@ -1,6 +1,6 @@
 <?php
 require_once 'autoload.php';
 
-$cartRep = new CartRepository();
-$result=$cartRep->insert(array('status'=>'en cours'));
-echo $result;
+$rp =new SpecialistRepository();
+$rp->insertSpecialist(array("lastName" => 'salut', "firstName" => 'toi' , "email" => 'alo' , "address" => 'aloo' , "description" => 'bma', "phoneNumber" => 'lala',"profession" => 'pro'));
+

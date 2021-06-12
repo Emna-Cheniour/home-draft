@@ -1,6 +1,10 @@
 <?php 
 
   include_once 'assets/bootstrapAsset.php';
+  include_once 'autoload.php';
+  $adminRepo=new AdminRepository();
+  $admins=$adminRepo->findAll();
+
 
 
 ?>
@@ -8,16 +12,12 @@
 <body>
   
 
-<?php include_once 'preloader.php' ?>
 
 
-<div class="container">
-  
-</div>
 <table class="table table-hover">
   <thead>
     <tr>
-      <th scope="col"><h3 style="color:#5FC2BA">Nom d'utilisateur</h3></th>
+      <th scope="col"><h3 style="color:#5FC2BA">Nom d'admin</h3></th>
       <th scope="col"><h3 style="color:#5FC2BA">Mot de passe</h3></th>
       <th scope="col"></th>
       
@@ -25,31 +25,24 @@
     </tr>
 
   </thead>
+  
   <tbody>
-  <tbody>
+  <?php foreach($admins as $admin){ ?>
     <tr class="user__row">
-      <td>Nawres Ncib</td>
-      <td>123456789</td>
+      <td><?php echo $admin['username'] ?></td>
+      <td><?php echo $admin['email'] ?></td>
+      <td><?php echo $admin['password'] ?></td>
       <td><i class="fas fa-trash delete"></i></td>
     </tr>
+    <?php } ?>
 
-    <tr lass="user__row">
-      <td>Meriem Ben Ismail</td>
-      <td>123456789</td>
-      <td><i class="fas fa-trash delete"></i></td>
-    </tr>
-
-    <tr lass="user__row">
-      <td>Emna Cheniour</td>
-      <td>123456789</td>
-      <td><i class="fas fa-trash delete"></i></td>
-    </tr>
+   
 
   </tbody>
    
    
    
-  </tbody>
+  
 </table>
 <div class="container">
 
@@ -89,7 +82,7 @@
       <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Mot De Passe">
     </div>
   
-    <button type="submit" class="btn btn3">Submit</button>
+    <button type="submit" class="btn btn3"><a href="">Submit</a></button>
   </form>
 
 </div>

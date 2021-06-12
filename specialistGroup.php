@@ -2,11 +2,11 @@
 session_start();
 
   include 'assets/bootstrapAsset.php';
-  include_once 'assets/mainHead.php';
+
 
   
 
-include_once('autoload.php');
+include_once 'autoload.php';
 ?>
 
 
@@ -67,18 +67,18 @@ include_once 'navbarCo.php'?>
       <div class="card__body">
         <img src="images/nutritionist.png" class="card__img spec">
         
-        <h2 class="card__title spec"><?php echo ($specialist->lastName ."". $specialist->firstName)?></h2>
+        <h2 class="card__title spec"><?php echo ($specialist['lastName'] ."". $specialist['firstName'])?></h2>
 
         <div class="card__detail">
     
           </div>
 
         <p class="card__description spec">
-        <?php echo $specialist->profession?>
+        <?php echo $specialist['profession']?>
         </p>
 
         <div class="card__options">
-          <a href="specialistProfile.php" class="btn btn1 don" >Voir Profil</a>
+          <a href="specialistProfile.php?<?php echo $specialist['id']?> " class="btn btn3 don" >Voir Profil</a>
         </div>
       </div>
 

@@ -1,15 +1,29 @@
 
   
 <?php 
-include("assets/mainHead.php"); ?>
+include("assets/mainHead.php"); 
+
+$recettes=new RecipeRepository();
+$recette=$recettes->findBy(array('id'=> $_GET['id']));
+
+$images=new recipeImageRepository();
+$recipeImg=$images->findBy(array('id'=> $recette->id));
+
+$ingredients=new IngredientRepository();
+$ingredient=$ingredients->findBy(array('id'=> $recette->id));
+
+$steps=new StepRepository();
+$step=$steps->findBy(array('id'=> $recette->id));
+
+?>
 
 <link rel="stylesheet" href="css/recipeIndivStyle.css">
-<title>Recette Indiv</title>
+<title><?php echo $recette->title ?></title>
 
 </head>
 <body>
   
-<?php include_once 'preloader.php' ?>
+
 
   <?php include("navbarCo.php"); ?>
   
@@ -17,13 +31,13 @@ include("assets/mainHead.php"); ?>
 <div class="path__link">
   <a href="#">Recette</a>
   >
-  <a href="#">Bowl Chia</a>
+  <a href="#"><?php echo $recette->title ?></a>
   
 </div>
 
 <div class="main__container">
   
-  <h1 class="main__header">Bowl Chia Maison</h1>
+  <h1 class="main__header"><?php echo $recette->title?></h1>
 
   <div class="rating">
 
@@ -54,17 +68,18 @@ include("assets/mainHead.php"); ?>
         <!--radio button end-->
    
         <!--slide image start-->
+
          <div class="slide first">
-           <img src="icons/chia1.jpg" alt="">
+           <img src="<?php 'data:image/jpeg;base64,".base64_encode($recipeImg[0]->image)."' ?>" alt="">
          </div>
          <div class="slide">
-           <img src="icons/reciper1.jpg" alt="">
+           <img src="<?php 'data:image/jpeg;base64,".base64_encode($recipeImg[1]->image)."' ?>" alt="">
          </div>
          <div class="slide">
-           <img src="icons/chia3.jpg" alt="">
+           <img src="<?php 'data:image/jpeg;base64,".base64_encode($recipeImg[2]->image)."' ?>" alt="">
          </div>
          <div class="slide">
-           <img src="icons/chia2.jpg" alt="">
+           <img src="<?php 'data:image/jpeg;base64,".base64_encode($recipeImg[3]->image)."' ?>" alt="">
          </div>
          
    
@@ -96,29 +111,23 @@ include("assets/mainHead.php"); ?>
 
         <div class="detail">
           <img src="icons/clock.png" alt="">
-          <span>20 Minutes</span>
+          <span><?php echo $recette->time ?> Minutes</span>
         </div>
   
         <div class="detail">
           <img src="icons/chef.png" alt="">
-          <span>Facile</span>
+          <span><?php echo $recette->difficulty ?></span>
         </div>
   
         <div class="detail">
           <img src="icons/dollar.png" alt="">
-          <span>Bon marché</span>
+          <span><?php echo $ingredient->countElement() ?> Minutes</span>
         </div>
         
   
       </div>
 
-      
     
-<!--<div class="quantity__container">
-      <img id="remove" src="images/remove (1).png" alt="">
-      <span class="person__span">4 personnes</span>
-      <img id="add" src="images/add.png" alt="">
-    </div>-->
     
 
    <div class="detail__wrapper">
@@ -133,62 +142,24 @@ include("assets/mainHead.php"); ?>
       <div class="item__wrapper">
         <div class="mini__card--wrapper">
 
+
+        <?php 
+          foreach($ingredient as $ingredientItem ){
+        ?>
           <div class="mini__card">
           
-            <img src="icons/salt-shaker.png" alt="">
-            <input type="checkbox" name="check-btn" id="ingredient__checkbox">
-            <h3>1 cuillères à café</h3>
-            <h4>Sel</h4>
+            <img src="<?php 'data:image/jpeg;base64,".base64_encode($ingredientItem->image)."' ?>" alt="">
+           
+            <h3><?php echo $ingredientItem->quantity ?></h3>
+            <h4><?php echo $ingredientItem->name ?></h4>
   
           </div>
   
-          <div class="mini__card">
-            
-            <img src="icons/water.png" alt="">
-            <input type="checkbox" name="check-btn" id="ingredient__checkbox">
-            <h3>1 cuillères à café</h3>
-            <h4>Sel</h4>
-            
-          </div>
-          <div class="mini__card">
-            
-            <img src="icons/butter.png" alt="">
-            <input type="checkbox" name="check-btn" id="ingredient__checkbox">
-            <h3>1 cuillères à café</h3>
-            <h4>Sel</h4>
-            
-          </div>
-          <div class="mini__card">
-            
-            <img src="icons/milk.png" alt="">
-            <input type="checkbox" name="check-btn" id="ingredient__checkbox">
-            <h3>1 cuillères à café</h3>
-            <h4>Sel</h4>
-          </div>
+        
   
-          <div class="mini__card">
-            
-            <img src="icons/water.png" alt="">
-            <input type="checkbox" name="check-btn" id="ingredient__checkbox">
-            <h3>1 cuillères à café</h3>
-            <h4>Sel</h4>
-            
-          </div>
-  
-          <div class="mini__card">
-            
-            <img src="icons/salt-shaker.png" alt="">
-            <input type="checkbox" name="check-btn" id="ingredient__checkbox">
-            <h3>1 cuillères à café</h3>
-            <h4>Sel</h4>
-          </div>
-  
-          
+          <?php } ?>
         </div>
 
-        <div class="add__cart--btn">
-          <button class="ingredientBtn"><a href="#">Ajouter Panier</a></button>
-        </div>
       </div>
       
 
@@ -208,12 +179,12 @@ include("assets/mainHead.php"); ?>
 
       <div class="step__summary">
         <div class="step__summary--header"><strong
-        >Temps Total: </strong> 20 min</div>
+        >Temps Total: </strong><?php echo $recette->time?>min</div>
        
         <div class="step__summary--container">
           <div class="step__summary--content">
             <h4>Péparation:</h4>
-            <div>20 min</div>
+            <div><?php echo $recette->time?> min</div>
           </div>
 
           <div class="step__summary--content">
@@ -229,24 +200,12 @@ include("assets/mainHead.php"); ?>
         </div>
       </div>
       <ul>
+      <?php foreach($stepItem as $step){?>
         <li>
-          <h3>Etape1</h3>
-          <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+          <h3>Etape<?php echo $stepItem->number?></h3>
+          <span>$stepItem->name</span>
         </li>
-  
-        <li>
-          <h3>Etape2</h3>
-          <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit</span></li>
-  
-        <li>
-          <h3>Etape3</h3>
-          <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </span></li>
-        <li>
-          <h3>Etape4</h3>
-          <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </span></li>
-        <li>
-          <h3>Etape5</h3>
-          <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </span></li>
+        <?php } ?>
       </ul>
 
       
@@ -270,35 +229,15 @@ include("assets/mainHead.php"); ?>
         </span>
     </div>
 
-    <div class="add__image" >
-      <i class="fas fa-camera-retro"></i>
-      <a href="#">Ajouter ma photo</a>
-    </div>
+ 
   </div>
 
   
- <div class="comment__section">
-   <div class="input__container">
-    <input type="text" id="input" placeholder="Donnez Votre Avis...">
-    <button type="button" name="button" id="cancel">Annuler</button>
-    <button type="button" name="button" id="comment">commenter</button>
-   </div>
-    
-    <div class="box__container">
-      <div class="box"></div>
-    </div>
-  </div>
-  
-  
-</div>
+ 
 
 <script src="Js/starHover.js"></script>
-
-<!--<script src="js/serving.js"></script>-->
 <script src="testnav.js"></script>
-
 <script src="Js/slide.js"></script>
-
 <?php include 'footer.php' ?>
 <?php include_once 'assets/scripts.php' ?>
 <script src="js/main.js"></script>

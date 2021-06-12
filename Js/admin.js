@@ -130,7 +130,7 @@ minusIconIngre.addEventListener('click',()=>{
  });
 
  plusIconIngre.addEventListener('click',()=>{
-  addInputField(inputContainerMultipleIngre,2,'text',['ingredientName','ingredientQte']);
+  addInputField(inputContainerMultipleIngre,2,'text',['ingredient','quantity']);
 });
 
 
