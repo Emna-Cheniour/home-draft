@@ -23,7 +23,7 @@
           </div>
 
           <div class="link__item">
-            <a href="#" id="dropService">Services</a>
+            <a id="dropService">Services</a>
             <div class="hidden__services">
 
               <div class="service__hidden">

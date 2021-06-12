@@ -1,5 +1,7 @@
 <?php 
 require_once 'autoload.php';
-$specialist = new SpecialistRepository();
-$result= $specialist->findByNumbered(array('firstName'=>'nawres'),4,0);
-var_dump($result);
+
+$prRep= new ProductRepository();
+$minPrice= $prRep->getProducts(10,30,'price','ASC');
+
+var_dump($minPrice);

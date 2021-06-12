@@ -13,6 +13,7 @@ $recipeImg=$images->findBy(array('id'=> $recette->id));
 </head>
 
 <?php include_once 'preloader.php' ?>
+
   <?php include("navbarCo.php"); ?>
 <div class="recipe--page__container">
 
@@ -26,12 +27,12 @@ $recipeImg=$images->findBy(array('id'=> $recette->id));
 
         <div class="dropdown-list">
           <ul class="indicator">
-            <li><button><a href="#">Pâtes</a></button></li>
-            <li><button><a href="#">Plat Végétarien</a></button></li>
-            <li><button><a href="#">Salade</a></button></li>
-            <li><button><a href="#">Smoothie</a></button></li>
-            <li><button><a href="#">Plat Tunisien</a></button></li>
-            <li><button><a href="#">Pâtisseries</a></button></li>
+          <?php 
+            $recipeCats=new RecipeCatgeoryRepository();
+            foreach($recipeCats as $recipeCatItem)
+          ?>
+            <li><button><a href="?<?php echo $recipeCatItem['id']?>"><?php echo $recipeCatItem?></a></button></li>
+            
 
           </ul>
         </div>
@@ -63,14 +64,18 @@ $recipeImg=$images->findBy(array('id'=> $recette->id));
   <div class="card__wrapper">
    <?php 
    $recetteRepo=new RecipeRepository();
+   if(isset($_GET['id'])){
+     $recetteCat=$recipeCats->findBy(array('id'=>$recette->id));
+   }
    $recettes=$recette->findAll();
 
    
    foreach($recettes as $recette){
      $images=new recipeImageRepository();
-     $recipeImg=$images->findBy(array('id',$recette->id));
+     $recipeImg=$images->findBy(array('id'=>$recette->id));
      $ingredients=new IngredientRepository();
-     $ingredient=$ingredients->findBy(array('id',$recette->id));
+     
+     $ingredient=$ingredients->findBy(array('id'=>$recette->id));
           ?>
     <div class="card">
      

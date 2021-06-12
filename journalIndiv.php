@@ -11,17 +11,19 @@ $foodNOK=$foodAliments->findBy(array('id'=> $cat->id,'permission','false'));
 <link rel="stylesheet" href="css/journalIndiv.css">
 </head>
 <body>
+
+
 <?php include_once 'preloader.php' ?>
+
+
 <?php include_once 'navbarCo.php'?>
 
+
 <body>
-<div class="journalIndivContainer">
-      <div class="searchJournal__input">
-        <i class="fas fa-search" id="search__icon"></i>
-        <input id="search" placeholder="Rechercher..." type="text">
-
       </div>
-
+            <br>
+            <h1 class="c4 faded">Titre Des Produits</h1>
+            <div class="imgJournal"><img src="icons/produitLaitier.png"></div>
         <div class="rowJournalIndiv">
         <div class="allowed">
             <div class="journalTitre">
@@ -29,7 +31,6 @@ $foodNOK=$foodAliments->findBy(array('id'=> $cat->id,'permission','false'));
                     A privilégier
                     <img src="icons/winking.png">
                 </h4>
-            
             </div>
             <ul>
             <?php 

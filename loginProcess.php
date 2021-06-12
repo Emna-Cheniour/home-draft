@@ -9,11 +9,17 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
     $password = $_POST['password'];
     if (!empty($username) && !empty($password)) {
         $user = new UserRepository();
-        $response1 = $user->findByUsernamePwd($username, $password);
-       
-        
-        if ($response1) {
+        $admin = new AdminRepository();
+        $response1 =$user->findBy(array('username'=>$username, 'password'=>$password));
+        $response2= $admin->findBy(array('username'=>$username, 'password'=>$password));
+        if($response2){
             $_SESSION['user']=$username;
+            $_SESSION['role']='admin';
+            header('location:adminMain.php');
+        }
+       else if ($response1) {
+            $_SESSION['user']=$username;
+            $_SESSION['role']='user';
             header('location:acceuil.php');
         } else {
             $_SESSION['IncorrectFieldsError']="Veuillez vérifier vos informations personnelles";

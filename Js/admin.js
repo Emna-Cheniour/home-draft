@@ -13,14 +13,14 @@ for(let i=0;i<optionBtn.length;i++){
 
 
 
-var plusIconCat=document.querySelector('.multiple.cat #plusIcon');
-var minusIconCat=document.querySelector('.multiple.cat #minus');
+var plusIconCat=document.querySelector('.multiple.cat .plusIcon');
+var minusIconCat=document.querySelector('.multiple.cat .minus');
 
-var plusIconIngre=document.querySelector('.multiple.ingre #plusIcon');
-var minusIconIngre=document.querySelector('.multiple.ingre #minus');
+var plusIconIngre=document.querySelector('.multiple.ingre .plusIcon');
+var minusIconIngre=document.querySelector('.multiple.ingre .minus');
 
-var plusIconImg=document.querySelector('.multiple.img #plusIcon');
-var minusIconImg=document.querySelector('.multiple.img #minus');
+var plusIconImg=document.querySelector('.multiple.img .plusIcon');
+var minusIconImg=document.querySelector('.multiple.img .minus');
 
 
 var inputContainerMultipleCat=document.querySelector('.multiple.cat');
@@ -32,7 +32,7 @@ var inputContainerMultipleIngre=document.querySelector('.multiple.ingre');
 
 
 minusIconImg.addEventListener('click',()=>{
-
+  console.log("hi-");
   var input=document.querySelector('.multiple.img .form-group input');
   input.value="";
   
@@ -40,7 +40,7 @@ minusIconImg.addEventListener('click',()=>{
  });
 
  minusIconCat.addEventListener('click',()=>{
-
+  console.log("hi-");
   var input=document.querySelector('.multiple.cat .form-group input');
   input.value="";
 
@@ -48,7 +48,9 @@ minusIconImg.addEventListener('click',()=>{
  });
 
 plusIconCat.addEventListener('click',()=>{
+  console.log("hi+");
   addInputField(inputContainerMultipleCat,1,'text','category');
+
 });
 
 
@@ -68,6 +70,7 @@ plusIconImg.addEventListener('click',()=>{
 
 
 function addInputField(mainInputContainer,inputNumber,inputType,name){
+  console.log("hi");
 
   var newInputContainer=document.createElement('div');
   for(let j=0;j<inputNumber;j++){
@@ -101,7 +104,7 @@ function addInputField(mainInputContainer,inputNumber,inputType,name){
   }
   newMinus.classList.add('fas');
   newMinus.classList.add('fa-minus');
-  newMinus.setAttribute('id','minus');
+  newMinus.classList.add('minus');
 
   newMinus.setAttribute('style','margin:10px 0 0 10px; cursor:pointer');
   mainInputContainer.appendChild(newInputContainer);

@@ -21,6 +21,10 @@ if (isset($_SESSION['user'])) {
 </head>
 
 <body>
+  
+
+
+
   <div class="container <?php 
     if(isset($_SESSION['page'])){
       if($_SESSION['page']=='inscription'){
@@ -75,7 +79,7 @@ if (isset($_SESSION['user'])) {
           </div>
           <div class="input__field">
             <i class="fas fa-envelope"></i>
-            <input type="email" name="email" placeholder="Email">
+            <input type="text" name="email" placeholder="Email">
           </div>
           <div class="input__field">
             <i class="fas fa-lock"></i>

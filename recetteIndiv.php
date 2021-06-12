@@ -24,6 +24,7 @@ $step=$steps->findBy(array('id'=> $recette->id));
 <body>
   
 <?php include_once 'preloader.php' ?>
+
   <?php include("navbarCo.php"); ?>
   
 

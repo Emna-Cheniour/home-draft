@@ -1,5 +1,6 @@
-const hiddenService=document.querySelector('header nav .nav__links .link__item .hidden__services');
-const service=document.querySelector('#dropService');
+var hiddenService=document.querySelector('.nav__links .link__item .hidden__services');
+var service=document.querySelector('#dropService');
+console.log(hidden);
 
 service.addEventListener('click',()=>{
 

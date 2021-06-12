@@ -7,6 +7,19 @@
     margin: 5% auto;
     color: #fff; 
 }
+.counter-section > .row{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+@media screen and (max-width:750px) {
+    .counter-section > .row {
+        grid-template-columns: 1fr;
+    }
+}
+.counter-box{
+    text-align: center;
+}
 .iconbox{
     border: 1px solid #fff;
     height: 100px;

@@ -1,0 +1,29 @@
+.welcomeAdmin{
+    color: #137c8b;
+    letter-spacing: 1px;
+    text-align: center;
+    padding: 20px;
+}
+.admin{
+    display: flex;
+    flex-direction: row;
+}
+.admin .adminPoster{
+    width: 60%;
+}
+.admin .adminPoster img{
+    max-width: 100% ;
+    display: flex;
+    margin: auto;
+}
+.admin .admin_fonctions{
+    
+    width: 40%;
+}
+.add{
+    margin: auto !important;
+}
+.add__admin{
+    padding: 0;
+    margin: 0;
+}

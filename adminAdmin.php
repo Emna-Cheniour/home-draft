@@ -6,6 +6,11 @@
 ?>
 
 <body>
+  
+
+<?php include_once 'preloader.php' ?>
+
+
 <div class="container">
   
 </div>

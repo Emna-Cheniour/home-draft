@@ -1,10 +1,82 @@
 <?php
 
+include_once 'autoload.php';
 include_once 'assets/bootstrapAsset.php';
+session_start();
+include_once 'isAdmin.php';
+
+if (isset($_POST['addRecipe'])) {
+$title = $_POST['title'];
+$description = $_POST['description'];
+$difficulty = $_POST['difficulty'];
+$time= $_POST['time'];
+
+$categories = [];
+$images=[];
+$ingredients =[];
+$quantities= [];
+
+foreach (array_slice($_POST, 4) as $key => $post) {
+  if (!(strpos($key, "category") === false)) {
+    array_push($categories, $post);
+  }
+}
+$recipe = new RecipeRepository();
+$recipeImage = new RecipeImageRepository();
+$recipeIngredient = new IngredientRepository();
+
+foreach ($_FILES as $key => $file) {
+  if (!(strpos($key, "image") === false)) {
+    array_push($images, $file);
+  }
+}
+
+foreach ($_POST as $key => $post) {
+  if (!(strpos($key, "ingredient") === false)) {
+    array_push($ingredients, $post);
+    
+  }
+  if (!(strpos($key, "quantity") === false)) {
+    array_push($quantities, $post);
+    
+  }
+}
+
+
+  
+  $recipe->insertRecipe(array($title, $description, $time, $difficulty));
+
+  $myRecipe = $recipe->findOneBy(array("title" => $title));
+  $recipeCategory = new RecipeCategoryRepository();
+  $recipeCategoryRel = new RecipeCategoryRelRepository();
+  foreach ($categories as $category) {
+    $result = $recipeCategory->findOneBy(array('name' => $category));
+    if ($result) {
+      $recipeCategoryRel->insert(array("categoryId" => $result['id'], 'recipeId' => $myRecipe['id']));
+    } else {
+      $recipeCategory->insert(array("name" => $category));
+      $myCategory = $recipeCategory->findOneBy(array('name' => $category));
+      $recipeCategoryRel->insert(array("categoryId" => $myCategory['id'], 'recipeId' => $myRecipe['id']));
+    };
+  }
+  foreach ($images as $image) {
+    $img_blob = file_get_contents($image['tmp_name']);
+    
+    $recipeImage->insert(array("image"=>$img_blob,"recipeId"=>$myRecipe['id']) );
+
+  }
+  $recipeIngredientRel = new RecipeIngredientRelRepository();
+  for($i=0;$i<$ingredients.length;$i++) {
+
+      $recipeIngredientRel->insert(array("categoryId" => $ingredients[$i]['id'],'quantity' => $quantities[$i], 'recipeId' => $myRecipe['id']));
+    
+
+  }
+}
 ?>
 
 <body>
-
+<?php include_once 'preloader.php' ?>
 <div class="container">
   
 </div>
@@ -79,9 +151,9 @@ include_once 'assets/bootstrapAsset.php';
       <div class="multiple ingre">
           <div class="form-group">
               
-              <input type="text"  name="ingredientName" class="form-control" placeholder="Entrer Ingrédient" style="margin-right:10px">
+              <input type="text"  name="ingredient" class="form-control" placeholder="Entrer Ingrédient" style="margin-right:10px">
 
-              <input  type="text" name="ingredientQte"  class="form-control" placeholder="Entrer Quantité">
+              <input  type="text" name="quantity"  class="form-control" placeholder="Entrer Quantité">
 
               <i class="fas fa-plus" id="plusIcon" style="margin:10px 0 0 10px; cursor:pointer"></i>
               <i class="fas fa-minus" id="minus" style="margin:10px 0 0 10px; cursor:pointer"></i>

@@ -11,7 +11,10 @@ include_once 'assets/bootstrapAsset.php'
 
 
 <body>
+
+
 <?php include_once 'preloader.php' ?>
+
 <?php 
 include_once 'navbarCo.php'?>
 

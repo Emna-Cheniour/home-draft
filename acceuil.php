@@ -1,7 +1,6 @@
 <?php include("assets/mainHead.php");
 
-//include 'isAuthentificated.php';
-
+session_start();
 
 
 ?>
@@ -9,12 +8,10 @@
 <body>
     <?php include_once 'preloader.php' ?>
     <?php
-    session_start();
-    if (isset($_SESSION['user'])) {
+if (isset($_SESSION['user'])) {
 
-        $username = $_SESSION['user'];
         include("navbarCo.php");
-        include_once 'profileProgress.php';
+        /*include_once 'profileProgress.php';
         $infoCount *= 10;
         if ($infoCount != 100) {
           
@@ -28,7 +25,7 @@
 
                
            </div> <?php
-        }
+        }*/
     } else {
         include "navbarDeco.php";
     }
