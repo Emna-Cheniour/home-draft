@@ -1,6 +1,35 @@
-<?php
+<?php session_start();
+include_once 'autoload.php';
+
 
 include_once 'assets/bootstrapAsset.php';
+
+$product = new ProductRepository();
+
+if (isset($_POST['name']) && isset($_POST['description']) && isset($_POST['price']) && isset($_POST['promotion']) && isset($_FILES['productImg'])  && isset($_POST['quantity'])) {
+
+    if (!empty($_POST['name']) && !empty($_POST['price']) && !empty($_POST['description']) && !empty($_POST['promotion']) && !empty($_POST['quantity']) && !empty($_FILES['productImg'])) {
+
+        $name=$_POST['name'];
+        $description=$_POST['description'];
+        $quantity=$_POST['quantity'];
+        $price=$_POST['price'];
+        $promotion=$_POST['promotion'];
+
+
+
+
+           
+
+                $img_blob = file_get_contents($_FILES['productImg']['tmp_name']);
+                $product->add();
+
+
+                header('location:shopping.php');
+            } 
+        } 
+    }
+}
 ?>
 
 <body>
@@ -66,9 +95,9 @@ include_once 'assets/bootstrapAsset.php';
       <div class="multiple img">
         <div class="form-group">
 
-          <!--<button  style="width:100px;" id="images" onclick="document.querySelector('#formFile').click();return false">Upload</button>-->
           
-          <input class="form-control" name="recipeImg" id="formFile" type="file"  accep="image/" >
+          
+          <input class="form-control" name="productImg" id="formFile" type="file"  accep="image/" >
 
           <i class="fas fa-plus" id="plusIcon" style="margin:10px 0 0 10px; cursor:pointer"></i>
           <i class="fas fa-minus" id="minus" style="margin:10px 0 0 10px; cursor:pointer"></i>

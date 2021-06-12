@@ -1,6 +1,10 @@
 <?php
 
 include_once 'assets/bootstrapAsset.php';
+
+
+
+
 ?>
 
 <body>
@@ -38,10 +42,10 @@ include_once 'assets/bootstrapAsset.php';
 
     </div>
 
-    <form>
+    <form method="post" action="addFoodElement.php">
       <div class="form-group">
         
-        <input type="text" class="form-control" placeholder="Nom Aliment">
+        <input type="text" class="form-control" name="name" placeholder="Nom Aliment">
       
       </div>
 
@@ -53,6 +57,7 @@ include_once 'assets/bootstrapAsset.php';
         <option value="produit laitiers">Produits Laitiers</option>
         <option value="conserves">Conserves</option>
         <option value="lipide">Lipides</option>
+       
       </select>
 
     
