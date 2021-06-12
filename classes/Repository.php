@@ -56,7 +56,7 @@ class Repository
         if ($limit >= count($result)) {
             $limit = count($result);
         }
-        
+
         $end = $offset + $limit - 1;
         if ($offset > count($result)) {
             return null;
@@ -122,10 +122,11 @@ class Repository
         foreach (array_slice($criterias['value'], 1) as $keyValue => $criteriaValue) {
             $request = $request . " , " . $keyValue . " = ?";
         }
-        $request = $request . " Where " . array_key_first($criterias['where']) . "=?";
+        $request = $request . " where " . array_key_first($criterias['where']) . "=?";
         foreach (array_slice($criterias['where'], 1) as $keyWhere => $criteriaWhere) {
             $request = $request . " and where  " . $keyWhere . " = ?";
         }
+        echo $request;
         $response = $this->bd->prepare($request);
         $i = 1;
         foreach ($criterias['value'] as $keyValue => $criteriaValue) {
@@ -138,16 +139,19 @@ class Repository
         }
         $response->execute();
     }
-    public function max($criteria){
-        $request ='SELECT MAX('.$criteria.') FROM '. $this->tableName ;
+    public function max($criteria)
+    {
+        $request = 'SELECT MAX(' . $criteria . ') FROM ' . $this->tableName;
         $response = $this->bd->prepare($request);
         $response->execute();
         return $response->fetchColumn();
     }
-    public function min($criteria){
-        $request ='SELECT MIN('.$criteria.') FROM '. $this->tableName ;
+    public function min($criteria)
+    {
+        $request = 'SELECT MIN(' . $criteria . ') FROM ' . $this->tableName;
         $response = $this->bd->prepare($request);
         $response->execute();
         return $response->fetchColumn();
     }
+   
 }

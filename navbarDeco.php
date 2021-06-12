@@ -1,5 +1,5 @@
 <?php include_once 'assets/mainHead.php';?>
-<link rel="stylesheet" href="testnav.css">
+<link rel="stylesheet" href="css/testnav.css">
 <link rel="stylesheet" href="css/navbar.css">
 
 </head>

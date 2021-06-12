@@ -56,7 +56,7 @@ var searchFilters = document.querySelector('.searchFilters');
 /*/**/
 
 var a = {};
-a["tri"] = "Nouveau produits"
+a["tri"] = "Nouveaux produits"
 $(document).ready(function () {
   $(".productCategoryOptions > div").each(function () {
     $(this).click(function () {

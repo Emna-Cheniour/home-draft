@@ -1,12 +1,30 @@
 <?php
 session_start();
 include_once 'assets/bootstrapAsset.php';
+include_once 'autoload.php';
+
+if(isset($_POST['submit'])){
+  $firstName=$_POST['firstName'];
+  $lastName=$_POST['lastName'];
+  $email=$_POST['email'];
+  $address=$_POST['address'];
+  $phoneNumber=$_POST['phoneNumber'];
+  $profession=$_POST['profession'];
+  $description=$_POST['description'];
+
+  $specialist=new SpecialistRepository();
+
+  $specialist->insertSpecialist(array('lastName' => $lastName, 'firstName' => $firstName, 'email' => $email, 'address' => $address,'phoneNumber' => $phoneNumber,'profession' => $profession,'description' =>$description));
+
+
+}
+
 ?>
 
 <body>
 
 
-<?php include_once 'preloader.php' ?>
+
 
 
 <div class="container">
@@ -45,7 +63,7 @@ include_once 'assets/bootstrapAsset.php';
 
     </div>
 
-    <form method="post" action="addSpecialistProcess.php">
+    <form method="post" action="addSpecialist.php">
       <div class="form-group">
         
         <input type="text" name="lastName" class="form-control" placeholder="Nom Spécialiste">
@@ -64,6 +82,11 @@ include_once 'assets/bootstrapAsset.php';
         <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email Spécialiste">
       
       </div>
+      <div class="form-group">
+      
+      <input type="text" name="description" class="form-control" placeholder="description">
+    
+    </div>
 
       <div class="form-group">
       
@@ -73,7 +96,7 @@ include_once 'assets/bootstrapAsset.php';
 
       <div class="form-group">
       
-        <input type="text" name="adress" class="form-control" placeholder="Adresse Spécialiste">
+        <input type="text" name="address" class="form-control" placeholder="Adresse Spécialiste">
       
       </div>
 
@@ -83,23 +106,9 @@ include_once 'assets/bootstrapAsset.php';
       
       </div>
 
-      <?php 
-            if(isset($_SESSION['addError'])){ ?>
-
-              <div class="alert alert-danger" class="close">
-                  
-                  <?= $_SESSION['addError'] ?>
-                  <a><i class="fas fa-times"></i></a>
-                
-                </div>
-              
-            <?php }
-            unset($_SESSION['addError']);
-            ?>
-
       
     
-      <button type="submit" class="btn btn3">Submit</button>
+      <button type="submit" name="submit" class="btn btn3">Submit</button>
     </form>
 
   </div>

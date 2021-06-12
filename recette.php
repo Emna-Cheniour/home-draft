@@ -12,7 +12,6 @@ $recipeImg=$images->findBy(array('id'=> $recette->id));
 
 </head>
 
-<?php include_once 'preloader.php' ?>
 
   <?php include("navbarCo.php"); ?>
 <div class="recipe--page__container">

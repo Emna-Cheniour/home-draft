@@ -22,8 +22,14 @@ foreach (array_slice($_POST, 4) as $key => $post) {
   }
 }
 $recipe = new RecipeRepository();
-$recipeImage = new RecipeImageRepository();
+
+$recipeImage = new RecipePictureRepository();
+
 $recipeIngredient = new IngredientRepository();
+$recipeIngredientRel = new RecipeIngredientRelRepository();
+
+$recipeCategory = new RecipeCategoryRepository();
+$recipeCategoryRel = new RecipeCategoryRelRepository();
 
 foreach ($_FILES as $key => $file) {
   if (!(strpos($key, "image") === false)) {
@@ -47,8 +53,7 @@ foreach ($_POST as $key => $post) {
   $recipe->insertRecipe(array($title, $description, $time, $difficulty));
 
   $myRecipe = $recipe->findOneBy(array("title" => $title));
-  $recipeCategory = new RecipeCategoryRepository();
-  $recipeCategoryRel = new RecipeCategoryRelRepository();
+ 
   foreach ($categories as $category) {
     $result = $recipeCategory->findOneBy(array('name' => $category));
     if ($result) {
@@ -65,7 +70,7 @@ foreach ($_POST as $key => $post) {
     $recipeImage->insert(array("image"=>$img_blob,"recipeId"=>$myRecipe['id']) );
 
   }
-  $recipeIngredientRel = new RecipeIngredientRelRepository();
+
   for($i=0;$i<$ingredients.length;$i++) {
 
       $recipeIngredientRel->insert(array("categoryId" => $ingredients[$i]['id'],'quantity' => $quantities[$i], 'recipeId' => $myRecipe['id']));
@@ -76,7 +81,7 @@ foreach ($_POST as $key => $post) {
 ?>
 
 <body>
-<?php include_once 'preloader.php' ?>
+
 <div class="container">
   
 </div>
@@ -111,7 +116,7 @@ foreach ($_POST as $key => $post) {
 
     </div>
 
-    <form method="post"  enctype="multipart/form-data">
+    <form method="post"  method="addRecipe.php" enctype="multipart/form-data">
 
       <div class="addForm">
       <div class="form-group">
@@ -155,8 +160,8 @@ foreach ($_POST as $key => $post) {
 
               <input  type="text" name="quantity"  class="form-control" placeholder="Entrer Quantité">
 
-              <i class="fas fa-plus" id="plusIcon" style="margin:10px 0 0 10px; cursor:pointer"></i>
-              <i class="fas fa-minus" id="minus" style="margin:10px 0 0 10px; cursor:pointer"></i>
+              <i class="fas fa-plus plusIcon" style="margin:10px 0 0 10px; cursor:pointer"></i>
+              <i class="fas fa-minus minus" style="margin:10px 0 0 10px; cursor:pointer"></i>
 
       
               </div>
@@ -172,8 +177,8 @@ foreach ($_POST as $key => $post) {
           
           <input class="form-control" name="recipeImg" id="formFile" type="file"  >
 
-          <i class="fas fa-plus" id="plusIcon" style="margin:10px 0 0 10px; cursor:pointer"></i>
-          <i class="fas fa-minus" id="minus" style="margin:10px 0 0 10px; cursor:pointer"></i>
+          <i class="fas fa-plus plusIcon" style="margin:10px 0 0 10px; cursor:pointer"></i>
+          <i class="fas fa-minus minus" style="margin:10px 0 0 10px; cursor:pointer"></i>
 
         </div>
     
@@ -184,8 +189,8 @@ foreach ($_POST as $key => $post) {
       <div class="form-group">
           <input type="text" name="category" class="form-control" placeholder="Entrer Catégorie" style="margin-right:10px">
 
-          <i class="fas fa-plus" id="plusIcon" style="margin:10px 0 0 10px; cursor:pointer"></i>
-          <i class="fas fa-minus" id="minus" style="margin:10px 0 0 10px; cursor:pointer"></i>
+          <i class="fas fa-plus plusIcon" style="margin:10px 0 0 10px; cursor:pointer"></i>
+          <i class="fas fa-minus minus" style="margin:10px 0 0 10px; cursor:pointer"></i>
 
         </div>
 
@@ -199,7 +204,7 @@ foreach ($_POST as $key => $post) {
 
      
     
-      <button type="submit" class="btn btn3">Submit</button>
+      <button type="submit" name="addRecipe" class="btn btn3">Submit</button>
     </form>
 
   </div>
