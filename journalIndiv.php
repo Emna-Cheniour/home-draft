@@ -2,8 +2,13 @@
 <link rel="stylesheet" href="css/journalIndiv.css">
 </head>
 <body>
+
+
 <?php include_once 'preloader.php' ?>
+
+
 <?php include_once 'navbarCo.php'?>
+
 
 <body>
 <div class="journalIndivContainer">
