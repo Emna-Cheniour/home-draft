@@ -56,27 +56,22 @@ include_once 'navbarCo.php'?>
   
    <div class="card__wrapper">
    <?php 
-   $doctor=new DoctorRepository();
-   ?>
-
-   
-
+   $doctors=new SpecialistRepository();
+    foreach($doctor as $doctors){
+  ?>
     <div class="card">
      
       <div class="card__body">
         <img src="images/nutritionist.png" class="card__img spec">
-        <?php 
-           
-           $query=$doctor->showElement(1);
-        ?>
-        <h2 class="card__title spec"><?php echo $query->name?></h2>
+        
+        <h2 class="card__title spec"><?php echo ($doctor->lastName ."". $doctor->firstName)?></h2>
 
         <div class="card__detail">
     
           </div>
 
         <p class="card__description spec">
-        <?php echo $query->profession?>
+        <?php echo $doctor->profession?>
         </p>
 
         <div class="card__options">
@@ -87,6 +82,7 @@ include_once 'navbarCo.php'?>
     
 
     </div>
+    <?php } ?>
     
   
   </div>

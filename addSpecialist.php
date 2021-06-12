@@ -9,41 +9,7 @@ include_once 'assets/bootstrapAsset.php';
 <div class="container">
   
 </div>
-<table class="table table-hover">
-  <thead>
-    <tr>
-      <th scope="col"><h4 style="color:#5FC2BA">Nom</h4></th>
-      <th scope="col"><h4 style="color:#5FC2BA">Prénom</h4></th>
-      <th scope="col"><h4 style="color:#5FC2BA">Email</h4></th>
-      <th scope="col"><h4 style="color:#5FC2BA">Profession</h4></th>
-      <th scope="col"><h4 style="color:#5FC2BA">Adresse</h4></th>
-      <th scope="col"><h4 style="color:#5FC2BA">Numéro De Téléphone</h4></th>
-      <th scope="col"></th>
-      
-      
-    </tr>
 
-  </thead>
-  <tbody>
-  <tbody>
-    <tr class="user__row">
-      <td>Ncib</td>
-      <td>Nawres</td>
-      <td>nawresncib@yahoo.com</td>
-      <td>Gastrologue</td>
-      <td>Ariana</td>
-      <td>55265847</td>
-      <td><i class="fas fa-trash delete"></i></td>
-    </tr>
-
-   
-
-  </tbody>
-   
-   
-   
-  </tbody>
-</table>
 <div class="container add">
   
   <div class="add__admin">
