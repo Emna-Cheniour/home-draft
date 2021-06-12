@@ -1,5 +1,7 @@
 <?php 
 require_once 'autoload.php';
-$specialist = new SpecialistRepository();
-$result= $specialist->findByNumbered(array('firstName'=>'nawres'),4,0);
-var_dump($result);
+$specialist = new ProductRepository();
+$result=$specialist->findOneBy(array('name'=>"p"));
+var_dump($result['id']);
+//  $specialist = new UserRepository();
+//  $specialist->insert(array("username"=>"c","password"=>"hi","email"=>"hh"));

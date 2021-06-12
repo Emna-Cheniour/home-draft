@@ -56,22 +56,23 @@ include_once 'navbarCo.php'?>
   
    <div class="card__wrapper">
    <?php 
-   $doctors=new SpecialistRepository();
-    foreach($doctor as $doctors){
+   $spRep=new SpecialistRepository();
+   $specialists=$spRep->findAll();
+    foreach($specialists as $specialist){
   ?>
     <div class="card">
      
       <div class="card__body">
         <img src="images/nutritionist.png" class="card__img spec">
         
-        <h2 class="card__title spec"><?php echo ($doctor->lastName ."". $doctor->firstName)?></h2>
+        <h2 class="card__title spec"><?php echo ($specialist->lastName ."". $specialist->firstName)?></h2>
 
         <div class="card__detail">
     
           </div>
 
         <p class="card__description spec">
-        <?php echo $doctor->profession?>
+        <?php echo $specialist->profession?>
         </p>
 
         <div class="card__options">

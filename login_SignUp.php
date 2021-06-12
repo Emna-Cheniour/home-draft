@@ -75,7 +75,7 @@ if (isset($_SESSION['user'])) {
           </div>
           <div class="input__field">
             <i class="fas fa-envelope"></i>
-            <input type="email" name="email" placeholder="Email">
+            <input type="text" name="email" placeholder="Email">
           </div>
           <div class="input__field">
             <i class="fas fa-lock"></i>

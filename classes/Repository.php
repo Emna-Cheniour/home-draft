@@ -60,7 +60,7 @@ class Repository
         }
         $response->execute();
 
-        return $response->fetchAll(PDO::FETCH_OBJ);
+        return $response->fetchAll(PDO::FETCH_ASSOC);
     }
     public function findOneBy($criterias)
     {
@@ -79,7 +79,7 @@ class Repository
         }
         $response->execute();
 
-        return $response->fetch(PDO::FETCH_OBJ);
+        return $response->fetch(PDO::FETCH_ASSOC);
     }
     public function findByNumbered($criterias, $limit, $offset)
     {
@@ -104,7 +104,7 @@ class Repository
         $request = "select * from " . $this->tableName;
         $response = $this->bd->prepare($request);
         $response->execute();
-        return $response->fetchAll(PDO::FETCH_OBJ);
+        return $response->fetchAll(PDO::FETCH_ASSOC);
     }
 
     public function findOne()
@@ -112,7 +112,7 @@ class Repository
         $request = "select * from " . $this->tableName;
         $response = $this->bd->prepare($request);
         $response->execute();
-        return $response->fetch(PDO::FETCH_OBJ);
+        return $response->fetch(PDO::FETCH_ASSOC);
     }
 
     public function getRandomId()

@@ -5,7 +5,6 @@
 </head>
 
 <body>
-<?php include_once 'preloader.php' ?>
 <?php 
     session_start();
     if (isset($_SESSION['user'])){

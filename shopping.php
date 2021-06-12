@@ -1,6 +1,8 @@
 <?php
 
 include_once 'assets/mainHead.php';
+session_start();
+require_once 'isAuthentificated.php';
 if (isset($_POST['sendReview'])) {
     echo $_POST['rating'];
     echo $_POST['reviewComment'];

@@ -8,16 +8,8 @@ for(let i=0;i<optionBtn.length;i++){
   });
 }
 
-
-
-
-
-
 var plusIconCat=document.querySelector('.multiple.cat .plusIcon');
 var minusIconCat=document.querySelector('.multiple.cat .minus');
-
-var plusIconIngre=document.querySelector('.multiple.ingre .plusIcon');
-var minusIconIngre=document.querySelector('.multiple.ingre .minus');
 
 var plusIconImg=document.querySelector('.multiple.img .plusIcon');
 var minusIconImg=document.querySelector('.multiple.img .minus');
@@ -25,9 +17,9 @@ var minusIconImg=document.querySelector('.multiple.img .minus');
 
 var inputContainerMultipleCat=document.querySelector('.multiple.cat');
 var inputContainerMultipleImg=document.querySelector('.multiple.img');
-var inputContainerMultipleIngre=document.querySelector('.multiple.ingre');
 
-
+var iCat=2;
+var iImg=2;
 
 
 
@@ -48,8 +40,8 @@ minusIconImg.addEventListener('click',()=>{
  });
 
 plusIconCat.addEventListener('click',()=>{
-  console.log("hi+");
-  addInputField(inputContainerMultipleCat,1,'text','category');
+  addInputField(inputContainerMultipleCat,'text','category',iCat);
+  iCat++;
 
 });
 
@@ -59,7 +51,8 @@ plusIconCat.addEventListener('click',()=>{
 
 
 plusIconImg.addEventListener('click',()=>{
-  addInputField(inputContainerMultipleImg,1,'file','recipeImg');
+  addInputField(inputContainerMultipleImg,'file','recipeImg',iImg);
+  iImg++;
 });
 
  
@@ -69,11 +62,11 @@ plusIconImg.addEventListener('click',()=>{
 
 
 
-function addInputField(mainInputContainer,inputNumber,inputType,name){
+function addInputField(mainInputContainer,inputType,name,i){
   console.log("hi");
 
   var newInputContainer=document.createElement('div');
-  for(let j=0;j<inputNumber;j++){
+  
    
 
     
@@ -91,9 +84,9 @@ function addInputField(mainInputContainer,inputNumber,inputType,name){
       
       newInput.setAttribute('type',inputType);
       newInput.setAttribute('style',' margin-right:10px');
-      newInput.setAttribute('name',name[j]);
+      newInput.setAttribute('name',name+i);
       
-      
+      newInput.setAttribute('placeholder',name+i);
       
       newInputContainer.appendChild(newInput);
       newInputContainer.appendChild(newMinus);
@@ -101,7 +94,6 @@ function addInputField(mainInputContainer,inputNumber,inputType,name){
     
   
 
-  }
   newMinus.classList.add('fas');
   newMinus.classList.add('fa-minus');
   newMinus.classList.add('minus');
@@ -121,17 +113,6 @@ function addInputField(mainInputContainer,inputNumber,inputType,name){
 }
 
 
-minusIconIngre.addEventListener('click',()=>{
-
-  var input=document.querySelectorAll('.multiple.ingre .form-group input');
-  input[0].value="";
-  input[1].value="";
- 
- });
-
- plusIconIngre.addEventListener('click',()=>{
-  addInputField(inputContainerMultipleIngre,2,'text',['ingredientName','ingredientQte']);
-});
 
 
 

@@ -32,5 +32,3 @@
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 
     <link rel="stylesheet" href="css/specialistGroup.css">
-    <title>Celiac101</title>
-</head>
