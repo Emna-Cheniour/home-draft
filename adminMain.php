@@ -9,27 +9,12 @@ include_once 'assets/bootstrapAsset.php';
 <body>
 
 
-<<<<<<< HEAD
   <h1 class="welcomeAdmin">Bienvenu <?= $_SESSION['user'] ?></h1>
   <div class="admin">
     <div class="adminPoster ">
       <img src="images/mainAdmin.jpg" alt="">
     </div>
     <div class="admin__fonctions">
-=======
-<?php include_once 'preloader.php' ?>
-
-
-
-  <div class="progress__result">
-    <p>
-      BIENVENU ADMIN 
-    </p>
-
-  </div>
-
-  <div class="admin__fonctions">
->>>>>>> 6fe60055a110d2ffcbfc87d5eadde94b4eff7646
 
       <div class="section__admin">
         <div class="services__btn default"><button class="btn btn1 btnServ">Gérer Les Comptes</button></div>

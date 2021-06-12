@@ -4,6 +4,8 @@ include_once 'autoload.php';
 include_once 'assets/bootstrapAsset.php';
 session_start();
 include_once 'isAdmin.php';
+
+if (isset($_POST['addProduct'])) {
 $name = $_POST['name'];
 $description = $_POST['description'];
 $price = $_POST['price'];
@@ -23,13 +25,11 @@ foreach ($_FILES as $key => $file) {
     array_push($images, $file);
   }
 }
-var_dump($images);
-if (isset($_POST['addProduct'])) {
   
 
 
   $product = new ProductRepository();
-  $product->insertProduct(array($name, $description, $quantity, $price, $promotion));
+  $product->insertProduct(array($name, $description, $quantity, $price, $promotion, date("y-m-d")));
   $myProdcut = $product->findOneBy(array("name" => $name));
   $productCategory = new ProductCategoryRepository();
   $productCategoryRel = new ProductCategoryRelRepository();
@@ -44,7 +44,6 @@ if (isset($_POST['addProduct'])) {
     };
   }
   foreach ($images as $image) {
-    var_dump($image);
     $img_blob = file_get_contents($image['tmp_name']);
     
     $productImage->insert(array("image"=>$img_blob,"productId"=>$myProdcut['id']) );
@@ -151,7 +150,7 @@ if (isset($_POST['addProduct'])) {
 
 
 
-        <input type="submit" name="addProduct" class="btn btn3">Submit</button>
+        <button type="submit" name="addProduct" class="btn btn3">Submit</button>
       </form>
 
     </div>

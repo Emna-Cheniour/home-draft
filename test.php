@@ -1,7 +1,7 @@
 <?php 
 require_once 'autoload.php';
-$specialist = new ProductRepository();
-$result=$specialist->findOneBy(array('name'=>"p"));
-var_dump($result['id']);
-//  $specialist = new UserRepository();
-//  $specialist->insert(array("username"=>"c","password"=>"hi","email"=>"hh"));
+
+$prRep= new ProductRepository();
+$minPrice= $prRep->getProducts(10,30,'price','ASC');
+
+var_dump($minPrice);
