@@ -1,7 +1,8 @@
-<?php 
+<?php
 require_once 'autoload.php';
 
-$prRep= new ProductRepository();
-$minPrice= $prRep->getProducts(10,30,'price','ASC');
+$rp =new ProductRepository();
+$result= $rp->update(array('where'=>array("id"=>28),'value'=>array('price'=>35,'promotion'=>5)));
 
-var_dump($minPrice);
+
+var_dump($result);

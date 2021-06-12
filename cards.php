@@ -1,8 +1,11 @@
 <?php
-
 include_once("autoload.php");
+var_dump($_POST);
 $prRep = new ProductRepository();
 $prImRep = new ProductImageRepository();
+$prCatRep = new ProductCategoryRepository();
+$prCatRelRem = new ProductCategoryRelRepository();
+
 if ($_POST['tri'] == "Prix Croissant") {
   $criteria = "price";
   $order = "ASC";
@@ -14,7 +17,7 @@ if ($_POST['tri'] == "Prix Croissant") {
   $order = "DESC";
 };
 $minPrice = $_POST['minPrice'];
-$minPrice = $_POST['maxPrice'];
+$maxPrice = $_POST['maxPrice'];
 $categories = [];
 foreach (array_slice($_POST, 3) as $key => $value) {
   array_push($categories, $value);
@@ -22,8 +25,11 @@ foreach (array_slice($_POST, 3) as $key => $value) {
 echo "<h3>";
 print_r($categories);
 echo "</h3>";
-
-$products = $prRep->getProducts(10, 30, 'price', 'ASC');
+if (empty($categories)) {
+  $products = $prRep->getProducts($minPrice, $maxPrice, $criteria, $order);
+} else {
+  $products = $prCatRelRem->productByCat($minPrice, $maxPrice, $categories, $criteria, $order);
+}
 foreach ($products as $product) {
 
   $image = $prImRep->findOneBy(array('productId' => $product['id']))
@@ -33,12 +39,28 @@ foreach ($products as $product) {
       <img src=<?php echo "data:image/jpeg;base64," . base64_encode($image['image']) ?> alt="">
     </div>
     <div class="productDetails">
-      <h4><?= $product['name'] ?></h4>
+      <h4><?= $product['name']?></h4>
       <h4><?= $product['price'] ?>Dt</h4>
-      <a>
-        <i class="fas fa-eye"></i>
-        <h4>View product</h4>
-      </a>
+
+      <?php
+      
+      if ($_SESSION['role'] = 'admin') { ?>
+        <a href="addProduct.php?edit=<?=$product['id']?>">
+          <i class="fas fa-pen"></i>
+        </a>
+        <a href="addProduct.php?remove=<?=$product['id']?>">
+        <i class="fas fa-times-circle"></i>
+        </a>
+      <?php } else {
+      ?>
+        <a >
+          <i class="fas fa-eye"></i>
+          <h4>View product</h4>
+        </a>
+      <?php }
+
+      ?>
+
     </div>
   </div>
 <?php

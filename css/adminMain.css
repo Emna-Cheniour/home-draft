@@ -27,3 +27,10 @@
     padding: 0;
     margin: 0;
 }
+.form-group h5{
+    color: #137c8b !important;
+    padding: 5px;
+    vertical-align: middle;
+    text-align: center;
+    width: 200px;
+}

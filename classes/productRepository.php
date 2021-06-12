@@ -34,6 +34,14 @@ class ProductRepository extends Repository
         $response->execute();
         return $response->fetchAll(PDO::FETCH_ASSOC);
      }
+    //  public function getProductsByCat($min,$max,$criteria,$order,$categories){
+    //     $request = "Select * from product where price >= ? and price <=? Order By ".$criteria." ".$order ;
+    //     $response = $this->bd->prepare($request);
+    //     $response->bindValue(1,$min);
+    //     $response->bindValue(2,$max);
+    //     $response->execute();
+    //     return $response->fetchAll(PDO::FETCH_ASSOC);
+    //  }
 
 }
 ?>
