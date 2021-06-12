@@ -37,7 +37,7 @@ include_once ("autoload.php");
       }
       else {
         header('location:addSpecialist.php');
-      }
+      }s
   
 
 
