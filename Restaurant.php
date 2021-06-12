@@ -75,6 +75,10 @@ include_once 'assets/mainHead.php';
             </div>
         </div>
     </div>
+    </div>
+    <div id="Local"></div>
+    <br>
+    <br>
     <div id="effect" class="wavy restolocation">
         <span style="--i:1;">L</span>
         <span style="--i:2;">O</span>
@@ -107,7 +111,7 @@ include_once 'assets/mainHead.php';
       </div>
     <!--The div element for the map -->
     <div id="map"></div>
-</div>
+
     <?php include("footer.php"); ?>
  <!--script pour map-->
  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQpw0VdM_Cpj50OfKTRMJbP1SK7wzYcAE&callback=initMap" type="text/javascript">

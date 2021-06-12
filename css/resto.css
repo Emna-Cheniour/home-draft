@@ -110,8 +110,9 @@ a,a:hover {
     .serviceRow {
         grid-template-columns: 1fr;
     }
+    
 }
 .restolocation{
-    margin-left: 25%;
+    margin-left: 30%;
     margin-bottom: 50px;
 }
