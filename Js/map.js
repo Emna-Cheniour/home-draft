@@ -74,21 +74,27 @@ function initMap() {
     infowindow1.open(map, marker1);
     document.getElementById("mybtn1").addEventListener("click", () => {
         map.setCenter(safe);
+        map.setZoom(17);
         });
     document.getElementById("mybtn2").addEventListener("click", () => {
         map.setCenter(roman);
+        map.setZoom(17);
         });  
     document.getElementById("mybtn3").addEventListener("click", () => {
         map.setCenter(seine);
+        map.setZoom(17);
         }); 
     document.getElementById("mybtn4").addEventListener("click", () => {
         map.setCenter(vignole);
+        map.setZoom(17);
         });
     document.getElementById("mybtn5").addEventListener("click", () => {
         map.setCenter(bistrot);
+        map.setZoom(17);
         });     
     document.getElementById("mybtn6").addEventListener("click", () => {
         map.setCenter(farfale);
+        map.setZoom(17);
         });                  
       map.controls[google.maps.ControlPosition.TOP_CENTER].push(centerControlDiv);
   }
