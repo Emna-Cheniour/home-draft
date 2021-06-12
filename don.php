@@ -15,20 +15,20 @@
         <div class="container__don counter-section">
 
           <div class="row text-center">
-            <div class="col-md-4 counter-box">
+            <div class="col counter-box">
                 <div class="iconbox"><i class="fas fa-piggy-bank"></i></div>
                 <p class="counter">10000</p><p>Dt/an</p>
                 <p> Don d'argent</p>
             </div>
 
-            <div class="col-md-4 counter-box">
+            <div class="col  counter-box">
                 <div class="iconbox"><i class="fas fa-shopping-basket"></i></div>
-                <p class="counter">300</p><p>/mois</p>
+                <p class="counter">600</p><p>/mois</p>
                 <p>Biens matériels</p>
                 <p></p>
             </div>
 
-            <div class="col-md-4 counter-box">
+            <div class="col counter-box">
                 <div class="iconbox"><i class="fas fa-users"></i></div>
                 <p class="counter">1000</p>
                 <p>/an</p>
@@ -189,7 +189,7 @@
         {
             $('.counter').counterUp({
             delay: 10,
-            time: 1000
+            time: 1500
             });
         })
     </script> 

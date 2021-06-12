@@ -11,11 +11,6 @@
 
 
 <body>
-<div class="journalIndivContainer">
-      <div class="searchJournal__input">
-        <i class="fas fa-search" id="search__icon"></i>
-        <input id="search" placeholder="Rechercher..." type="text">
-
       </div>
 
         <div class="rowJournalIndiv">
@@ -25,7 +20,6 @@
                     A privilégier
                     <img src="icons/winking.png">
                 </h4>
-            
             </div>
             <ul>
                 <li>
