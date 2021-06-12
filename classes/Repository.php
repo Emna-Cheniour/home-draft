@@ -115,6 +115,7 @@ class Repository
             }
         }
         $response->execute();
+        return $this->bd->lastInsertId();
     }
     public function update($criterias)
     {
@@ -153,5 +154,17 @@ class Repository
         $response->execute();
         return $response->fetchColumn();
     }
-   
+    public function latest()
+    {
+        $request = 'SELECT * FROM '.$this->tableName.' ORDER BY date DESC LIMIT 0,3';
+        $response = $this->bd->prepare($request);
+        $response->execute();
+        return $response->fetchAll(PDO::FETCH_ASSOC);
+    }
+   public function delete($criteria){
+       $request='DELETE FROM '.$this->tableName.' WHERE '.array_key_first($criteria) .' = ?';
+       $response = $this->bd->prepare($request);
+       $response->bindValue(1,$criteria[array_key_first($criteria)]);
+       $response->execute();
+   }
 }

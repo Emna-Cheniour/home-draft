@@ -1,15 +1,20 @@
 <?php
-
-include_once 'assets/mainHead.php';
+include_once 'autoload.php';
 session_start();
 require_once 'isAuthentificated.php';
+$productrep = new ProductRepository();
+$productImgrep = new ProductImageRepository();
+$cmntShpRep = new CommentShoppingRepository();
+$userRep = new UserRepository();
 if (isset($_POST['sendReview'])) {
-    echo $_POST['rating'];
-    echo $_POST['reviewComment'];
+    $cmntShpRep->insert(array('userId'=>$_SESSION['user'],'rating'=>$_POST['rating'],'description'=>$_POST['reviewComment']));
     $reviewstat = "1";
     $reviewContent = "Votre évaluation est ajoutée avec succès";
 }
+
+include_once 'assets/mainHead.php';
 ?>
+
 <link rel="stylesheet" href="css/shopping.css">
 <link rel="stylesheet" href="css/product.css">
 </head>
@@ -18,7 +23,6 @@ if (isset($_POST['sendReview'])) {
 
     <?php include_once 'preloader.php' ?>
     <?php
-    var_dump($_SESSION);
     if ($_SESSION['role'] == 'user') {
         include_once 'navbarCo.php' ?>
 
@@ -91,28 +95,35 @@ if (isset($_POST['sendReview'])) {
             <div class="swiper-button-next shoppingPosterNext"></div>
             <div class="swiper-button-prev shoppingPosterPrev"></div>
         </div>
-        <h2 class="latestTitle">Nouveautés</h2>
+        <h2 class="latestTitle">Nos Nouveautés</h2>
         <div class="mainLatest">
+            <?php $newProducts = $productrep->latest();
+            foreach ($newProducts as $newProduct) {
+                $newImage = $productImgrep->findOneBy(array('productId' => $newProduct['id']));
+            ?>
+                <div class="cardLatest">
+                    <div class="circle">
+                    </div>
+                    <img src=<?php echo "data:image/jpeg;base64," . base64_encode($newImage['image']) ?> alt="">
+                    <div class="content">
+                        <div class="productDetails">
+                            <h4><?= $newProduct['name'] ?></h4>
+                            <h4><?= $newProduct['price'] ?> Dt</h4>
+                        </div>
+                    </div>
+                    <div class="view">
+                        <div class="productDetails">
+                            <a>
+                                <i class="fas fa-eye"></i>
+                                <h4>View product</h4>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            <?php
+            }
+            ?>
 
-            <div class="cardLatest">
-                <div class="circle">
-                </div>
-                <img src="images/farine shar.png" alt="">
-                <div class="content">
-                    <div class="productDetails">
-                        <h4>Farine Sans Gluten Mix It Universal – Schar</h4>
-                        <h4>45 Dt</h4>
-                    </div>
-                </div>
-                <div class="view">
-                    <div class="productDetails">
-                        <a>
-                            <i class="fas fa-eye"></i>
-                            <h4>View product</h4>
-                        </a>
-                    </div>
-                </div>
-            </div>
 
         </div>
         <div class="reviewWrapper">
@@ -126,12 +137,15 @@ if (isset($_POST['sendReview'])) {
                 <div class="swiper-container swiperCommentaires">
                     <div class="swiper-wrapper swiperCommentaire">
                         <?php
-                        for ($x = 0; $x < 5; $x++) {
+                        $cmnts = $cmntShpRep->findAll();
+                        foreach ($cmnts as $cmnt) {
+                            $user = $userRep->findOneBy(array('username' => $cmnt['userId']));
+
                         ?>
                             <div class="swiper-slide swiperCommentaireContent">
                                 <div class="review">
                                     <img src="images/right-quote.png" class="quote" alt="quote">
-                                    <input id="reviewNote" type="hidden" value="<?= $x ?>">
+                                    <input id="reviewNote" type="hidden" value="<?= $cmnt['rating'] ?>">
                                     <div class="reviewContent">
                                         <div class="reviewNote">
                                             <i class="far fa-heart"></i>
@@ -140,16 +154,25 @@ if (isset($_POST['sendReview'])) {
                                             <i class="far fa-heart"></i>
                                             <i class="far fa-heart"></i>
                                         </div>
-                                        <p>Lorem ipsum dolor sit amet, consesteur de
-                                            la meuiileure propagande de la ville de saint
-                                            exupery il etait un homme bon mais rien ne
-                                            dure il s'est transformé en un vampire.
+                                        <p>
+                                            <?= $cmnt['description'] ?>
                                         </p>
                                         <div class="detailsReview">
                                             <div class="imgProfilRviewerBox">
-                                                <img src="images/nutritionist.png" alt="">
+
+                                                <img src=<?php if ($user['image']) {
+                                                                echo "data:image/jpeg;base64," . base64_encode($user['image']);
+                                                            } else {
+                                                                echo "images/userWithoutPic.jpg";
+                                                            } ?> alt="">
                                             </div>
-                                            <h3>Somemone Someone</h3>
+                                            
+                                            <h3><?php
+                                            if ($user['firstName'] && $user['lastName']) {
+                                                    echo $user['firstName'] . " " . $user['lastName'];
+                                                } else {
+                                                    echo $user['username'];
+                                                } ?></h3>
                                         </div>
                                     </div>
                                 </div>
@@ -164,7 +187,7 @@ if (isset($_POST['sendReview'])) {
             <h1 class="closeReview"> &times;</h1>
             <img src="images/reviewForm.png" alt="">
             <h3>Evaluez votre experience de shopping de chez Celiac101</h3>
-            <form action="latest.php" method="post">
+            <form action="shopping.php" method="post">
                 <textarea name="reviewComment"></textarea>
                 <h3>Nottez la !</h3>
                 <div class="heart_section">
@@ -176,18 +199,18 @@ if (isset($_POST['sendReview'])) {
                 </div>
                 <h1 id="reviewRating">?/5</h1>
                 <input name="rating" id="stars" type="hidden" value="0">
-                <input class="btn btn1 submitReview" name="sendReview" type="submit">
+                <button  class="btn btn1 " name="sendReview" type="submit">Submit Review</button>
             </form>
         </div>
         <div class="reviewStat" id=<?php if (isset($reviewstat)) {
                                         echo $reviewstat;
                                     } ?>></i><?php
-                                            if ((isset($reviewstat)) && $reviewstat == 1) {
-                                                echo '
+                                                if ((isset($reviewstat)) && $reviewstat == 1) {
+                                                    echo '
         <i class="fas fa-check-circle reviewIcon"> </i>';
 
-                                                echo $reviewContent;
-                                            } ?></div>
+                                                    echo $reviewContent;
+                                                } ?></div>
         <div id="overlayAddReview"></div>
     <?php } ?>
     <?php if (($_SESSION['role'] == 'user') || ($_SESSION['role'] == 'admin')) { ?>
@@ -211,26 +234,17 @@ if (isset($_POST['sendReview'])) {
                     </div>
                     <div id="productCategoryOptions" class="productCategoryOptions">
 
+                    <?php
+                    $catRep = new ProductCategoryRepository;
+                    $categories = $catRep->findAll();
+                    foreach ($categories as $categorie) {
+                    ?>
                         <div>
                             <input type="checkbox" name="" id="">
-                            <label for="">Biscuits</label>
+                            <label for=""><?= $categorie['name']?></label>
                         </div>
-                        <div>
-                            <input type="checkbox" name="" id="">
-                            <label for="">Farine</label>
-                        </div>
-                        <div>
-                            <input type="checkbox" name="" id="">
-                            <label for="">Pain</label>
-                        </div>
-                        <div>
-                            <input type="checkbox" name="" id="">
-                            <label for="">Pâtes</label>
-                        </div>
-                        <div>
-                            <input type="checkbox" name="" id="">
-                            <label for="">Cupcake</label>
-                        </div>
+                    <?php
+                    } ?>
                     </div>
                     <div class="ProductPriceRange">
                         <div class="ProductPrice">
@@ -243,8 +257,13 @@ if (isset($_POST['sendReview'])) {
                             <h3 id="amountmax"></h3>
                         </div>
                         <div id="slider-range"></div>
-                        <input type="hidden" id="min" value="100">
-                        <input type="hidden" id="max" value="800">
+                        
+                    <?php
+                    $minPrice= $productrep->min('price');
+                    $maxPrice= $productrep->max('price');
+                    ?>
+                    <input type="hidden" id="min" value="<?= $minPrice?>">
+                    <input type="hidden" id="max" value="<?= $maxPrice?>">
 
                     </div>
 
