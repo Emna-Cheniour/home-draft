@@ -23,8 +23,12 @@ if (isset($_POST['sendReview'])) {
                 <div class="leftSlide">
                     <h2>Bienvenue à Celiac101 : The Shop</h2>
                     <h5>Une collection de produits sans gluten variée avec des prix raisonnables. </h5>
-                    <a href=""><button class="btn btn1 btnServ">Commencez votre shopping</button></a>
+                    <a href="#startShopping"><button class="btn btn1 btnServ">Commencez votre shopping</button></a>
+
+            
                 </div>
+
+
                 <div class="rightSlide">
                     <img src="images/shopWithUs.png" alt="">
                 </div>
@@ -33,9 +37,12 @@ if (isset($_POST['sendReview'])) {
                 <div class="leftSlide">
                     <h2>Livraison à domicile</h2>
                     <h5>Celiac101 garantit une livraison rapide , ponctuelle et très satisfaisante. </h5>
-                    <a href=""><button class="btn btn1 btnServ">Commencez votre shopping</button></a>
+                    <a href="#startShopping"><button class="btn btn1 btnServ">Commencez votre shopping</button></a>
 
                 </div>
+
+
+
                 <div class="rightSlide">
                     <img src="images/deliveryposter.png" alt="">
                 </div>
@@ -44,8 +51,11 @@ if (isset($_POST['sendReview'])) {
                 <div class="leftSlide">
                     <h2>Méthodes de Paiement</h2>
                     <h5>Vous pouvez soit payer à la livraison soit payer électroniquement en toute sécurité. </h5>
-                    <a href=""><button class="btn btn1 btnServ">Commencez votre shopping</button></a>
+                    <a href="#startShopping"><button class="btn btn1 btnServ">Commencez votre shopping</button></a>
+
                 </div>
+
+
                 <div class="rightSlide">
                     <img src="images/electroOuLivraison.png" alt="">
                 </div>
@@ -56,8 +66,14 @@ if (isset($_POST['sendReview'])) {
                     <h5>Trouvez tous nos produits dans les adresses suivantes: </h5>
                     <h6>xxxx</h6>
                     <h6>xxxx</h6>
-                    <a href=""><button class="btn btn1 btnServ">Commencez votre shopping</button></a>
+                    <a href="#startShopping"><button class="btn btn1 btnServ">Commencez votre shopping</button></a>
+                    
                 </div>
+
+
+
+
+
                 <div class="rightSlide">
                     <img src="images/pointdevente.png" alt="">
                 </div>

@@ -2,15 +2,15 @@
 <link rel="stylesheet" href="css/journalIndiv.css">
 </head>
 <body>
+
+
 <?php include_once 'preloader.php' ?>
+
+
 <?php include_once 'navbarCo.php'?>
 
-<body>
-<div class="journalIndivContainer">
-      <div class="searchJournal__input">
-        <i class="fas fa-search" id="search__icon"></i>
-        <input id="search" placeholder="Rechercher..." type="text">
 
+<body>
       </div>
 
         <div class="rowJournalIndiv">
@@ -20,7 +20,6 @@
                     A privilégier
                     <img src="icons/winking.png">
                 </h4>
-            
             </div>
             <ul>
                 <li>

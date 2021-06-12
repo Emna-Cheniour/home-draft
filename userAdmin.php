@@ -7,7 +7,7 @@
 
 <body>
 
-
+<?php include_once 'preloader.php' ?>
 
 <table class="table table-hover">
   <thead>

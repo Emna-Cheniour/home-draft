@@ -21,6 +21,10 @@ if (isset($_SESSION['user'])) {
 </head>
 
 <body>
+  
+<?php include_once 'preloader.php' ?>
+
+
   <div class="container <?php 
     if(isset($_SESSION['page'])){
       if($_SESSION['page']=='inscription'){
