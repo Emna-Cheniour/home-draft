@@ -8,4 +8,5 @@
             <div class="loader-section section-right"></div>
  
     </div>
+<?php include_once 'assets/scripts.php';?>
 </body>
