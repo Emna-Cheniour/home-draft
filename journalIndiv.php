@@ -12,7 +12,9 @@
 
 <body>
       </div>
-
+            <br>
+            <h1 class="c4 faded">Titre Des Produits</h1>
+            <div class="imgJournal"><img src="icons/produitLaitier.png"></div>
         <div class="rowJournalIndiv">
         <div class="allowed">
             <div class="journalTitre">
