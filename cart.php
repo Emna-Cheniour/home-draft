@@ -2,15 +2,37 @@
 session_start();
 include_once 'assets/mainHead.php';
 include_once 'autoload.php';
-$display="cart";
-$cartIsEmpty = 0;
+$display = "cart";
+$total = array();
 $wishProductRep = new WishProductRepository();
 $productRep = new ProductRepository();
+$cartRep = new CartRepository();
+$userRep = new UserRepository();
+$user = $userRep->findOneBy(array('username' => $_SESSION['user']));
+$cartElements = $cartRep->findBy(array('userId' => $_SESSION['user']));
 if (isset($_POST['removeWished'])) {
-    $display="wishlist";
+    $display = "wishlist";
     $removedId = $_POST['productRemoved'];
-    $wishProductRep->deleteTwo('productId',$removedId,'userId',$_SESSION['user']);
+    $wishProductRep->deleteTwo('productId', $removedId, 'userId', $_SESSION['user']);
 }
+if (isset($_POST['removeProduct'])) {
+    $removedId = $_POST['productRemoved'];
+    $cartRep->deleteTwo('productId', $removedId, 'userId', $_SESSION['user']);
+    header('location:cart.php');
+}
+if (isset($_POST['PayDelivery'])) {
+    $method = $_POST['method'];
+    $date = $_POST['date'];
+    $adress = $_POST['adress'];
+    $phone = $_POST['phone'];
+    $amount = $_POST['total'];
+    $cmdRep = new CommandRepository();
+    $cmdRep->addCommand(array($_SESSION['user'], date('Y-m-d'), 'submitted', $amount, $adress, $phone, date('Y-m-d', strtotime(date('Y-m-d') . ' + 2 days')), $method));
+    $cartRep->delete(array('userId' => $_SESSION['user']));
+    header('location:cart.php');
+    $display = "order";
+}
+
 ?>
 <link rel="stylesheet" href="css/cart.css">
 
@@ -22,7 +44,9 @@ if (isset($_POST['removeWished'])) {
     <?php include_once 'navbarCo.php' ?>
     <div class="wrapp">
         <div class="navbarCart">
-            <div id="cart" class="navbarCartElementWrapper <?php if($display=='cart'){echo 'active';}?>">
+            <div id="cart" class="navbarCartElementWrapper <?php if ($display == 'cart') {
+                                                                echo 'active';
+                                                            } ?>">
                 <div class="navbarCartElement ">
                     <i class="fas fa-shopping-cart "></i>
                     <h5>Panier</h5>
@@ -37,14 +61,18 @@ if (isset($_POST['removeWished'])) {
                 <div class="arrow-right"></div>
             </div>
 
-            <div id="wishlist" class="navbarCartElementWrapper <?php if($display=='wishlist'){echo 'active';}?>">
+            <div id="wishlist" class="navbarCartElementWrapper <?php if ($display == 'wishlist') {
+                                                                    echo 'active';
+                                                                } ?>">
                 <div class="navbarCartElement">
                     <i class="fas fa-heart"></i>
                     <h5>Wishlist</h5>
                 </div>
                 <div class="arrow-right"></div>
             </div>
-            <div id="order" class="navbarCartElementWrapper <?php if($display=='order'){echo 'active';}?>">
+            <div id="order" class="navbarCartElementWrapper <?php if ($display == 'order') {
+                                                                echo 'active';
+                                                            } ?>">
                 <div class="navbarCartElement">
                     <i class="fas fa-shipping-fast"></i>
                     <h5>Orders</h5>
@@ -54,8 +82,12 @@ if (isset($_POST['removeWished'])) {
 
 
         </div>
-        <div class="cart" style="display:<?php if($display=='cart'){echo 'block';} else {echo 'none';}?>">
-            <?php if ($cartIsEmpty) { ?>
+        <div class="cart" style="display:<?php if ($display == 'cart') {
+                                                echo 'block';
+                                            } else {
+                                                echo 'none';
+                                            } ?>">
+            <?php if (!$cartElements) { ?>
                 <div class="panierVide">
 
                     <div class="load">
@@ -70,130 +102,75 @@ if (isset($_POST['removeWished'])) {
                 </div>
             <?php } else { ?>
                 <div class="cartElements">
-                    <div class="cartElementWrapper">
-                        <div class="cartElement">
-                            <div class="info">
-                                <h6>12345 -</h6>
-                                <h4>Farine schar</h4>
-                                <div class="details">
-                                    <h6>Prix : 5</h6>
-                                    <h6>Quantité : 3</h6>
-                                    <h6>Total : 15</h6>
+                    <?php
+                    foreach ($cartElements as $cartElement) {
+                        $productElement = $productRep->findOneBy(array('id' => $cartElement['productId']))
+                    ?>
+                        <div class="cartElementWrapper">
+                            <div class="cartElement">
+                                <div class="info">
+                                    <h6>12345 -</h6>
+                                    <h4><?= $productElement['name'] ?></h4>
+                                    <div class="details">
+                                        <h6>Prix : <?= $productElement['price'] ?> Dt</h6>
+                                        <h6>Quantité : <?= $cartElement['quantity'] ?></h6>
+                                        <?php $totalProduct = intval($productElement['price'], 10) * intval($cartElement['quantity'], 10);
+                                        array_push($total, $totalProduct);
+                                        ?>
+                                        <h6>Total : <?= $totalProduct ?> Dt</h6>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="gestion">
-                                <span>
-                                    <i class="fas fa-eye"></i>
-                                </span>
-                                <span class="shopped">
-                                    <i class="fas fa-shopping-cart"></i>
-                                    <h4>1</h4>
+                                <div class="gestion">
                                     <span>
-                                        <i class="fas fa-plus addCart"></i>
-                                        <i class="fas fa-minus removeCart"></i>
-                                    </span>
-                                </span>
-                                <span>
-                                    <i class="removeElement fas fa-times-circle"></i>
-                                </span>
-                            </div>
-                        </div>
-                        <div class="details">
-                            <h6>Prix : 5</h6>
-                            <h6>Quantité : 3</h6>
-                            <h6>Total : 15</h6>
-                        </div>
-                    </div>
-                    <div class="cartElementWrapper">
-                        <div class="cartElement">
-                            <div class="info">
-                                <h6>12345 -</h6>
-                                <h4>Farine schar</h4>
-                                <div class="details">
-                                    <h6>Prix : 5</h6>
-                                    <h6>Quantité : 3</h6>
-                                    <h6>Total : 15</h6>
-                                </div>
-                            </div>
-                            <div class="gestion">
-                                <span>
-                                    <i class="fas fa-eye"></i>
-                                </span>
-                                <span class="shopped">
-                                    <i class="fas fa-shopping-cart"></i>
-                                    <h4>1</h4>
-                                    <span>
-                                        <i class="fas fa-plus addCart"></i>
-                                        <i class="fas fa-minus removeCart"></i>
-                                    </span>
-                                </span>
-                                <span>
-                                    <i class="removeElement fas fa-times-circle"></i>
-                                </span>
-                            </div>
-                        </div>
-                        <div class="details">
-                            <h6>Prix : 5</h6>
-                            <h6>Quantité : 3</h6>
-                            <h6>Total : 15</h6>
-                        </div>
-                    </div>
-                    <div class="cartElementWrapper">
+                                        <a href="product.php?view=<?= $productElement['id'] ?>">
+                                            <i class="fas fa-eye"></i>
+                                        </a>
 
-                        <div class="cartElement">
-                            <div class="info">
-                                <h6>12345 -</h6>
-                                <h4>Farine schar</h4>
-                                <div class="details">
-                                    <h6>Prix : 5</h6>
-                                    <h6>Quantité : 3</h6>
-                                    <h6>Total : 15</h6>
+                                    </span>
+                                    <span>
+                                        <form action="cart.php" method="post">
+                                            <input type="hidden" name="productRemoved" value="<?= $productElement['id'] ?>">
+                                            <button type="submit" name="removeProduct" class="btn btn2">
+                                                <i class="removeElement fas fa-times-circle"></i>
+                                            </button>
+                                        </form>
+                                    </span>
                                 </div>
                             </div>
-                            <div class="gestion">
-                                <span>
-                                    <i class="fas fa-eye"></i>
-                                </span>
-                                <span class="shopped">
-                                    <i class="fas fa-shopping-cart"></i>
-                                    <h4>1</h4>
-                                    <span>
-                                        <i class="fas fa-plus addCart"></i>
-                                        <i class="fas fa-minus removeCart"></i>
-                                    </span>
-                                </span>
-                                <span>
-                                    <i class="removeElement fas fa-times-circle"></i>
-                                </span>
+                            <div class="details">
+                                <h6>Prix : <?= $productElement['price'] ?> Dt</h6>
+                                <h6>Quantité : <?= $cartElement['quantity'] ?></h6>
+                                <h6>Total : <?= $totalProduct ?> Dt</h6>
                             </div>
                         </div>
-                        <div class="details">
-                            <h6>Prix : 5</h6>
-                            <h6>Quantité : 3</h6>
-                            <h6>Total : 15</h6>
-                        </div>
-                    </div>
+                    <?php
+                    }
+                    ?>
+
                     <div class="total">
                         <img src="images/totalCart.jpg" alt="">
                         <span>Total:</span>
-                        <span>15.00 Dt</span>
+                        <span><?php echo array_sum($total) ?> Dt</span>
                     </div>
                     <div class="tel">
                         <img src="images/telCart.png" alt="">
                         <span>Telephone: </span>
-                        <input type="text" value="97782808">
+                        <input type="text" id="num" value="<?php if (isset($user['phoneNumber'])) {
+                                                                echo $user['phoneNumber'];
+                                                            } ?>">
                     </div>
                     <div class="adresse">
                         <img src="images/adresseCart.png" alt="">
                         <span>Adresse: </span>
-                        <span id="locAddress">73 rue du Général Ailleret
-                        </span>
-                        <button id="changeLocation" class="btn btn3">Changer Adresse</button>
-                        <!-- if has adress in profile show it as default-->
+                        <span id="locAddress"><?php if (isset($user['address'])) {
+                                                    echo $user['address'];
+                                                } ?> </span>
 
-                        <!-- if not
-                        <button class="btn btn3">Add Location</button>
-                        -->
+                        <button id="changeLocation" class="btn btn3"><?php if (isset($user['address'])) {
+                                                                            echo "Changer Adresse";
+                                                                        } else {
+                                                                            echo "Ajouter Adresse";
+                                                                        } ?></button>
 
                     </div>
 
@@ -207,97 +184,76 @@ if (isset($_POST['removeWished'])) {
                     <span>Veuillez choisir une adresse </span>
                     <div id="mapAddress">
                     </div>
-                    <div class="saveAdress">
-                        <label for="saveAdrs">Ajouter cette adresse à mes adresses</label>
-                        <input id="saveAdrs" type="checkbox">
-                    </div>
                     <button class="btn btn3 " id="mybutton1">Confirmer</button>
                 </div>
                 <div class="paymentPopUp ">
                     <h1 class="closePaymentPopUp"> &times;</h1>
                     <div class="payElements">
-                        <div class="payElement">
-                            <div class="infoElement">
-                                <h6>12345 -</h6>
-                                <h4>Farine schar</h4>
+                        <?php
+                        foreach ($cartElements as $cartElement) {
+                            $productElement = $productRep->findOneBy(array('id' => $cartElement['productId']))
+                        ?>
+                            <div class="payElement">
+                                <div class="infoElement">
+                                    <h4><?= $productElement['name'] ?></h4>
+                                </div>
+                                <div class="detailsElement">
+                                    <h6>Prix : <?= $productElement['price'] ?> Dt</h6>
+                                    <h6>Quantité : <?= $cartElement['quantity'] ?></h6>
+                                    <?php $totalProduct = intval($productElement['price'], 10) * intval($cartElement['quantity'], 10);
+                                    ?>
+                                    <h6>Total : <?= $totalProduct ?> Dt</h6>
+                                </div>
                             </div>
-                            <div class="detailsElement">
-                                <h6>Prix : 5</h6>
-                                <h6>Quantité : 3</h6>
-                                <h6>Total : 15</h6>
-                            </div>
-                        </div>
-                        <div class="payElement">
-                            <div class="infoElement">
-                                <h6>12345 -</h6>
-                                <h4>Farine schar</h4>
-                            </div>
-                            <div class="detailsElement">
-                                <h6>Prix : 5</h6>
-                                <h6>Quantité : 3</h6>
-                                <h6>Total : 15</h6>
-                            </div>
-                        </div>
-                        <div class="payElement">
-                            <div class="infoElement">
-                                <h6>12345 -</h6>
-                                <h4>Farine schar</h4>
-                            </div>
-                            <div class="detailsElement">
-                                <h6>Prix : 5</h6>
-                                <h6>Quantité : 3</h6>
-                                <h6>Total : 15</h6>
-                            </div>
-                        </div>
-                        <div class="payElement">
-                            <div class="infoElement">
-                                <h6>12345 -</h6>
-                                <h4>Farine schar</h4>
-                            </div>
-                            <div class="detailsElement">
-                                <h6>Prix : 5</h6>
-                                <h6>Quantité : 3</h6>
-                                <h6>Total : 15</h6>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="paymentInfo">
-                        <div class="paymentTotal">
-                            <img src="images/totalCart.jpg" alt="">
-                            <span>Total:</span>
-                            <span>15.00 Dt</span>
-                        </div>
+                        <?php } ?>
 
-                        <div class="paymentAdress">
-                            <img src="images/adresseCart.png" alt="">
-                            <span>Adresse: </span>
-                            <span>73 rue du Général Ailleret </span>
-                        </div>
-                        <div class="paymentTel">
-                            <img src="images/telCart.png" alt="">
-                            <span>Téléphone: </span>
-                            <span>97 782 808 </span>
-                        </div>
 
-                        <div class="paymentDelivery">
-                            <img src="images/deliveryCart.png" alt="">
-                            <span>La livraison sera dans 48 heures :</span>
-                            <span>12-12-2021 </span>
-                        </div>
                     </div>
+                    <form method="post">
+                        <div class="paymentInfo">
+                            <div class="paymentTotal">
+                                <img src="images/totalCart.jpg" alt="">
+                                <span>Total:</span>
+                                <span> <?php echo array_sum($total) ?> Dt</span>
+                                <input name="total" value="<?php echo array_sum($total) ?>" type="hidden">
+                            </div>
+
+                            <div class="paymentAdress">
+                                <img src="images/adresseCart.png" alt="">
+                                <span>Adresse: </span>
+                                <span id="popupAdresse"><?php if (isset($user['address'])) {
+                                                            echo $user['address'];
+                                                        } ?></span>
+                                <input name="adress" id="adresseInput" value="<?php if (isset($user['address'])) {
+                                                                                    echo $user['address'];
+                                                                                } ?>" type="hidden">
+                            </div>
+                            <div class="paymentTel">
+                                <img src="images/telCart.png" alt="">
+                                <span>Téléphone: </span>
+                                <span id="popupNum"><?php if (isset($user['phoneNumber'])) {
+                                                        echo $user['phoneNumber'];
+                                                    } ?> </span>
+                                <input id="numInput" name="phone" value="<?php if (isset($user['phoneNumber'])) {
+                                                                                echo $user['phoneNumber'];
+                                                                            } ?>" type="hidden">
+                            </div>
+
+                            <div class="paymentDelivery">
+                                <img src="images/deliveryCart.png" alt="">
+                                <span>La livraison sera dans 48 heures :</span>
+                                <span> <?php echo date('Y-m-d', strtotime(date('Y-m-d') . ' + 2 days')); ?> </span>
+                                <input name="date" value="<?php echo date('Y-m-d', strtotime(date('Y-m-d') . ' + 2 days')); ?>" type="hidden">
+                            </div>
+                            <input name="method" type="hidden" value="livraison">
+                        </div>
+                        <input class="pay" name="PayDelivery" type="submit" value="Payer à la livraison">
+                    </form>
                     <div class="payment">
 
                         <form action="checkout-charge.php" method="post">
 
-                            <input type="hidden" name="amount" value="15">
-                            <input type="hidden" name="phoneNumber" value="98652478">
-                            <input type="hidden" name="address" value="ariana">
-
-                            <input class="pay" name="livraison" type="submit" value="Payer à la livraison">
-                            <input class="pay" name="online" type="submit" value="Payer maintenant">
-
-
-
+                            <input type="hidden" name="amount" value="<?php echo array_sum($total) ?>">
 
                             <script src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-key="pk_test_51J1SzJE3gsjF0BrLVeytp4haD9b0CDM5IbkhmTDnCVDYrNekt7CXbwdjdgheujajglAOcMr4Y0lMX3j08b2RbXv400PpkHkqjz" data-currency="inr" data-locale="auto">
                             </script>
@@ -317,7 +273,11 @@ if (isset($_POST['removeWished'])) {
             <div id="overlayCart" class=""></div>
             <div class="sendPost"></div>
         </div>
-        <div class="wishlist" style="display:<?php if($display=='wishlist'){echo 'block';} else {echo 'none';}?>">
+        <div class="wishlist" style="display:<?php if ($display == 'wishlist') {
+                                                    echo 'block';
+                                                } else {
+                                                    echo 'none';
+                                                } ?>">
             <?php
             $wishes = $wishProductRep->findBy(array('userId' => $_SESSION['user']));
             foreach ($wishes as $wish) {
@@ -358,28 +318,27 @@ if (isset($_POST['removeWished'])) {
 
 
         </div>
-        <div class="order" style="display:<?php if($display=='cart'){echo 'block';} else {echo 'none';}?>"></div>
+        <div class="order" style="display:<?php if ($display == 'cart') {
+                                                echo 'block';
+                                            } else {
+                                                echo 'none';
+                                            } ?>"></div>
+        <?php $cmdRep = new CommandRepository();
+        $orders = $cmdRep->findBy(array('userId' => $_SESSION['user']));
+        foreach ($orders as $order) {
+
+        ?>
+           
+        <?php
+        }
+
+        ?>
     </div>
 
 
 
+    <?php include_once 'assets/scripts.php' ?>
 
-
-    <!-- <div class="orders">
-            <div class="payElement">
-                <div class="infoElement">
-                    <h6>12345 -</h6>
-                    <h4>Farine schar</h4>
-                </div>
-                <div class="detailsElement">
-                    <h6>Prix : 5</h6>
-                    <h6>Quantité : 3</h6>
-                    <h6>Total : 15</h6>
-                </div>
-            </div>
-        </div>
-    </div>-->
-    
     <?php include_once 'footer.php' ?>
 
 
@@ -388,16 +347,12 @@ if (isset($_POST['removeWished'])) {
     <!--script pour map-->
 
 
-    <?php include_once 'assets/scripts.php' ?>
 
-<<<<<<< HEAD
-        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQpw0VdM_Cpj50OfKTRMJbP1SK7wzYcAE&callback=initMap&libraries=places" type="text/javascript"></script>
-        <script src="js/cart.js"></script>
-       
-        <script src="testnav.js"></script>
-        
-=======
->>>>>>> upstream/master
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQpw0VdM_Cpj50OfKTRMJbP1SK7wzYcAE&callback=initMap&libraries=places" type="text/javascript"></script>
+    <script src="js/cart.js"></script>
+
+    <script src="testnav.js"></script>
+
 </body>
 
 </html>

@@ -1,5 +1,5 @@
 <?php
 require_once 'autoload.php';
 
-$rp =new CartRepository();
-$rp->updateCart('28','nawres04',1);
+$cmdRep=new CommandRepository();
+$cmdRep->addCommand(array('nawres04',date('Y-m-d'),'submitted',14,'sgg',3354,date('Y-m-d'),'sgwfg'));

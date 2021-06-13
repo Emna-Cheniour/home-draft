@@ -79,6 +79,8 @@ wishlistButton.addEventListener('click',()=>{
     wishlistButton.classList.add("active");
     cartButton.classList.remove("active");
     orderButton.classList.remove("active");
+    myLine.hide();
+    myLineHover.hide();
 })
 cartButton.addEventListener('click',()=>{
     cart.style.display="block";
@@ -87,6 +89,8 @@ cartButton.addEventListener('click',()=>{
     wishlistButton.classList.remove("active");
     cartButton.classList.add("active");
     orderButton.classList.remove("active");
+    myLine.show();
+    myLineHover.show();
 })
 
 orderButton.addEventListener('click',()=>{
@@ -96,6 +100,8 @@ orderButton.addEventListener('click',()=>{
     wishlistButton.classList.remove("active");
     cartButton.classList.remove("active");
     orderButton.classList.add("active");
+    myLine.hide();
+    myLineHover.hide();
 })
 /*Product control*/
 var shopped = document.querySelectorAll(".shopped");
@@ -180,6 +186,15 @@ overlayCart.addEventListener("click", () => {
     overlayCart.classList.remove("active");
     document.querySelector('body').style.overflow = "auto";
 });
+/*Passer adresse et num vers pop up*/
+
+var num = document.querySelector("#num");
+var popupnum = document.querySelector("#popupNum");
+num.addEventListener('change',()=>{
+  popupnum.innerHTML=num.value;
+  document.querySelector("#numInput").value=num.value;
+})
+
 /*var service;
 var request;
 var map;
@@ -324,6 +339,8 @@ function initMap() {
   var closeLocationPopUp2 = document.querySelector("#mybutton1");
         closeLocationPopUp2.addEventListener("click", () => {
         document.getElementById("locAddress").innerHTML = names;
+        document.querySelector("#popupAdresse").innerHTML=names;
+        document.querySelector("#adresseInput").value=names;
         locationPopUp.classList.remove("active");
         overlayCart.classList.remove("active");
         document.querySelector('body').style.overflow = "auto";

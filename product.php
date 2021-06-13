@@ -74,7 +74,9 @@ if (isset($_GET['view'])) {
             $check = $cartRep->findOneBy(array('userId' => $_SESSION['user'], 'productId' => $product['id']));
             ?>
                 <span class="shopped"><i class="fas fa-shopping-cart"></i>
-                    <h4><?php if ($check){echo $check['quantity'];} ?></h4>
+                    <h4><?php if ($check){echo $check['quantity'];} else{
+                        echo '1';
+                    } ?></h4>
                     <span>
                         <i class="fas fa-plus addCart"></i>
                         <i class="fas fa-minus removeCart"></i>
