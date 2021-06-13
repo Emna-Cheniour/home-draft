@@ -1,6 +1,7 @@
 <?php
 include_once 'assets/mainHead.php';
 include_once 'autoload.php';
+session_start();
 
 
 
@@ -14,26 +15,6 @@ include_once 'autoload.php';
     <?php include_once 'preloader.php' ?>
     
     <div class="container_resto">
-<<<<<<< HEAD
-    <div class="services">
-        <h1 class="c4 faded">Les Restaurants Coeliaques</h1>
-        <br>
-        <br>
-        <div class="serviceRow row">
-        <?php 
-         $restoRepo=new RestaurantRepository();
-         $restaurants=$restoRepo->findAll();
-
-        foreach($restaurants as $resto){?>
-            <div class="service col4">
-                <img src="<?php echo "data:image/jpeg;base64,".base64_encode($resto['image'])."" ?>" class="service__img">
-                <h2 class="fbpage"><a href="<?php echo $resto['fbPage']?>" target="_blank"><?php echo $resto['name']?></a></h2>
-                <p>Adresse: <?php echo $resto['address']?><br>
-                    
-                    Phone: <?php echo $resto['phone']?><br>
-                    <button class="btn btn4" id="mybtn1"><a href="#Local"> Location</a></button>
-                </p>
-=======
         <div class="services">
             <h1 class="c4 faded">Les Restaurants Coeliaques</h1>
             <br>
@@ -42,21 +23,20 @@ include_once 'autoload.php';
                 <div class="service col4">
                     <img src="images/T.jpg" class="service__img">
                     <h2 class="fbpage"><a href="https://www.facebook.com/celiacsafesansgluten/" target="_blank">Celiac Safe</a></h2>
-                    <p>Address: 4 Reu de Moscou, Tunis 1089<br>
-                        Hours: Closed ⋅ Opens 12PM<br>
-                        Phone: 24 101 401<br>
+                    <p>Adresse: 4 Reu de Moscou, Tunis 1089<br>
+                        Heure De Travail: Ouvre à 12h<br>
+                        Téléphone: 24 101 401<br>
                         <button class="btn btn4" id="mybtn1"><a href="#Local"> Location</a></button>
                     </p>
->>>>>>> 9e6eec389c591ccdfdca55f9b33d1fb3a834b1fa
 
                 </div>
 
                 <div class="service col4">
                     <img src="images/T2.jpg" class="service__img">
                     <h2 class="fbpage"><a href="https://www.facebook.com/laseine.tn/" target="_blank">La Seine Pâtisserie</a></h2>
-                    <p>Address: 2 Rue Tahar Memmi, Ariana 2091<br>
-                        Hours: Closed ⋅ Opens 8AM<br>
-                        Phone: 52 516 415 <br>
+                    <p>Adresse: 2 Rue Tahar Memmi, Ariana 2091<br>
+                        Heure: Ouvre à 8h<br>
+                        Téléphone: 52 516 415 <br>
                         <button class="btn btn4" id="mybtn3"><a href="#Local"> Location</a></button>
                     </p>
 
@@ -64,9 +44,9 @@ include_once 'autoload.php';
                 <div class="service col4">
                     <img src="images/T3.jpg" class="service__img">
                     <h2 class="fbpage"><a href="https://www.facebook.com/Romanescatunis" target="_blank">Restaurant La Romanesca</a></h2>
-                    <p> Address: Ariana<br>
-                        Hours: Closed ⋅ Opens 12PM<br>
-                        Phone: 71 753 241 <br>
+                    <p> Adresse: Ariana<br>
+                        Heure: Ouvre à 12PM<br>
+                        Téléphone: 71 753 241 <br>
                         <button class="btn btn4" id="mybtn2"><a href="#Local"> Location</a></button>
                     </p>
 
@@ -74,9 +54,9 @@ include_once 'autoload.php';
                 <div class="service col4">
                     <img src="images/T4.jpg" class="service__img">
                     <h2 class="fbpage"><a href="https://www.facebook.com/ilVongole/?ref=page_internal" target="_blank">il Vongole</a></h2>
-                    <p>Address: Rue des Lac de Mazurie, Les Berges Du Lac, Tunis 1053<br>
+                    <p>Adresse: Rue des Lac de Mazurie, Les Berges Du Lac, Tunis 1053<br>
 
-                        Phone: 71 960 207 <br>
+                        Téléphone: 71 960 207 <br>
                         <button class="btn btn4" id="mybtn4"><a href="#Local"> Location</a></button>
                     </p>
 
@@ -84,18 +64,18 @@ include_once 'autoload.php';
                 <div class="service col4">
                     <img src="images/T5.jpg" class="service__img">
                     <h2 class="fbpage"><a href="https://www.facebook.com/breizhbistrottunisie/" target="_blank">Breizh Bistrot</a></h2>
-                    <p>Address: Passage du la Malawi, Tunis<br>
-                        Hours: Closed ⋅ Opens 11AM<br>
-                        Phone: 71 960 155 <br>
+                    <p>Adresse: Passage du la Malawi, Tunis<br>
+                        Heure: Ouvre à 11h<br>
+                        Téléphone: 71 960 155 <br>
                         <button class="btn btn4" id="mybtn5"><a href="#Local"> Location</a></button>
                     </p>
                 </div>
                 <div class="service col4">
                     <img src="images/T6.jpg" class="service__img">
                     <h2 class="fbpage"><a href="https://www.facebook.com/lasuitedufarfalle/" target="_blank">Le Farfalle</a></h2>
-                    <p>Address: Rue du Lac Biwa, Tunis 1053<br>
-                        Hours: Closed ⋅ Opens 12PM<br>
-                        Phone: 71 960 128 <br>
+                    <p>Adresse: Rue du Lac Biwa, Tunis 1053<br>
+                        Heure: Ouvre à 12h<br>
+                        Téléphone: 71 960 128 <br>
                         <button class="btn btn4" id="mybtn6"><a href="#Local"> Location</a></button>
                     </p>
 

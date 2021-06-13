@@ -1,4 +1,5 @@
 <?php include("assets/mainHead.php");
+include_once 'autoload.php';
 
 session_start();
 
@@ -173,41 +174,22 @@ if (isset($_SESSION['user'])) {
     <div class="specialistsAd">
         <div class="swiper-container specialistsContainer">
             <div class="swiper-wrapper specialistsWrapper">
+                <?php 
+                    $specialistRepo=new SpecialistRepository();
+                    $specialists=$specialistRepo->findAll();
+
+                    foreach($specialists as $specialist){
+                ?>
                 <div class="swiper-slide specialistSlide">
                     <div class="specialistAd">
                         <img src="images/nutritionist.png" alt="">
-                        <h4>Nom Prénom</h4>
-                        <h5>Fonction</h5>
+                        <h4><?php echo $specialist['firstName']." ".$specialist['lastName']?></h4>
+                        <h5><?php echo $specialist['profession']?></h5>
                     </div>
                 </div>
-                <div class="swiper-slide specialistSlide">
-                    <div class="specialistAd">
-                        <img src="images/nutritionist.png" alt="">
-                        <h4>Nom Prénom</h4>
-                        <h5>Fonction</h5>
-                    </div>
-                </div>
-                <div class="swiper-slide specialistSlide">
-                    <div class="specialistAd">
-                        <img src="images/nutritionist.png" alt="">
-                        <h4>Nom Prénom</h4>
-                        <h5>Fonction</h5>
-                    </div>
-                </div>
-                <div class="swiper-slide specialistSlide">
-                    <div class="specialistAd">
-                        <img src="images/nutritionist.png" alt="">
-                        <h4>Nom Prénom</h4>
-                        <h5>Fonction</h5>
-                    </div>
-                </div>
-                <div class="swiper-slide specialistSlide">
-                    <div class="specialistAd">
-                        <img src="images/nutritionist.png" alt="">
-                        <h4>Nom Prénom</h4>
-                        <h5>Fonction</h5>
-                    </div>
-                </div>
+                <?php } ?>
+               
+               
           
             </div>
         </div>
@@ -223,6 +205,7 @@ if (isset($_SESSION['user'])) {
     <script src="js/txtRotation.js"></script>
     <script type="js/scrollUpBtn.js"></script>
     <script src="js/testnav.js"></script>
+    <script src="js/specialistIndiv.js"></script>
     
     
    

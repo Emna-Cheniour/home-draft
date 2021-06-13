@@ -1,5 +1,6 @@
 <?php 
-  include_once 'assets/mainHead.php'
+  include_once 'assets/mainHead.php';
+  session_start();
   
 ?>
 </head>
@@ -11,7 +12,7 @@
 
 
 <?php 
-    session_start();
+  
     if (isset($_SESSION['user'])){
        include("navbarCo.php"); 
     } else include_once 'navbarDeco.php'?>

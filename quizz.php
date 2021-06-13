@@ -6,7 +6,7 @@ include_once 'assets/mainHead.php'
 ?>
 <body>
 
-<?php include_once('navbarCo.php');?>
+<?php include_once 'navbarCo.php' ;?>
 <?php include_once 'preloader.php' ?>
 
 
@@ -47,7 +47,7 @@ include_once 'assets/mainHead.php'
           <div class="answers one__choice--question" >
             <button id="answerBtn" class="answerBtn">OUI</button>
             <button id="answerBtn" class="answerBtn">NON</button>
-            <button id="answerBtn" class="answerBtn">PAS SURE</button>
+            
           </div>
 
           <button class="btn btn3"  disabled='disabled' style="cursor:not-allowed" id="nextQuestionBtn">Question Suivante<i id="right" class="fas fa-arrow-alt-circle-right"></i></button>
@@ -110,7 +110,7 @@ include_once 'assets/mainHead.php'
             <button id="answerBtn " class="answerBtn valid">Ostéopénie ou ostéoporose</button>
             <button id="answerBtn" class="answerBtn valid">Douleurs osseuses ou articulaires </button>
             <button id="answerBtn" class="answerBtn valid">Engourdissement ou douleur dans les mains et les pieds (neuropathie périphérique)</button>
-            <button id="answerBtn" class="answerBtn none__btn"">Rien de ce qui précède</button>
+            <button id="answerBtn" class="answerBtn none__btn">Rien de ce qui précède</button>
           </div>
 
           <button class="btn btn3" id="nextQuestionBtn" style="cursor:not-allowed" disabled='disabled'>Question Suivante<i id="right" class="fas fa-arrow-alt-circle-right"></i></button>
@@ -122,7 +122,7 @@ include_once 'assets/mainHead.php'
           <h2>Troubles de reproduction<img src="icons/pregnant.png" alt=""></h2>
           <p>Veuillez sélectionner toutes les conditions</p>
           <div class="answers " >
-            <button id="answerBtn" class="answerBtn valid">Menstrual irregularities</button>
+           
             <button id="answerBtn" class="answerBtn valid">Infertilité</button>
             <button id="answerBtn" class="answerBtn valid">Fausses couches</button>
             <button id="answerBtn" class="answerBtn valid">Irrégularités menstruelles</button>

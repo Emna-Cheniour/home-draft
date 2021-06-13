@@ -1,14 +1,8 @@
 <?php 
-
+session_start();
 include_once 'autoload.php';
 
-if(isset($_POST['addDon'])){
 
-    $lastame=$_POST['lastname'];
-    $firstname=$_POST['firstname'];
-    $email=$_POST['email'];
-    
-}
 
 
 ?>

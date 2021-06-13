@@ -13,7 +13,8 @@ include_once 'autoload.php';
 
 
 <?php include_once 'navbarCo.php'?>
-<?php include_once 'preloader.php' ?>
+<?php include_once 'preloader.php' ;
+session_start();?>
 
 
 <div id="effect" class="wavy titreJournal">

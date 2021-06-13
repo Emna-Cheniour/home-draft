@@ -1,4 +1,8 @@
-<?php include_once 'assets/mainHead.php';?>
+<?php 
+
+include_once 'assets/mainHead.php';
+include_once 'autoload.php'; 
+?>
 <link rel="stylesheet" href="css/testnav.css">
 <link rel="stylesheet" href="css/navbar.css">
 
@@ -67,7 +71,10 @@
         <div class="profile__hidden">
           
 
-          <img src="svg/undraw_male_avatar_323b.svg" alt="">
+          <img src="<?php 
+          $users=new UserRepository();
+          $user=$users->findOneBy(array('username' => $_SESSION['user']));
+          echo "data:image/jpeg;base64,".base64_encode($user['image'])."" ?>"alt="">
           
           <a href="profile.php"><i class="fas fa-cogs"></i>Modifier Profil</a>
           <a href="logout.php"><i class="fas fa-sign-out-alt"></i>Se Deconnecter</a>

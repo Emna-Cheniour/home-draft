@@ -1,5 +1,6 @@
 <?php include_once 'assets/bootstrapAsset.php';
 include_once 'autoload.php';
+session_start();
 
 $foodCat=new FoodCategoryRepository();
 
