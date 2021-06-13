@@ -1,11 +1,17 @@
 <?php include_once 'assets/bootstrapAsset.php';
+include_once 'autoload.php';
 
 $foodCat=new FoodCategoryRepository();
-$cat=$foodCat->findBy(array('id'=> $_GET['id']));
 
-$foodAliments=new AlimentRepository();
-$foodOK=$foodAliments->findBy(array('id'=> $cat->id,'permission','true'));
-$foodNOK=$foodAliments->findBy(array('id'=> $cat->id,'permission','false'));
+if( isset($_GET['catId']) ){
+  $catId=$_GET['catId'];
+}
+$food=$foodCat->findOneBy(array('id'=> $catId));
+
+
+$foodAliments=new FoodAlimentRepository();
+$foodOK=$foodAliments->findBy(array('id'=> $catId,'permission',1));
+$foodNOK=$foodAliments->findBy(array('id'=> $catId,'permission',0));
 
 ?>
 <link rel="stylesheet" href="css/journalIndiv.css">
@@ -23,7 +29,7 @@ $foodNOK=$foodAliments->findBy(array('id'=> $cat->id,'permission','false'));
       </div>
             <br>
             <h1 class="c4 faded">Titre Des Produits</h1>
-            <div class="imgJournal"><img src="icons/produitLaitier.png"></div>
+            <div class="imgJournal"><img src="<?php echo "data:image/jpeg;base64,".base64_encode($food['image'])."" ?>"></div>
         <div class="rowJournalIndiv">
         <div class="allowed">
             <div class="journalTitre">
@@ -37,7 +43,7 @@ $foodNOK=$foodAliments->findBy(array('id'=> $cat->id,'permission','false'));
                 foreach($foodOK as $okfood){
             ?>
                 <li>
-                   <?php echo $okfood->name?>
+                   <?php echo $okfood['name']?>
                 </li>
                 <?php } ?>
             </ul>
@@ -56,7 +62,7 @@ $foodNOK=$foodAliments->findBy(array('id'=> $cat->id,'permission','false'));
                 foreach($foodNOK as $nokfood){
             ?>
                 <li>
-                   <?php echo $nokfood->name?>
+                   <?php echo $nokfood['name']?>
                 </li>
             <?php } ?>
                 

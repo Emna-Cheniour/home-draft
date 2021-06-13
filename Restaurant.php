@@ -3,6 +3,8 @@ include_once 'assets/mainHead.php';
 include_once 'autoload.php';
 
 
+
+
 ?>
 <link rel="stylesheet" href="css/resto.css">
 <link rel="stylesheet" href="css/map.css">
@@ -16,13 +18,17 @@ include_once 'autoload.php';
         <br>
         <br>
         <div class="serviceRow row">
-        <?php foreach($restaurants as $resto){?>
+        <?php 
+         $restoRepo=new RestaurantRepository();
+         $restaurants=$restoRepo->findAll();
+
+        foreach($restaurants as $resto){?>
             <div class="service col4">
-                <img src="images/T.jpg" class="service__img">
-                <h2 class="fbpage"><a href="https://www.facebook.com/celiacsafesansgluten/" target="_blank">Celiac Safe</a></h2>
-                <p>Address: 4 Reu de Moscou, Tunis 1089<br>
-                    Hours: Closed ⋅ Opens 12PM<br>
-                    Phone: 24 101 401<br>
+                <img src="<?php echo "data:image/jpeg;base64,".base64_encode($resto['image'])."" ?>" class="service__img">
+                <h2 class="fbpage"><a href="<?php echo $resto['fbPage']?>" target="_blank"><?php echo $resto['name']?></a></h2>
+                <p>Adresse: <?php echo $resto['address']?><br>
+                    
+                    Phone: <?php echo $resto['phone']?><br>
                     <button class="btn btn4" id="mybtn1"><a href="#Local"> Location</a></button>
                 </p>
 
