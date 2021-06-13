@@ -25,12 +25,6 @@ require_once 'isAuthentificated.php';
         <div class="containerProducts">
 
 
-            <div class="searchProduct">
-                <i class="fas fa-search" id="search__icon"></i>
-                <input class="search" placeholder="Rechercher..." type="text">
-
-            </div>
-
             <div class="productCategories ">
                 <div class="productCategory">
 

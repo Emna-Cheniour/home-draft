@@ -390,6 +390,14 @@ if (isset($_POST['removeWished'])) {
 
     <?php include_once 'assets/scripts.php' ?>
 
+<<<<<<< HEAD
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQpw0VdM_Cpj50OfKTRMJbP1SK7wzYcAE&callback=initMap&libraries=places" type="text/javascript"></script>
+        <script src="js/cart.js"></script>
+       
+        <script src="testnav.js"></script>
+        
+=======
+>>>>>>> upstream/master
 </body>
 
 </html>

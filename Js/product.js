@@ -4,38 +4,48 @@ var shopped = document.querySelector(".shopped");
 var addCart = document.querySelector(".addCart");
 var removeCart = document.querySelector(".removeCart");
 var wishedProduct = document.querySelector(".wishedProduct");
+var shpStat = document.querySelector("#shop");
 var product = {};
-product['product']=productId.innerHTML;
-product["wish"]=0;
+product['product'] = productId.innerHTML;
+product["wish"] = 0;
 product["shopping"] = 0;
-product["order"]="";
 var wsh = wishedProduct.children[1].innerHTML;
 if (wsh == "Add to Wishlist") {
-    product["wish"]=0;
+    product["wish"] = 0;
 } else {
-    product["wish"]=1;
+    product["wish"] = 1;
+}
+var shp = shpStat.innerHTML;
+if (shp == "buy") {
+    product["shopping"] = 0;
+    shop.style.display = "inline-block";
+    shopped.style.display = "none"
+
+} else {
+    product["shopping"] = parseInt(shp);
+    shop.style.display = "none";
+    shopped.style.display = "inline-flex"
 }
 
 $(".shop").click(function () {
     product["shopping"] = 1;
-    product["order"]="add";
     $(".sendPost").load("products.php", product);
 });
 $(".addCart").click(function () {
     product["shopping"]++;
-    product["order"]="add";
     $(".sendPost").load("products.php", product);
 });
 $(".removeCart").click(function () {
     product["shopping"]--;
-    product["order"]="remove";
     $(".sendPost").load("products.php", product);
 
 });
 $(".wishedProduct").click(function () {
-    if(!product["wish"])
-    {product["wish"]=1;}
-    else {product["wish"]=0;}
+    if (!product["wish"]) {
+        product["wish"] = 1;
+    } else {
+        product["wish"] = 0;
+    }
     $(".sendPost").load("products.php", product);
 
 });

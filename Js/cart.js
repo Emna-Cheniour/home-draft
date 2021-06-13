@@ -180,65 +180,151 @@ overlayCart.addEventListener("click", () => {
     overlayCart.classList.remove("active");
     document.querySelector('body').style.overflow = "auto";
 });
-var closeLocationPopUp2 = document.querySelector("#mybutton1");
-        closeLocationPopUp2.addEventListener("click", () => {
-        document.getElementById("locAddress").innerHTML = "bonjour";
-        locationPopUp.classList.remove("active");
-        overlayCart.classList.remove("active");
-        document.querySelector('body').style.overflow = "auto";
-            });
-/*Map adreesse*/
+/*var service;
+var request;
+var map;
+var insat;
+var infoWindow;
+var names;
+Map adreesse
 function initMap() {
-    // The location of Uluru
-    const insat = {
+    The location of Uluru
+    insat = {
         lat: 36.84286722163025,
         lng: 10.196148353222771
     };
-    // The map, centered at center
-    const map = new google.maps.Map(document.getElementById("mapAddress"), {
+    The map, centered at center
+    map = new google.maps.Map(document.getElementById("mapAddress"), {
         zoom: 17,
         center: insat,
     });
     
-    const request = {
+    request = {
         placeId: "ChIJN1t_tDeuEmsRUsoyG83frY4",
         fields: ["name", "formatted_address", "place_id", "geometry"],
       };
-      const infowindow = new google.maps.InfoWindow();
-      const service = new google.maps.places.PlacesService(map);
+      infowindow = new google.maps.InfoWindow();
+      service = new google.maps.places.PlacesService(map);
+      service.getDetails(request, (place, status) => {
+        if (
+          status === google.maps.places.PlacesServiceStatus.OK &&
+          place &&
+          place.geometry &&
+          place.geometry.location
+        ) {
+          const marker = new google.maps.Marker({
+            map:map,
+            position: place.geometry.location,
+          });
+         
+          google.maps.event.addListener(marker,"click",function () {
+            names=place.geometry.location;
+          });
+          google.maps.event.addListener(marker, "click", function () {
+            infowindow.setContent(
+              "<div><strong>" +
+                place.name +
+                "</strong><br>" +
+                "Place ID: " +
+                place.place_id +
+                "<br>" +
+                place.formatted_address +
+                "</div>"
+            );
+            infowindow.open(map, this);
+            
+          });
 
+
+          
+        }
+        
+      });
       
     map.controls[google.maps.ControlPosition.TOP_CENTER].push(centerControlDiv);
-}
-
-service.getDetails(request, (place, status) => {
-    if (
-      status === google.maps.places.PlacesServiceStatus.OK &&
-      place &&
-      place.geometry &&
-      place.geometry.location
-    ) {
-      const marker = new google.maps.Marker({
-        map:map,
-        position: place.geometry.location,
-      });
-      google.maps.event.addListener(marker, "click", function () {
-        console.log(place.name) ;  
-        infowindow.setContent(
-          "<div><strong>" +
-            place.name +
-            "</strong><br>" +
-            "Place ID: " +
-            place.place_id +
-            "<br>" +
-            place.formatted_address +
-            "</div>"
-        );
-        infowindow.open(map, this);
-      });
-      
-    }
-    
-  });
-
+}*/
+var names;
+function initMap() {
+    const origin = { lat: 36.84286722163025, lng: 10.196148353222771 };
+    const map = new google.maps.Map(document.getElementById("mapAddress"), {
+      zoom: 15,
+      center: origin,
+    });
+    new ClickEventHandler(map, origin);
+  }
   
+  function isIconMouseEvent(e) {
+    return "placeId" in e;
+  }
+  
+  class ClickEventHandler {
+    origin;
+    map;
+    directionsService;
+    directionsRenderer;
+    placesService;
+    infowindow;
+    infowindowContent;
+    marker;
+    constructor(map, origin) {
+      this.origin = origin;
+      this.map = map;
+      this.directionsService = new google.maps.DirectionsService();
+      this.directionsRenderer = new google.maps.DirectionsRenderer();
+      this.directionsRenderer.setMap(map);
+      this.placesService = new google.maps.places.PlacesService(map);
+      this.infowindow = new google.maps.InfoWindow();
+      // Listen for clicks on the map.
+      this.map.addListener("click", this.handleClick.bind(this));
+    }
+    handleClick(event) {
+      console.log("You clicked on: " + event.latLng);
+  
+      // If the event has a placeId, use it.
+      if (isIconMouseEvent(event)) {
+        console.log("You clicked on place:" + event.placeId);
+        // Calling e.stop() on the event prevents the default info window from
+        // showing.
+        // If you call stop here when there is no placeId you will prevent some
+        // other map click event handlers from receiving the event.
+        event.stop();
+  
+        if (event.placeId) {
+          this.getPlaceInformation(event.placeId);
+        }
+      }
+    }
+    getPlaceInformation(placeId) {
+      const me = this;
+      this.placesService.getDetails({ placeId: placeId }, (place, status) => {
+        if (
+          status === "OK" &&
+          place &&
+          place.geometry &&
+          place.geometry.location
+        ) {
+          names=place.name+place.formatted_address;
+          if(me.marker){(me.marker).setMap(null);}
+          me.marker = new google.maps.Marker({
+            map:me.map,
+            position: place.geometry.location,
+          });
+            me.infowindow.setContent(
+              "<div><strong>" +
+                place.name +
+                "</strong><br>" +
+                place.formatted_address +
+                "</div>" );
+            me.infowindow.open(me.map, me.marker);
+        }
+      });
+    }
+  }
+
+  var closeLocationPopUp2 = document.querySelector("#mybutton1");
+        closeLocationPopUp2.addEventListener("click", () => {
+        document.getElementById("locAddress").innerHTML = names;
+        locationPopUp.classList.remove("active");
+        overlayCart.classList.remove("active");
+        document.querySelector('body').style.overflow = "auto";
+            });
