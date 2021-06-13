@@ -7,7 +7,7 @@ include_once ("autoload.php");
 $users = new UserRepository();
 
 
-if ((empty($_POST['firstname'])) && (empty($_POST['lastname'])) && (empty($_POST['sexe'])) ) {
+if ((empty($_POST['firstName'])) && (empty($_POST['lastName'])) && (empty($_POST['sex'])) ) {
 
   $_SESSION['profileError']='Veuillez vérifier les informations saisies';
   $_SESSION['page']='profile';

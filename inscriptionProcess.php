@@ -65,6 +65,7 @@ include_once ("autoload.php");
             $_SESSION['user']=$username;
             $_SESSION['role']='user';
             $_SESSION['order']=0;
+           
             header('location:acceuil.php');
         }
           

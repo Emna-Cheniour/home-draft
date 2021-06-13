@@ -13,11 +13,12 @@ include_once 'autoload.php';
 <link rel="stylesheet" href="css/specialistGroup.css">
 </head>
 <body>
+<?php 
+include_once 'navbarCo.php'?>
 
 <?php include_once 'preloader.php' ?>
 
-<?php 
-include_once 'navbarCo.php'?>
+
 
 <div class="specialist__container">
 

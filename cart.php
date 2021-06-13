@@ -379,20 +379,16 @@ if (isset($_POST['removeWished'])) {
             </div>
         </div>
     </div>-->
-    <?php include_once 'assets/scripts.php' ?>
+    
     <?php include_once 'footer.php' ?>
 
-    <script src="js/main.js"></script>
-    <script src="js/txtRotation.js"></script>
-    <script type="js/scrollUpBtn.js"></script>
+
     <script src="js/testnav.js"></script>
+    <script src="js/cart.js"></script>
     <!--script pour map-->
 
 
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQpw0VdM_Cpj50OfKTRMJbP1SK7wzYcAE&callback=initMap" type="text/javascript"></script>
-    <script src="js/cart.js"></script>
-
-    <script src="testnav.js"></script>
+    <?php include_once 'assets/scripts.php' ?>
 
 </body>
 

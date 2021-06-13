@@ -1,3 +1,19 @@
+<?php 
+
+include_once 'autoload.php';
+
+if(isset($_POST['addDon'])){
+
+    $lastame=$_POST['lastname'];
+    $firstname=$_POST['firstname'];
+    $email=$_POST['email'];
+    
+}
+
+
+?>
+
+
 <?php include_once 'assets/mainHead.php' ?>
 <link href="css/counter.css" rel="stylesheet">
 <link rel="stylesheet" href="css/don.css">
@@ -5,10 +21,12 @@
 <body>
 
 
-<?php include_once 'preloader.php' ?>
 
 
 <?php include_once 'navbarCo.php'?>
+
+
+<?php include_once 'preloader.php' ?>
 
 <div class="contenu">
 
@@ -151,13 +169,14 @@
                         </tr>
                     </table>
                     
-                    <button type="submit" id="submitForm" class="btn btn3 don" name="submitForm">Faire un Don</button>
+                    <button type="submit" id="submitForm" class="stripe-button btn btn3 don" style="opacity:0" name="submitForm">Faire un Don</button>
                     <script
-                src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                src="https://checkout.stripe.com/checkout.js" class="stripe-button " 
                 data-key="pk_test_51J1SzJE3gsjF0BrLVeytp4haD9b0CDM5IbkhmTDnCVDYrNekt7CXbwdjdgheujajglAOcMr4Y0lMX3j08b2RbXv400PpkHkqjz"
                 
                 data-currency="inr"
-                data-locale="auto">
+                data-local="center"
+                >
                 </script>
                 </form>
             </div>
