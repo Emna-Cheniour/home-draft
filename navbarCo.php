@@ -74,7 +74,13 @@ include_once 'autoload.php';
           <img src="<?php 
           $users=new UserRepository();
           $user=$users->findOneBy(array('username' => $_SESSION['user']));
-          echo "data:image/jpeg;base64,".base64_encode($user['image'])."" ?>"alt="">
+
+          if($user['image']){
+            echo "data:image/jpeg;base64,".base64_encode($user['image'])."";
+          } else {
+            echo "svg/undraw_male_avatar_323b.svg";
+          }
+           ?>"alt="">
           
           <a href="profile.php"><i class="fas fa-cogs"></i>Modifier Profil</a>
           <a href="logout.php"><i class="fas fa-sign-out-alt"></i>Se Deconnecter</a>
