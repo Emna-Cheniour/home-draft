@@ -1,7 +1,8 @@
-<?php include_once 'assets/bootstrapAsset.php';
-include_once 'autoload.php';
+<?php
 session_start();
-
+include_once 'isAuthentificated.php';
+include_once 'assets/bootstrapAsset.php';
+include_once 'autoload.php';
 $foodCat=new FoodCategoryRepository();
 
 if( isset($_GET['catId']) ){

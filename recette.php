@@ -1,9 +1,11 @@
 <?php 
 session_start();
-include_once 'assets/mainHead.php';
+include_once 'assets/bootstrapAsset.php';
 include_once 'autoload.php';
+include_once 'isAuthentificated.php';
 $recipeCatsRepo=new RecipeCategoryRepository();
 $recipeCats=$recipeCatsRepo->findAll();
+
          
 ?>
 
@@ -12,7 +14,7 @@ $recipeCats=$recipeCatsRepo->findAll();
 </head>
 
 
-  <?php include("navbarCo.php"); ?>
+  <?php include_once "navbarCo.php"; ?>
 <div class="recipe--page__container">
 
 
@@ -29,8 +31,9 @@ $recipeCats=$recipeCatsRepo->findAll();
               
 
               foreach($recipeCats as $recipeCatItem){
+              
             ?>
-              <li><button><a href="?catId<?php echo $recipeCatItem['id']?>"><?php echo $recipeCatItem['nom'] ?></a></button></li>
+              <li><button style="color:#fff" type="submit" name="submit<?php echo $recipeCatItem['nom'] ?>"><a href="#" ><?php echo $recipeCatItem['nom'] ?></a></button></li>
 
             <?php } ?>
             
@@ -64,13 +67,20 @@ $recipeCats=$recipeCatsRepo->findAll();
   <?php 
      $recetteRepo=new RecipeRepository();
      $recettes=$recetteRepo->findAll();
+     
+     $recipeCatRelRepo=new RecipeCategoryRelRepository();
 
-  
-     if(isset($_GET['catId'])){
-       $recipeCatRelRepo=new RecipeCategoryRelRepository();
-       $recetteCatRel=$recipeCatRelRepo->findOneBy(array('cetagoryId' => $ca));
-       $recettes= $recetteCatRel['recipeId'];
+     foreach($recipeCats as $recipeCatItem){
+
+       if(isset($_POST['submit'.''.$recipeCatItem['nom']])){
+       
+        $recetteCatRel=$recipeCatRelRepo->findOneBy(array('cetagoryId' => $recipeCatItem));
+        $recetteFiltred=$recetteCatRel['recipeId'];
+        $recettes=$recetteRepo->findBy(array());
+       }
      }
+    
+
   ?>
 
 
@@ -85,6 +95,7 @@ $recipeCats=$recipeCatsRepo->findAll();
      $recipeImg=$images->findOneBy(array('recipeId'=>$recette['id']));
 
      $ingredientRecipeRel=new RecipeIngredientRelRepository();
+     
      $ingredientRel=$ingredientRecipeRel->findOneBy(array('recipeId'=>$recette['id']));
           ?>
     <div class="card">
@@ -139,12 +150,13 @@ $recipeCats=$recipeCatsRepo->findAll();
 
 </div>
 <?php include 'footer.php' ?>
-<script src="js/main.js"></script>
    
-
+    <script src="js/filter.js"></script>
     <script src="js/testnav.js"></script>
-  <script src="Js/heart.js"></script>
-  <script src="Js/searchBar.js"></script>
+    <script src="Js/heart.js"></script>
+ 
+    <script src="Js/searchBar.js"></script>
+    
   
  
 

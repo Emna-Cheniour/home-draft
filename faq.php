@@ -1,7 +1,16 @@
 <?php include_once 'assets/mainHead.php' ;
 session_start();
+
+if (isset($_SESSION['user'])) {
+
+    include_once "navbarCo.php";
+   
+} else {
+    include_once "navbarDeco.php";
+}
 ?>
 <link rel="stylesheet" href="css/faq.css">
+
 </head>
 <body>
 
@@ -9,7 +18,7 @@ session_start();
 <?php //include_once 'preloader.php' ?>
 
 
-<?php include_once 'navbarCo.php'?>
+
 
 
 <div class="faq__container">

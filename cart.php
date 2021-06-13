@@ -2,6 +2,7 @@
 session_start();
 include_once 'assets/mainHead.php';
 include_once 'autoload.php';
+include_once 'isAuthentificated.php';
 $display = "cart";
 $total = array();
 $wishProductRep = new WishProductRepository();
