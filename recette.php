@@ -104,7 +104,7 @@ $recipeCats=$recipeCatsRepo->findAll();
 
           <div class="detail__field">
           <span class="number">Ingredients</span>
-            <span class="number"><?php  //echo $ingredient->countRow()?></span>
+            <span class="expression"><?php  echo count($ingredientRel)?></span>
             
           </div>
 

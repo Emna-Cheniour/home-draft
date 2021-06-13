@@ -32,7 +32,6 @@ minusIconImg.addEventListener('click',()=>{
  });
 
  minusIconCat.addEventListener('click',()=>{
-  console.log("hi-");
   var input=document.querySelector('.multiple.cat .form-group input');
   input.value="";
 

@@ -2,15 +2,19 @@
 
   include_once 'assets/bootstrapAsset.php';
   include_once 'autoload.php';
-  $adminRepo=new AdminRepository();
-  $admins=$adminRepo->findAll();
 
+
+  $adminRepo=new AdminRepository();
+
+
+  
   if(isset($_POST['addAdmin'])){
+
     $username=$_POST['username'];
     $password=$_POST['password'];
     $email=$_POST['email'];
 
-    $admins->insert(array('id' => '' , 'username' => $username , 'password' => $password , 'email' => $email , 'super' => '0'));
+    $adminRepo->insert(array('username' => $username , 'password' => $password , 'email' => $email , 'super' => 0));
   }
 
 
@@ -26,6 +30,7 @@
   <thead>
     <tr>
       <th scope="col"><h3 style="color:#5FC2BA">Nom d'admin</h3></th>
+      <th scope="col"><h3 style="color:#5FC2BA">Email</h3></th>
       <th scope="col"><h3 style="color:#5FC2BA">Mot de passe</h3></th>
       <th scope="col"></th>
       
@@ -35,7 +40,9 @@
   </thead>
   
   <tbody>
-  <?php foreach($admins as $admin){ ?>
+  <?php 
+    $admins=$adminRepo->findAll();
+  foreach($admins as $admin){ ?>
     <tr class="user__row">
       <td><?php echo $admin['username'] ?></td>
       <td><?php echo $admin['email'] ?></td>
@@ -80,14 +87,18 @@
   </div>
 
   <form>
+  <div class="form-group">
+      
+      <input type="text" name="username" class="form-control"  placeholder="Nom d'utilisateur">
+    </div>
     <div class="form-group">
      
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Entrer adresse email">
+      <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Entrer adresse email">
     
     </div>
     <div class="form-group">
       
-      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Mot De Passe">
+      <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Mot De Passe">
     </div>
   
     <button type="submit" name="addAdmin" class="btn btn3"><a href="">Submit</a></button>

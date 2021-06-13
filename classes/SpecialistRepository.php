@@ -14,7 +14,7 @@ class SpecialistRepository extends Repository
 
     }
     public function insertSpecialist($criterias){
-        $request = "INSERT INTO specialist (`lastName`, `firstName`, `email`, `address`, `phoneNumber`,`profession`,`description`) VALUES (?,?,?,?,?,?,?)";
+        $request = "INSERT INTO specialist (`lastName`, `firstName`, `email`, `address`, `phoneNumber`,`profession`,`description`,`image`) VALUES (?,?,?,?,?,?,?,?)";
         $response = $this->bd->prepare($request);
         $i = 1;
         foreach ($criterias as $key => $criteria) {
