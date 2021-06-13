@@ -1,6 +1,9 @@
 <?php
 session_start();
 include_once 'assets/bootstrapAsset.php';
+if($_SESSION['role']=='user'){
+  header('Location:404page.php');
+}
 ?>
 <link rel="stylesheet" href="css/adminMain.css">;
 <title>Acceuil Admin</title>
@@ -92,12 +95,6 @@ include_once 'assets/bootstrapAsset.php';
         </div>
 
       </div>
-
-
-
-
-
-
 
     </div>
   </div>

@@ -20,17 +20,17 @@ if (isset($_GET['view'])) {
     <?php include_once 'preloader.php' ?>
     <?php include_once 'navbarCo.php' ?>
     <div class="product">
-    <h1 style=" display : none" id="productId"><?=$product['id']?></h1>
+        <h1 style=" display : none" id="productId"><?= $product['id'] ?></h1>
         <div class="swiper-container productImageContainer">
             <div class="swiper-wrapper productImageWrapper">
                 <?php
                 foreach ($images as $image) {
                 ?>
-                 <div class="swiper-slide productImageSlide">
-                    <div class="productImage">
-                        <img src=<?php echo "data:image/jpeg;base64," . base64_encode($image['image']) ?> alt="">
+                    <div class="swiper-slide productImageSlide">
+                        <div class="productImage">
+                            <img src=<?php echo "data:image/jpeg;base64," . base64_encode($image['image']) ?> alt="">
+                        </div>
                     </div>
-                </div>
                 <?php
                 }
                 ?>
@@ -44,12 +44,26 @@ if (isset($_GET['view'])) {
         <div class="productDetails">
             <h1><?= $product['name'] ?></h1>
             <p>
-            <?= $product['description'] ?>
+                <?= $product['description'] ?>
             </p>
             <h1><?= $product['price'] ?> Dt</h1>
-            <span class="wishedProduct"><i class="far fa-heart"></i>
-                <h4>Add to Wishlist</h4>
-            </span>
+
+            <?php $wishProductRep = new WishProductRepository();
+            $wish = $wishProductRep->findOneBy(array('productId' => $product['id'], 'userId' => $_SESSION['user']));
+            if ($wish) {
+            ?>
+            <span class="wishedProduct"><i class="fas fa-heart"></i>
+                    <h4>Wished</h4>
+                </span>
+            <?php
+            } else { ?>
+                <span class="wishedProduct"><i class="far fa-heart"></i>
+                    <h4>Add to Wishlist</h4>
+                </span>
+            <?php
+            }
+            ?>
+
             <span class="shop"><i class="fas fa-shopping-cart"></i>
                 <h4>Add to cart</h4>
             </span>
