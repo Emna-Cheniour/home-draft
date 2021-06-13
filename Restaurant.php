@@ -14,26 +14,6 @@ include_once 'autoload.php';
     <?php include_once 'preloader.php' ?>
     
     <div class="container_resto">
-<<<<<<< HEAD
-    <div class="services">
-        <h1 class="c4 faded">Les Restaurants Coeliaques</h1>
-        <br>
-        <br>
-        <div class="serviceRow row">
-        <?php 
-         $restoRepo=new RestaurantRepository();
-         $restaurants=$restoRepo->findAll();
-
-        foreach($restaurants as $resto){?>
-            <div class="service col4">
-                <img src="<?php echo "data:image/jpeg;base64,".base64_encode($resto['image'])."" ?>" class="service__img">
-                <h2 class="fbpage"><a href="<?php echo $resto['fbPage']?>" target="_blank"><?php echo $resto['name']?></a></h2>
-                <p>Adresse: <?php echo $resto['address']?><br>
-                    
-                    Phone: <?php echo $resto['phone']?><br>
-                    <button class="btn btn4" id="mybtn1"><a href="#Local"> Location</a></button>
-                </p>
-=======
         <div class="services">
             <h1 class="c4 faded">Les Restaurants Coeliaques</h1>
             <br>
@@ -47,7 +27,6 @@ include_once 'autoload.php';
                         Phone: 24 101 401<br>
                         <button class="btn btn4" id="mybtn1"><a href="#Local"> Location</a></button>
                     </p>
->>>>>>> ec6c2303219761e228d3c3cf09dd82ced7ab1dac
 
                 </div>
 
