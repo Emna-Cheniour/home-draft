@@ -148,6 +148,13 @@ overlayCart.addEventListener("click", () => {
     overlayCart.classList.remove("active");
     document.querySelector('body').style.overflow = "auto";
 });
+var closeLocationPopUp2 = document.querySelector("#mybutton1");
+        closeLocationPopUp2.addEventListener("click", () => {
+        document.getElementById("locAddress").innerHTML = "bonjour";
+        locationPopUp.classList.remove("active");
+        overlayCart.classList.remove("active");
+        document.querySelector('body').style.overflow = "auto";
+            });
 /*Map adreesse*/
 function initMap() {
     // The location of Uluru
@@ -160,22 +167,46 @@ function initMap() {
         zoom: 17,
         center: insat,
     });
+    
+    const request = {
+        placeId: "ChIJN1t_tDeuEmsRUsoyG83frY4",
+        fields: ["name", "formatted_address", "place_id", "geometry"],
+      };
+      const infowindow = new google.maps.InfoWindow();
+      const service = new google.maps.places.PlacesService(map);
 
-
-    var infowindow6 = new google.maps.InfoWindow({
-        content: 'Insat'
-    });
-    const marker6 = new google.maps.Marker({
-        position: center,
-        map: map,
-        title: "Insat",
-
-    });
-
-    infowindow6.open(map, marker6);
-    document.getElementById("mybtn1").addEventListener("click", () => {
-        map.setCenter(insat);
-    });
-
+      
     map.controls[google.maps.ControlPosition.TOP_CENTER].push(centerControlDiv);
 }
+
+service.getDetails(request, (place, status) => {
+    if (
+      status === google.maps.places.PlacesServiceStatus.OK &&
+      place &&
+      place.geometry &&
+      place.geometry.location
+    ) {
+      const marker = new google.maps.Marker({
+        map:map,
+        position: place.geometry.location,
+      });
+      google.maps.event.addListener(marker, "click", function () {
+        console.log(place.name) ;  
+        infowindow.setContent(
+          "<div><strong>" +
+            place.name +
+            "</strong><br>" +
+            "Place ID: " +
+            place.place_id +
+            "<br>" +
+            place.formatted_address +
+            "</div>"
+        );
+        infowindow.open(map, this);
+      });
+      
+    }
+    
+  });
+
+  

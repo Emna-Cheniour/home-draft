@@ -183,10 +183,9 @@ $cartIsEmpty = 0;
                     <div class="adresse">
                         <img src="images/adresseCart.png" alt="">
                         <span>Adresse: </span>
-                        <span>73 rue du Général Ailleret
-
-                            <button id="changeLocation" class="btn btn3">Changer Adresse</button>
+                        <span id="locAddress">73 rue du Général Ailleret    
                         </span>
+                        <button id="changeLocation" class="btn btn3">Changer Adresse</button>
                         <!-- if has adress in profile show it as default-->
 
         <!-- if not
@@ -209,7 +208,7 @@ $cartIsEmpty = 0;
                         <label for="saveAdrs">Ajouter cette adresse à mes adresses</label>
                         <input id="saveAdrs" type="checkbox">
                     </div>
-                    <button class="btn btn3 " id="mybtn1">Confirmer</button>
+                    <button class="btn btn3 " id="mybutton1">Confirmer</button>
                 </div>
                 <div class="paymentPopUp ">
                     <h1 class="closePaymentPopUp"> &times;</h1>
