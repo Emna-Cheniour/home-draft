@@ -10,7 +10,6 @@ class WishProductRepository extends Repository
     public function deleteTwo($criteria1,$value1,$criteria2,$value2){
         $request='DELETE FROM `wishproduct` WHERE '.$criteria1.' = ? AND  '.$criteria2.' = ?';
         $response = $this->bd->prepare($request);
-        echo $request;
         $response->bindValue(1,$value1);
         $response->bindValue(2,$value2);
         

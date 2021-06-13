@@ -165,17 +165,11 @@
         <p>Check the URL you entered for any mistakes and try again. Alternatively, search
         for whatever is missing or take a look around the rest of our site.</p>
 
-        <div id="search">
-            <form>
-            <input type="text" placeholder="Search" />
-            </form>
-        </div>
 
         <div id="navigation">
-            <a class="navigation" href="acceuil.php"><button class="btn btn1 btnServ">Home</button></a><a class="navigation" href="login_SignUp.php"><button class="btn btn1 btnServ">Login</button></a>
-            <a class="navigation" href="shopping.php"><button class="btn btn1 btnServ">Site Shop</button></a>
-            <a class="navigation" href=
-            "InfoPage.php"><button class="btn btn1 btnServ">Infos</button></a>
+            <a class="navigation" href="acceuil.php"><button class="btn btn1 btnServ">Home</button></a>
+            
+            
         </div>
         </div>
     </div>
