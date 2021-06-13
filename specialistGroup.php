@@ -10,7 +10,8 @@ include_once 'autoload.php';
 ?>
 
 
-
+<link rel="stylesheet" href="css/specialistGroup.css">
+</head>
 <body>
 
 <?php include_once 'preloader.php' ?>

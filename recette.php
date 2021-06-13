@@ -4,9 +4,11 @@ include_once 'assets/mainHead.php';
 include_once 'autoload.php';
 
 $recipeCatsRepo=new RecipeCategoryRepository();
-              $recipeCats=$recipeCatsRepo->findAll();
+$recipeCats=$recipeCatsRepo->findAll();
          
 ?>
+
+<link rel="stylesheet" href="css/recipeStyle.css">
 
 </head>
 
@@ -80,16 +82,16 @@ $recipeCatsRepo=new RecipeCategoryRepository();
    
    foreach($recettes as $recette){
 
-     $images=new recipePictureRepository();
+     $images=new RecipePictureRepository();
      $recipeImg=$images->findOneBy(array('recipeId'=>$recette['id']));
-     
+
      $ingredientRecipeRel=new RecipeIngredientRelRepository();
      $ingredientRel=$ingredientRecipeRel->findOneBy(array('recipeId'=>$recette['id']));
           ?>
     <div class="card">
      
       <div class="card__body">
-        <img src="<?php "data:image/jpeg;base64,".base64_encode($recipeImg[0]['image'])."" ?>" class="card__img">
+        <img  src=<?php echo "data:image/jpeg;base64," . base64_encode($recipeImg['picture']) ?> class="card__img">
   
 
         <h2 class="card__title"><?php echo $recette['title'] ?></h2>
@@ -115,7 +117,7 @@ $recipeCatsRepo=new RecipeCategoryRepository();
       </div>
 
       <div class="card__options">
-         <a href="recetteIndiv?recipeId<?php echo $recette['id']?>.php" class="btn btn1 don" >Voir Recette</a>
+         <a href="recetteIndiv.php?recipeId=<?php echo $recette['id']?>" class="btn btn1 don" >Voir Recette</a>
 
         <div class="card__icons">
           <a class="like">
