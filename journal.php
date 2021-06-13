@@ -1,8 +1,7 @@
 <?php include_once 'assets/mainHead.php';
 include_once 'autoload.php';
 
-$foodCatgeoryRepo=new FoodCatgeoryRepository();
-$foodCat=$foodCatgeoryRepo->findAll();
+
 ?>
 <link rel="stylesheet" href="css/journal.css">
 <link rel="stylesheet" href="css/shopping.css">
@@ -17,6 +16,7 @@ $foodCat=$foodCatgeoryRepo->findAll();
 
 
 <div id="effect" class="wavy titreJournal">
+
         <span style="--i:1;">J</span>
         <span style="--i:2;">O</span>
         <span style="--i:3;">U</span>
@@ -38,25 +38,27 @@ $foodCat=$foodCatgeoryRepo->findAll();
         <span style="--i:19;">R</span>
         <span style="--i:20;">E</span>
 </div>
-<div class="searchJournal__input">
-        <i class="fas fa-search" id="search__icon"></i>
-        <input id="search" placeholder="Rechercher..." type="text">
 
-</div>
+
 
 <div class="journal_container">
 
     <div class="row">
 
-    <?php foreach($foodCat as $cat ){ ?>
+    <?php 
+
+    $foodCatgeoryRepo=new FoodCategoryRepository();
+    $foodCat=$foodCatgeoryRepo->findAll();
+    
+    foreach($foodCat as $cat ){ ?>
 
       <div class="card cardJournal col">
         <div class="card-body">
-            <h4 class="card-title"><?php $cat->name?></h4>
-            <div class="imgJournal"><img src="<?php echo 'data:image/jpeg;base64,".base64_encode($cat->image)."' ?>"></div>
+            <h4 class="card-title"><?php echo $cat['name']?></h4>
+            <div class="imgJournal"><img src="<?php echo "data:image/jpeg;base64,".base64_encode($cat['image'])."" ?>"></div>
             <h6>Celiac 101</h6>
             <p class="card-text">Cliquez ici pour voir ce que vous est permis et ce que vous est interdit </p>
-            <a href="journalIndiv.php?<?php echo $cat->id ?>" class="card-link"><button class="btn btn4">Voir Journal</button></a>
+            <a href="journalIndiv.php?catId=<?php echo $cat['id'] ?>" class="card-link"><button class="btn btn4">Voir Journal</button></a>
         </div>
       </div>
 

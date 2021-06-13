@@ -83,28 +83,12 @@ $steps=$stepRepo->findBy(array('idRecipe'=> $recipeId ));
         <?php 
         
         for ($i = 0; $i < count($recipeImg); $i++){
+          $keys = array_keys( $recipeImg );
+
           ?>
             <div class="slide <?php if($i==0) {echo "first" ;} ?>">
-            <img  src=<?php echo "data:image/jpeg;base64," . base64_encode($recipeImg['picture']) ?> alt="">
+            <img  src=<?php echo "data:image/jpeg;base64," . base64_encode($recipeImg[$keys[$i]]['picture']) ?> alt="">
           </div>
-
-          }
-        ?>
-
-        <div class="slide first">
-           <img  src=<?php echo "data:image/jpeg;base64," . base64_encode($recipeImg['picture']) ?> alt="">
-         </div>
-      
-
-          
-
-          
-               
-                
-      ?>
-         <div class="slide">
-           <img  src=<?php echo "data:image/jpeg;base64," . base64_encode($recipeImgItem['picture']) ?> alt="">
-         </div>
          
          <?php } ?>
          
@@ -113,7 +97,7 @@ $steps=$stepRepo->findBy(array('idRecipe'=> $recipeId ));
    
         <!--slide image end -->
    
-        <!--autonaviqgation start-->
+        <!--autonavigation start-->
         <div class="navigation__auto">
           <div class="auto__btn1"></div>
           <div class="auto__btn2"></div>

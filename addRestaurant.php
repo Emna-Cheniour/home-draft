@@ -15,7 +15,7 @@ if(isset($_POST['addRest'])){
 
   $restaurant=new RestaurantRepository();
 
-  $restaurant->insertRest(array('',$name,$address,$phoneNumber));
+  $restaurant->insert(array('name' => $name,'address' => $address,'phone' => $phoneNumber, 'fbPage' => $fbPage));
 
   
 }
