@@ -348,7 +348,7 @@ $cartIsEmpty = 0;
         <!--script pour map-->
 
 
-        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQpw0VdM_Cpj50OfKTRMJbP1SK7wzYcAE&callback=initMap" type="text/javascript"></script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQpw0VdM_Cpj50OfKTRMJbP1SK7wzYcAE&callback=initMap&libraries=places" type="text/javascript"></script>
         <script src="js/cart.js"></script>
        
         <script src="testnav.js"></script>
