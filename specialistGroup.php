@@ -78,7 +78,7 @@ include_once 'navbarCo.php'?>
         </p>
 
         <div class="card__options">
-          <a href="specialistProfile.php?<?php echo $specialist['id']?> " class="btn btn3 don" >Voir Profil</a>
+          <a href="specialistProfile.php?id=<?php echo $specialist['id']?> " class="btn btn3 don" >Voir Profil</a>
         </div>
       </div>
 

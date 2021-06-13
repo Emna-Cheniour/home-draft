@@ -1,6 +1,26 @@
 <?php
 
 include_once 'assets/bootstrapAsset.php';
+
+session_start();
+
+include_once 'autoload.php';
+
+if(isset($_POST['addRest'])){
+
+  $name=$_POST['name'];
+  $address=$_POST['address'];
+  $phoneNumber=$_POST['phoneNumber'];
+  $fbPage=$_POST['fbPage'];
+
+  $restaurant=new RestaurantRepository();
+
+  $restaurant->insertRest(array('',$name,$address,$phoneNumber));
+
+  
+}
+
+
 ?>
 
 <body>
@@ -41,40 +61,41 @@ include_once 'assets/bootstrapAsset.php';
 
     </div>
 
-    <form method="post"  enctype="multipart/form-data">
+    <form method="post"  action="addRestaurant.php" enctype="multipart/form-data">
       <div class="form-group">
         
-        <input type="text" class="form-control" placeholder="Nom Restaurant">
+        <input type="text" class="form-control" name="name" placeholder="Nom Restaurant">
       
       </div>
 
       <div class="form-group">
 
-        <input type="text" class="form-control" placeholder="Description">
+        <input type="text" class="form-control" name="address" placeholder="Adresse">
       
       </div>
 
 
-      <div class="form-group">
       
-        <input type="text" class="form-control" placeholder="Horaire">
-      
-      </div>
 
       <div class="form-group">
       
-        <input type="file" class="form-control" placeholder="Image">
+        <input type="file" class="form-control" name="image" placeholder="Image">
       
       </div>
 
       <div class="form-group">
         
-        <input type="text" class="form-control" placeholder="Numéro De Téléphone">
+        <input type="text" class="form-control" name="phoneNumber" placeholder="Numéro De Téléphone">
+      
+      </div>
+      <div class="form-group">
+        
+        <input type="text" class="form-control" name="fbPage" placeholder="Fb">
       
       </div>
       
     
-      <button type="submit" class="btn btn3">Submit</button>
+      <button type="submit" name="addRest" class="btn btn3">Submit</button>
     </form>
 
   </div>

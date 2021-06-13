@@ -64,6 +64,7 @@ include_once ("autoload.php");
             $user->inscription(array($username,$email,$password));
             $_SESSION['user']=$username;
             $_SESSION['role']='user';
+            $_SESSION['order']=0;
             header('location:acceuil.php');
         }
           

@@ -3,8 +3,10 @@
 <?php 
 include("assets/mainHead.php"); 
 
+include_once 'autoload.php';
+
 $recettes=new RecipeRepository();
-$recette=$recettes->findBy(array('id'=> $_GET['id']));
+$recette=$recettes->findBy(array('id'=> $_GET['recipeId']));
 
 $images=new recipeImageRepository();
 $recipeImg=$images->findBy(array('id'=> $recette->id));

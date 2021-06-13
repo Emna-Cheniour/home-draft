@@ -9,7 +9,7 @@ class ProductCategoryRelRepository extends Repository
     }
     public function productByCat($min,$max,$categories,$criteria,$order)
     {
-        $request = "select * from product , categoryproduct, categoryproductrel where product.id=categoryproductrel.productId and 
+        $request = "select product.* from product , categoryproduct, categoryproductrel where product.id=categoryproductrel.productId and 
         categoryproduct.id=categoryproductrel.categoryId and product.price >= ? and product.price <= ? and categoryproduct.name=? ";
         foreach (array_slice($categories, 1) as $cat) {
             $request = $request . " and categoryproduct.name=?";

@@ -1,38 +1,28 @@
 var shop = document.querySelector(".shop");
+var productId = document.querySelector("#productId");
 var shopped = document.querySelector(".shopped");
-var donate = document.querySelector(".donate");
-var donated = document.querySelector(".donated");
 var addCart = document.querySelector(".addCart");
 var removeCart = document.querySelector(".removeCart");
-var addDonation = document.querySelector(".addDonation");
-var removeDonation = document.querySelector(".removeDonation");
 var wishedProduct = document.querySelector(".wishedProduct");
 var product = {};
+product['product']=productId.innerHTML;
 product["wish"]=0;
 product["shopping"] = 0;
-product["donations"] = 0;
-$(".donate").click(function () {
-    product["donations"] = 1;
-    $(".sendPost").load("products.php", product);
-});
-$(".addDonation").click(function () {
-    product["donations"]++;
-    $(".sendPost").load("products.php", product);
-});
-$(".removeDonation").click(function () {
-    product["donations"]--;
-    $(".sendPost").load("products.php", product);
-});
+product["order"]="";
+
 $(".shop").click(function () {
     product["shopping"] = 1;
+    product["order"]="add";
     $(".sendPost").load("products.php", product);
 });
 $(".addCart").click(function () {
     product["shopping"]++;
+    product["order"]="add";
     $(".sendPost").load("products.php", product);
 });
 $(".removeCart").click(function () {
     product["shopping"]--;
+    product["order"]="remove";
     $(".sendPost").load("products.php", product);
 
 });
@@ -61,23 +51,8 @@ removeCart.addEventListener('click', () => {
         shopped.children[1].innerHTML = 1;
     }
 });
-donate.addEventListener('click', () => {
-    donated.children[1].innerHTML = 1;
-    donate.style.display = "none";
-    donated.style.display = "inline-flex"
-});
-addDonation.addEventListener('click', () => {
 
-    donated.children[1].innerHTML = parseInt(donated.children[1].innerHTML) + 1;
-});
 
-removeDonation.addEventListener('click', () => {
-    donated.children[1].innerHTML = parseInt(donated.children[1].innerHTML) - 1;
-    if (donated.children[1].innerHTML == 0) {
-        donate.style.display = "inline-flex";
-        donated.style.display = "none";
-    }
-});
 wishedProduct.addEventListener('click', () => {
     var text = wishedProduct.children[1].innerHTML;
     if (text == "Add to Wishlist") {

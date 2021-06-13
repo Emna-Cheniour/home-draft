@@ -8,7 +8,9 @@ include_once 'autoload.php';
 
 $specialistRepo=new SpecialistRepository();
 $specialistId=$_GET['id'];
-$specialist=$specialistRepo->findBy($specialistId);
+$specialist=$specialistRepo->findOneBy(array('id' => $specialistId));
+
+
 
 
 
@@ -34,6 +36,7 @@ include_once 'navbarCo.php'?>
       <li><a href="#Apropos">A propos</a></li>
       <li><a href="#contact">Contact</a></li>
       <li><a href="specialistGroup.php">Retour</a></li>
+
       
     </ul>
 
@@ -41,7 +44,8 @@ include_once 'navbarCo.php'?>
 
         <div class="field" id="profile">
           <img src="images/nutritionist.png" alt="">
-            <h2><?php echo $specialist['lastName'] .''. $specialist['firstName'] ?></h2>
+         
+            <h2><?php  echo $specialist["lastName"] .''. $specialist['firstName'] ?></h2>
             
             <h4>Réseaux Sociaux</h4>
         </div>
@@ -60,9 +64,9 @@ include_once 'navbarCo.php'?>
           <h2>Contacter Votre médecin</h2>
           <div class="contact__container">
             <div class="discussion">
-                <a href="#"><i class="fas fa-sms"></i><?php echo $specialist['email'] ?></a>
+                <a href="#"><i class="fas fa-envelope"></i><?php echo $specialist['email'] ?></a>
             </div>
-            <div class="discussion">
+            <div class="contact">
                 <a href="#"><i class="fas fa-sms"></i><?php echo $specialist['phoneNumber'] ?></a>
             </div>
           </div>
