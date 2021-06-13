@@ -71,10 +71,10 @@ include_once 'autoload.php';
         <div class="profile__hidden">
           
 
-          <img src="<?php 
-          $users=new UserRepository();
+          <!--<img src="<?php 
+          /*$users=new UserRepository();
           $user=$users->findOneBy(array('username' => $_SESSION['user']));
-          echo "data:image/jpeg;base64,".base64_encode($user['image'])."" ?>"alt="">
+          echo "data:image/jpeg;base64,".base64_encode($user['image'])."" */?>"alt="">-->
           
           <a href="profile.php"><i class="fas fa-cogs"></i>Modifier Profil</a>
           <a href="logout.php"><i class="fas fa-sign-out-alt"></i>Se Deconnecter</a>
