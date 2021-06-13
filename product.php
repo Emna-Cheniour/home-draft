@@ -47,12 +47,17 @@ if (isset($_GET['view'])) {
                 <?= $product['description'] ?>
             </p>
             <h1><?= $product['price'] ?> Dt</h1>
+            <?php if ($product['quantity'] == 0) { ?>
+                <h1> Le stock est épuisé </h1>
+            <?php } else if ($product['quantity'] <= 3) { ?>
+                <h1> Il ne reste que <?$product['quantity']?> eléments !! </h1>
+            <?php } ?>
 
             <?php $wishProductRep = new WishProductRepository();
             $wish = $wishProductRep->findOneBy(array('productId' => $product['id'], 'userId' => $_SESSION['user']));
             if ($wish) {
             ?>
-            <span class="wishedProduct"><i class="fas fa-heart"></i>
+                <span class="wishedProduct"><i class="fas fa-heart"></i>
                     <h4>Wished</h4>
                 </span>
             <?php

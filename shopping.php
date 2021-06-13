@@ -2,12 +2,15 @@
 include_once 'autoload.php';
 session_start();
 require_once 'isAuthentificated.php';
+if ($_SESSION['role'] == 'admin') {
+    header('Location:catalogueAdmin.php');
+}
 $productrep = new ProductRepository();
 $productImgrep = new ProductImageRepository();
 $cmntShpRep = new CommentShoppingRepository();
 $userRep = new UserRepository();
 if (isset($_POST['sendReview'])) {
-    $cmntShpRep->insert(array('userId'=>$_SESSION['user'],'rating'=>$_POST['rating'],'description'=>$_POST['reviewComment']));
+    $cmntShpRep->insert(array('userId' => $_SESSION['user'], 'rating' => $_POST['rating'], 'description' => $_POST['reviewComment']));
     $reviewstat = "1";
     $reviewContent = "Votre évaluation est ajoutée avec succès";
 }
@@ -166,9 +169,9 @@ include_once 'assets/mainHead.php';
                                                                 echo "images/userWithoutPic.jpg";
                                                             } ?> alt="">
                                             </div>
-                                            
+
                                             <h3><?php
-                                            if ($user['firstName'] && $user['lastName']) {
+                                                if ($user['firstName'] && $user['lastName']) {
                                                     echo $user['firstName'] . " " . $user['lastName'];
                                                 } else {
                                                     echo $user['username'];
@@ -199,7 +202,7 @@ include_once 'assets/mainHead.php';
                 </div>
                 <h1 id="reviewRating">?/5</h1>
                 <input name="rating" id="stars" type="hidden" value="0">
-                <button  class="btn btn1 " name="sendReview" type="submit">Submit Review</button>
+                <button class="btn btn1 " name="sendReview" type="submit">Submit Review</button>
             </form>
         </div>
         <div class="reviewStat" id=<?php if (isset($reviewstat)) {
@@ -234,17 +237,17 @@ include_once 'assets/mainHead.php';
                     </div>
                     <div id="productCategoryOptions" class="productCategoryOptions">
 
-                    <?php
-                    $catRep = new ProductCategoryRepository;
-                    $categories = $catRep->findAll();
-                    foreach ($categories as $categorie) {
-                    ?>
-                        <div>
-                            <input type="checkbox" name="" id="">
-                            <label for=""><?= $categorie['name']?></label>
-                        </div>
-                    <?php
-                    } ?>
+                        <?php
+                        $catRep = new ProductCategoryRepository;
+                        $categories = $catRep->findAll();
+                        foreach ($categories as $categorie) {
+                        ?>
+                            <div>
+                                <input type="checkbox" name="" id="">
+                                <label for=""><?= $categorie['name'] ?></label>
+                            </div>
+                        <?php
+                        } ?>
                     </div>
                     <div class="ProductPriceRange">
                         <div class="ProductPrice">
@@ -257,13 +260,13 @@ include_once 'assets/mainHead.php';
                             <h3 id="amountmax"></h3>
                         </div>
                         <div id="slider-range"></div>
-                        
-                    <?php
-                    $minPrice= $productrep->min('price');
-                    $maxPrice= $productrep->max('price');
-                    ?>
-                    <input type="hidden" id="min" value="<?= $minPrice?>">
-                    <input type="hidden" id="max" value="<?= $maxPrice?>">
+
+                        <?php
+                        $minPrice = $productrep->min('price');
+                        $maxPrice = $productrep->max('price');
+                        ?>
+                        <input type="hidden" id="min" value="<?= $minPrice ?>">
+                        <input type="hidden" id="max" value="<?= $maxPrice ?>">
 
                     </div>
 

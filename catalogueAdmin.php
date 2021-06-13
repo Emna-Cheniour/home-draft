@@ -13,7 +13,12 @@ require_once 'isAuthentificated.php';
 
 <body>
 
-    <?php include_once 'preloader.php' ?>
+    <?php include_once 'preloader.php' ;
+    if(isset($_SESSION['succesMessage'])){
+        echo '<h4 style="color:green ; font-weight:bolder; ">'.$_SESSION['succesMessage'].'</h4>';
+        unset($_SESSION['succesMessage']);
+    }
+    ?>
 
     <div id="startShopping" class="productsss">
 
