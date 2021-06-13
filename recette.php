@@ -2,7 +2,6 @@
 session_start();
 include_once 'assets/mainHead.php';
 include_once 'autoload.php';
-
 $recipeCatsRepo=new RecipeCategoryRepository();
 $recipeCats=$recipeCatsRepo->findAll();
          

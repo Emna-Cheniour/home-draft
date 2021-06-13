@@ -71,8 +71,8 @@ include_once 'autoload.php';
         <div class="profile__hidden">
           
 
-          <!--<img src="<?php 
-          /*$users=new UserRepository();
+          <img src="<?php 
+          $users=new UserRepository();
           $user=$users->findOneBy(array('username' => $_SESSION['user']));
 
           if($user['image']){
