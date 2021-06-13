@@ -46,11 +46,11 @@ if (isset($_GET['view'])) {
             <p>
                 <?= $product['description'] ?>
             </p>
-            <h1><?= $product['price'] ?> Dt</h1>
+            <h2><?php echo "Prix: " . $product['price']  ?> Dt</h2>
             <?php if ($product['quantity'] == 0) { ?>
-                <h1> Le stock est épuisé </h1>
+                <h4 style="color:red; letter-spacing:2px"> Le stock est épuisé </h4>
             <?php } else if ($product['quantity'] <= 3) { ?>
-                <h1> Il ne reste que <?$product['quantity']?> eléments !! </h1>
+                <h4 style="color:red; letter-spacing:2px"> Il ne reste que <? $product['quantity'] ?> eléments !! </h4>
             <?php } ?>
 
             <?php $wishProductRep = new WishProductRepository();
@@ -68,18 +68,31 @@ if (isset($_GET['view'])) {
             <?php
             }
             ?>
-
-            <span class="shop"><i class="fas fa-shopping-cart"></i>
-                <h4>Add to cart</h4>
-            </span>
-
-            <span class="shopped"><i class="fas fa-shopping-cart"></i>
-                <h4>1</h4>
-                <span>
-                    <i class="fas fa-plus addCart"></i>
-                    <i class="fas fa-minus removeCart"></i>
+            <?php
+            $cartRep = new CartRepository();
+            $check = $cartRep->findOneBy(array('userId' => $_SESSION['user'], 'productId' => $product['id']));
+            ?>
+                <span class="shopped"><i class="fas fa-shopping-cart"></i>
+                    <h4><?php if ($check){echo $check['quantity'];} ?></h4>
+                    <span>
+                        <i class="fas fa-plus addCart"></i>
+                        <i class="fas fa-minus removeCart"></i>
+                    </span>
                 </span>
-            </span>
+                
+           
+                <span class="shop"><i class="fas fa-shopping-cart"></i>
+                    <h4>Add to cart</h4>
+                </span>
+                <?php if($check){?>
+                <span id="shop" style="display: none;"><?php if ($check) {
+                    echo $check['quantity'];
+                } ?></span>
+                <?php  } else {?>
+                <span id="shop" style="display: none;">buy</span>
+
+                <?php } ?>
+
         </div>
     </div>
     <div class="sendPost"></div>

@@ -127,27 +127,25 @@ p {
 
 .productDetails>a>*,
 .shop>*,
-.wishedProduct>*,
-.donate>* {
+.wishedProduct>*
+{
     display: inline-block;
 }
 
-.productDetails>span.shopped,
-.productDetails>span.donated {
-    display: none;
+.productDetails>span.shopped
+ {
+    display: inline-flex;
     flex-direction: row;
     height: 60px !important;
 }
 
-.productDetails>span.shopped span,
-.productDetails>span.donated span {
+.productDetails>span.shopped span
+ {
     display: inline-flex;
     flex-direction: column;
 }
 
 .addCart,
-.removeCart,
-.addDonation,
-.removeDonation {
+.removeCart {
     padding: 0;
 }
