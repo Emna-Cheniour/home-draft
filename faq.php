@@ -1,4 +1,6 @@
-<?php include_once 'assets/mainHead.php' ?>
+<?php include_once 'assets/mainHead.php' ;
+session_start();
+?>
 <link rel="stylesheet" href="css/faq.css">
 </head>
 <body>
@@ -19,7 +21,8 @@
         <p class="soustitre">la maladie coeliaque</p>
         
     </div>
-    <div id="effect" class="wavy titreJournal">
+
+    <div style="margin:50px" id="effect" class="wavy titreJournal">
         <span style="--i:1;">M</span>
         <span style="--i:2;">O</span>
         <span style="--i:3;">s</span>

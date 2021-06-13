@@ -1,6 +1,6 @@
 <?php 
 include_once 'autoload.php';
-
+session_start();
 
 include_once 'assets/mainHead.php' ;
 include_once 'assets/bootstrapAsset.php';
@@ -67,7 +67,7 @@ include_once 'navbarCo.php'?>
                 <a href="#"><i class="fas fa-envelope"></i><?php echo $specialist['email'] ?></a>
             </div>
             <div class="contact">
-                <a href="#"><i class="fas fa-sms"></i><?php echo $specialist['phoneNumber'] ?></a>
+                <a href="#"><i class="fas fa-phone"></i><?php echo $specialist['phoneNumber'] ?></a>
             </div>
           </div>
 

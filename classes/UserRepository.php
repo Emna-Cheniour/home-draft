@@ -13,10 +13,20 @@ class UserRepository extends Repository
         parent::insert($req);
      }
 
-     public function update1($crit){
-         $req=" UPDATE `user` SET `lastName`='',`firstName`='',`birthday`='[value-6]',`sex`='' ";
+     public function updateByOne($key,$value){
 
+         $req=" UPDATE `user` SET `$key`='$value'";
+         $response = $this->bd->prepare($req);
+         $response->execute();
      }
+
+     public function updatePic($img){
+
+        $request="UPDATE `user` SET `image`='".addslashes($img)."'";
+        $response =$this->bd->prepare($request);
+        $response->execute();
+        
+    }
  
 
 }
