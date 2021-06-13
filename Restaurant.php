@@ -14,6 +14,7 @@ include_once 'autoload.php';
     <?php include_once 'preloader.php' ?>
     
     <div class="container_resto">
+<<<<<<< HEAD
     <div class="services">
         <h1 class="c4 faded">Les Restaurants Coeliaques</h1>
         <br>
@@ -32,6 +33,21 @@ include_once 'autoload.php';
                     Phone: <?php echo $resto['phone']?><br>
                     <button class="btn btn4" id="mybtn1"><a href="#Local"> Location</a></button>
                 </p>
+=======
+        <div class="services">
+            <h1 class="c4 faded">Les Restaurants Coeliaques</h1>
+            <br>
+            <br>
+            <div class="serviceRow row">
+                <div class="service col4">
+                    <img src="images/T.jpg" class="service__img">
+                    <h2 class="fbpage"><a href="https://www.facebook.com/celiacsafesansgluten/" target="_blank">Celiac Safe</a></h2>
+                    <p>Address: 4 Reu de Moscou, Tunis 1089<br>
+                        Hours: Closed ⋅ Opens 12PM<br>
+                        Phone: 24 101 401<br>
+                        <button class="btn btn4" id="mybtn1"><a href="#Local"> Location</a></button>
+                    </p>
+>>>>>>> 19a37c4d81fe1b96e02e7e752701189eb4187ea6
 
                 </div>
 
