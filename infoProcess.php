@@ -26,7 +26,7 @@ if ((empty($_POST['password'])) || (empty($_POST['passwordConfirmed'])) || ($_PO
 else {
 
   $password=$_POST['password'];
-  $users->update('password', $password);
+  $users->updateByOne('password', $password);
 
 
 }

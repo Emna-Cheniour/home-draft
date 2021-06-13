@@ -7,6 +7,7 @@ include_once 'assets/mainHead.php' ;
 include_once 'assets/bootstrapAsset.php';
 
 
+
 ?>
 
 
@@ -125,7 +126,7 @@ include_once 'profileProgress.php';
                         
 
                         <h4>Nom</h4>
-                        <input class="input" name="lastname" type="text" value="<?php
+                        <input class="input" name="lastName" type="text" value="<?php
                         
                         
                         
@@ -163,11 +164,11 @@ include_once 'profileProgress.php';
                         
                         
                       ?>
-                                            <input type="radio" name="sexe" value="female" <?php if(!empty($user['sex']) && ($user['sex']=='female')){
+                                            <input type="radio" name="sex" value="female" <?php if(!empty($user['sex']) && ($user['sex']=='female')){
                                               echo 'checked';
                           
                         } ?>><span>Femme</span>
-                                            <input type="radio" name="sexe" value="male" <?php if(!empty($user['sex']) && ($user['sex']=='male')){
+                                            <input type="radio" name="sex" value="male" <?php if(!empty($user['sex']) && ($user['sex']=='male')){
                                               echo 'checked';
           
                         } ?>><span>Homme</span>

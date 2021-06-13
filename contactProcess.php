@@ -5,7 +5,7 @@ include_once ("autoload.php");
 
 $users = new UserRepository();
 
-if ( empty($_POST['adresse'])  &&  empty($_POST['telephone']) ) {
+if ( empty($_POST['address'])  &&  empty($_POST['phoneNumber']) ) {
 
   $_SESSION['contactError']='Veuillez vérifier les informations saisies' ;
   $_SESSION['page']='contact';
@@ -15,14 +15,14 @@ if ( empty($_POST['adresse'])  &&  empty($_POST['telephone']) ) {
 
 } else {
   
-    if(isset($_POST['adresse']) && !(empty($_POST['adresse']))){
-      $adresse=$_POST['adresse'];
-      $users->update('adresse', $adresse);
+    if(isset($_POST['address']) && !(empty($_POST['address']))){
+      $adresse=$_POST['address'];
+      $users->updateByOne('address', $adresse);
     }
 
-    if(isset($_POST['telephone']) && !(empty($_POST['telephone']))){
-      $telephone=$_POST['telephone'];
-      $users->update('telephone', $telephone);
+    if(isset($_POST['phoneNumber']) && !(empty($_POST['phoneNumber']))){
+      $phone=$_POST['phoneNumber'];
+      $users->updateByOne('phoneNumber', $phone);
     }
 }
 
