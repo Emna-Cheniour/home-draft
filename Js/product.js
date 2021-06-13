@@ -9,6 +9,12 @@ product['product']=productId.innerHTML;
 product["wish"]=0;
 product["shopping"] = 0;
 product["order"]="";
+var wsh = wishedProduct.children[1].innerHTML;
+if (wsh == "Add to Wishlist") {
+    product["wish"]=0;
+} else {
+    product["wish"]=1;
+}
 
 $(".shop").click(function () {
     product["shopping"] = 1;

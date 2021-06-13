@@ -26,7 +26,19 @@ if (isset($_GET['edit'])) {
     ));
     $product = $prRep->update($req);
     header('Location: catalogueAdmin.php ');
+    $_SESSION['succesMessage']='Produit modifié !';
   }
+}
+if (isset($_GET['remove'])) {
+  $prRep = new ProductRepository();
+  $product = $prRep->findOneBy(array('id' => $_GET['remove']));
+    $req = array('where' => array('id' => $_GET['remove']), 'value' => array(
+      'quantity' => '0',
+   ));
+    $product = $prRep->update($req);
+    header('Location: catalogueAdmin.php ');
+    $_SESSION['succesMessage']='Produit epuisé : stock est défini à 0 !';
+  
 }
 
 if (isset($_POST['addProduct'])) {

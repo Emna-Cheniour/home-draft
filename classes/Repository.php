@@ -127,7 +127,6 @@ class Repository
         foreach (array_slice($criterias['where'], 1) as $keyWhere => $criteriaWhere) {
             $request = $request . " and where  " . $keyWhere . " = ?";
         }
-        echo $request;
         $response = $this->bd->prepare($request);
         $i = 1;
         foreach ($criterias['value'] as $keyValue => $criteriaValue) {
@@ -167,4 +166,5 @@ class Repository
        $response->bindValue(1,$criteria[array_key_first($criteria)]);
        $response->execute();
    }
+  
 }

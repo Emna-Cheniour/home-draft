@@ -48,7 +48,7 @@ foreach ($_POST as $key => $post) {
   }
 }
 
-
+var_dump($_POST,$categories,$ingredients,$quantities);
   
   $recipe->insertRecipe(array($title, $description, $time, $difficulty));
 
@@ -71,7 +71,7 @@ foreach ($_POST as $key => $post) {
 
   }
 
-  for($i=0;$i<$ingredients.length;$i++) {
+  for($i=0;$i<count($ingredients);$i++) {
 
       $recipeIngredientRel->insert(array("categoryId" => $ingredients[$i]['id'],'quantity' => $quantities[$i], 'recipeId' => $myRecipe['id']));
     

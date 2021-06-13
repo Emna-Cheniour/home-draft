@@ -41,7 +41,7 @@ foreach ($products as $product) {
 
       <?php
       if ($_SESSION['role'] == 'admin') { 
-        echo 'oui';?>
+        ?>
         <a href="addProduct.php?edit=<?=$product['id']?>">
           <i class="fas fa-pen"></i>
         </a>

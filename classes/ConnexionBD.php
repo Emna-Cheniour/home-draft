@@ -4,7 +4,8 @@ class ConnexionBD
 {
     private static $_dbname = "celiac101";
     private static $_user = "root";
-    private static $_pwd = "";
+    private static $_pwd = ""
+    ;
     private static $_host = "localhost";
     private static $_bdd = null;
 

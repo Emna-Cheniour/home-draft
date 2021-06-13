@@ -3,7 +3,25 @@ session_start();
 include_once 'assets/bootstrapAsset.php';
 include_once 'autoload.php';
 
+$categoryRepo=new FoodCategoryRepository();
+
 if(isset($_POST['addFood'])){
+
+  $name=$_POST['name'];
+  $cat=$_POST['category'];
+  $allowed=$_POST['permission'];
+
+  $catResult=$categoryRepo->findOneBy(array('name' => $cat)) ;
+
+  $foodRepo=new FoodAlimentRepository();
+  $foodRepo->insert(array('name' => $name , 'permission' => $allowed , 'catgeoryId' => $catResult['id'] ));
+
+
+
+
+
+
+
   
 }
 
@@ -56,7 +74,7 @@ if(isset($_POST['addFood'])){
 
       <select name="category" id="">
       <?php 
-        $categoryRepo=new FoodCategoryRepository();
+        
         $categorys=$categoryRepo->findAll();
         foreach($categorys as $cat){
       ?>
@@ -73,7 +91,7 @@ if(isset($_POST['addFood'])){
     <br><br>
       
     
-      <button type="submit" class="btn btn3">Submit</button>
+      <button type="submit" name="addFood" class="btn btn3">Submit</button>
     </form>
 
   </div>

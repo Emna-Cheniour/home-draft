@@ -1,14 +1,14 @@
 <?php 
 session_start();
 include_once 'assets/mainHead.php';
-include_once('autoload.php');
+include_once 'autoload.php';
 
-$recettes=new RecipeRepository();
-$recette=$recettes->findBy(array('id'=> $_GET['id']));
-
-$images=new recipeImageRepository();
-$recipeImg=$images->findBy(array('id'=> $recette->id));
+$recipeCatsRepo=new RecipeCategoryRepository();
+$recipeCats=$recipeCatsRepo->findAll();
+         
 ?>
+
+<link rel="stylesheet" href="css/recipeStyle.css">
 
 </head>
 
@@ -26,14 +26,18 @@ $recipeImg=$images->findBy(array('id'=> $recette->id));
 
         <div class="dropdown-list">
           <ul class="indicator">
-          <?php 
-            $recipeCats=new RecipeCatgeoryRepository();
-            foreach($recipeCats as $recipeCatItem)
-          ?>
-            <li><button><a href="?<?php echo $recipeCatItem['id']?>"><?php echo $recipeCatItem?></a></button></li>
+            <?php 
+              
+
+              foreach($recipeCats as $recipeCatItem){
+            ?>
+              <li><button><a href="?catId<?php echo $recipeCatItem['id']?>"><?php echo $recipeCatItem['nom'] ?></a></button></li>
+
+            <?php } ?>
             
 
           </ul>
+
         </div>
       </div class="trierPardiv">
           
@@ -58,53 +62,62 @@ $recipeImg=$images->findBy(array('id'=> $recette->id));
    
   </div>
 
+  <?php 
+     $recetteRepo=new RecipeRepository();
+     $recettes=$recetteRepo->findAll();
+
+  
+     if(isset($_GET['catId'])){
+       $recipeCatRelRepo=new RecipeCatgeoryRelRepository();
+       $recetteCatRel=$recipeCatRelRepo->findOneBy(array('cetagoryId' => $ca));
+       $recettes= $recetteCatRel['recipeId'];
+     }
+  ?>
+
 
 
   <div class="card__wrapper">
    <?php 
-   $recetteRepo=new RecipeRepository();
-   if(isset($_GET['id'])){
-     $recetteCat=$recipeCats->findBy(array('id'=>$recette->id));
-   }
-   $recettes=$recette->findAll();
-
+  
    
    foreach($recettes as $recette){
-     $images=new recipeImageRepository();
-     $recipeImg=$images->findBy(array('id'=>$recette->id));
-     $ingredients=new IngredientRepository();
-     
-     $ingredient=$ingredients->findBy(array('id'=>$recette->id));
+
+     $images=new RecipePictureRepository();
+     $recipeImg=$images->findOneBy(array('recipeId'=>$recette['id']));
+
+     $ingredientRecipeRel=new RecipeIngredientRelRepository();
+     $ingredientRel=$ingredientRecipeRel->findOneBy(array('recipeId'=>$recette['id']));
           ?>
     <div class="card">
      
       <div class="card__body">
-        <img src="<?php 'data:image/jpeg;base64,".base64_encode($recipeImg[0]->image)."' ?>" class="card__img">
+        <img  src=<?php echo "data:image/jpeg;base64," . base64_encode($recipeImg['picture']) ?> class="card__img">
   
 
-        <h2 class="card__title"><?php echo $recette->title ?></h2>
+        <h2 class="card__title"><?php echo $recette['title'] ?></h2>
 
         <div class="card__detail">
           <div class="detail__field">
-            <span class="number"><?php echo $recette->time ?></span>
+            <span class="number"><?php echo $recette['time'] ?></span>
             <span class="expression">Minutes</span>
           </div>
 
           <div class="detail__field">
-            <span class="number"><?php echo $ingredient->countRow()?></span>
-            <span class="expression">Ingredients</span>
+          <span class="number">Ingredients</span>
+            <span class="expression"><?php  echo count($ingredientRel)?></span>
+            
           </div>
 
           <div class="detail__field">
             <span class="number">Difficulté</span>
-            <span class="expression"><?php echo $recette->time?></span>
+            <span class="expression"><?php echo $recette['difficulty']?></span>
           </div>
         </div>
-        <p class="card__description"><?php echo $recette->description ?></p>
+        <p class="card__description"><?php echo $recette['description'] ?></p>
       </div>
 
       <div class="card__options">
-         <a href="recetteIndiv?<?php echo ($recette->id)?>.php" class="btn btn1 don" >Voir Recette</a>
+         <a href="recetteIndiv.php?recipeId=<?php echo $recette['id']?>" class="btn btn1 don" >Voir Recette</a>
 
         <div class="card__icons">
           <a class="like">

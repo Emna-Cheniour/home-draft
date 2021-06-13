@@ -31,4 +31,4 @@
     <link rel="stylesheet" href="css/iconHover.css">
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 
-    <link rel="stylesheet" href="css/specialistGroup.css">
+ 
