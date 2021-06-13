@@ -13,5 +13,18 @@ class SpecialistRepository extends Repository
         parent::insert($req);
 
     }
+    public function insertSpecialist($criterias){
+        $request = "INSERT INTO specialist (`lastName`, `firstName`, `email`, `address`, `phoneNumber`,`profession`,`description`) VALUES (?,?,?,?,?,?,?)";
+        $response = $this->bd->prepare($request);
+        $i = 1;
+        foreach ($criterias as $key => $criteria) {
+            
+                $response->bindValue($i, $criteria);
+                $i++;
+            
+        }
+        $response->execute();
+ 
+     }
 
 }

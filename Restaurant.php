@@ -1,5 +1,7 @@
 <?php 
 include_once 'assets/mainHead.php';
+include_once 'autoload.php';
+
 
 ?>
 <link rel="stylesheet" href="css/resto.css">
@@ -14,6 +16,7 @@ include_once 'assets/mainHead.php';
         <br>
         <br>
         <div class="serviceRow row">
+        <?php foreach($restaurants as $resto){?>
             <div class="service col4">
                 <img src="images/T.jpg" class="service__img">
                 <h2 class="fbpage"><a href="https://www.facebook.com/celiacsafesansgluten/" target="_blank">Celiac Safe</a></h2>
@@ -24,55 +27,8 @@ include_once 'assets/mainHead.php';
                 </p>
 
             </div>
-            <div class="service col4">
-                <img src="images/T2.jpg" class="service__img">
-                <h2 class="fbpage"><a href="https://www.facebook.com/laseine.tn/" target="_blank">La Seine Pâtisserie</a></h2>
-                <p>Address: 2 Rue Tahar Memmi, Ariana 2091<br>
-                    Hours: Closed ⋅ Opens 8AM<br>
-                    Phone: 52 516 415 <br>
-                    <button class="btn btn4" id="mybtn3"><a href="#Local"> Location</a></button>
-                </p>
-
-            </div>
-            <div class="service col4">
-                <img src="images/T3.jpg" class="service__img">
-                <h2 class="fbpage"><a href="https://www.facebook.com/Romanescatunis" target="_blank">Restaurant La Romanesca</a></h2>
-                <p> Address: Ariana<br>
-                    Hours: Closed ⋅ Opens 12PM<br>
-                    Phone: 71 753 241 <br>
-                    <button class="btn btn4" id="mybtn2"><a href="#Local"> Location</a></button>
-                </p>
-
-            </div>
-            <div class="service col4">
-                <img src="images/T4.jpg" class="service__img">
-                <h2 class="fbpage"><a href="https://www.facebook.com/ilVongole/?ref=page_internal" target="_blank">il Vongole</a></h2>
-                <p>Address: Rue des Lac de Mazurie, Les Berges Du Lac, Tunis 1053<br>
-
-                    Phone: 71 960 207 <br>
-                    <button class="btn btn4" id="mybtn4"><a href="#Local"> Location</a></button>
-                </p>
-
-            </div>
-            <div class="service col4">
-                <img src="images/T5.jpg" class="service__img">
-                <h2 class="fbpage"><a href="https://www.facebook.com/breizhbistrottunisie/" target="_blank">Breizh Bistrot</a></h2>
-                <p>Address: Passage du la Malawi, Tunis<br>
-                    Hours: Closed ⋅ Opens 11AM<br>
-                    Phone: 71 960 155 <br>
-                    <button class="btn btn4" id="mybtn5"><a href="#Local"> Location</a></button>
-                </p>
-            </div>
-            <div class="service col4">
-                <img src="images/T6.jpg" class="service__img">
-                <h2 class="fbpage"><a href="https://www.facebook.com/lasuitedufarfalle/" target="_blank">Le Farfalle</a></h2>
-                <p>Address: Rue du Lac Biwa, Tunis 1053<br>
-                    Hours: Closed ⋅ Opens 12PM<br>
-                    Phone: 71 960 128 <br>
-                    <button class="btn btn4" id="mybtn6"><a href="#Local"> Location</a></button>
-                </p>
-
-            </div>
+        <?php } ?>
+            
         </div>
     </div>
     </div>
@@ -117,13 +73,6 @@ include_once 'assets/mainHead.php';
  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQpw0VdM_Cpj50OfKTRMJbP1SK7wzYcAE&callback=initMap" type="text/javascript">
     </script>
     <script src="Js/map.js"></script>
-
-
-    
-    <?php include_once 'assets/scripts.php' ?>
-    <script src="js/main.js"></script>
-   
-    <script type="js/scrollUpBtn.js"></script>
     <script src="js/testnav.js"></script>
 
     

@@ -22,7 +22,7 @@ if (isset($_SESSION['user'])) {
 
 <body>
   
-<?php include_once 'preloader.php' ?>
+
 
 
   <div class="container <?php 

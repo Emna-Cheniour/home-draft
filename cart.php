@@ -1,6 +1,7 @@
 <?php
 include_once 'assets/mainHead.php';
 $cartIsEmpty = 0;
+
 ?>
 <link rel="stylesheet" href="css/cart.css">
 
@@ -8,7 +9,7 @@ $cartIsEmpty = 0;
 
 <body>
     
-    <?php include_once 'preloader.php' ?>
+    
     <?php include_once 'navbarCo.php' ?>
     <div class="wrapp">
         <div class="navbarCart">
@@ -282,8 +283,35 @@ $cartIsEmpty = 0;
                         </div>
                     </div>
                     <div class="payment">
-                        <input class="pay" type="submit" value="Payer à la livraison">
-                        <input class="pay" type="submit" value="Payer maintenant">
+
+                        <form action="checkout-charge.php" method="post">
+
+                            <input  type="hidden" name="amount" value="15">
+                            <input  type="hidden" name="phoneNumber" value="98652478">
+                            <input  type="hidden" name="address" value="ariana">
+
+                            <input class="pay" name="livraison" type="submit" value="Payer à la livraison">
+                            <input class="pay" name="online" type="submit" value="Payer maintenant">
+
+                            
+                    
+                          
+                            <script
+                src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                data-key="pk_test_51J1SzJE3gsjF0BrLVeytp4haD9b0CDM5IbkhmTDnCVDYrNekt7CXbwdjdgheujajglAOcMr4Y0lMX3j08b2RbXv400PpkHkqjz"
+                
+                data-currency="inr"
+                data-locale="auto">
+                </script>
+               
+                        </form>
+
+                        
+                       
+                       
+                        
+                        
+                        
                     </div>
                 </div>
             <?php } ?>
@@ -312,6 +340,7 @@ $cartIsEmpty = 0;
     </div>-->
         <?php include_once 'assets/scripts.php' ?>
         <?php include_once 'footer.php' ?>
+        
         <script src="js/main.js"></script>
     <script src="js/txtRotation.js"></script>
     <script type="js/scrollUpBtn.js"></script>
@@ -321,6 +350,7 @@ $cartIsEmpty = 0;
 
         <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQpw0VdM_Cpj50OfKTRMJbP1SK7wzYcAE&callback=initMap" type="text/javascript"></script>
         <script src="js/cart.js"></script>
+       
         <script src="testnav.js"></script>
         
 </body>

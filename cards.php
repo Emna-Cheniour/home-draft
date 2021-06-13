@@ -1,6 +1,6 @@
 <?php
 include_once("autoload.php");
-var_dump($_POST);
+session_start();
 $prRep = new ProductRepository();
 $prImRep = new ProductImageRepository();
 $prCatRep = new ProductCategoryRepository();
@@ -22,9 +22,6 @@ $categories = [];
 foreach (array_slice($_POST, 3) as $key => $value) {
   array_push($categories, $value);
 }
-echo "<h3>";
-print_r($categories);
-echo "</h3>";
 if (empty($categories)) {
   $products = $prRep->getProducts($minPrice, $maxPrice, $criteria, $order);
 } else {
@@ -43,8 +40,8 @@ foreach ($products as $product) {
       <h4><?= $product['price'] ?>Dt</h4>
 
       <?php
-      
-      if ($_SESSION['role'] = 'admin') { ?>
+      if ($_SESSION['role'] == 'admin') { 
+        echo 'oui';?>
         <a href="addProduct.php?edit=<?=$product['id']?>">
           <i class="fas fa-pen"></i>
         </a>
@@ -53,7 +50,7 @@ foreach ($products as $product) {
         </a>
       <?php } else {
       ?>
-        <a >
+        <a href="product.php?view=<?=$product['id']?>" >
           <i class="fas fa-eye"></i>
           <h4>View product</h4>
         </a>

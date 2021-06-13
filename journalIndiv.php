@@ -1,4 +1,13 @@
-<?php include_once 'assets/bootstrapAsset.php' ?>
+<?php include_once 'assets/bootstrapAsset.php';
+
+$foodCat=new FoodCategoryRepository();
+$cat=$foodCat->findBy(array('id'=> $_GET['id']));
+
+$foodAliments=new AlimentRepository();
+$foodOK=$foodAliments->findBy(array('id'=> $cat->id,'permission','true'));
+$foodNOK=$foodAliments->findBy(array('id'=> $cat->id,'permission','false'));
+
+?>
 <link rel="stylesheet" href="css/journalIndiv.css">
 </head>
 <body>
@@ -24,17 +33,15 @@
                 </h4>
             </div>
             <ul>
+            <?php 
+                foreach($foodOK as $okfood){
+            ?>
                 <li>
-                    product1
+                   <?php echo $okfood->name?>
                 </li>
-                <li>
-                    product2
-                </li>
-                <li>
-                    product3
-
-                </li>
+                <?php } ?>
             </ul>
+            
         </div>
      
         <div class="forbidden">
@@ -45,17 +52,15 @@
             </h4>
         </div>
         <ul>
-            <li>
-                product1
-            </li>
-            <li>
-                product2
-            </li>
-            <li>
-                product3
-
-            </li>
-        </ul>
+            <?php 
+                foreach($foodNOK as $nokfood){
+            ?>
+                <li>
+                   <?php echo $nokfood->name?>
+                </li>
+            <?php } ?>
+                
+            </ul>
         </div>
     </div>
     </div>

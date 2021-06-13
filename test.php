@@ -1,8 +1,6 @@
 <?php
 require_once 'autoload.php';
 
-$rp =new ProductRepository();
-$result= $rp->update(array('where'=>array("id"=>28),'value'=>array('price'=>35,'promotion'=>5)));
+$rp =new SpecialistRepository();
+$rp->insertSpecialist(array("lastName" => 'salut', "firstName" => 'toi' , "email" => 'alo' , "address" => 'aloo' , "description" => 'bma', "phoneNumber" => 'lala',"profession" => 'pro'));
 
-
-var_dump($result);
