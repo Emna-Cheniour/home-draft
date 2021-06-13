@@ -68,7 +68,7 @@ $recipeCats=$recipeCatsRepo->findAll();
 
   
      if(isset($_GET['catId'])){
-       $recipeCatRelRepo=new RecipeCatgeoryRelRepository();
+       $recipeCatRelRepo=new RecipeCategoryRelRepository();
        $recetteCatRel=$recipeCatRelRepo->findOneBy(array('cetagoryId' => $ca));
        $recettes= $recetteCatRel['recipeId'];
      }
