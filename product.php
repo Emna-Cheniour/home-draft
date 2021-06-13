@@ -1,6 +1,7 @@
 <?php
 session_start();
 include_once 'assets/mainHead.php';
+include_once 'isAuthentificated.php';
 include_once 'autoload.php';
 $productrep = new ProductRepository();
 $productImgrep = new ProductImageRepository();

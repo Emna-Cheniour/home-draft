@@ -1,3 +1,4 @@
+console.log('hi');
 var drop=document.querySelector('.default-option');
 var dropList=document.querySelector('.dropdown-list ul');
 var searchRecipeWrapper=document.querySelector('.search__wrapper .selectedAdded');
