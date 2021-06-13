@@ -24,7 +24,7 @@ include_once 'assets/mainHead.php';
 
 <body>
 
-    <?php include_once 'preloader.php' ?>
+    <?php // include_once 'preloader.php' ?>
     <?php
     if ($_SESSION['role'] == 'user') {
         include_once 'navbarCo.php' ?>

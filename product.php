@@ -17,8 +17,9 @@ if (isset($_GET['view'])) {
 </head>
 
 <body>
-    <?php include_once 'preloader.php' ?>
+  
     <?php include_once 'navbarCo.php' ?>
+    <?php include_once 'preloader.php' ?>
     <div class="product">
         <h1 style=" display : none" id="productId"><?= $product['id'] ?></h1>
         <div class="swiper-container productImageContainer">

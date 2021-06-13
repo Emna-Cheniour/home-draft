@@ -4,7 +4,7 @@
 <body>
 
 
-<?php include_once 'preloader.php' ?>
+<?php //include_once 'preloader.php' ?>
 
 
 <?php include_once 'navbarCo.php'?>
@@ -125,12 +125,10 @@
 </div>
 
     <?php include_once 'footer.php'?>
-    <?php include_once 'assets/scripts.php' ?>
-    <script src="js/main.js"></script>
-    <script src="js/txtRotation.js"></script>
-    <script type="js/scrollUpBtn.js"></script>
     <script src="js/testnav.js"></script>
     <script src="Js/faq.js"></script>
+    <?php include_once 'assets/scripts.php' ?>
+   
 
 </body>
 </html>

@@ -1,6 +1,6 @@
 var hiddenService=document.querySelector('.nav__links .link__item .hidden__services');
 var service=document.querySelector('#dropService');
-console.log(hidden);
+console.log(hiddenService);
 
 service.addEventListener('click',()=>{
 

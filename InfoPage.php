@@ -7,7 +7,7 @@
 <body>
 
 
-<?php include_once 'preloader.php' ?>
+
 
 
 <?php 
@@ -16,7 +16,7 @@
        include("navbarCo.php"); 
     } else include_once 'navbarDeco.php'?>
 
-
+<?php include_once 'preloader.php' ?>
 <div class="container">
 
   <div class="info__container">
@@ -393,9 +393,9 @@
 <script src="testnav.js"></script>
 
     <script src="js/main.js"></script>
-    <script src="js/txtRotation.js"></script>
+
     <script type="js/scrollUpBtn.js"></script>
-    <script src="js/testnav.js"></script>
+   
 
 <script type="text/javascript" src="js/vanilla-tilt.js"></script>
 

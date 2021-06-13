@@ -21,10 +21,10 @@ $specialist=$specialistRepo->findOneBy(array('id' => $specialistId));
 <body>
 
 
-<?php include_once 'preloader.php' ?>
-
 <?php 
 include_once 'navbarCo.php'?>
+<?php include_once 'preloader.php' ?>
+
 
 <div class="specialist__body">
 
