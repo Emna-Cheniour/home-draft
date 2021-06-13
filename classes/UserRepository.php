@@ -12,6 +12,11 @@ class UserRepository extends Repository
         $req=array('username'=>$criterias[0],'email'=>$criterias[1],'password'=>$criterias[2]);
         parent::insert($req);
      }
+
+     public function update1($crit){
+         $req=" UPDATE `user` SET `lastName`='',`firstName`='',`birthday`='[value-6]',`sex`='' ";
+
+     }
  
 
 }
