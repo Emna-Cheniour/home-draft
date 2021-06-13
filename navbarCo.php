@@ -72,7 +72,10 @@ include_once 'autoload.php';
           
 
           <img src="<?php 
+<<<<<<< HEAD
           
+=======
+>>>>>>> 23c738fa76e13b2a5019496d17c661d5ccd4ea6d
           $users=new UserRepository();
           $user=$users->findOneBy(array('username' => $_SESSION['user']));
 
