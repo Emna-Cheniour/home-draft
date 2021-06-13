@@ -16,23 +16,23 @@ if ((empty($_POST['firstName'])) && (empty($_POST['lastName'])) && (empty($_POST
 
 else {
 
-  if (isset($_POST['firstname']) && !(empty($_POST['firstname'])) ){
-    $firstname=$_POST['firstname'];
-    $users->update('firstname', $firstname);
+  if (isset($_POST['firstName']) && !(empty($_POST['firstName'])) ){
+    $firstname=$_POST['firstName'];
+   
   }
-  if(isset($_POST['lastname']) && !(empty($_POST['lastname']))){
+  if(isset($_POST['lastName']) && !(empty($_POST['lastName']))){
     $lastname=$_POST['lastname'];
-    $users->update('lastname', $lastname);
+   
   } 
   if(isset($_POST['birthday']) ){
     
     $birthday=$_POST['birthday'];
-    $users->update('birthday', $birthday);
-  }
-  if(isset($_POST['sexe']) && !(empty($_POST['sexe'])) ) {
   
-    $sexe=$_POST['sexe'];
-    $users->update('sexe', $sexe);
+  }
+  if(isset($_POST['sex']) && !(empty($_POST['sex'])) ) {
+  
+    $sexe=$_POST['sex'];
+  
   }
   
   }
