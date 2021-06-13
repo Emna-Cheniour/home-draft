@@ -6,6 +6,6 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="js/loading.js"></script>
     <script src="js/leader-line.min.js"></script>
-    <script type="js/scrollUpBtn.js"></script>
+ 
 
-    <script src="js/testnav.js"></script>
+   

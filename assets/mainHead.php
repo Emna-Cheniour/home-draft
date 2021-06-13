@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
 
     <link rel="stylesheet" href="css/testInfo.css">
-    <link rel="stylesheet" href="css/testnav.css">
+    <link rel="stylesheet" href="css/navbar.css">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />

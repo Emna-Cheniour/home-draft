@@ -13,7 +13,7 @@ session_start();
     <?php
 if (isset($_SESSION['user'])) {
 
-        include("navbarCo.php");
+        include_once "navbarCo.php";
         include_once 'profileProgress.php';
         $infoCount *= 10;
         if ($infoCount != 100) {

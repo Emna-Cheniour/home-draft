@@ -96,6 +96,8 @@ if($_SESSION['role']=='user'){
 
       </div>
 
+      <div class="services__btn"><a href="logout.php"><button class="btn btn1 btnServ">Se Déconnecter</button></a></div>
+
     </div>
   </div>
 
