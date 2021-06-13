@@ -4,6 +4,8 @@ include_once 'assets/bootstrapAsset.php';
 include_once 'autoload.php';
 
 if(isset($_POST['addFood'])){
+
+  
   
 }
 
@@ -73,7 +75,7 @@ if(isset($_POST['addFood'])){
     <br><br>
       
     
-      <button type="submit" class="btn btn3">Submit</button>
+      <button type="submit" name="addFood" class="btn btn3">Submit</button>
     </form>
 
   </div>

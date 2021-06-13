@@ -5,6 +5,14 @@
   $adminRepo=new AdminRepository();
   $admins=$adminRepo->findAll();
 
+  if(isset($_POST['addAdmin'])){
+    $username=$_POST['username'];
+    $password=$_POST['password'];
+    $email=$_POST['email'];
+
+    $admins->insert(array('id' => '' , 'username' => $username , 'password' => $password , 'email' => $email , 'super' => '0'));
+  }
+
 
 
 ?>
@@ -82,7 +90,7 @@
       <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Mot De Passe">
     </div>
   
-    <button type="submit" class="btn btn3"><a href="">Submit</a></button>
+    <button type="submit" name="addAdmin" class="btn btn3"><a href="">Submit</a></button>
   </form>
 
 </div>

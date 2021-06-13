@@ -5,7 +5,7 @@ class RecipeCategoryRelRepository extends Repository
 {
     public function __construct()
     {
-        parent::__construct('categoryreciperel');
+        parent::__construct('cetagoryreciperel');
     }
 
 }

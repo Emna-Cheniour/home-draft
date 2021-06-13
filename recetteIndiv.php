@@ -1,24 +1,35 @@
-
-  
 <?php 
-include("assets/mainHead.php"); 
+include_once 'autoload.php';
+include_once "assets/mainHead.php"; 
+
 
 $recettes=new RecipeRepository();
-$recette=$recettes->findBy(array('id'=> $_GET['id']));
+if( isset($_GET['recipeId']) ){
+  $recipeId=$_GET['recipeId'];
+}
+$recette=$recettes->findOneBy(array('id'=> $recipeId));
 
-$images=new recipeImageRepository();
-$recipeImg=$images->findBy(array('id'=> $recette->id));
 
-$ingredients=new IngredientRepository();
-$ingredient=$ingredients->findBy(array('id'=> $recette->id));
+// 4 images de la recette
+$images=new recipePictureRepository();
+$recipeImg=$images->findBy(array('recipeId'=> $recipeId));
 
-$steps=new StepRepository();
-$step=$steps->findBy(array('id'=> $recette->id));
+
+
+$ingredientRecipeRepo=new RecipeIngredientRelRepository();
+$ingredientRecipe=$ingredientRecipeRepo->findBy(array('recipeId'=> $recipeId ));
+
+
+
+
+$stepRepo=new RecipeStepsRepository();
+$steps=$stepRepo->findBy(array('idRecipe'=> $recipeId ));
+
 
 ?>
 
 <link rel="stylesheet" href="css/recipeIndivStyle.css">
-<title><?php echo $recette->title ?></title>
+<title><?php echo $recette['title'] ?></title>
 
 </head>
 <body>
@@ -31,29 +42,29 @@ $step=$steps->findBy(array('id'=> $recette->id));
 <div class="path__link">
   <a href="#">Recette</a>
   >
-  <a href="#"><?php echo $recette->title ?></a>
+  <a href="#"><?php echo $recette['title'] ?></a>
   
 </div>
 
 <div class="main__container">
   
-  <h1 class="main__header"><?php echo $recette->title?></h1>
+  <h1 class="main__header"><?php echo $recette['title']?></h1>
 
   <div class="rating">
 
-    <div class="star">
-      <i class="fas fa-star"></i>
-      <i class="fas fa-star"></i>
-      <i class="fas fa-star"></i>
-      <i class="fas fa-star"></i>
-      <i class="fas fa-star-half-alt"></i>
-      <span class="num__rating">4.5/5</span>
-    </div>
+      <div class="star">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star-half-alt"></i>
+        <span class="num__rating">4.5/5</span>
+      </div>
 
-    <a href="#" class="comment">
-      <i class="fas fa-comment"></i>
-      <span>10 commentaires</span>
-    </a>
+      <a href="#" class="comment">
+        <i class="fas fa-comment"></i>
+        <span>10 commentaires</span>
+      </a>
   
   </div>
 
@@ -69,18 +80,35 @@ $step=$steps->findBy(array('id'=> $recette->id));
    
         <!--slide image start-->
 
-         <div class="slide first">
-           <img src="<?php 'data:image/jpeg;base64,".base64_encode($recipeImg[0]->image)."' ?>" alt="">
+        <?php 
+        
+        for ($i = 0; $i < count($recipeImg); $i++){
+          ?>
+            <div class="slide <?php if($i==0) {echo "first" ;} ?>">
+            <img  src=<?php echo "data:image/jpeg;base64," . base64_encode($recipeImg['picture']) ?> alt="">
+          </div>
+
+          }
+        ?>
+
+        <div class="slide first">
+           <img  src=<?php echo "data:image/jpeg;base64," . base64_encode($recipeImg['picture']) ?> alt="">
          </div>
+      
+
+          
+
+          
+               
+                
+      ?>
          <div class="slide">
-           <img src="<?php 'data:image/jpeg;base64,".base64_encode($recipeImg[1]->image)."' ?>" alt="">
+           <img  src=<?php echo "data:image/jpeg;base64," . base64_encode($recipeImgItem['picture']) ?> alt="">
          </div>
-         <div class="slide">
-           <img src="<?php 'data:image/jpeg;base64,".base64_encode($recipeImg[2]->image)."' ?>" alt="">
-         </div>
-         <div class="slide">
-           <img src="<?php 'data:image/jpeg;base64,".base64_encode($recipeImg[3]->image)."' ?>" alt="">
-         </div>
+         
+         <?php } ?>
+         
+       
          
    
         <!--slide image end -->
@@ -111,17 +139,17 @@ $step=$steps->findBy(array('id'=> $recette->id));
 
         <div class="detail">
           <img src="icons/clock.png" alt="">
-          <span><?php echo $recette->time ?> Minutes</span>
+          <span><?php echo $recette['time'] ?> Minutes</span>
         </div>
   
         <div class="detail">
           <img src="icons/chef.png" alt="">
-          <span><?php echo $recette->difficulty ?></span>
+          <span><?php echo $recette['difficulty'] ?></span>
         </div>
   
         <div class="detail">
           <img src="icons/dollar.png" alt="">
-          <span><?php echo $ingredient->countElement() ?> Minutes</span>
+          <span><?php // echo $ingredient->countElement() ?> Minutes</span>
         </div>
         
   
@@ -144,20 +172,26 @@ $step=$steps->findBy(array('id'=> $recette->id));
 
 
         <?php 
-          foreach($ingredient as $ingredientItem ){
+
+        $ingredients=new IngredientRepository();
+
+          foreach($ingredientRecipe as $ingredientRecipeItem ){
+            $ingredient=$ingredients->findBy(array('id'=> $ingredientRecipeItem['ingredientId']));
+            foreach($ingredient as $ingredientItem){
+
         ?>
           <div class="mini__card">
           
-            <img src="<?php 'data:image/jpeg;base64,".base64_encode($ingredientItem->image)."' ?>" alt="">
+            <img src="<?php echo "data:image/jpeg;base64,".base64_encode($ingredientItem['image'])."" ?>" alt="">
            
-            <h3><?php echo $ingredientItem->quantity ?></h3>
-            <h4><?php echo $ingredientItem->name ?></h4>
+            <h3><?php echo $ingredientRecipeItem['quantity'] ?></h3>
+            <h4><?php echo $ingredientItem['nom'] ?></h4>
   
           </div>
   
         
   
-          <?php } ?>
+          <?php } }?>
         </div>
 
       </div>
@@ -179,12 +213,12 @@ $step=$steps->findBy(array('id'=> $recette->id));
 
       <div class="step__summary">
         <div class="step__summary--header"><strong
-        >Temps Total: </strong><?php echo $recette->time?>min</div>
+        >Temps Total: </strong><?php echo $recette['time']?>min</div>
        
         <div class="step__summary--container">
           <div class="step__summary--content">
             <h4>Péparation:</h4>
-            <div><?php echo $recette->time?> min</div>
+            <div><?php echo $recette['time']?> min</div>
           </div>
 
           <div class="step__summary--content">
@@ -200,10 +234,10 @@ $step=$steps->findBy(array('id'=> $recette->id));
         </div>
       </div>
       <ul>
-      <?php foreach($stepItem as $step){?>
+      <?php foreach($steps as $step){?>
         <li>
-          <h3>Etape<?php echo $stepItem->number?></h3>
-          <span>$stepItem->name</span>
+          <h3>Etape<?php echo $step['order']?></h3>
+          <span><?php echo $step['description'] ?></span>
         </li>
         <?php } ?>
       </ul>
@@ -231,15 +265,18 @@ $step=$steps->findBy(array('id'=> $recette->id));
 
  
   </div>
+</div>
 
   
  
+
+
 
 <script src="Js/starHover.js"></script>
 <script src="testnav.js"></script>
 <script src="Js/slide.js"></script>
 <?php include 'footer.php' ?>
-<?php include_once 'assets/scripts.php' ?>
+
 <script src="js/main.js"></script>
    
     <script type="js/scrollUpBtn.js"></script>
