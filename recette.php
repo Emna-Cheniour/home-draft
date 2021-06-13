@@ -142,11 +142,11 @@ $recipeCats=$recipeCatsRepo->findAll();
 <?php include 'footer.php' ?>
 <script src="js/main.js"></script>
    
-    <script type="js/scrollUpBtn.js"></script>
+
     <script src="js/testnav.js"></script>
   <script src="Js/heart.js"></script>
   <script src="Js/searchBar.js"></script>
-  <script src="Js/filter.js"></script>
+  
  
 
 </body>

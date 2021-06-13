@@ -19,10 +19,11 @@ $foodNOK=$foodAliments->findBy(array('id'=> $catId,'permission',0));
 <body>
 
 
-<?php include_once 'preloader.php' ?>
+
 
 
 <?php include_once 'navbarCo.php'?>
+<?php include_once 'preloader.php' ?>
 
 
 <body>

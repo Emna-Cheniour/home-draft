@@ -3,9 +3,11 @@
 include_once 'autoload.php';
 $user=new UserRepository();
 $infoCount=3;
-$query1=$user->findByUsername($_SESSION['user']);
+$username=$_SESSION['user'];
+$query1=$user->findBy(array('username' => $username ));
+
 foreach($query1 as $key => $val) {
-  if(!empty($val) && $key!='id' && $key!='username' && $key!='email' && $key!='password'){
+  if( $key!='username' && $key!='email' && $key!='password'){
     $infoCount++;
   }
 }

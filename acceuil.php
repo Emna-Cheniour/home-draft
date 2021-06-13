@@ -6,26 +6,28 @@ session_start();
 ?>
 </head>
 <body>
-    <?php include_once 'preloader.php' ?>
+    <?php 
+ 
+    //include_once 'preloader.php' ?>
     <?php
 if (isset($_SESSION['user'])) {
 
         include("navbarCo.php");
-        /*include_once 'profileProgress.php';
+        include_once 'profileProgress.php';
         $infoCount *= 10;
         if ($infoCount != 100) {
           
            ?>
            <div class="progress__result">
                <p>
-                <?php echo "Bienvenu $username <br>Votre profile est à $infoCount %"; ?>
+                <?php $username=$_SESSION['user']; echo "Bienvenu $username <br>Votre profile est à $infoCount %"; ?>
                </p>
 
                <a href="profile.php">Complétez votre profil<i class="fas fa-arrow-alt-circle-right"></i></a>
 
                
            </div> <?php
-        }*/
+        }
     } else {
         include "navbarDeco.php";
     }
@@ -214,12 +216,15 @@ if (isset($_SESSION['user'])) {
 
 
 
+  
     <?php include 'footer.php' ?>
 <?php include_once 'assets/scripts.php' ?>
     <script src="js/main.js"></script>
     <script src="js/txtRotation.js"></script>
     <script type="js/scrollUpBtn.js"></script>
     <script src="js/testnav.js"></script>
+    
+    
    
 
 </body>

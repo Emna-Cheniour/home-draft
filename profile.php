@@ -1,9 +1,11 @@
 <?php 
+
+session_start();
 include_once 'autoload.php';
 
-include_once 'isAuthentificated.php';
 include_once 'assets/mainHead.php' ;
 include_once 'assets/bootstrapAsset.php';
+
 
 ?>
 
@@ -11,13 +13,15 @@ include_once 'assets/bootstrapAsset.php';
 
 <body>
 
-<?php include_once 'preloader.php' ?>
+
 
 
 <?php 
 include_once 'navbarCo.php';
+
 include_once 'profileProgress.php';
 ?>
+
 
   <div class="profile__body">
 
@@ -108,37 +112,46 @@ include_once 'profileProgress.php';
 
                         </div>
                 <div class="content">
+                  <?php 
+                  $username=$_SESSION['user'];
+                  $userRepo=new UserRepository();
+                  
+                  
+                  $user=$userRepo->findOneBy(array('username' => $username));
+                
+                  ?>
 
                   <div class="info">
                         
 
                         <h4>Nom</h4>
-                        <input class="input" name="lastname" type="text" value="<?php $user=new UserRepository();
-                        $query1=$user->findByUsername($_SESSION['user']);
+                        <input class="input" name="lastname" type="text" value="<?php
                         
-                        if(!empty($query1->lastname)){
                         
-                          echo $query1->lastname;
+                        
+                        if(!empty($user['lastName'])){
+                        
+                          echo $user['lastName'];
                         } else ?>" placeholder ="Nom">
 
                         <h4>Prénom</h4>
-                        <input class="input" name="firstname" type="text" value="<?php $user=new UserRepository();
-                        $query1=$user->findByUsername($_SESSION['user']);
+                        <input class="input" name="firstName" type="text" value="<?php 
+                    
         
-                              if (!empty($query1->firstname)){
+                              if (!empty($user['firstName'])){
                             
-                              echo $query1->firstname;
+                              echo $user['firstName'];
                               
                               } else ?>" placeholder="Prénom">
 
                         
 
                         <h4>Date de naissance</h4>
-                        <input name="birthday" class="input" type="Date" value="<?php $user=new UserRepository();
-                                  $query1=$user->findByUsername($_SESSION['user']);
+                        <input name="birthday" class="input" type="Date" value="<?php 
                                   
-                                  if(!empty($query1->birthday)){
-                                    echo $query1->birthday;
+                                  
+                                  if(!empty($user['birthday'])){
+                                    echo $user['birthday'];
                                   }
                                   
                                   
@@ -146,15 +159,15 @@ include_once 'profileProgress.php';
 
                         <h4>Sexe</h4>
                           <div class="radio__container">
-                                            <?php $user=new UserRepository();
-                        $query1=$user->findByUsername($_SESSION['user']);
+                                            <?php 
+                        
                         
                       ?>
-                                            <input type="radio" name="sexe" value="female" <?php if(!empty($query1->sexe) && ($query1->sexe=='female')){
+                                            <input type="radio" name="sexe" value="female" <?php if(!empty($user['sex']) && ($user['sex']=='female')){
                                               echo 'checked';
                           
                         } ?>><span>Femme</span>
-                                            <input type="radio" name="sexe" value="male" <?php if(!empty($query1->sexe) && ($query1->sexe=='male')){
+                                            <input type="radio" name="sexe" value="male" <?php if(!empty($user['sex']) && ($user['sex']=='male')){
                                               echo 'checked';
           
                         } ?>><span>Homme</span>
@@ -175,17 +188,16 @@ include_once 'profileProgress.php';
                   <div class="image" >
               
                     
-                     <!--<input type="file" name="profileImg" id="image" placeholder="image">-->
+                     <input type="file" name="image" id="image" placeholder="image">
                   
-                              <img src=" <?php $user=new UserRepository();
-                            $query1=$user->findByUsername($_SESSION['user']);
+                              <img src=" <?php 
                         
                       
-                            if(!empty($query1->profileImg)){
+                            if(!empty($user['image'])){
                             
-                              echo 'data:image/jpeg;base64,".base64_encode($user->profileImg)."';
-                            } else if (!empty($query1->sexe)) {
-                                if($query1->sexe=='female') {
+                              echo "data:image/jpeg;base64,".base64_encode($user['image'])."";
+                            } else if (!empty($user['sex'])) {
+                                if($user['sex']=='female') {
                                   echo 'svg/undraw_female_avatar_w3jk.svg';
                                 } else {
                                   echo 'svg/undraw_male_avatar_323b.svg';
@@ -236,27 +248,26 @@ include_once 'profileProgress.php';
                    
 
                     <h4>Adresse</h4>
-                    <input class="input" name="adresse" type="adress" value="<?php $user=new UserRepository();
-        $query1=$user->findByUsername($_SESSION['user']);
+                    <input class="input" name="address" type="adress" value="<?php
+        
   
-        if(!empty($query1->adresse)){
-          echo $query1->adresse;
+        if(!empty($user['address'])){
+          echo $user['address'];
         } else ?>" placeholder="Adresse">
 
                     <h4>Email</h4>
-                    <input class="input" name="email" type="email" value="<?php $user=new UserRepository();
-        $query1=$user->findByUsername($_SESSION['user']);
-       if (!empty($query1->email)){
-         echo $query1->email;
+                    <input class="input" name="email" type="email" value="<?php 
+        
+       if (!empty($user['email'])){
+         echo $user['email'];
        };
          ?>">
 
                     <h4>Numéro de Téléphone</h4>
-                    <input name="telephone" class="input" value="<?php $user=new UserRepository();
-        $query1=$user->findByUsername($_SESSION['user']);
+                    <input name="phoneNumber" class="input" value="<?php 
     
-        if(!empty($query1->telephone)){
-          echo $query1->telephone;
+        if(!empty($user['phoneNumber'])){
+          echo $user['phoneNumber'];
         } else ?>" placeholder="+216">
 
  <?php 
@@ -316,9 +327,8 @@ include_once 'profileProgress.php';
 
 
                         <h4>Ancien mot de passe</h4>
-                        <input class="input" name="password" type="password" placeholder="<?php $user=new UserRepository();
-        $query1=$user->findByUsername($_SESSION['user']);
-        echo $query1->password;
+                        <input class="input" name="password" type="password" placeholder="<?php 
+        echo $user['password'];
 
         ?>">
                       <h4>Nouveau mot de passe</h4>
@@ -427,12 +437,13 @@ include_once 'profileProgress.php';
 
 
   <?php include_once('footer.php'); ?>
-  <?php include_once 'assets/scripts.php' ?>
-
-  <script src="js/main.js"></script>
-   
-   <script type="js/scrollUpBtn.js"></script>
-   <script src="js/testnav.js"></script>
+  <script src="js/testnav.js"></script>
   <script src="js/profile.js"></script>
+ 
+
+
+   
+
+   
 </body>
 <html>
