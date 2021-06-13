@@ -1,7 +1,6 @@
 <?php
 session_start();
 include_once('autoload.php');
-var_dump($_POST);
 /*gestion wishlist*/
 $wishProductRep = new WishProductRepository();
 $wished = $_POST['wish'];

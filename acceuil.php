@@ -42,7 +42,7 @@ if (isset($_SESSION['user'])) {
                 <h2>Qui sommes nous?</h2>
             </div>
             <p> Votre meilleur guide pour vivre avec la maladie coeliaque </p>
-            <p>Celiac 101 vous offre un ensemble de service qui facilitent votre quotidient et vous aident à vous adapter au régime alimentaire sans gluten
+            <p>Celiac 101 vous offre un ensemble de services qui facilitent votre quotidien et vous aident à vous adapter au régime alimentaire sans gluten
             </p>
             <p>Bienvenu au premier site web d'origine tunisienne pour les malades coeliaques. </p>
         </div>
@@ -57,7 +57,7 @@ if (isset($_SESSION['user'])) {
                 <h2 class="faded">Vente des produits</h2>
                 <p>Nous offrons un catalogue contenant une grande varieté des produits sans gluten.
                     <br>
-                    Visitez notre catalogue et jouissez de la qualité au meilleur prix.
+                    Visitez notre catalogue et jouissez de la qualité à meilleur prix.
                 </p>
                 <div class="services__btn" ><a href="shopping.php" ><button class="btn btn1 btnServ">Catalogue</button></a></div>
             </div>
@@ -66,7 +66,7 @@ if (isset($_SESSION['user'])) {
                 <h2 class="faded">Recettes</h2>
                 <p>Cuisiner sans gluten est l'une des tâches les plus délicates en cuisine.
                     <br>
-                    Pour ceci, Celiac101 vous offre des recettes testées et leurs démarches simplifiées.
+                    C'est pourquoi Celiac101 vous offre des recettes testées avec leurs démarches simplifiées.
                 </p>
                 <div class="services__btn"><a href="recette.php" ><button class="btn btn2 btnServ">Recettes</button></a></div>
             </div>
@@ -82,25 +82,25 @@ if (isset($_SESSION['user'])) {
             <div class="service col4">
                 <img src="images/resto.png">
                 <h2 class="faded">Carte</h2>
-                <p>Celiac101 offre une carte speciale coeliaques !
+                <p>Celiac101 vous offre une carte spéciale coeliaque !
                     <br>
-                    Decouvrez les localisations des restaurants en Tunisie avec des repas sans gluten et plus.
+                    Découvrez les localisations des restaurants en Tunisie avec des repas sans gluten et plus.
                 </p>
                 <div class="services__btn"><a href="Restaurant.php"><button class="btn btn2 btnServ">Carte</button></a></div>
             </div>
             <div class="service col4">
                 <img src="images/faq.png">
                 <h2 class="faded">FAQs</h2>
-                <p>Les questions les plus posées par et aux les coeliaques.
+                <p>Les questions les plus posées par et aux coeliaques.
                     <br>
-                    Découvrez maintenant leurs réponses correctes, faciles à comprendre et brèves !
+                    Découvrez maintenant leurs réponses correctes,brèves et faciles à comprendre !
                 </p>
                 <div class="services__btn"><a href="faq.php"><button class="btn btn1 btnServ">FAQ</button></a></div>
             </div>
             <div class="service col4">
                 <img src="images/nutritionist.png">
                 <h2 class="faded">Spécialistes</h2>
-                <p>Plusieurs medecins et specialistes sont là pour vous !
+                <p>Plusieurs médecins et spécialistes sont là pour vous !
                     <br>
                     Vous pouvez les contacter et demander leurs conseils.
                 </p>
@@ -135,8 +135,8 @@ if (isset($_SESSION['user'])) {
                 </div>
                 <div class="col9">
                     <h2 class="c4 faded">Prenez notre quizz!<h2>
-                            <p>Vous avez quelques symptomes de la maladie coeliaque?</p>
-                            <p> Prenez un quizz réalisé par des spécialites pour le meilleur conseil!</p>
+                            <p>Vous avez quelques symptômes de la maladie coeliaque ?</p>
+                            <p> Prenez un quizz réalisé par des spécialistes pour avoir le meilleur conseil!</p>
                             <a href="quizz.php"><button class="btn btn4">Quizz</button></a>
                 </div>
                 <div class="col3 phone">
