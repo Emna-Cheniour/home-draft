@@ -44,7 +44,7 @@ include_once 'navbarCo.php'?>
     <div class="specialist__info">
 
         <div class="field" id="profile">
-          <img src="images/nutritionist.png" alt="">
+          <img src=<?php echo "data:image/jpeg;base64," . base64_encode($specialist['image']) ?> alt="">
          
             <h2><?php  echo $specialist["lastName"] .''. $specialist['firstName'] ?></h2>
             

@@ -33,9 +33,9 @@ include_once 'assets/mainHead.php';
             <div class="swiper-wrapper shoppingPosterWrapper">
                 <div class="swiper-slide shoppingPosterSlide">
                     <div class="leftSlide">
-                        <h2>Bienvenue A Celiac101 : The Shop</h2>
+                        <h2>Bienvenue à Celiac101 : The Shop</h2>
                         <h5>Une collection de produits sans gluten variée avec des prix raisonnables. </h5>
-                        <a href="#startShopping"><button class="btn btn1 btnServ">Commencez Votre Shopping</button></a>
+                        <a href="#startShopping"><button class="btn btn1 btnServ">Commencez votre shopping</button></a>
 
 
                     </div>
@@ -47,9 +47,9 @@ include_once 'assets/mainHead.php';
                 </div>
                 <div class="swiper-slide shoppingPosterSlide">
                     <div class="leftSlide">
-                        <h2>Livraison A Domicile</h2>
+                        <h2>Livraison à domicile</h2>
                         <h5>Celiac101 garantit une livraison rapide , ponctuelle et très satisfaisante. </h5>
-                        <a href="#startShopping"><button class="btn btn1 btnServ">Commencez Votre Shopping</button></a>
+                        <a href="#startShopping"><button class="btn btn1 btnServ">Commencez votre shopping</button></a>
 
                     </div>
 
@@ -61,9 +61,9 @@ include_once 'assets/mainHead.php';
                 </div>
                 <div class="swiper-slide shoppingPosterSlide">
                     <div class="leftSlide">
-                        <h2>Méthodes De Paiement</h2>
-                        <h5>Vous pouvez soit payer à la livraison, soit payer électroniquement en toute sécurité. </h5>
-                        <a href="#startShopping"><button class="btn btn1 btnServ">Commencez Votre Shopping</button></a>
+                        <h2>Méthodes de Paiement</h2>
+                        <h5>Vous pouvez soit payer à la livraison soit payer électroniquement en toute sécurité. </h5>
+                        <a href="#startShopping"><button class="btn btn1 btnServ">Commencez votre shopping</button></a>
 
                     </div>
 
@@ -74,11 +74,11 @@ include_once 'assets/mainHead.php';
                 </div>
                 <div class="swiper-slide shoppingPosterSlide">
                     <div class="leftSlide">
-                        <h2>Points De vente</h2>
+                        <h2>Points de vente</h2>
                         <h5>Trouvez tous nos produits dans les adresses suivantes: </h5>
                         <h6>xxxx</h6>
                         <h6>xxxx</h6>
-                        <a href="#startShopping"><button class="btn btn1 btnServ">Commencez Votre Shopping</button></a>
+                        <a href="#startShopping"><button class="btn btn1 btnServ">Commencez votre shopping</button></a>
 
                     </div>
 
@@ -116,9 +116,9 @@ include_once 'assets/mainHead.php';
                     </div>
                     <div class="view">
                         <div class="productDetails">
-                            <a>
+                            <a href="product.php?view=<?php echo $newProduct['id']; ?>">
                                 <i class="fas fa-eye"></i>
-                                <h4>View Product</h4>
+                                <h4>View product </h4>
                             </a>
                         </div>
                     </div>
@@ -292,10 +292,12 @@ include_once 'assets/mainHead.php';
         </div>
     <?php } ?>
     <?php include_once 'assets/scripts.php' ?>
-    <script src="js/shopping.js"></script>
-    <script src="js/testnav.js"></script>
 
-    
+    <script src="js/shopping.js"></script>
+    <script src="js/main.js"></script>
+
+    <script type="js/scrollUpBtn.js"></script>
+    <script src="js/testnav.js"></script>
 </body>
 
 </html>

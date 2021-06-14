@@ -68,7 +68,7 @@ include_once 'navbarCo.php'?>
     <div class="card">
      
       <div class="card__body">
-        <img src="images/nutritionist.png" class="card__img spec">
+        <img src=<?php echo "data:image/jpeg;base64," . base64_encode($specialist['image']) ?> class="card__img spec">
         
         <h2 class="card__title spec"><?php echo ($specialist['lastName'] ."". $specialist['firstName'])?></h2>
 

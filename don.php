@@ -1,9 +1,7 @@
 <?php 
 session_start();
 include_once 'autoload.php';
-
-
-
+include_once 'isAuthentificated.php';
 
 ?>
 
@@ -19,8 +17,6 @@ include_once 'autoload.php';
 
 <?php include_once 'navbarCo.php'?>
 
-
-<?php include_once 'preloader.php' ?>
 
 <div class="contenu">
 
@@ -53,24 +49,31 @@ include_once 'autoload.php';
         </div>
 
 
-        <div class="introDon">
-            <p>Vivre sans gluten est onéreux !</p><p> Les produits sans gluten coûtent trop cher pour plusieurs malades.</p>
-                <p>Suivre une diète et un régime avec ses produits devient difficile à cause des problèmes financiers.</p>
-                <p>Un petit geste de générosité pour ne pas risquer la santé d'une grande majorité</p>
-            <p>Celiac101 vous offre la possibilité d'aider ceux qui en ont vraiment besoin. Un don = une vie.</p>
-            <p>Faites votre don (d'argent ou de produits) et sauvez une vie!</p>
+        <div class="introDon reveal">
+            
+            
+                <p>Vivre sans gluten est onéreux ! <br>Les produits sans gluten coûtent trop cher pour plusieurs malades.<img src="icons/donation.png" class="imageDonate"><br>
+                        Suivre une diète et un régime avec ses produits devient difficile à cause des problèmes financiers.
+                        <br>Un petit geste de générosité pour ne pas risquer la santé d'une grande majorité<br>
+                    Celiac101 vous offre la possibilité d'aider ceux qui en ont vraiment besoin. Un don = une vie.<br>
+                    Faites votre don (d'argent ou de produits) et sauvez une vie!</p>
+
+            
+
+          
+        
         </div>
 
         <div class="formContent">
             <div class="container-Don">
-                <div class="donArg">Don d'argents<i class="fas fa-donate"></i></div>
-                <div class="donProd">Don de produits<i class="fas fa-shopping-cart"></i></div>
+                <div class="donArg">Don D'Argents<i class="fas fa-donate"></i></div>
+                
             </div>
 
             <div class="contenuForm">
                 <form class="formDon"  method="post" action="don-checkout.php">
                     </br>
-                    <div class="titleForm"><img id="imageDonate" src="icons/donate.png">Faire un Don</div>
+                    <div class="titleForm"><img class="imageDonate" src="icons/donate.png">Faire Un Don</div>
                     </br>
                     <table class="Form">
                         <tr>
@@ -78,14 +81,14 @@ include_once 'autoload.php';
                             <h4>Nom :</h4>
                             <div class="input-icon">
                             <i id="iconForm" class="fas fa-user"></i>
-                            <input class="inputForm" type="text" placeholder="Nom" required>
+                            <input class="inputForm" type="text" placeholder="Nom" name="lastName" required>
                             </div>
                         </td>
                         <td>
                             <h4>Prenom :</h4>
                             <div class="input-icon">
                             <i id="iconForm" class="fas fa-user"></i>
-                            <input class="inputForm" type="text" placeholder="Prenom" required>
+                            <input class="inputForm" type="text" placeholder="Prenom" name="firstName" required>
                             </div>
                         </td>
                         </tr>
@@ -94,29 +97,21 @@ include_once 'autoload.php';
                             <h4>Email :</h4>
                             <div class="input-icon">
                             <i id="iconForm" class="fas fa-at"></i>
-                            <input class="inputForm" type="email" placeholder="foulen@gmail.com" required>
+                            <input class="inputForm" type="email" placeholder="foulen@gmail.com" name="email" required>
                             </div>
                         </td>
-                        <td>
-                            <h4>Date de naissance :</h4>
-                            <div class="input-icon">
-                            <i id="iconForm" class="fas fa-calendar-day"></i>
-                            <input class="inputForm" type="date" required></div>
-                        </td>
-                        </tr>
-                        <tr>
+
                         <td>
                             <h4>Numéro de téléphone :</h4>
                             <div class="input-icon">
                             <i class="bi bi-telephone-fill"></i>
-                            <input class="inputForm" type="tel" placeholder="Numéro de téléphone"></div>
+                            <input class="inputForm" type="tel" name="phonenumber" placeholder="Numéro de téléphone"></div>
                         </td>
-                        <td>
-                            <h4>Ville :</h4>
-                            <div class="input-icon">
-                            <i id="iconForm" class="fas fa-city"></i>
-                            <input class="inputForm" type="text" name="Ville" placeholder="Ville"></div>
-                        </td>
+                        
+                        </tr>
+                        <tr>
+                        
+                        
                         </tr>
                         <tr>
                         <td colspan="2">
@@ -127,40 +122,14 @@ include_once 'autoload.php';
                         </td>
                         </tr>
                         <tr>
-                        <td colspan="2">
-                            <h4>Mode de paiement :</h4>
-                        </td>
+                        
                         </tr>
                         <tr>
-                        <td>
-                            <input class="inputPay" type="radio" name="carte" value="CIB"><label for="CIB" checked> CIB <i id="methPay" class="far fa-credit-card"></i></label>&emsp;&emsp;&emsp;
-                            <input class="inputPay" type="radio" name="carte" value="MasterCard"><label for="MasterCard"> MasterCard <i id="methPay" class="fab fa-cc-mastercard"></i></label>
-                            </td>
-                            <td>
-                            <input class="inputPay" type="radio" name="carte" value="Visa"><label for="Visa">Visa <i id="methPay" class="fab fa-cc-visa"></i></label>
-                        </td>
+                        
                         </tr>
-                        <tr>
-                        <td colspan="2">
-                            <h4>Carte crédit :</h4>
-                        </td>
-                        </tr>
-                        <tr>
-                        <td>
-                            <label>Numéro de Carte : </label><input class="inputForm2" type="tel" name="Numéro de Carte" placeholder="Numéro de Carte" required>
-                        </td>
-                        <td>
-                            <label>Code de sécurité : </label><input class="inputForm2" type="password" name="Code de sécurité" placeholder="Code de sécurité" maxlength="4" required>
-                        </td>
-                        </tr>
-                        <tr>
-                        <td>
-                            <label>Mois d'expiration : </label><input class="inputForm2" type="month" name="mois d'expiration" placeholder="mois d'expiration" required>
-                        </td>
-                        <td>
-                            <label>Année d'expiration : </label><input class="inputForm2" type="number" min="2021" name="année d'expiration" placeholder="Année d'expiration" required>
-                        </td>
-                        </tr>
+                        
+                        
+                        
                     </table>
                     
                     <button type="submit" id="submitForm" class="stripe-button btn btn3 don" style="opacity:0" name="submitForm">Faire un Don</button>
@@ -201,7 +170,7 @@ include_once 'autoload.php';
     <script src="js/testnav.js"></script>
 
     <script src="Js/don.js"></script>
-   
+    <script src="js/specialistIndiv.js"></script>
     <script src="js/jquery.counterup.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
     <script>

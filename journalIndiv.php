@@ -1,6 +1,12 @@
 <?php
 session_start();
-include_once 'isAuthentificated.php';
+if (isset($_SESSION['user'])) {
+
+    include_once "navbarCo.php";
+   
+  } else {
+    include_once "navbarDeco.php";
+  }
 include_once 'assets/bootstrapAsset.php';
 include_once 'autoload.php';
 $foodCat=new FoodCategoryRepository();

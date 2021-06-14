@@ -26,7 +26,7 @@
     ]);
 
     if($charge){
-      header("location:success.php");
+      header("location:cart.php");
     }
 
     }
