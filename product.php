@@ -13,6 +13,7 @@ if (isset($_GET['view'])) {
 }
 
 ?>
+<title><?=$product['name']?></title>
 <link rel="stylesheet" href="css/product.css">
 
 </head>

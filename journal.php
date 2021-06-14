@@ -2,6 +2,7 @@
 session_start();
 include_once 'assets/mainHead.php';
 
+
 include_once 'autoload.php';
 
 
@@ -15,6 +16,7 @@ if (isset($_SESSION['user'])) {
 
 
 ?>
+<title>Journal Alimentaire</title>
 <link rel="stylesheet" href="css/journal.css">
 <link rel="stylesheet" href="css/shopping.css">
 </head>

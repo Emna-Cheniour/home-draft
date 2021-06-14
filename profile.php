@@ -10,8 +10,9 @@ include_once 'assets/bootstrapAsset.php';
 
 ?>
 
-
-
+<link rel="stylesheet" href="css/profile.css">
+<title>Votre Profil</title>
+</head>
 <body>
 
 

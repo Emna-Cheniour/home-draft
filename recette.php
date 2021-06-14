@@ -8,7 +8,7 @@ $recipeCats=$recipeCatsRepo->findAll();
 
          
 ?>
-
+<title>Nos Recettes</title>
 <link rel="stylesheet" href="css/recipeStyle.css">
 
 </head>

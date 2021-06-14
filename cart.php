@@ -35,6 +35,7 @@ if (isset($_POST['PayDelivery'])) {
 }
 
 ?>
+<title>Votre Panier</title>
 <link rel="stylesheet" href="css/cart.css">
 
 </head>

@@ -7,6 +7,7 @@ include_once 'isAuthentificated.php';
 
 
 <?php include_once 'assets/mainHead.php' ?>
+<title>Faire Un Don </title>
 <link href="css/counter.css" rel="stylesheet">
 <link rel="stylesheet" href="css/don.css">
 </head>

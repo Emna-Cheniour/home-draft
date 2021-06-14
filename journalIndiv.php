@@ -22,6 +22,7 @@ $foodOK=$foodAliments->findBy(array('id'=> $catId,'permission',1));
 $foodNOK=$foodAliments->findBy(array('id'=> $catId,'permission',0));
 
 ?>
+<title><?=$food['name']?></title>
 <link rel="stylesheet" href="css/journalIndiv.css">
 </head>
 <body>

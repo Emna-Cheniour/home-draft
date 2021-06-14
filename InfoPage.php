@@ -3,6 +3,7 @@
   session_start();
   
 ?>
+<title>La Maladie Coeliaque</title>
 </head>
 
 <body>
