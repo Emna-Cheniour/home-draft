@@ -69,7 +69,7 @@ if (isset($_SESSION['user'])) {
         <div class="card-body">
             <h4 class="card-title"><?php echo $cat['name']?></h4>
             <div class="imgJournal"><img src="<?php echo "data:image/jpeg;base64,".base64_encode($cat['image'])."" ?>"></div>
-            <h6>Celiac 101</h6>
+            <h6 class="faded">Celiac 101</h6>
             <p class="card-text">Cliquez ici pour voir ce que vous est permis et ce que vous est interdit </p>
             <a href="journalIndiv.php?catId=<?php echo $cat['id'] ?>" class="card-link"><button class="btn btn4">Voir Journal</button></a>
         </div>

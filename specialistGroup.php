@@ -34,8 +34,8 @@ if (isset($_SESSION['user'])) {
 
     <div class="poster">
             <div class="posterDetails">
-                <div class="c4 sign">
-                    <span class="fast-flicker">Celiac</span><span class="flicker">101</span>
+                <div class="c4 sign faded" >
+                    <span style="font-size:2em; font-weigh:bold">Celiac101</span>
                 </div>
                 
             </div>

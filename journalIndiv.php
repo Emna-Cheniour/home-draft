@@ -8,8 +8,7 @@ if (isset($_SESSION['user'])) {
   } else {
     include_once "navbarDeco.php";
   }
-  $pageName=$food['name'];
-include_once 'assets/bootstrapAsset.php';
+  
 include_once 'autoload.php';
 $foodCat=new FoodCategoryRepository();
 
@@ -19,9 +18,13 @@ if( isset($_GET['catId']) ){
 $food=$foodCat->findOneBy(array('id'=> $catId));
 
 
+
 $foodAliments=new FoodAlimentRepository();
 $foodOK=$foodAliments->findBy(array('id'=> $catId,'permission',1));
 $foodNOK=$foodAliments->findBy(array('id'=> $catId,'permission',0));
+
+$pageName=$food['name'];
+include_once 'assets/mainHead.php';
 
 ?>
 
