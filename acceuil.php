@@ -1,28 +1,28 @@
-<?php 
+<?php
 
 session_start();
 
-$pageName='Acceuil';
+$pageName = 'Acceuil';
 include("assets/mainHead.php");
 include_once 'autoload.php';
 
 ?>
 
 </head>
+
 <body>
-    <?php 
- 
-    //include_once 'preloader.php' ?>
     <?php
-if (isset($_SESSION['user'])) {
+
+    //include_once 'preloader.php' 
+    ?>
+    <?php
+    if (isset($_SESSION['user'])) {
 
         include_once "navbarCo.php";
         include_once 'profileProgress.php';
         $infoCount *= 10;
-        
-          
            ?>
-           <ul class="welcome">
+            <ul class="welcome">
                 <li>B</li>
                 <li>I</li>
                 <li>E</li>
@@ -31,21 +31,23 @@ if (isset($_SESSION['user'])) {
                 <li>E</li>
                 <li>N</li>
                 <li>U</li>
-                
+
             </ul>
-           <?php
-        
+
+    <?php
+        }
     } else {
         include "navbarDeco.php";
     }
-
-
     ?>
+
 
     <div class="poster">
         <div class="posterDetails">
-            <div class="c4 sign faded">
-                <h2>Qui sommes nous?</h2>
+
+            <div class="c4 sign">
+                <h2>CELIAC101</h2>
+
             </div>
             <p> Votre meilleur guide pour vivre avec la maladie coeliaque </p>
             <p>Celiac 101 vous offre un ensemble de services qui facilitent votre quotidien et vous aident à vous adapter au régime alimentaire sans gluten
@@ -53,6 +55,19 @@ if (isset($_SESSION['user'])) {
             <p style="font-weight:bold">Bienvenu au premier site web d'origine tunisienne pour les malades coeliaques. </p>
         </div>
         <div class="pimg"><img class="posterImg" src="images/poster picture.png" alt=""></div>
+    </div>
+    <div class="posterV">
+
+        <video class="posterVid" playsinline autoplay muted loop>
+            <source src="images/poster.mp4" type="video/mp4">
+        </video>
+        
+        <div class="posterDetails">
+            <p> La maladie coeliaque est plus récurrente que vous pensez </p>
+            <p>Conçu par une équipe comportant des personnes eux même atteints ce guide répond à tout besoin d'un coeliaque
+            </p>
+            <p>Naviguez Celiac101 pour découvrir ses multiples services</p>
+        </div>
     </div>
 
     <div class="services">
@@ -65,7 +80,7 @@ if (isset($_SESSION['user'])) {
                     <br>
                     Visitez notre catalogue et jouissez de la qualité à meilleur prix.
                 </p>
-                <div class="services__btn" ><a href="shopping.php" ><button class="btn btn1 btnServ">Catalogue</button></a></div>
+                <div class="services__btn"><a href="shopping.php"><button class="btn btn1 btnServ">Catalogue</button></a></div>
             </div>
             <div class="service col4">
                 <img src="images/recette.png">
@@ -74,7 +89,7 @@ if (isset($_SESSION['user'])) {
                     <br>
                     C'est pourquoi Celiac101 vous offre des recettes testées avec leurs démarches simplifiées.
                 </p>
-                <div class="services__btn"><a href="recette.php" ><button class="btn btn2 btnServ">Recettes</button></a></div>
+                <div class="services__btn"><a href="recette.php"><button class="btn btn2 btnServ">Recettes</button></a></div>
             </div>
             <div class="service col4">
                 <img src="images/aliment.png">
@@ -83,7 +98,7 @@ if (isset($_SESSION['user'])) {
                     <br>
                     Notre journal des aliments omettera toute incertitude !
                 </p>
-                <div class="services__btn"><a href="Journal.php"><button class="btn btn1 btnServ" >Journal</button></a></div>
+                <div class="services__btn"><a href="Journal.php"><button class="btn btn1 btnServ">Journal</button></a></div>
             </div>
             <div class="service col4">
                 <img src="images/resto.png">
@@ -149,19 +164,8 @@ if (isset($_SESSION['user'])) {
                     <img class="imgDon" src="images/quizz.png" alt="dons">
                 </div>
             </div>
-
-            
-
-        </div>
-
-
-
-
-    </div>
-
-  
-
-
+             </div>
+            </div>
    
 <div class="last__section reveal">
     <div class="row rowy quizz"> 
@@ -199,8 +203,8 @@ if (isset($_SESSION['user'])) {
             </div>
 
 
-        </div>
 
+                </div
 
         <div class="specialistsAd">
             <div class="swiper-container specialistsContainer">
@@ -223,18 +227,16 @@ if (isset($_SESSION['user'])) {
                     
             
                 </div>
-            </div>
-        </div>
-
-    </div>
-</div>    
-    
- 
+                </div>
+                </div>
+                </div>
+      
+      
  
  
    
      <?php include 'footer.php' ?>
- <?php include_once 'assets/scripts.php' ?>
+  <?php include_once 'assets/scripts.php' ?>
      <script src="js/main.js"></script>
  
      <script src="js/txtRotation.js"></script>
@@ -248,3 +250,6 @@ if (isset($_SESSION['user'])) {
  </body>
  
  </html>
+
+
+   

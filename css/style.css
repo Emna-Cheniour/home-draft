@@ -735,6 +735,25 @@ float: left;
     flex-direction: column;
     
  }
+ .intialPoster{
+     display:flex;
+     flex-direction: row;
+ }
+.posterVid{
+    max-height: 400px;
+    display: inline-flex;
+    border-radius: 50px;
+    margin: 0 10px 0;
+}
+.posterV{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+@media screen and (max-width:1250px) {
+    .posterV {
+        display: flex;
+        flex-direction: column;
+    }
 
 .last__section
 {
@@ -743,4 +762,10 @@ float: left;
   grid-template-columns:repeat(auto-fit,minmax(25rem,30rem)) ;
   grid-gap: 2rem;
   justify-content: center;
+}
+    .posterVid {
+        align-self: center;
+        display: flex;
+        justify-content: center;
+    }
 }
