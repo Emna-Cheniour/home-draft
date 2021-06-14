@@ -35,7 +35,7 @@ include_once 'assets/mainHead.php';
                     <div class="leftSlide">
                         <h2>Bienvenue à Celiac101 : The Shop</h2>
                         <h5>Une collection de produits sans gluten variée avec des prix raisonnables. </h5>
-                        <a href="#startShopping"><button class="btn btn1 btnServ">Commencez votre shopping</button></a>
+                        <a href="#startShopping"><button class="btn btn1 btnServ">Commencez Votre Shopping</button></a>
 
 
                     </div>
@@ -47,9 +47,9 @@ include_once 'assets/mainHead.php';
                 </div>
                 <div class="swiper-slide shoppingPosterSlide">
                     <div class="leftSlide">
-                        <h2>Livraison à domicile</h2>
+                        <h2>Livraison à Domicile</h2>
                         <h5>Celiac101 garantit une livraison rapide , ponctuelle et très satisfaisante. </h5>
-                        <a href="#startShopping"><button class="btn btn1 btnServ">Commencez votre shopping</button></a>
+                        <a href="#startShopping"><button class="btn btn1 btnServ">Commencez Votre Shopping</button></a>
 
                     </div>
 
@@ -61,9 +61,9 @@ include_once 'assets/mainHead.php';
                 </div>
                 <div class="swiper-slide shoppingPosterSlide">
                     <div class="leftSlide">
-                        <h2>Méthodes de Paiement</h2>
+                        <h2>Méthodes De Paiement</h2>
                         <h5>Vous pouvez soit payer à la livraison soit payer électroniquement en toute sécurité. </h5>
-                        <a href="#startShopping"><button class="btn btn1 btnServ">Commencez votre shopping</button></a>
+                        <a href="#startShopping"><button class="btn btn1 btnServ">Commencez Votre Shopping</button></a>
 
                     </div>
 
@@ -74,11 +74,11 @@ include_once 'assets/mainHead.php';
                 </div>
                 <div class="swiper-slide shoppingPosterSlide">
                     <div class="leftSlide">
-                        <h2>Points de vente</h2>
+                        <h2>Points De Vente</h2>
                         <h5>Trouvez tous nos produits dans les adresses suivantes: </h5>
                         <h6>xxxx</h6>
                         <h6>xxxx</h6>
-                        <a href="#startShopping"><button class="btn btn1 btnServ">Commencez votre shopping</button></a>
+                        <a href="#startShopping"><button class="btn btn1 btnServ">Commencez Votre Shopping</button></a>
 
                     </div>
 
@@ -98,7 +98,7 @@ include_once 'assets/mainHead.php';
             <div class="swiper-button-next shoppingPosterNext"></div>
             <div class="swiper-button-prev shoppingPosterPrev"></div>
         </div>
-        <h2 class="latestTitle">Nos Nouveautés</h2>
+        <h2 class="latestTitle faded">Nos Nouveautés</h2>
         <div class="mainLatest">
             <?php $newProducts = $productrep->latest();
             foreach ($newProducts as $newProduct) {
@@ -114,14 +114,23 @@ include_once 'assets/mainHead.php';
                             <h4><?= $newProduct['price'] ?> Dt</h4>
                         </div>
                     </div>
+
                     <div class="view">
+                        
+                            <a href="product.php?view=<?php echo $newProduct['id']; ?>">
+                                <button class="btn latest--btn"><i class="fas fa-eye"></i>Voir Produit</button>
+                            </a>
+                        
+                    </div>
+                    <!--<div class="view">
                         <div class="productDetails">
+                            
                             <a href="product.php?view=<?php echo $newProduct['id']; ?>">
                                 <i class="fas fa-eye"></i>
-                                <h4>View product </h4>
+                                <h4>Voir Produit</h4>
                             </a>
                         </div>
-                    </div>
+                    </div>-->
                 </div>
             <?php
             }
@@ -143,6 +152,7 @@ include_once 'assets/mainHead.php';
                         $cmnts = $cmntShpRep->findAll();
                         foreach ($cmnts as $cmnt) {
                             $user = $userRep->findOneBy(array('username' => $cmnt['userId']));
+                            
 
                         ?>
                             <div class="swiper-slide swiperCommentaireContent">
@@ -166,7 +176,7 @@ include_once 'assets/mainHead.php';
                                                 <img src=<?php if ($user['image']) {
                                                                 echo "data:image/jpeg;base64," . base64_encode($user['image']);
                                                             } else {
-                                                                echo "images/userWithoutPic.jpg";
+                                                                echo "svg/undraw_male_avatar_323b.svg";
                                                             } ?> alt="">
                                             </div>
 
@@ -189,10 +199,10 @@ include_once 'assets/mainHead.php';
         <div class=" addReviewForm">
             <h1 class="closeReview"> &times;</h1>
             <img src="images/reviewForm.png" alt="">
-            <h3>Evaluez votre experience de shopping de chez Celiac101</h3>
+            <h3>Evaluez Votre Experience De Shopping De Chez Celiac101</h3>
             <form action="shopping.php" method="post">
                 <textarea name="reviewComment"></textarea>
-                <h3>Nottez la !</h3>
+                <h3>Nottez La !</h3>
                 <div class="heart_section">
                     <i id="review1" class="far fa-heart"></i>
                     <i id="review2" class="far fa-heart"></i>
@@ -202,7 +212,7 @@ include_once 'assets/mainHead.php';
                 </div>
                 <h1 id="reviewRating">?/5</h1>
                 <input name="rating" id="stars" type="hidden" value="0">
-                <button class="btn btn1 " name="sendReview" type="submit">Submit Review</button>
+                <button class="btn btn1 " name="sendReview" type="submit">Confirmer Evaluation</button>
             </form>
         </div>
         <div class="reviewStat" id=<?php if (isset($reviewstat)) {
@@ -270,7 +280,7 @@ include_once 'assets/mainHead.php';
             <div class="trierProduits">
                 <h3>Trier par:</h3>
                 <select name="" id="">
-                    <option value="">Nouveaux produits</option>
+                    <option value="">Nouveaux Produits</option>
 
                     <option value="">Prix Croissant</option>
 

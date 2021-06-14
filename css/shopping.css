@@ -22,9 +22,7 @@
 .leftSlide {
     padding: 20px;
 }
-.leftSlide{
-    
-}
+
 .leftSlide h2{
     color: #3498db;
     font-size: 40px;
@@ -121,14 +119,14 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color:#2f3b539e;
+    background: linear-gradient(to right, #bdc3c7, #2c3e50);
     clip-path: circle(110px at center);
     transition: 0.5s;
 
 }
 
 .cardLatest:hover .circle::before {
-    background-color:#2f3b539e;
+    background: linear-gradient(to right, #bdc3c7, #2c3e50);
     clip-path: circle(300px at center);
     border-radius: 30px;
 
@@ -145,7 +143,7 @@
 }
 
 .cardLatest:hover img {
-    top: 60%;
+    top: 55%;
     height: 250px;
 }
 
@@ -160,7 +158,7 @@
     transition: 0.5s;
     opacity: 0;
     visibility: hidden;
-   ;
+  
 }
 .cardLatest .content *, .cardLatest .view *{
      color: white !important
@@ -183,6 +181,22 @@
     visibility: hidden;
    
 }
+
+
+.view a  .btn.latest--btn:hover
+{
+background:linear-gradient(to right, #525252, #3d72b4);
+}
+.latest--btn i 
+{ 
+    margin-right: 10px;
+}
+.latest--btn 
+{ 
+    border: none;
+}
+
+
 
 .cardLatest:hover .view {
     bottom: 0;
