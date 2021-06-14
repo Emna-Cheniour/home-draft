@@ -21,9 +21,7 @@ include_once 'autoload.php';
         include_once "navbarCo.php";
         include_once 'profileProgress.php';
         $infoCount *= 10;
-        if ($infoCount != 100) {
-
-    ?>
+           ?>
             <ul class="welcome">
                 <li>B</li>
                 <li>I</li>
@@ -35,25 +33,26 @@ include_once 'autoload.php';
                 <li>U</li>
 
             </ul>
+
     <?php
         }
     } else {
         include "navbarDeco.php";
     }
-
-
     ?>
 
 
     <div class="poster">
         <div class="posterDetails">
+
             <div class="c4 sign">
                 <h2>CELIAC101</h2>
+
             </div>
             <p> Votre meilleur guide pour vivre avec la maladie coeliaque </p>
             <p>Celiac 101 vous offre un ensemble de services qui facilitent votre quotidien et vous aident à vous adapter au régime alimentaire sans gluten
             </p>
-            <p>Bienvenu au premier site web d'origine tunisienne pour les malades coeliaques. </p>
+            <p style="font-weight:bold">Bienvenu au premier site web d'origine tunisienne pour les malades coeliaques. </p>
         </div>
         <div class="pimg"><img class="posterImg" src="images/poster picture.png" alt=""></div>
     </div>
@@ -72,7 +71,7 @@ include_once 'autoload.php';
     </div>
 
     <div class="services">
-        <h1 class="c4 faded">Services</h1>
+        <h1 style="font-size:3em; " class="c4 faded">SERVICE</h1>
         <div class="serviceRow row">
             <div class="service col4">
                 <img src="images/panier.png">
@@ -139,7 +138,7 @@ include_once 'autoload.php';
         <div class="col" style="flex: 1.5;">
             <div class="row rowy donation reveal">
                 <div class="col9">
-                    <h2 class="c4 faded">Faites un don !</h2>
+                    <h2 class="c4 faded">Faites Un Don !</h2>
                     <p>Vivre sans gluten est couteux voire irréalisable pour certains malades.</p>
                     <p> Faites un dons monétaire ou de produits et sauvez leurs vies!</p>
 
@@ -156,7 +155,7 @@ include_once 'autoload.php';
                     <img class="imgDon" src="images/quizz.png" alt="dons">
                 </div>
                 <div class="col9">
-                    <h2 class="c4 faded">Prenez notre quizz!<h2>
+                    <h2 class="c4 faded">Prenez Notre Quizz!<h2>
                             <p>Vous avez quelques symptômes de la maladie coeliaque ?</p>
                             <p> Prenez un quizz réalisé par des spécialistes pour avoir le meilleur conseil!</p>
                             <a href="quizz.php"><button class="btn btn4">Quizz</button></a>
@@ -165,36 +164,31 @@ include_once 'autoload.php';
                     <img class="imgDon" src="images/quizz.png" alt="dons">
                 </div>
             </div>
-
-            <div class="row rowy quizz reveal">
-
-
-                <div class="col9">
-                    <?php if (isset($_SESSION['user'])) {
-                        $username = $_SESSION['user'];
-                        if ($infoCount != 100) {
-                            echo "<h2 class='c4 faded' >Bienvenu $username</h2>";
-                            echo "<p>Votre Profil est à $infoCount %</p>";
-                            echo "<a href='profile.php'><button class='btn btn3'>Complétez votre profil<i class='fas fa-arrow-alt-circle-right'></i></button></a>";
-                        }
-                    } ?>
-
-
-
-
-
-                </div>
-
+             </div>
             </div>
-
-
-
-
-        </div>
-
+   
+<div class="last__section reveal">
+    <div class="row rowy quizz"> 
+        <div class="col9">
+             <?php if(isset($_SESSION['user'])){ 
+                 $username=$_SESSION['user'];
+                    if($infoCount!=100){ 
+                        echo "<h2 class='c4 faded' >Bienvenu $username</h2>"; 
+                        echo "<p>Votre Profil est à $infoCount %</p>"; 
+                        echo "<a href='profile.php'><button class='btn btn3'>Complétez Votre Profil<i class='fas fa-arrow-alt-circle-right'></i></button></a>";
+                    }else{ 
+                        echo "<h2 class='c4 faded' >Bienvenu $username</h2>";
+                     } 
+                } else { 
+                    echo "<h2 class='c4 faded'>Rejoignez-nous Pour Bénéficier De Notre Guide CELIAC101 !</h2>"; 
+                    echo "<a href='login_SignUp.php'><button class='btn btn3'>Inscrivez-Vous<i class='fas fa-arrow-alt-circle-right'></i></button></a>"; } ?>
+        </div> 
+    </div>
+    
+    <div class="specialist__section">
         <div class="row">
-
-
+        
+        
             <div class="col specialist__section">
 
                 <div class="suggestionsSpecialist">
@@ -209,49 +203,53 @@ include_once 'autoload.php';
             </div>
 
 
-        </div>
 
-    </div>
-    <div class="specialistsAd">
-        <div class="swiper-container specialistsContainer">
-            <div class="swiper-wrapper specialistsWrapper">
-                <?php
-                $specialistRepo = new SpecialistRepository();
-                $specialists = $specialistRepo->findAll();
+                </div
 
-                foreach ($specialists as $specialist) {
-                ?>
+        <div class="specialistsAd">
+            <div class="swiper-container specialistsContainer">
+                <div class="swiper-wrapper specialistsWrapper">
+                    <?php 
+                        $specialistRepo=new SpecialistRepository();
+                        $specialists=$specialistRepo->findAll();
+
+                        foreach($specialists as $specialist){
+                    ?>
                     <div class="swiper-slide specialistSlide">
                         <div class="specialistAd">
                             <img src=<?php echo "data:image/jpeg;base64," . base64_encode($specialist['image']) ?> alt="">
-                            <h4><?php echo $specialist['firstName'] . " " . $specialist['lastName'] ?></h4>
-                            <h5><?php echo $specialist['profession'] ?></h5>
+                            <h4><?php echo $specialist['firstName']." ".$specialist['lastName']?></h4>
+                            <h5><?php echo $specialist['profession']?></h5>
                         </div>
                     </div>
-                <?php } ?>
+                    <?php } ?>
+                    
+                    
+            
+                </div>
+                </div>
+                </div>
+                </div>
+      
+      
+ 
+ 
+   
+     <?php include 'footer.php' ?>
+  <?php include_once 'assets/scripts.php' ?>
+     <script src="js/main.js"></script>
+ 
+     <script src="js/txtRotation.js"></script>
+     <script type="js/scrollUpBtn.js"></script>
+     <script src="js/testnav.js"></script>
+     <script src="js/specialistIndiv.js"></script>
+     
+     
+    
+ 
+ </body>
+ 
+ </html>
 
 
-
-            </div>
-        </div>
-    </div>
-    </div>
-
-
-
-
-    <?php include 'footer.php' ?>
-    <?php include_once 'assets/scripts.php' ?>
-    <script src="js/main.js"></script>
-
-    <script src="js/txtRotation.js"></script>
-    <script type="js/scrollUpBtn.js"></script>
-    <script src="js/testnav.js"></script>
-    <script src="js/specialistIndiv.js"></script>
-
-
-
-
-</body>
-
-</html>
+   

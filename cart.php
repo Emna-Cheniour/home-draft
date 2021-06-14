@@ -45,7 +45,7 @@ if (isset($_POST['PayDelivery'])) {
 
 
     <?php include_once 'navbarCo.php' ?>
-    <div class="wrapp">
+    <div style="margin-bottom:100px" class="wrapp">
         <div class="navbarCart">
             <div id="cart" class="navbarCartElementWrapper <?php if ($display == 'cart') {
                                                                 echo 'active';

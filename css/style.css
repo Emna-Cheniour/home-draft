@@ -733,6 +733,7 @@ float: left;
     align-items: center;
     display: flex;
     flex-direction: column;
+    
  }
  .intialPoster{
      display:flex;
@@ -754,6 +755,14 @@ float: left;
         flex-direction: column;
     }
 
+.last__section
+{
+  margin: 2rem;
+  display: grid;
+  grid-template-columns:repeat(auto-fit,minmax(25rem,30rem)) ;
+  grid-gap: 2rem;
+  justify-content: center;
+}
     .posterVid {
         align-self: center;
         display: flex;
