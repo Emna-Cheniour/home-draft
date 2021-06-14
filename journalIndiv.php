@@ -12,8 +12,8 @@ $food=$foodCat->findOneBy(array('id'=> $catId));
 
 
 $foodAliments=new FoodAlimentRepository();
-$foodOK=$foodAliments->findBy(array('id'=> $catId,'permission',1));
-$foodNOK=$foodAliments->findBy(array('id'=> $catId,'permission',0));
+$foodOK=$foodAliments->findBy(array('catgeoryId'=> $catId,'permission' => 1));
+$foodNOK=$foodAliments->findBy(array('catgeoryId'=> $catId,'permission' => 0));
 
 $pageName=$food['name'];
 include_once 'assets/mainHead.php';
