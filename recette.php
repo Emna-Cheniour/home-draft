@@ -1,5 +1,6 @@
 <?php 
 session_start();
+$pageName='Nos Recettes';
 include_once 'assets/bootstrapAsset.php';
 include_once 'autoload.php';
 include_once 'isAuthentificated.php';
@@ -8,7 +9,7 @@ $recipeCats=$recipeCatsRepo->findAll();
 
          
 ?>
-<title>Nos Recettes</title>
+
 <link rel="stylesheet" href="css/recipeStyle.css">
 
 </head>

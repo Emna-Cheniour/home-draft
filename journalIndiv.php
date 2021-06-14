@@ -1,5 +1,6 @@
 <?php
 session_start();
+
 if (isset($_SESSION['user'])) {
 
     include_once "navbarCo.php";
@@ -7,6 +8,7 @@ if (isset($_SESSION['user'])) {
   } else {
     include_once "navbarDeco.php";
   }
+  $pageName=$food['name'];
 include_once 'assets/bootstrapAsset.php';
 include_once 'autoload.php';
 $foodCat=new FoodCategoryRepository();
@@ -22,7 +24,7 @@ $foodOK=$foodAliments->findBy(array('id'=> $catId,'permission',1));
 $foodNOK=$foodAliments->findBy(array('id'=> $catId,'permission',0));
 
 ?>
-<title><?=$food['name']?></title>
+
 <link rel="stylesheet" href="css/journalIndiv.css">
 </head>
 <body>

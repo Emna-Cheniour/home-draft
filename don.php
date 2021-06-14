@@ -1,5 +1,6 @@
 <?php 
 session_start();
+$pageName='Faire Un Don';
 include_once 'autoload.php';
 include_once 'isAuthentificated.php';
 
@@ -7,7 +8,7 @@ include_once 'isAuthentificated.php';
 
 
 <?php include_once 'assets/mainHead.php' ?>
-<title>Faire Un Don </title>
+
 <link href="css/counter.css" rel="stylesheet">
 <link rel="stylesheet" href="css/don.css">
 </head>
@@ -147,21 +148,7 @@ include_once 'isAuthentificated.php';
 
         </div>
 
-            <div class="contenuForm2">
-                <form class="formPay">
-                    <h1>
-                        Veuillez remplir votre Panier de Don
-                    </h1>
-                    <h3>
-                        Vous pouvez consultez notre catalogue pour choisir les produits et les mettre dans votre panier de Don, comme vous pouvez payer directement.
-                    </h3>
-                    <div>
-                    <img src="images/fooddonation.png"></div>
-                    <span><a href="shopping.php"><button type="button" class="btn btn3 don" name="revenirCat">Revenier au catalogue</button></a>
-                    <button type="submit" class="btn btn3 don" name="submitPay">Payer maintenant</button></span>
-                </form>
-
-            </div>
+           
 </div>
     <?php include_once 'footer.php' ?>
     <?php include_once 'assets/scripts.php' ?>

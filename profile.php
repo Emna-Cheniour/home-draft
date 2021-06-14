@@ -1,6 +1,7 @@
 <?php 
 
 session_start();
+$pageName='Votre Profil';
 include_once 'autoload.php';
 include_once 'isAuthentificated.php';
 include_once 'assets/mainHead.php' ;
@@ -11,7 +12,7 @@ include_once 'assets/bootstrapAsset.php';
 ?>
 
 <link rel="stylesheet" href="css/profile.css">
-<title>Votre Profil</title>
+
 </head>
 <body>
 

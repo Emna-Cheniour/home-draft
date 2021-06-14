@@ -1,5 +1,6 @@
 <?php 
 session_start();
+$pageName='Journal Alimentaire';
 include_once 'assets/mainHead.php';
 
 
@@ -16,7 +17,7 @@ if (isset($_SESSION['user'])) {
 
 
 ?>
-<title>Journal Alimentaire</title>
+
 <link rel="stylesheet" href="css/journal.css">
 <link rel="stylesheet" href="css/shopping.css">
 </head>

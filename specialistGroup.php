@@ -1,6 +1,7 @@
 <?php 
 session_start();
 
+$pageName='Nos Spécialistes';
   include 'assets/bootstrapAsset.php';
   include_once 'isAuthentificated.php';
 

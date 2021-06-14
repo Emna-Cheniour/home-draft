@@ -1,5 +1,6 @@
 <?php
 include_once 'autoload.php';
+$pageName='Notre Catalogue';
 session_start();
 require_once 'isAuthentificated.php';
 if ($_SESSION['role'] == 'admin') {

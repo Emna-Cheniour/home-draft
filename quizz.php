@@ -1,11 +1,12 @@
 <?php
 
 session_start();
+$pageName='QUIZZ';
 include_once 'isAuthentificated.php';
 include_once 'assets/bootstrapAsset.php';
 include_once 'assets/mainHead.php'
 ?>
-<title>QUIZZ</title>
+
 <body>
 
 <?php include_once 'navbarCo.php' ;?>

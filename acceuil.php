@@ -1,10 +1,13 @@
-<?php include("assets/mainHead.php");
-include_once 'autoload.php';
+<?php 
 
 session_start();
 
+$pageName='Acceuil';
+include("assets/mainHead.php");
+include_once 'autoload.php';
 
 ?>
+
 </head>
 <body>
     <?php 

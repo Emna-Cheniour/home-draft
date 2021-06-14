@@ -50,7 +50,7 @@ if($_SESSION['role']=='user'){
         <div class="services__btn default"><button class="btn btn1 btnServ">Gérer Les Recette</button></div>
 
         <div class="hidden__options">
-          <div class="services__btn"><a href="recette.php"><button class="btn btn3 don">Catalogue</button></a></div>
+          
           <div class="services__btn"><a href="addRecipe.php"><button class="btn btn3 don">Ajouter Recette</button></a></div>
 
         </div>
@@ -67,19 +67,9 @@ if($_SESSION['role']=='user'){
         </div>
 
       </div>
-      <div class="section__admin">
-        <div class="services__btn default"><button class="btn btn1 btnServ">Gérer Les Restaurant</button></div>
+     
 
-        <div class="hidden__options">
-          <div class="services__btn"><a href="restaurant.php"><button class="btn btn3 don">Carte</button></a></div>
-          <div class="services__btn"><a href="addRestaurant.php"><button class="btn btn3 don">Ajouter</button></a></div>
-
-        </div>
-
-      </div>
-
-      <div class="section__admin">
-        <div class="services__btn"><a href="don.php"><button class="btn btn1 btnServ">Gérer Les Dons</button></a></div>
+    
 
 
       </div>

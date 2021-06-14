@@ -1,5 +1,9 @@
-<?php include_once 'assets/mainHead.php' ;
+<?php 
 session_start();
+$pageName='Acceuil';
+include_once 'assets/mainHead.php' ;
+
+
 
 if (isset($_SESSION['user'])) {
 

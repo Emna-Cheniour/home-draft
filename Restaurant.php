@@ -1,5 +1,6 @@
 <?php
 session_start();
+$pageName='Restaurants';
 include_once 'isAuthentificated.php';
 include_once 'assets/mainHead.php';
 include_once 'autoload.php';

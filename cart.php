@@ -1,5 +1,6 @@
 <?php
 session_start();
+$pageName='Votre Panier';
 include_once 'assets/mainHead.php';
 include_once 'autoload.php';
 include_once 'isAuthentificated.php';
@@ -35,7 +36,7 @@ if (isset($_POST['PayDelivery'])) {
 }
 
 ?>
-<title>Votre Panier</title>
+
 <link rel="stylesheet" href="css/cart.css">
 
 </head>
