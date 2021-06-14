@@ -24,62 +24,49 @@ $recipeCats=$recipeCatsRepo->findAll();
     <div class="form-group">
 
       <div class="dropdown">
-        <div class="default-option">Catégories</div>
+        
 
-        <div class="dropdown-list">
-          <ul class="indicator">
+           
+
+        <select style="margin:40px 30px 0 40px"name="category" id="">
             <?php 
               
 
               foreach($recipeCats as $recipeCatItem){
               
             ?>
-              <li><button style="color:#fff" type="submit" name="submit<?php echo $recipeCatItem['nom'] ?>"><a href="#" ><?php echo $recipeCatItem['nom'] ?></a></button></li>
+              <option><?php echo $recipeCatItem['nom'] ?></option>
 
             <?php } ?>
-            
+                
+        </select>
 
-          </ul>
+        <button type="submit" class="btn btn1 don">Filtrer</button>
 
-        </div>
-      </div class="trierPardiv">
-          
-        <div class="search">
-            <div class="icon">
-
-            </div>
-            <div class="input">
-              <input type="text" placeholder="Rechercher" id="mysearch">
-            </div>
-             <span class="clear" ></span>
-        </div>
-
-     
-        
 
       </div>
 
 
-    
-    <div class="selectedAdded"></div>
+              
+   
    
   </div>
 
   <?php 
      $recetteRepo=new RecipeRepository();
      $recettes=$recetteRepo->findAll();
-     
+
      $recipeCatRelRepo=new RecipeCategoryRelRepository();
 
-     foreach($recipeCats as $recipeCatItem){
+   
 
-       if(isset($_POST['submit'.''.$recipeCatItem['nom']])){
+       if(isset($_POST['submit'])){
+         $catName=$_POST['category'];
        
-        $recetteCatRel=$recipeCatRelRepo->findOneBy(array('cetagoryId' => $recipeCatItem));
-        $recetteFiltred=$recetteCatRel['recipeId'];
-        $recettes=$recetteRepo->findBy(array());
+        $recetteCatRel=$recipeCatRelRepo->findBy(array('nom' => $cat));
+        
        }
-     }
+     
     
 
   ?>
@@ -97,7 +84,7 @@ $recipeCats=$recipeCatsRepo->findAll();
 
      $ingredientRecipeRel=new RecipeIngredientRelRepository();
      
-     $ingredientRel=$ingredientRecipeRel->findOneBy(array('recipeId'=>$recette['id']));
+     $ingredientRel=$ingredientRecipeRel->findBy(array('recipeId'=>$recette['id']));
           ?>
     <div class="card">
      
@@ -115,7 +102,7 @@ $recipeCats=$recipeCatsRepo->findAll();
 
           <div class="detail__field">
           <span class="number">Ingredients</span>
-            <span class="expression"><?php  echo count($ingredientRel)?></span>
+            <span class="expression"><?php echo count($ingredientRel)?></span>
             
           </div>
 
@@ -133,7 +120,7 @@ $recipeCats=$recipeCatsRepo->findAll();
         <div class="card__icons">
           <a class="like">
             
-            <i class="fa fa-heart" aria-hidden="true"></i>
+            
             
            </a>
 

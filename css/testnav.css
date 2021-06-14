@@ -16,6 +16,7 @@ header .logo__container
 {
   margin-right: 20px;
   margin-left: -10px;
+  
 }
 .logopic {
   height: 80px;
@@ -29,7 +30,7 @@ header .logo__container
 
 .logoname{
   background-size:100%;
-  
+  height: 80px;
   align-items: center;
   cursor: pointer;
   text-decoration: none;
@@ -40,6 +41,7 @@ header .logo__container
   -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
+  
 }
 
   .right__nav__links

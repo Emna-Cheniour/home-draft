@@ -17,7 +17,7 @@ if (isset($_SESSION['user'])) {
     <link rel="stylesheet" href="css/login_SignUpStyle.css">
  
 
-  <title>LOGIN</title>
+  <title>Se Connecter</title>
 </head>
 
 <body>
@@ -41,7 +41,7 @@ if (isset($_SESSION['user'])) {
         <form action="loginProcess.php" method="post" class="sign-in-form">
             
 
-          <h2 class="title">Se connecter</h2>
+          <h2 class="title">Se Connecter</h2>
           <div class="input__field">
             <i class="fas fa-user"></i>
             <input type="text" name="username" placeholder="Nom d'utilisateur">
@@ -121,8 +121,8 @@ if (isset($_SESSION['user'])) {
 
         <div class="panel panel__left">
           <div class="content">
-            <h3>Vous êtes nouveau ?</h3>
-            <p>Rejoignez-nous pour bénéficier de notre guide CELIAC101 !</p>
+            <h3>Vous Etes Nouveau ?</h3>
+            <p>Rejoignez-Nous Pour Bénéficier De Notre Guide CELIAC101 !</p>
             <button class="btn transparent" id=sign-up-btn>S'inscrire</button>
           </div>
 
@@ -131,9 +131,9 @@ if (isset($_SESSION['user'])) {
 
         <div class="panel panel__right">
           <div class="content">
-            <h3>Vous êtes parmi nous ?</h3>
-            <p>Pour rester connecté avec nous, Veuillez remplir vos informations personnelles.</p>
-            <button class="btn transparent" id=sign-in-btn>Se connecter</button>
+            <h3>Vous Etes parmi nous ?</h3>
+            <p>Pour Rester Connecté Avec Nous, Veuillez Remplir Vos Informations Personnelles.</p>
+            <button class="btn transparent" id=sign-in-btn>Se Connecter</button>
           </div>
 
           <img src="svg/undraw_welcome_cats_thqn.svg" class="image" alt="">
