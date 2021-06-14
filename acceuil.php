@@ -131,9 +131,6 @@ include_once 'autoload.php';
 
     <div class="row">
 
-
-
-
         <div class="col" style="flex: 1.5;">
             <div class="row rowy donation reveal">
                 <div class="col9">
@@ -187,9 +184,7 @@ include_once 'autoload.php';
 
         <div class="specialist__section">
             <div class="row">
-
-
-                <div class="col specialist__section">
+               <div class="col specialist__section">
 
                     <div class="suggestionsSpecialist">
 
@@ -223,26 +218,21 @@ include_once 'autoload.php';
                                 </div>
                             </div>
                         <?php } ?>
-
-
-
                     </div>
                 </div>
             </div>
         </div>
 
+    </div>
 
+    <?php include 'footer.php' ?>
+    <?php include_once 'assets/scripts.php' ?>
+    <script src="js/main.js"></script>
 
-
-
-        <?php include 'footer.php' ?>
-        <?php include_once 'assets/scripts.php' ?>
-        <script src="js/main.js"></script>
-
-        <script src="js/txtRotation.js"></script>
-        <script type="js/scrollUpBtn.js"></script>
-        <script src="js/testnav.js"></script>
-        <script src="js/specialistIndiv.js"></script>
+    <script src="js/txtRotation.js"></script>
+    <script type="js/scrollUpBtn.js"></script>
+    <script src="js/testnav.js"></script>
+    <script src="js/specialistIndiv.js"></script>
 
 
 
