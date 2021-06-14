@@ -763,9 +763,9 @@ float: left;
   grid-gap: 2rem;
   justify-content: center;
 }
-    .posterVid {
+.posterVid {
         align-self: center;
         display: flex;
         justify-content: center;
-    }
+}
 }
