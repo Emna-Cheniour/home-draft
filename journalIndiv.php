@@ -16,7 +16,7 @@ if( isset($_GET['catId']) ){
   $catId=$_GET['catId'];
 }
 $food=$foodCat->findOneBy(array('id'=> $catId));
-echo($food['name']);
+
 
 
 $foodAliments=new FoodAlimentRepository();
