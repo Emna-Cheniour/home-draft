@@ -13,7 +13,7 @@ include_once 'autoload.php';
 
 
 <div class="logo__container">
-<img class="logopic" src="images/logo1.png" alt="Logo">
+  <img class="logopic" src="images/logo1.png" alt="Logo">
   <span class="logoname">Celiac101</span>
 </div>
 
