@@ -159,11 +159,12 @@ if (isset($_SESSION['user'])) {
                     if($infoCount!=100){
                      echo "<h2 class='c4 faded' >Bienvenu $username</h2>";
                      echo "<p>Votre Profil est à $infoCount %</p>";
+                     echo "<a href='profile.php'><button class='btn btn3'>Complétez votre profil<i class='fas fa-arrow-alt-circle-right'></i></button></a>";
                     }
                 } ?>
-               </p>
+               
 
-               <a href="profile.php"><button class="btn btn3">Complétez votre profil<i class="fas fa-arrow-alt-circle-right"></i></button></a>
+               
 
                
            </div> 

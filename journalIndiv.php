@@ -31,9 +31,6 @@ $foodNOK=$foodAliments->findBy(array('id'=> $catId,'permission',0));
 
 
 
-
-
-<?php include_once 'navbarCo.php'?>
 <?php include_once 'preloader.php' ?>
 
 
