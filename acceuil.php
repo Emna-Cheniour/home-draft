@@ -1,10 +1,13 @@
-<?php include("assets/mainHead.php");
-include_once 'autoload.php';
+<?php 
 
 session_start();
 
+$pageName='Acceuil';
+include("assets/mainHead.php");
+include_once 'autoload.php';
 
 ?>
+
 </head>
 <body>
     <?php 
@@ -19,15 +22,18 @@ if (isset($_SESSION['user'])) {
         if ($infoCount != 100) {
           
            ?>
-           <div class="progress__result">
-               <p>
-                <?php $username=$_SESSION['user']; echo "Bienvenu $username <br>Votre profile est à $infoCount %"; ?>
-               </p>
-
-               <a href="profile.php">Complétez votre profil<i class="fas fa-arrow-alt-circle-right"></i></a>
-
-               
-           </div> <?php
+           <ul class="welcome">
+                <li>B</li>
+                <li>I</li>
+                <li>E</li>
+                <li>N</li>
+                <li>V</li>
+                <li>E</li>
+                <li>N</li>
+                <li>U</li>
+                
+            </ul>
+           <?php
         }
     } else {
         include "navbarDeco.php";
@@ -144,6 +150,24 @@ if (isset($_SESSION['user'])) {
                 </div>
             </div>
 
+            <div class="row rowy quizz reveal">
+                
+           
+               <div class="col9">
+                <?php if(isset($_SESSION['user'])){
+                    $username=$_SESSION['user'];
+                    if($infoCount!=100){
+                     echo "<h2 class='c4 faded' >Bienvenu $username</h2>";
+                     echo "<p>Votre Profil est à $infoCount %</p>";
+                    }
+                } ?>
+               </p>
+
+               <a href="profile.php"><button class="btn btn3">Complétez votre profil<i class="fas fa-arrow-alt-circle-right"></i></button></a>
+
+               
+           </div> 
+
         </div>
 
 
@@ -182,7 +206,7 @@ if (isset($_SESSION['user'])) {
                 ?>
                 <div class="swiper-slide specialistSlide">
                     <div class="specialistAd">
-                        <img src="images/nutritionist.png" alt="">
+                        <img src=<?php echo "data:image/jpeg;base64," . base64_encode($specialist['image']) ?> alt="">
                         <h4><?php echo $specialist['firstName']." ".$specialist['lastName']?></h4>
                         <h5><?php echo $specialist['profession']?></h5>
                     </div>
@@ -202,6 +226,7 @@ if (isset($_SESSION['user'])) {
     <?php include 'footer.php' ?>
 <?php include_once 'assets/scripts.php' ?>
     <script src="js/main.js"></script>
+
     <script src="js/txtRotation.js"></script>
     <script type="js/scrollUpBtn.js"></script>
     <script src="js/testnav.js"></script>

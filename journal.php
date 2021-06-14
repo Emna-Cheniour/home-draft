@@ -1,9 +1,23 @@
-<?php include_once 'assets/mainHead.php';
-include_once 'isAuthentificated.php';
+<?php 
+session_start();
+$pageName='Journal Alimentaire';
+include_once 'assets/mainHead.php';
+
+
 include_once 'autoload.php';
 
 
+if (isset($_SESSION['user'])) {
+
+  include_once "navbarCo.php";
+ 
+} else {
+  include_once "navbarDeco.php";
+}
+
+
 ?>
+
 <link rel="stylesheet" href="css/journal.css">
 <link rel="stylesheet" href="css/shopping.css">
 </head>
@@ -15,7 +29,7 @@ include_once 'autoload.php';
 
 <?php include_once 'navbarCo.php'?>
 <?php include_once 'preloader.php' ;
-session_start();?>
+?>
 
 
 <div id="effect" class="wavy titreJournal">

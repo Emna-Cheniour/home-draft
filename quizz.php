@@ -1,14 +1,16 @@
 <?php
 
 session_start();
+$pageName='QUIZZ';
 include_once 'isAuthentificated.php';
 include_once 'assets/bootstrapAsset.php';
 include_once 'assets/mainHead.php'
 ?>
+
 <body>
 
 <?php include_once 'navbarCo.php' ;?>
-<?php include_once 'preloader.php' ?>
+
 
 
   

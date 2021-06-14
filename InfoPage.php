@@ -1,8 +1,11 @@
 <?php 
+session_start();
+$pageName='Maladie Coeliaque';
   include_once 'assets/mainHead.php';
-  session_start();
+
   
 ?>
+
 </head>
 
 <body>
@@ -389,9 +392,9 @@
 
   <?php include 'footer.php' ?>
   
-<script src="js/circleTxt.js"></script>
+  <script src="js/testnav.js"></script>
 <script src="js/cardTilt.js"></script>
-<script src="testnav.js"></script>
+
 
     <script src="js/main.js"></script>
 

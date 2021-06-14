@@ -1,5 +1,6 @@
 <?php
 session_start();
+$pageName='Votre Panier';
 include_once 'assets/mainHead.php';
 include_once 'autoload.php';
 include_once 'isAuthentificated.php';
@@ -35,6 +36,7 @@ if (isset($_POST['PayDelivery'])) {
 }
 
 ?>
+
 <link rel="stylesheet" href="css/cart.css">
 
 </head>
@@ -327,8 +329,27 @@ if (isset($_POST['PayDelivery'])) {
         <?php $cmdRep = new CommandRepository();
         $orders = $cmdRep->findBy(array('userId' => $_SESSION['user']));
         foreach ($orders as $order) {
+            
 
         ?>
+
+                        <div class="cartElementWrapper">
+                            <div class="cartElement">
+                                <div class="info">
+                                    <h6>Commande -</h6>
+                                    <h4><?= $order['userId'] ?></h4>
+                                    <div class="details">
+                                        <h6>Total : <?= $order['total'] ?> Dt</h6>
+                                        <h6>Date Commande : <?= $order['date'] ?></h6>
+                                        <h6>Date Livraison : <?= $order['deliveryDate'] ?></h6>
+                                        <h6>Etat Commande : <?= $order['status'] ?></h6>
+                                    </div> 
+                                        
+                                    
+                                </div>
+                                
+                            </div>
+                        </div>
            
         <?php
         }

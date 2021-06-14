@@ -16,7 +16,7 @@
 .formContent{
     background-color: #1c294211;
     width: 660px;
-    height: 900px;
+    height: 660px;
     border-radius: 2px;
     box-shadow: 0 0 10px #333;
     top:0;
@@ -31,18 +31,24 @@
     border-bottom: 1px solid #333;
 }
 .container-Don > *{
-    width: 330px;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 22px;
+    font-size: 30px;
     font-weight: 600;
     cursor: pointer;
-    border-right: 1px solid #00000038;
+    /*border-right: 1px solid #00000038;*/
     background: #3B556D;
     background: -webkit-linear-gradient(to left, #1C2942, #3B556D);  
     background: linear-gradient(to left, #1C2942, #3B556D); 
     color: white;
+
+}
+.container-Don .donArg i 
+{ 
+    animation: UpAndDown 1.5s linear infinite;
+    margin: 20px;
 }
 .titleForm{
     font-size: 30px;
@@ -50,11 +56,12 @@
     text-align: center;
     color: #137c8b;
 }
-#imageDonate{
+.imageDonate{
     width: 80px;
     border: 0;
     margin-right: 10px;
     vertical-align: middle;
+    animation:UpAndDown 1.5s linear infinite;
 }
 .Form{
     padding: 5px 25px;
@@ -101,19 +108,23 @@ color: #137c8b !important;
     
 }
 .introDon{
+    
+  
     padding-top: 30px;
     text-align: center;
-    font-size: 1.5em;
-    border: 3px solid #5FC2BA;
-    border-radius: 50px;
-    border-collapse: collapse;
-    width: 60%;
+    font-size: 1.3em;
+ 
+    
     top:0;
 	bottom: 0;
 	left: 0;
 	right: 0;
 	margin: 5% auto;
 }  
+
+
+
+
 .formPay{
     text-align: center;
     top:0;

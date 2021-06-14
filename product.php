@@ -1,6 +1,7 @@
 <?php
 session_start();
-include_once 'assets/mainHead.php';
+
+
 include_once 'isAuthentificated.php';
 include_once 'autoload.php';
 $productrep = new ProductRepository();
@@ -11,8 +12,10 @@ if (isset($_GET['view'])) {
 } else {
     header("Location:shopping.php");
 }
-
+$pageName=$product['name'];
+include_once 'assets/mainHead.php';
 ?>
+
 <link rel="stylesheet" href="css/product.css">
 
 </head>

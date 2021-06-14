@@ -1,6 +1,6 @@
 <?php 
 include_once 'autoload.php';
-include_once "assets/mainHead.php"; 
+
 
 
 $recettes=new RecipeRepository();
@@ -25,11 +25,12 @@ $ingredientRecipe=$ingredientRecipeRepo->findBy(array('recipeId'=> $recipeId ));
 $stepRepo=new RecipeStepsRepository();
 $steps=$stepRepo->findBy(array('idRecipe'=> $recipeId ));
 
-
+$pageName=$recette['title'];
+include_once "assets/mainHead.php"; 
 ?>
 
 <link rel="stylesheet" href="css/recipeIndivStyle.css">
-<title><?php echo $recette['title'] ?></title>
+
 
 </head>
 <body>

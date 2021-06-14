@@ -11,6 +11,18 @@
 <body>
 
 <?php include_once 'navbarDeco.php' ?>
+<ul class="welcome">
+  <li>B</li>
+  <li>I</li>
+  <li>E</li>
+  <li>N</li>
+  <li>V</li>
+  <li>E</li>
+  <li>N</li>
+  <li>U</li>
+  
+</ul>
+
  
 
 

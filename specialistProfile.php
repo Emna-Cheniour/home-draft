@@ -3,14 +3,17 @@
 session_start();
 include_once 'isAuthentificated.php';
 
-include_once 'assets/mainHead.php' ;
-include_once 'assets/bootstrapAsset.php';
+
 include_once 'autoload.php';
 
 $specialistRepo=new SpecialistRepository();
 $specialistId=$_GET['id'];
 $specialist=$specialistRepo->findOneBy(array('id' => $specialistId));
 
+
+$pageName=$specialist['lastName'].' '.$specialist['firstName'];
+include_once 'assets/mainHead.php' ;
+include_once 'assets/bootstrapAsset.php';
 
 
 
@@ -44,7 +47,7 @@ include_once 'navbarCo.php'?>
     <div class="specialist__info">
 
         <div class="field" id="profile">
-          <img src="images/nutritionist.png" alt="">
+          <img src=<?php echo "data:image/jpeg;base64," . base64_encode($specialist['image']) ?> alt="">
          
             <h2><?php  echo $specialist["lastName"] .''. $specialist['firstName'] ?></h2>
             

@@ -1,5 +1,9 @@
-<?php include_once 'assets/mainHead.php' ;
+<?php 
 session_start();
+$pageName='Acceuil';
+include_once 'assets/mainHead.php' ;
+
+
 
 if (isset($_SESSION['user'])) {
 
@@ -9,6 +13,7 @@ if (isset($_SESSION['user'])) {
     include_once "navbarDeco.php";
 }
 ?>
+<title>FAQs</title>
 <link rel="stylesheet" href="css/faq.css">
 
 </head>
