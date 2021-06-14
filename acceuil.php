@@ -21,21 +21,20 @@ include_once 'autoload.php';
         include_once "navbarCo.php";
         include_once 'profileProgress.php';
         $infoCount *= 10;
-           ?>
-            <ul class="welcome">
-                <li>B</li>
-                <li>I</li>
-                <li>E</li>
-                <li>N</li>
-                <li>V</li>
-                <li>E</li>
-                <li>N</li>
-                <li>U</li>
+    ?>
+        <ul class="welcome">
+            <li>B</li>
+            <li>I</li>
+            <li>E</li>
+            <li>N</li>
+            <li>V</li>
+            <li>E</li>
+            <li>N</li>
+            <li>U</li>
 
-            </ul>
+        </ul>
 
     <?php
-        }
     } else {
         include "navbarDeco.php";
     }
@@ -61,7 +60,7 @@ include_once 'autoload.php';
         <video class="posterVid" playsinline autoplay muted loop>
             <source src="images/poster.mp4" type="video/mp4">
         </video>
-        
+
         <div class="posterDetails">
             <p> La maladie coeliaque est plus récurrente que vous pensez </p>
             <p>Conçu par une équipe comportant des personnes eux même atteints ce guide répond à tout besoin d'un coeliaque
@@ -164,92 +163,90 @@ include_once 'autoload.php';
                     <img class="imgDon" src="images/quizz.png" alt="dons">
                 </div>
             </div>
-             </div>
-            </div>
-   
-<div class="last__section reveal">
-    <div class="row rowy quizz"> 
-        <div class="col9">
-             <?php if(isset($_SESSION['user'])){ 
-                 $username=$_SESSION['user'];
-                    if($infoCount!=100){ 
-                        echo "<h2 class='c4 faded' >Bienvenu $username</h2>"; 
-                        echo "<p>Votre Profil est à $infoCount %</p>"; 
-                        echo "<a href='profile.php'><button class='btn btn3'>Complétez Votre Profil<i class='fas fa-arrow-alt-circle-right'></i></button></a>";
-                    }else{ 
-                        echo "<h2 class='c4 faded' >Bienvenu $username</h2>";
-                     } 
-                } else { 
-                    echo "<h2 class='c4 faded'>Rejoignez-nous Pour Bénéficier De Notre Guide CELIAC101 !</h2>"; 
-                    echo "<a href='login_SignUp.php'><button class='btn btn3'>Inscrivez-Vous<i class='fas fa-arrow-alt-circle-right'></i></button></a>"; } ?>
-        </div> 
+        </div>
     </div>
-    
-    <div class="specialist__section">
-        <div class="row">
-        
-        
-            <div class="col specialist__section">
 
-                <div class="suggestionsSpecialist">
+    <div class="last__section reveal">
+        <div class="row rowy quizz">
+            <div class="col9">
+                <?php if (isset($_SESSION['user'])) {
+                    $username = $_SESSION['user'];
+                    if ($infoCount != 100) {
+                        echo "<h2 class='c4 faded' >Bienvenu $username</h2>";
+                        echo "<p>Votre Profil est à $infoCount %</p>";
+                        echo "<a href='profile.php'><button class='btn btn3'>Complétez Votre Profil<i class='fas fa-arrow-alt-circle-right'></i></button></a>";
+                    } else {
+                        echo "<h2 class='c4 faded' >Bienvenu $username</h2>";
+                    }
+                } else {
+                    echo "<h2 class='c4 faded'>Rejoignez-nous Pour Bénéficier De Notre Guide CELIAC101 !</h2>";
+                    echo "<a href='login_SignUp.php'><button class='btn btn3'>Inscrivez-Vous<i class='fas fa-arrow-alt-circle-right'></i></button></a>";
+                } ?>
+            </div>
+        </div>
 
-                    <h4 class="specialistsText">Vous avez besoin d'un
-                        <span class="txt-rotate" data-period="2000" data-rotate='["medécin?","nutritioniste?","gastrologue?"]'></span>
-                    </h4>
+        <div class="specialist__section">
+            <div class="row">
 
+
+                <div class="col specialist__section">
+
+                    <div class="suggestionsSpecialist">
+
+                        <h4 class="specialistsText">Vous avez besoin d'un
+                            <span class="txt-rotate" data-period="2000" data-rotate='["medécin?","nutritioniste?","gastrologue?"]'></span>
+                        </h4>
+
+
+                    </div>
 
                 </div>
+
+
 
             </div>
 
+            <div class="specialistsAd">
+                <div class="swiper-container specialistsContainer">
+                    <div class="swiper-wrapper specialistsWrapper">
+                        <?php
+                        $specialistRepo = new SpecialistRepository();
+                        $specialists = $specialistRepo->findAll();
+
+                        foreach ($specialists as $specialist) {
+                        ?>
+                            <div class="swiper-slide specialistSlide">
+                                <div class="specialistAd">
+                                    <img src=<?php echo "data:image/jpeg;base64," . base64_encode($specialist['image']) ?> alt="">
+                                    <h4><?php echo $specialist['firstName'] . " " . $specialist['lastName'] ?></h4>
+                                    <h5><?php echo $specialist['profession'] ?></h5>
+                                </div>
+                            </div>
+                        <?php } ?>
 
 
-                </div
 
-        <div class="specialistsAd">
-            <div class="swiper-container specialistsContainer">
-                <div class="swiper-wrapper specialistsWrapper">
-                    <?php 
-                        $specialistRepo=new SpecialistRepository();
-                        $specialists=$specialistRepo->findAll();
-
-                        foreach($specialists as $specialist){
-                    ?>
-                    <div class="swiper-slide specialistSlide">
-                        <div class="specialistAd">
-                            <img src=<?php echo "data:image/jpeg;base64," . base64_encode($specialist['image']) ?> alt="">
-                            <h4><?php echo $specialist['firstName']." ".$specialist['lastName']?></h4>
-                            <h5><?php echo $specialist['profession']?></h5>
-                        </div>
                     </div>
-                    <?php } ?>
-                    
-                    
-            
                 </div>
-                </div>
-                </div>
-                </div>
-      
-      
- 
- 
-   
-     <?php include 'footer.php' ?>
-  <?php include_once 'assets/scripts.php' ?>
-     <script src="js/main.js"></script>
- 
-     <script src="js/txtRotation.js"></script>
-     <script type="js/scrollUpBtn.js"></script>
-     <script src="js/testnav.js"></script>
-     <script src="js/specialistIndiv.js"></script>
-     
-     
-    
- 
- </body>
- 
- </html>
+            </div>
+        </div>
 
 
-   
+
+
+
+        <?php include 'footer.php' ?>
+        <?php include_once 'assets/scripts.php' ?>
+        <script src="js/main.js"></script>
+
+        <script src="js/txtRotation.js"></script>
+        <script type="js/scrollUpBtn.js"></script>
+        <script src="js/testnav.js"></script>
+        <script src="js/specialistIndiv.js"></script>
+
+
+
+
+</body>
+
+</html>
