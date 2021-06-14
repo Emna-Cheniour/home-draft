@@ -1,5 +1,6 @@
 <?php
 
+$pageName = "Ajouter Produit";
 include_once 'autoload.php';
 include_once 'assets/bootstrapAsset.php';
 session_start();

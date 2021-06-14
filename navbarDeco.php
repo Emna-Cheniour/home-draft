@@ -10,7 +10,7 @@
 
 <div class="logo__container">
 <img class="logopic" src="images/logo1.png" alt="Logo">
-  <span class="logoname">Celiac101</span>
+  <a href="acceuil.php"><span class="logoname">Celiac101</span></a>
 </div>
 
 

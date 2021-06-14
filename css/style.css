@@ -755,6 +755,13 @@ float: left;
         flex-direction: column;
     }
 
+.posterVid {
+        align-self: center;
+        display: flex;
+        justify-content: center;
+}
+}
+
 .last__section
 {
   margin: 2rem;
@@ -762,10 +769,4 @@ float: left;
   grid-template-columns:repeat(auto-fit,minmax(25rem,30rem)) ;
   grid-gap: 2rem;
   justify-content: center;
-}
-.posterVid {
-        align-self: center;
-        display: flex;
-        justify-content: center;
-}
 }

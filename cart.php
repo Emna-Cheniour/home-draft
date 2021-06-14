@@ -286,9 +286,9 @@ if (isset($_POST['PayDelivery'])) {
             foreach ($wishes as $wish) {
                 $wishedProduct = $productRep->findOneBy(array('id' => $wish['productId']));
             ?>
-                <div class="cartElements">
+                <div class="cartElements" style="padding: 0 !important;">
                     <div class="cartElementWrapper">
-                        <div class="cartElement">
+                        <div class="cartElement" >
                             <div class="info">
                                 <h4><?= $wishedProduct['name'] ?></h4>
                                 <div class="details">
@@ -337,7 +337,6 @@ if (isset($_POST['PayDelivery'])) {
                     <div class="cartElement">
                         <div class="info">
                             <h6>Commande -</h6>
-                            <h4><?= $order['userId'] ?></h4>
                             <div class="details">
                                 <h6>Total : <?= $order['total'] ?> Dt</h6>
                                 <h6>Date Commande : <?= $order['date'] ?></h6>

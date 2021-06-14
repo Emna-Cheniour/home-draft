@@ -100,7 +100,6 @@ require_once 'isAuthentificated.php';
     <script src="js/main.js"></script>
 
     <script type="js/scrollUpBtn.js"></script>
-    <script src="js/testnav.js"></script>
 </body>
 
 </html>

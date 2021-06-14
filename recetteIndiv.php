@@ -1,4 +1,5 @@
 <?php 
+session_start();
 include_once 'autoload.php';
 
 
@@ -51,23 +52,7 @@ include_once "assets/mainHead.php";
   
   <h1 class="main__header"><?php echo $recette['title']?></h1>
 
-  <div class="rating">
-
-      <div class="star">
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star-half-alt"></i>
-        <span class="num__rating">4.5/5</span>
-      </div>
-
-      <a href="#" class="comment">
-        <i class="fas fa-comment"></i>
-        <span>10 commentaires</span>
-      </a>
-  
-  </div>
+ 
 
   <div class="recipe__container">
     <div class="slider">
@@ -235,21 +220,7 @@ include_once "assets/mainHead.php";
     
   </div>
 
-  <div class="star__rating--section">
-    <div class="star__section">
-      <h4>C'est terminé ! Qu'en avez-vous pensé ?</h4>
-        <span class="stars">
-        <i class="far fa-star"></i>
-        <i class="far fa-star"></i>
-        <i class="far fa-star"></i>
-        <i class="far fa-star"></i>
-        <i class="far fa-star"></i>
-     
-        </span>
-    </div>
-
  
-  </div>
 </div>
 
   
