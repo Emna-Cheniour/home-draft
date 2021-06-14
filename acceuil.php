@@ -70,7 +70,7 @@ include_once 'autoload.php';
     </div>
 
     <div class="services">
-        <h1 style="font-size:3em; " class="c4 faded">SERVICE</h1>
+        <h1 style="font-size:3em; " class="c4 faded">S E R V I C E S</h1>
         <div class="serviceRow row">
             <div class="service col4">
                 <img src="images/panier.png">
