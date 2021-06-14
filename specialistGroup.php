@@ -3,20 +3,28 @@ session_start();
 
 $pageName='Nos Spécialistes';
   include 'assets/bootstrapAsset.php';
-  include_once 'isAuthentificated.php';
+ 
 
 
   
 
 include_once 'autoload.php';
+
+
+if (isset($_SESSION['user'])) {
+
+  include_once "navbarCo.php";
+ 
+} else {
+  include_once "navbarDeco.php";
+}
 ?>
 
 
 <link rel="stylesheet" href="css/specialistGroup.css">
 </head>
 <body>
-<?php 
-include_once 'navbarCo.php'?>
+
 
 <?php include_once 'preloader.php' ?>
 
